@@ -37,7 +37,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div
-              className="flex flex-col sm:flex-row items-start gap-4 mb-12"
+              className="flex flex-col sm:flex-row sm:flex-wrap items-start gap-4 mb-12"
             >
               <Link
                 href="/demo"
@@ -64,6 +64,14 @@ export default function HeroSection() {
               >
                 Explore Features
               </Link>
+              <a
+                href="https://app.pmspace.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-200"
+              >
+                Try for Free
+              </a>
             </div>
 
             {/* Trust Indicator */}
