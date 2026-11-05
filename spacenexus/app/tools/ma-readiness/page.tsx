@@ -577,7 +577,7 @@ export default function MAReadinessPage() {
               <p className="text-blue-100 mb-6 max-w-lg mx-auto">Auto-index and store your files securely in a SpaceNexus AI Data Room.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/demo" className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-all shadow-lg">Request a Demo</Link>
-                <a href="https://app.pmspace.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition-all">Try for Free</a>
+                <a href="https://app.pmspace.ai/login?type=SpaceVDR&moduleId=add00f0c-0428-423e-bfa4-01032205ed46&invite=guest&orgName=SPACE+VDR" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition-all">Try for Free</a>
               </div>
             </div>
             <div className="text-center">

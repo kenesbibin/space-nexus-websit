@@ -908,7 +908,7 @@ export default function Header() {
           </div>
 
           <a
-            href="https://app.pmspace.ai/"
+            href={isKindora ? "https://kindora.pmspace.ai/login?redirectTo=%2F" : "https://app.pmspace.ai/login?type=SpaceVDR&moduleId=add00f0c-0428-423e-bfa4-01032205ed46&invite=guest&orgName=SPACE+VDR"}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex lg:hidden items-center px-3 py-2 text-xs font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-colors whitespace-nowrap"
@@ -1131,7 +1131,7 @@ export default function Header() {
                     Request a Demo
                   </Link>
                   <a
-                    href="https://app.pmspace.ai/"
+                    href={isKindora ? "https://kindora.pmspace.ai/login?redirectTo=%2F" : "https://app.pmspace.ai/login?type=SpaceVDR&moduleId=add00f0c-0428-423e-bfa4-01032205ed46&invite=guest&orgName=SPACE+VDR"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block mx-4 mt-3 py-3 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full text-center transition-colors"
