@@ -158,7 +158,7 @@ const industryUseCases = [
         title: "Board & Governance",
         description:
             "Corporate boards share confidential board materials, resolutions, and minutes with directors and advisors. Board portals provide secure sharing with D&O liability protection.",
-        link: "/board-portals",
+        link: "/board-portal-software",
     },
     {
         title: "Real Estate Transactions",
@@ -599,7 +599,7 @@ export default function SecureDocumentSharingPage() {
                                 Data Room Software →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/features/vdr-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/features/data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 VDR Data Room →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -661,7 +661,7 @@ export default function SecureDocumentSharingPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing for legal →</h3>
                         </Link>
                         <Link
-                            href="/fundraising-and-investor-due-diligence"
+                            href="/investor-due-diligence"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Investor communications.</p>

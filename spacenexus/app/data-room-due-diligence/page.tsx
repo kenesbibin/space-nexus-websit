@@ -126,7 +126,7 @@ const setupSteps = [
             "Confirm setup can be completed in under 24 hours",
         ],
         color: "blue",
-        link: "/vdr-providers",
+        link: "/virtual-data-room-providers",
         linkText: "Compare data room providers →",
     },
     {
@@ -731,7 +731,7 @@ export default function DataRoomDueDiligencePage() {
                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring data room resources</h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             <Link
-                                href="/vdr-providers"
+                                href="/virtual-data-room-providers"
                                 className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                             >
                                 <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Top providers for M&A.</p>

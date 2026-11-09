@@ -906,7 +906,7 @@ export default function DueDiligenceChecklistPage() {
                             {[
                                 { title: "M&A VDR — Virtual Data Room for Mergers", href: "/solutions/mergers-and-acquisitions-vdr", label: "Solution" },
                                 { title: "Series A Fundraising Data Room Guide", href: "/solutions/series-a-fundraising-data-room", label: "Solution" },
-                                { title: "Virtual Data Room Providers Compared", href: "/vdr-providers", label: "Guide" },
+                                { title: "Virtual Data Room Providers Compared", href: "/virtual-data-room-providers", label: "Guide" },
                                 { title: "Data Room Software — Buyer's Guide", href: "/data-room-software", label: "Guide" },
                             ].map((post) => (
                                 <Link key={post.href} href={post.href} className="group flex flex-col p-5 border border-gray-200 bg-white rounded-xl hover:border-[#2563eb]/30 hover:shadow-md transition-all duration-200">

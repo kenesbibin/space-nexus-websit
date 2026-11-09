@@ -862,7 +862,7 @@ export default function BoardPortalSoftwarePage() {
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
                         <div className="flex flex-wrap gap-3 justify-center">
-                            <Link href="/features/vdr-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/features/data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 VDR Data Room →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -870,7 +870,7 @@ export default function BoardPortalSoftwarePage() {
                                 Data Room Software →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/deal-room-software" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/data-room-software" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 Deal Room Software →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -910,13 +910,6 @@ export default function BoardPortalSoftwarePage() {
                     <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <Link
-                            href="/board-portals"
-                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
-                        >
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">For boards and governance.</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Board portal comparison →</h3>
-                        </Link>
                         <Link
                             href="/secure-document-sharing"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"

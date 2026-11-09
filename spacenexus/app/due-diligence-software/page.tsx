@@ -939,11 +939,7 @@ export default function DueDiligenceSoftwarePage() {
                                 Data Room Due Diligence Guide →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/deal-room-software" className="text-sm font-semibold text-[#2563eb] hover:underline">
-                                Deal Room Software →
-                            </Link>
-                            <span className="text-gray-300">|</span>
-                            <Link href="/m-a-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/ma-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 M&amp;A Data Room Providers →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -993,13 +989,6 @@ export default function DueDiligenceSoftwarePage() {
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Software platform comparison.</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room software →</h3>
-                        </Link>
-                        <Link
-                            href="/deal-room-software"
-                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
-                        >
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">For M&A and fundraising.</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Deal room software →</h3>
                         </Link>
                         <Link
                             href="/best-data-room-for-startups"

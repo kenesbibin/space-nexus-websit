@@ -928,7 +928,7 @@ export default function MADataRoomProvidersPage() {
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
                         <div className="flex flex-wrap gap-3 justify-center">
-                            <Link href="/deal-room-software" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/data-room-software" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 Deal Room Software →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -936,11 +936,11 @@ export default function MADataRoomProvidersPage() {
                                 M&amp;A VDR Guide →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/ma-document-sharing" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/solutions/ma-document-sharing" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 M&amp;A Document Sharing →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/virtual-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 All Data Room Providers →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -990,20 +990,6 @@ export default function MADataRoomProvidersPage() {
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">7 providers ranked for founders.</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
-                        </Link>
-                        <Link
-                            href="/virtual-data-room-providers"
-                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
-                        >
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Complete provider directory.</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">All virtual data room providers →</h3>
-                        </Link>
-                        <Link
-                            href="/data-room-providers"
-                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
-                        >
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Comprehensive provider list.</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room providers →</h3>
                         </Link>
                         <Link
                             href="/pricing-comparison"
