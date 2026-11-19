@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <title>Space Kindora — Five modules, one workspace</title>
+
+    <!--[if mso]>
+    <noscript>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    </noscript>
+    <style type="text/css">
+      body, table, td, p, a, span, h1, h2, h3 { font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif !important; }
+      table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+    </style>
+    <![endif]-->
+
+    <style type="text/css">
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        background-color: #eef1f8;
+        background-image: linear-gradient(180deg, #e9edf7 0%, #f6f8fc 100%);
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      a { text-decoration: none; }
+
+      .ExternalClass { width: 100%; }
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+
+      .btn { font-size: 15px; font-weight: 600; line-height: 18px; padding: 14px 28px; border-radius: 8px; }
+      .btn-solid { background-color: #2563eb; color: #ffffff !important; }
+      .btn-ghost { background-color: #ffffff; border: 1px solid #dbe3f1; color: #1d4ed8 !important; }
+      .btn-white { background-color: #ffffff; color: #1d4ed8 !important; }
+      .btn-outline-white { background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.45); color: #ffffff !important; }
+
+      @media only screen and (max-width: 620px) {
+        .container { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; border-left: 0 !important; border-right: 0 !important; }
+        .pad { padding-left: 22px !important; padding-right: 22px !important; }
+        .section-pad { padding-top: 44px !important; padding-bottom: 40px !important; padding-left: 22px !important; padding-right: 22px !important; }
+        .card-pad { padding: 22px 20px !important; }
+        .cta-pad { padding: 32px 24px !important; }
+        .stack { display: block !important; width: 100% !important; max-width: 100% !important; }
+        .stack-gap { padding-right: 0 !important; padding-bottom: 12px !important; }
+        .stack-gap-last { padding-bottom: 0 !important; }
+        .card-index { display: none !important; }
+        .center { text-align: center !important; }
+        .btn-block { display: block !important; width: 100% !important; }
+        .btn-gap { display: block !important; height: 10px !important; line-height: 10px !important; font-size: 0 !important; }
+        .h1 { font-size: 30px !important; line-height: 1.2 !important; }
+        .h2 { font-size: 24px !important; line-height: 1.3 !important; }
+        .h3 { font-size: 17px !important; }
+        .lede { font-size: 16px !important; line-height: 1.65 !important; }
+        .logo-img { width: 22px !important; height: auto !important; }
+        .logo-text { font-size: 16px !important; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden; opacity: 0; mso-hide: all;">
+      Donor management, grant tracking, volunteer coordination, program delivery, and financial reporting — five modules, one workspace for nonprofit teams.
+    </div>
+
+    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #eef1f8;">
+      <tr>
+        <td align="center" style="padding: 40px 16px 40px 16px;">
+          <table role="presentation" width="640" border="0" cellpadding="0" cellspacing="0" class="container" style="width: 100%; max-width: 640px; background-color: #ffffff; border: 1px solid #e4e9f2; border-radius: 18px; overflow: hidden; box-shadow: 0 28px 60px -30px rgba(15, 23, 42, 0.30);">
+
+            <!-- ============ BRAND ACCENT BAR ============ -->
+            <tr>
+              <td bgcolor="#2563eb" style="height: 4px; line-height: 4px; font-size: 0; background: linear-gradient(90deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);">&nbsp;</td>
+            </tr>
+
+            <!-- ============ HEADER ============ -->
+            <tr>
+              <td class="pad" style="padding: 20px 36px; background-color: #ffffff; border-bottom: 1px solid #eef1f6;">
+                <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="left" class="center" style="vertical-align: middle;">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="left" valign="middle" style="padding-right: 10px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=header_logo" style="display: inline-block;">
+                              <img src="https://spacenexus.net/icononly_transparent_nobuffer.png" alt="Space Kindora" width="27" height="34" class="logo-img" style="display: block; width: 27px; max-width: 27px; height: auto; border: 0;" />
+                            </a>
+                          </td>
+                          <td align="left" valign="middle">
+                            <div class="logo-text" style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -0.4px; line-height: 24px; color: #0f172a;">
+                              SPACE <span style="color: #2563eb;">KINDORA</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td align="right" class="center stack" style="vertical-align: middle;">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" bgcolor="#2563eb" style="border-radius: 8px;">
+                        <tr>
+                          <td align="center" bgcolor="#2563eb" style="border-radius: 8px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=header_demo" class="btn btn-solid" style="display: inline-block; background-color: #2563eb; color: #ffffff !important; font-size: 15px; font-weight: 600; line-height: 18px; padding: 14px 28px; border-radius: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);">Explore
+                      &#8594;</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ HERO ============ -->
+            <tr>
+              <td align="center" class="pad" bgcolor="#f3f1ff" style="padding: 20px 36px 18px 36px; background-color: #f3f1ff; background: linear-gradient(135deg, #eaf0ff 0%, #f7f2ff 55%, #ffffff 100%);">
+                <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center">
+                      <div style="margin: 0 0 20px 0;">
+                        <span style="display: inline-block; padding: 7px 14px; border-radius: 999px; background-color: #e9efff; border: 1px solid #dbe4ff; color: #4c1d95; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; line-height: 16px;">Space Kindora modules</span>
+                      </div>
+                      <h1 class="h1" style="margin: 0 0 16px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; color: #0f172a;">
+                        Five modules. <span style="color: #2563eb;">One connected workspace.</span>
+                      </h1>
+                      <p class="lede" style="margin: 0 auto 28px auto; max-width: 460px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.7; color: #4b5563;">
+                        Manage donors, grants, volunteers, programs, and finances in one place, so your team can focus on its mission.
+                      </p>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" class="btn-block" bgcolor="#2563eb" style="border-radius: 8px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=hero_primary" class="btn btn-solid" style="display: inline-block; background-color: #2563eb; color: #ffffff !important; font-size: 15px; font-weight: 600; line-height: 18px; padding: 14px 28px; border-radius: 8px; box-shadow: 0 6px 16px rgba(37, 99, 235, 0.30);">Explore features</a>
+                          </td>
+                          <td class="btn-gap" style="width: 12px; font-size: 0; line-height: 0;">&nbsp;</td>
+                          <td align="center" class="btn-block" bgcolor="#ffffff" style="border-radius: 8px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fcal.com%2Fspace-ai%2Fspace-kindora-product-demo&n=hero_secondary" class="btn btn-ghost" style="background-color: #ffffff; border: 1px solid #dbe3f1; color: #1d4ed8 !important; font-size: 15px; font-weight: 600; line-height: 18px; padding: 14px 28px; border-radius: 8px;">View demo</a>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!-- Module legend -->
+                      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" style="padding: 34px 0 0 0;">
+                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="background-color: #ffffff; border: 1px solid #e7ebf5; border-radius: 16px; padding: 20px 16px 15px 16px; box-shadow: 0 16px 34px -22px rgba(15, 23, 42, 0.28);">
+                                  <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="20%" align="center" style="padding: 0 4px; vertical-align: top;">
+                                        <div style="width: 11px; height: 11px; margin: 0 auto 11px auto; border-radius: 50%; background-color: #2563eb; box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.12); font-size: 0; line-height: 0;">&nbsp;</div>
+                                        <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 16px; color: #334155;">Donors</div>
+                                      </td>
+                                      <td width="20%" align="center" style="padding: 0 4px; vertical-align: top;">
+                                        <div style="width: 11px; height: 11px; margin: 0 auto 11px auto; border-radius: 50%; background-color: #7c3aed; box-shadow: 0 0 0 5px rgba(124, 58, 237, 0.12); font-size: 0; line-height: 0;">&nbsp;</div>
+                                        <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 16px; color: #334155;">Grants</div>
+                                      </td>
+                                      <td width="20%" align="center" style="padding: 0 4px; vertical-align: top;">
+                                        <div style="width: 11px; height: 11px; margin: 0 auto 11px auto; border-radius: 50%; background-color: #0ea5e9; box-shadow: 0 0 0 5px rgba(14, 165, 233, 0.12); font-size: 0; line-height: 0;">&nbsp;</div>
+                                        <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 16px; color: #334155;">Volunteers</div>
+                                      </td>
+                                      <td width="20%" align="center" style="padding: 0 4px; vertical-align: top;">
+                                        <div style="width: 11px; height: 11px; margin: 0 auto 11px auto; border-radius: 50%; background-color: #8b5cf6; box-shadow: 0 0 0 5px rgba(139, 92, 246, 0.12); font-size: 0; line-height: 0;">&nbsp;</div>
+                                        <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 16px; color: #334155;">Programs</div>
+                                      </td>
+                                      <td width="20%" align="center" style="padding: 0 4px; vertical-align: top;">
+                                        <div style="width: 11px; height: 11px; margin: 0 auto 11px auto; border-radius: 50%; background-color: #4f46e5; box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.12); font-size: 0; line-height: 0;">&nbsp;</div>
+                                        <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; line-height: 16px; color: #334155;">Finance</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ FEATURES ============ -->
+            <tr>
+              <td bgcolor="#f7f9fd" class="section-pad" style="padding: 15px 36px 15px 36px; background-color: #f7f9fd; border-top: 1px solid #eef1f6;">
+                <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="left" style="padding: 0 0 28px 0;">
+                      <div style="margin: 0 0 16px 0;">
+                        <span style="display: inline-block; padding: 6px 12px; border-radius: 999px; background-color: #f3eeff; border: 1px solid #e6dcff; color: #6d28d9; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 16px;">What you get</span>
+                      </div>
+                      <h2 class="h2" style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; color: #0f172a;">
+                        Everything your team runs on, in one place
+                      </h2>
+                      <p style="margin: 0; max-width: 480px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.7; color: #55606f;">
+                        Purpose-built modules that replace scattered spreadsheets, so records stay current and every handoff is quick.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <!-- Feature 1 : Donor Management -->
+                  <tr>
+                    <td colspan="2" valign="top" style="padding: 0 0 8px 0;">
+                      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #e6eaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 24px rgba(15, 23, 42, 0.05);">
+                        <tr>
+                          <td class="card-pad" style="padding: 16px 18px;">
+                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="stack stack-gap stack-gap-last" width="60" valign="top" style="width: 60px; padding: 0 16px 0 0;">
+                                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="44" height="44" align="center" valign="middle" bgcolor="#2563eb" style="width: 44px; height: 44px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.30); border-radius: 12px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; line-height: 44px;">DM</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td class="stack" valign="top">
+                                  <h3 class="h3" style="margin: 0 0 8px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.3; color: #0f172a;">Donor Management</h3>
+                                  <p style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.65; color: #55606f;">
+                                    Manage donor details, giving history, and engagement in one place.
+
+                                  </p>
+                                  <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 600; line-height: 16px; color: #475569;">
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #eff6ff; border: 1px solid #dbeafe; color: #1d4ed8;">Donor profiles</span>
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #eff6ff; border: 1px solid #dbeafe; color: #1d4ed8;">Giving history</span>
+                                    <span style="display: inline-block; margin: 0; padding: 5px 10px; border-radius: 999px; background-color: #eff6ff; border: 1px solid #dbeafe; color: #1d4ed8;">Follow-up activity</span>
+                                  </p>
+                                </td>
+                                <td class="card-index" align="right" valign="top" style="padding: 0 0 0 14px;">
+                                  <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -0.6px; color: #e5eaf4;">01</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Feature 2 : Grant Tracking -->
+                  <tr>
+                    <td colspan="2" valign="top" style="padding: 0 0 8px 0;">
+                      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #e6eaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 24px rgba(15, 23, 42, 0.05);">
+                        <tr>
+                          <td class="card-pad" style="padding: 16px 18px;">
+                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="stack stack-gap stack-gap-last" width="60" valign="top" style="width: 60px; padding: 0 16px 0 0;">
+                                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="44" height="44" align="center" valign="middle" bgcolor="#7c3aed" style="width: 44px; height: 44px; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); box-shadow: 0 4px 12px rgba(124, 58, 237, 0.30); border-radius: 12px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; line-height: 44px;">GT</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td class="stack" valign="top">
+                                  <h3 class="h3" style="margin: 0 0 8px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.3; color: #0f172a;">Grant Tracking</h3>
+                                  <p style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.65; color: #55606f;">
+                                    Track grant applications, deadlines, budgets, and reporting in one place.
+
+                                  </p>
+                                  <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 600; line-height: 16px; color: #475569;">
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #f5f3ff; border: 1px solid #e4d9fd; color: #6d28d9;">Applications</span>
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #f5f3ff; border: 1px solid #e4d9fd; color: #6d28d9;">Deadlines</span>
+                                    <span style="display: inline-block; margin: 0; padding: 5px 10px; border-radius: 999px; background-color: #f5f3ff; border: 1px solid #e4d9fd; color: #6d28d9;">Funder reports</span>
+                                  </p>
+                                </td>
+                                <td class="card-index" align="right" valign="top" style="padding: 0 0 0 14px;">
+                                  <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -0.6px; color: #e5eaf4;">02</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Feature 3 : Volunteer Management -->
+                  <tr>
+                    <td colspan="2" valign="top" style="padding: 0 0 8px 0;">
+                      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #e6eaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 24px rgba(15, 23, 42, 0.05);">
+                        <tr>
+                          <td class="card-pad" style="padding: 16px 18px;">
+                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="stack stack-gap stack-gap-last" width="60" valign="top" style="width: 60px; padding: 0 16px 0 0;">
+                                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="44" height="44" align="center" valign="middle" bgcolor="#2563eb" style="width: 44px; height: 44px; background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); box-shadow: 0 4px 12px rgba(14, 165, 233, 0.30); border-radius: 12px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; line-height: 44px;">VM</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td class="stack" valign="top">
+                                  <h3 class="h3" style="margin: 0 0 8px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.3; color: #0f172a;">Volunteer Management</h3>
+                                  <p style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.65; color: #55606f;">
+                                    Manage volunteer recruitment, schedules, and hours in one place.
+
+                                  </p>
+                                  <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 600; line-height: 16px; color: #475569;">
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #f0f9ff; border: 1px solid #d8eefd; color: #0369a1;">Recruitment</span>
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #f0f9ff; border: 1px solid #d8eefd; color: #0369a1;">Scheduling</span>
+                                    <span style="display: inline-block; margin: 0; padding: 5px 10px; border-radius: 999px; background-color: #f0f9ff; border: 1px solid #d8eefd; color: #0369a1;">Hours tracking</span>
+                                  </p>
+                                </td>
+                                <td class="card-index" align="right" valign="top" style="padding: 0 0 0 14px;">
+                                  <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -0.6px; color: #e5eaf4;">03</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Feature 4 : Program Management -->
+                  <tr>
+                    <td colspan="2" valign="top" style="padding: 0 0 8px 0;">
+                      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #e6eaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 24px rgba(15, 23, 42, 0.05);">
+                        <tr>
+                          <td class="card-pad" style="padding: 16px 18px;">
+                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="stack stack-gap stack-gap-last" width="60" valign="top" style="width: 60px; padding: 0 16px 0 0;">
+                                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="44" height="44" align="center" valign="middle" bgcolor="#7c3aed" style="width: 44px; height: 44px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.30); border-radius: 12px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; line-height: 44px;">PM</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td class="stack" valign="top">
+                                  <h3 class="h3" style="margin: 0 0 8px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.3; color: #0f172a;">Program Management</h3>
+                                  <p style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.65; color: #55606f;">
+                                    Manage programs, track participants, and measure outcomes.
+
+                                  </p>
+                                  <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 600; line-height: 16px; color: #475569;">
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #faf5ff; border: 1px solid #f0dcff; color: #7e22ce;">Initiatives</span>
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #faf5ff; border: 1px solid #f0dcff; color: #7e22ce;">Participants</span>
+                                    <span style="display: inline-block; margin: 0; padding: 5px 10px; border-radius: 999px; background-color: #faf5ff; border: 1px solid #f0dcff; color: #7e22ce;">Outcomes</span>
+                                  </p>
+                                </td>
+                                <td class="card-index" align="right" valign="top" style="padding: 0 0 0 14px;">
+                                  <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -0.6px; color: #e5eaf4;">04</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Feature 5 : Financial Reporting -->
+                  <tr>
+                    <td colspan="2" valign="top" style="padding: 0;">
+                      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #e6eaf3; border-radius: 14px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 24px rgba(15, 23, 42, 0.05);">
+                        <tr>
+                          <td class="card-pad" style="padding: 16px 18px;">
+                            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td class="stack stack-gap stack-gap-last" width="60" valign="top" style="width: 60px; padding: 0 16px 0 0;">
+                                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="44" height="44" align="center" valign="middle" bgcolor="#2563eb" style="width: 44px; height: 44px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); box-shadow: 0 4px 12px rgba(99, 102, 241, 0.30); border-radius: 12px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; line-height: 44px;">FR</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td class="stack" valign="top">
+                                  <h3 class="h3" style="margin: 0 0 8px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; line-height: 1.3; color: #0f172a;">Financial Reporting</h3>
+                                  <p style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.65; color: #55606f;">
+                                    Track budgets, expenses, and financial reports in one place.
+
+                                  </p>
+                                  <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 600; line-height: 16px; color: #475569;">
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #eef2ff; border: 1px solid #dfe3ff; color: #4338ca;">Budgets</span>
+                                    <span style="display: inline-block; margin: 0 6px 0 0; padding: 5px 10px; border-radius: 999px; background-color: #eef2ff; border: 1px solid #dfe3ff; color: #4338ca;">Expenses</span>
+                                    <span style="display: inline-block; margin: 0; padding: 5px 10px; border-radius: 999px; background-color: #eef2ff; border: 1px solid #dfe3ff; color: #4338ca;">Financial reports</span>
+                                  </p>
+                                </td>
+                                <td class="card-index" align="right" valign="top" style="padding: 0 0 0 14px;">
+                                  <div style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 800; line-height: 1; letter-spacing: -0.6px; color: #e5eaf4;">05</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ CTA ============ -->
+            <tr>
+              <td class="pad" style="padding: 15px 36px 15px 36px; background-color: #ffffff;">
+                <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#2563eb" style="background-color: #2563eb; background: radial-gradient(120% 120% at 10% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 55%), linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #7c3aed 100%); border-radius: 14px; box-shadow: 0 14px 34px rgba(37, 99, 235, 0.18);">
+                  <tr>
+                    <td align="center" class="cta-pad" style="padding: 15px 32px 16px 32px;">
+                      <div style="margin: 0 0 16px 0;">
+                        <span style="display: inline-block; padding: 6px 12px; border-radius: 999px; background-color: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.30); color: #ffffff; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 16px;">Less admin. More impact.</span>
+                      </div>
+                      <h2 class="h2" style="margin: 0 0 12px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; color: #ffffff;">
+                        See your five modules in one workflow
+                      </h2>
+                      <p style="margin: 0 auto 28px auto; max-width: 420px; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.7; color: rgba(255, 255, 255, 0.92);">
+                       Explore donor, grant, volunteer, program, and finance workflows tailored to your organisation.
+
+                      </p>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" class="btn-block" bgcolor="#ffffff" style="border-radius: 8px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=cta_primary" class="btn btn-white" style="display: inline-block; background-color: #ffffff; color: #1d4ed8 !important; font-size: 15px; font-weight: 600; line-height: 18px; padding: 14px 28px; border-radius: 8px; box-shadow: 0 6px 16px rgba(15, 23, 42, 0.20);">Explore Space Kindora</a>
+                          </td>
+                          <td class="btn-gap" style="width: 12px; font-size: 0; line-height: 0;">&nbsp;</td>
+                          <td align="center" class="btn-block" bgcolor="#2563eb" style="border-radius: 8px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fcal.com%2Fspace-ai%2Fspace-kindora-product-demo&n=cta_secondary" class="btn btn-outline-white" style="background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.45); color: #ffffff !important; font-size: 15px; font-weight: 600; line-height: 18px; padding: 14px 28px; border-radius: 8px;">Book a live demo</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ FOOTER ============ -->
+            <tr>
+              <td align="center" class="pad" bgcolor="#f7f9fd" style="padding: 40px 36px 32px 36px; background-color: #f7f9fd; border-top: 1px solid #eef1f6;">
+                <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" style="padding-bottom: 20px;">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" valign="middle" style="padding-right: 10px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=footer_logo" style="display: inline-block;">
+                              <img src="https://spacenexus.net/icononly_transparent_nobuffer.png" alt="Space Kindora" width="24" height="30" class="logo-img" style="display: block; width: 24px; max-width: 24px; height: auto; border: 0;" />
+                            </a>
+                          </td>
+                          <td align="center" valign="middle">
+                            <div class="logo-text" style="font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: -0.4px; line-height: 22px; color: #0f172a;">
+                              SPACE <span style="color: #2563eb;">KINDORA</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-bottom: 20px;">
+                      <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 22px;">
+                        <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=footer_website" style="color: #55606f; text-decoration: none;">Website</a>
+                        <span style="color: #c6ccd8; padding: 0 10px;">|</span>
+                        <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Fpricing&n=footer_pricing" style="color: #55606f; text-decoration: none;">Pricing</a>
+                        <span style="color: #c6ccd8; padding: 0 10px;">|</span>
+                        <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Fabout&n=footer_about" style="color: #55606f; text-decoration: none;">About</a>
+                        <span style="color: #c6ccd8; padding: 0 10px;">|</span>
+                        <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Fcontact&n=footer_contact" style="color: #55606f; text-decoration: none;">Contact</a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-bottom: 24px;">
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="padding: 0 5px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fspace-kindora%2F&n=social_linkedin" style="display: inline-block; width: 34px; height: 34px; background-color: #ffffff; border: 1px solid #e0e6f0; border-radius: 50%; line-height: 34px; text-align: center; color: #475569 !important; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700;">in</a>
+                          </td>
+                          <td style="padding: 0 5px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fwww.youtube.com%2F%40KindoraNGOOS1&n=social_youtube" style="display: inline-block; width: 34px; height: 34px; background-color: #ffffff; border: 1px solid #e0e6f0; border-radius: 50%; line-height: 34px; text-align: center; color: #475569 !important; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700;">&#9654;</a>
+                          </td>
+                          <td style="padding: 0 5px;">
+                            <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fx.com%2Fspace_kindora&n=social_x" style="display: inline-block; width: 34px; height: 34px; background-color: #ffffff; border: 1px solid #e0e6f0; border-radius: 50%; line-height: 34px; text-align: center; color: #475569 !important; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700;">X</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- <td align="center" style="border-top: 1px solid #e4e9f2; padding-top: 24px;">
+                      <p style="margin: 0 0 8px 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; line-height: 18px; color: #6b7280;">
+                        <a href="{{unsubscribe_url}}" style="color: #4b5563; text-decoration: underline;">Unsubscribe</a>
+                      </p>
+                      <p style="margin: 0; font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 400; line-height: 17px; color: #8b94a3;">
+                        © 2026 SpaceKindora by SpaceNexus. All rights reserved.
+                      </p>
+                    </td> -->
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
