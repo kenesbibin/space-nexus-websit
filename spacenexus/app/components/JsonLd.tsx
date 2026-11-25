@@ -30,7 +30,7 @@ export default function JsonLd() {
     description:
       "SpaceNexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams.",
     foundingDate: "2022",
-    employee: personSchemas,
+    employee: personSchemas.map((p) => ({ "@id": p["@id"] })),
     knowsAbout: [
       "Virtual Data Rooms",
       "M&A Due Diligence",
@@ -116,6 +116,11 @@ export default function JsonLd() {
     inLanguage: "en-US",
   };
 
+  const peopleSchema = {
+    "@context": "https://schema.org",
+    "@graph": personSchemas,
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -160,6 +165,12 @@ export default function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(peopleSchema),
         }}
       />
     </>
