@@ -1,4 +1,17 @@
+import { authorProfiles } from "../blog/data/posts";
+
 export default function JsonLd() {
+  const personSchemas = Object.values(authorProfiles).map((m) => ({
+    "@type": "Person",
+    "@id": `https://spacenexus.net/about#${m.slug}`,
+    name: m.name,
+    jobTitle: m.role,
+    description: m.bio,
+    url: `https://spacenexus.net/about#${m.slug}`,
+    sameAs: [m.linkedin],
+    worksFor: { "@id": "https://spacenexus.net/#organization" },
+  }));
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -17,6 +30,7 @@ export default function JsonLd() {
     description:
       "SpaceNexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams.",
     foundingDate: "2022",
+    employee: personSchemas,
     knowsAbout: [
       "Virtual Data Rooms",
       "M&A Due Diligence",
@@ -102,6 +116,32 @@ export default function JsonLd() {
     inLanguage: "en-US",
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://spacenexus.net/#service",
+    name: "SpaceNexus Virtual Data Room",
+    serviceType: "Virtual Data Room",
+    description:
+      "SpaceNexus provides a secure virtual data room for M&A due diligence, capital raising, and legal document sharing, with granular permissions, dynamic watermarking, and a tamper-evident audit trail.",
+    provider: { "@id": "https://spacenexus.net/#organization" },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+    ],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "M&A advisors, law firms, investment banks, and corporate deal teams",
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://spacenexus.net/pricing",
+      availability: "https://schema.org/InStock",
+    },
+  };
+
   return (
     <>
       <script
@@ -114,6 +154,12 @@ export default function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
         }}
       />
     </>

@@ -161,10 +161,14 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         ...(post.lastReviewed && { dateModified: post.lastReviewed }),
         author: {
             "@type": "Person",
+            ...(authorProfile && { "@id": `https://spacenexus.net/about#${authorProfile.slug}` }),
             name: post.author.name,
             jobTitle: post.author.role,
             ...(authorProfile && {
                 url: `https://spacenexus.net/about#${authorProfile.slug}`,
+                description: authorProfile.bio,
+                sameAs: [authorProfile.linkedin],
+                worksFor: { "@id": "https://spacenexus.net/#organization" },
             }),
         },
         publisher: {
