@@ -17,19 +17,12 @@ export default function JsonLd() {
     description:
       "SpaceNexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams.",
     foundingDate: "2022",
-    numberOfEmployees: {
-      "@type": "QuantitativeValue",
-      minValue: 10,
-      maxValue: 50,
-    },
     knowsAbout: [
       "Virtual Data Rooms",
       "M&A Due Diligence",
       "Secure Document Sharing",
       "Investment Banking Technology",
       "Legal Technology",
-      "SOC 2 Compliance",
-      "ISO 27001",
     ],
     sameAs: [
       "https://x.com/spacenexus111",
@@ -78,9 +71,11 @@ export default function JsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "SoftwareApplication",
+            "@id": "https://spacenexus.net/#software",
             name: "SpaceNexus VDR",
             applicationCategory: "BusinessApplication",
             url: "https://spacenexus.net",
+            publisher: { "@id": "https://spacenexus.net/#organization" },
           },
         },
         {
@@ -96,108 +91,15 @@ export default function JsonLd() {
     },
   };
 
-  const softwareApplicationSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "SpaceNexus Virtual Data Room",
-    applicationCategory: "BusinessApplication",
-    applicationSubCategory: "Virtual Data Room",
-    operatingSystem: "Web Browser",
-    url: "https://spacenexus.net",
-    description:
-      "Enterprise Virtual Data Room for secure M&A due diligence, capital raising, and document management. Built on Zero Trust architecture with AES-256 encryption and SOC 2 Type II compliance.",
-    offers: {
-      "@type": "Offer",
-      price: "Contact for pricing",
-      priceCurrency: "USD",
-      description: "Transparent, published pricing — Enterprise plans available",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "500",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    author: {
-      "@type": "Organization",
-      name: "SpaceNexus",
-      url: "https://spacenexus.net",
-    },
-    review: {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Michael Chen",
-        jobTitle: "Managing Director",
-        worksFor: { "@type": "Organization", name: "Apex Capital Partners" },
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      reviewBody:
-        "SpaceNexus cut our due diligence timeline from 8 weeks to 3. The AI document processing alone is worth the investment.",
-    },
-    featureList: [
-      "Zero Trust architecture",
-      "AES-256 encryption at rest and in transit",
-      "SOC 2 Type II certified",
-      "ISO 27001 aligned",
-      "SEC and FINRA compliance ready",
-      "FCA and UK GDPR compliance ready",
-      "CCPA and GDPR data privacy compliant",
-      "AI-powered document processing and redaction",
-      "Real-time buyer activity analytics",
-      "Granular role-based permissions",
-      "Q&A due diligence workflow management",
-      "Dynamic watermarking and print restrictions",
-      "Full-text search across 100+ file types",
-      "24/7 enterprise support",
-    ],
-    keywords: "virtual data room, VDR, M&A due diligence, secure data room, investment banking data room, private equity data room",
-  };
-
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://spacenexus.net/#website",
     name: "SpaceNexus",
     alternateName: "Space Nexus",
     url: "https://spacenexus.net",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://spacenexus.net/search?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://spacenexus.net",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Features",
-        item: "https://spacenexus.net/features",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Industries",
-        item: "https://spacenexus.net/industries",
-      },
-    ],
+    publisher: { "@id": "https://spacenexus.net/#organization" },
+    inLanguage: "en-US",
   };
 
   return (
@@ -211,19 +113,7 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(softwareApplicationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
     </>

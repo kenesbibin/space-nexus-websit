@@ -5,7 +5,7 @@ import LastUpdated from "../components/LastUpdated";
 import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "Data Room Software Comparison 2026 — Features, Pricing & Top Picks | SpaceNexus",
+    title: "Data Room Software Comparison 2026 — Features, Pricing & Top Picks",
     description: "Compare the best data room software platforms side by side. AI features, security certifications, pricing, and use cases — find the right data room for your deal.",
     alternates: {
         canonical: "https://spacenexus.net/data-room-software",
@@ -329,24 +329,18 @@ const organizationSchema = {
 const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": "https://spacenexus.net/#software",
     name: "SpaceNexus Data Room Software",
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Data Room Software",
     operatingSystem: "Web Browser",
     url: "https://spacenexus.net",
-    description: "AI-powered data room software for M&A due diligence, fundraising, and secure document sharing. SOC 2 Type II certified, with transparent published pricing.",
+    description: "AI-powered data room software for M&A due diligence, fundraising, and secure document sharing.",
+    publisher: { "@id": "https://spacenexus.net/#organization" },
+    isPartOf: { "@id": "https://spacenexus.net/#website" },
     offers: {
         "@type": "Offer",
-        price: "Contact for pricing",
-        priceCurrency: "USD",
-        description: "Transparent, published pricing",
-    },
-    aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        ratingCount: "500",
-        bestRating: "5",
-        worstRating: "1",
+        description: "Transparent, published pricing. Contact SpaceNexus for current plan pricing.",
     },
 };
 
@@ -754,7 +748,7 @@ export default function DataRoomSoftwarePage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-11-25" />
             </div></div>
             </section>
 

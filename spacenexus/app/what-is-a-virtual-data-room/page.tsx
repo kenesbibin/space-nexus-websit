@@ -5,7 +5,7 @@ import LastUpdated from "../components/LastUpdated";
 import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-  title: "What is a Virtual Data Room? Complete Guide 2026 | SpaceNexus",
+  title: "What is a Virtual Data Room? Complete Guide 2026",
   description:
     "A virtual data room (VDR) is a secure online repository for sharing confidential documents during M&A, due diligence, fundraising, and legal transactions. Learn how VDRs work, key features, security, pricing, and how to choose the right provider.",
   alternates: {
@@ -427,7 +427,7 @@ export default function WhatIsAVirtualDataRoomPage() {
 
         {/* Last Updated */}
         <div className="py-6 text-center border-t border-gray-100 mt-8">
-          <LastUpdated date="2026-08-01" />
+          <LastUpdated date="2026-11-25" />
         </div>
       </main>
     </>

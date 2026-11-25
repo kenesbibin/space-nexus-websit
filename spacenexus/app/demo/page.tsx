@@ -155,32 +155,15 @@ const breadcrumbSchema = {
 
 const faqSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      mainEntity: demoFaqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
+  "@type": "FAQPage",
+  mainEntity: demoFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
-    {
-      "@type": "SoftwareApplication",
-      name: "SpaceNexus Virtual Data Room",
-      applicationCategory: "BusinessApplication",
-      url: "https://spacenexus.net",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "500",
-        bestRating: "5",
-        worstRating: "1",
-      },
-    },
-  ],
+  })),
 };
 
 export default function DemoPage() {

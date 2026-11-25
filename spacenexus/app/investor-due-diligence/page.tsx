@@ -2,9 +2,10 @@ import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "Investor Due Diligence 2026 | SpaceNexus",
+    title: "Investor Due Diligence 2026",
     description: "Complete guide to investor due diligence. Documents, processes, and tools for fundraising teams and VCs.",
     alternates: {
         canonical: "https://spacenexus.net/investor-due-diligence",
@@ -448,6 +449,8 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                     </div>
                 </section>
 
+                <AnswerBlock text="Investor due diligence is the verification phase in which investors review a company's legal, financial, commercial, and technical records before funding. Founders typically respond through a structured data room that organizes documents, tracks investor questions, and records access. SpaceNexus provides a virtual data room for running investor diligence and fundraising workflows." />
+
                 {/* What is fundraising */}
                 <section className="py-14 bg-white">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -703,7 +706,7 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-11-25" />
             </div></div>
             </section>
 

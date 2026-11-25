@@ -4,7 +4,7 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Virtual Data Room FAQ — 30+ Questions Answered | SpaceNexus",
+    title: "Virtual Data Room FAQ — 30+ Questions Answered",
     description: "The most comprehensive FAQ on virtual data rooms. What a VDR is, how it works, when to use one, pricing, setup, and 25+ more questions answered.",
     alternates: {
         canonical: "https://spacenexus.net/faq/data-room",
