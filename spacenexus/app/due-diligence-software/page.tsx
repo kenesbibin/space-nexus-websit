@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Due Diligence Software 2026 | SpaceNexus",
+    title: "Due Diligence Software 2026",
     description: "Compare the best due diligence software platforms. AI document review, structured Q&A, and audit-ready workflows.",
     alternates: {
         canonical: "https://spacenexus.net/due-diligence-software",
@@ -807,6 +807,41 @@ export default function DueDiligenceSoftwarePage() {
                                     )}
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Spreadsheet Alternatives */}
+                <section className="py-16 lg:py-20 bg-[#f8f9fa]" aria-labelledby="spreadsheet-alternatives-heading">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-3xl mb-10">
+                            <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">M&amp;A Workflow</p>
+                            <h2 id="spreadsheet-alternatives-heading" className="text-3xl font-bold text-gray-900 mb-4">
+                                Alternatives to spreadsheets for M&amp;A due diligence
+                            </h2>
+                            <p className="text-gray-600 leading-relaxed">
+                                Spreadsheets can be useful for a small, straightforward review. As deal teams, workstreams, and document requests grow, separate copies and email updates can make it harder to see the current owner, status, and supporting evidence for each item.
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div className="bg-white rounded-2xl border border-gray-100 p-6">
+                                <h3 className="text-lg font-bold text-gray-900 mb-3">Where spreadsheet-led processes can fall short</h3>
+                                <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600">
+                                    <li>Multiple workbook copies can drift out of sync.</li>
+                                    <li>Ownership, due dates, and follow-ups may be spread across tabs and email threads.</li>
+                                    <li>It can be difficult to connect a request to the current document and its review history.</li>
+                                    <li>A tracker alone does not manage access to the confidential files it references.</li>
+                                </ul>
+                            </div>
+                            <div className="bg-white rounded-2xl border border-gray-100 p-6">
+                                <h3 className="text-lg font-bold text-gray-900 mb-3">Choose a process that fits the deal</h3>
+                                <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600">
+                                    <li>For a limited review, keep one controlled tracker with a named owner, status, due date, and evidence link for each request.</li>
+                                    <li>For several workstreams, pair a request tracker with a clearly managed document repository and a separate, organized Q&amp;A log.</li>
+                                    <li>For high-volume or multi-party diligence, evaluate dedicated software for access controls, activity history, exports, and handling of updates.</li>
+                                    <li>Set a regular review cadence so open requests, missing evidence, and unresolved questions have clear next steps.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>

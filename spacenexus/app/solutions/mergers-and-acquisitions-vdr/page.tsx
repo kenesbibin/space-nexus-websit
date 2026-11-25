@@ -5,7 +5,7 @@ import LastUpdated from "../../components/LastUpdated";
 import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "M&A Virtual Data Room Software | SpaceNexus",
+    title: "M&A Virtual Data Room Software",
     description: "Sell-side and buy-side M&A VDR with AI redaction, granular bidder access, structured Q&A, and tamper-evident audit logs. Start your data room in 24 hours.",
     alternates: {
         canonical: "https://spacenexus.net/solutions/mergers-and-acquisitions-vdr",
@@ -272,15 +272,15 @@ export default function MAVDRPage() {
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
                     <div className="flex flex-wrap gap-3 justify-center">
-                        <Link href="/m-a-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                        <Link href="/ma-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
                             M&amp;A Data Room Providers (2026 Ranking) →
                         </Link>
                         <span className="text-gray-300">|</span>
-                        <Link href="/data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                        <Link href="/virtual-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
                             All Data Room Providers →
                         </Link>
                         <span className="text-gray-300">|</span>
-                        <Link href="/ma-document-sharing" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                        <Link href="/solutions/ma-document-sharing" className="text-sm font-semibold text-[#2563eb] hover:underline">
                             M&amp;A Document Sharing →
                         </Link>
                         <span className="text-gray-300">|</span>
@@ -331,7 +331,7 @@ export default function MAVDRPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For law firms →</h3>
                         </Link>
                         <Link
-                            href="/m-a-data-room-providers"
+                            href="/ma-data-room-providers"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Independent ranking of the top providers for M&A transactions.</p>
@@ -345,11 +345,25 @@ export default function MAVDRPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A due diligence checklist →</h3>
                         </Link>
                         <Link
-                            href="/features/vdr-data-room"
+                            href="/features/data-room"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">AI redaction, structured Q&A, and real-time engagement analytics.</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR data room features →</h3>
+                        </Link>
+                        <Link
+                            href="/features/qa"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Feature</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Q&amp;A workflow overview →</h3>
+                        </Link>
+                        <Link
+                            href="/security"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Security</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security information →</h3>
                         </Link>
                     </div>
                 

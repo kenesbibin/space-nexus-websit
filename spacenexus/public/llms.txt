@@ -55,10 +55,13 @@ knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasonin
 - [Case Studies](https://spacenexus.net/case-studies): Customer case studies and outcomes
 - [Demo Request](https://spacenexus.net/demo): Request a live product demo
 - [Get Started](https://spacenexus.net/get-started): Start the free 14-day trial, no credit card required
+- [Due Diligence Software](https://spacenexus.net/due-diligence-software): Guide and comparison for M&A due diligence software
+- [Data Room Due Diligence](https://spacenexus.net/data-room-due-diligence): Guide to due diligence data rooms and preparation
 
 ## Solutions
 
 - [M&A Virtual Data Room](https://spacenexus.net/solutions/mergers-and-acquisitions-vdr): VDR for mergers and acquisitions due diligence
+- [M&A Document Sharing](https://spacenexus.net/solutions/ma-document-sharing): Page about document sharing in M&A workflows
 - [Investor Data Room](https://spacenexus.net/solutions/investor-data-room): Data room for investor relations and fundraising
 - [Startup Fundraising Data Room](https://spacenexus.net/solutions/startup-data-room): Data room for startup fundraising rounds
 - [Secure Document Sharing for Legal](https://spacenexus.net/solutions/secure-document-sharing-for-legal): Document exchange for legal teams
