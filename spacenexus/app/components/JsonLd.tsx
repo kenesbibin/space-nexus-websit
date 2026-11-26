@@ -1,4 +1,5 @@
 import { kindoraCanonicalUrl } from "../kindora/components/kindora-entity";
+import { authorProfiles } from "../blog/data/posts";
 
 export default function JsonLd() {
   const personSchemas = Object.values(authorProfiles).map((m) => ({
@@ -152,6 +153,37 @@ export default function JsonLd() {
     inLanguage: "en-US",
   };
 
+  const peopleSchema = {
+    "@context": "https://schema.org",
+    "@graph": personSchemas,
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://spacenexus.net/#service",
+    name: "SpaceNexus Virtual Data Room",
+    serviceType: "Virtual Data Room",
+    description:
+      "SpaceNexus provides a secure virtual data room for M&A due diligence, capital raising, and legal document sharing, with granular permissions, dynamic watermarking, and a tamper-evident audit trail.",
+    provider: { "@id": "https://spacenexus.net/#organization" },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+    ],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "M&A advisors, law firms, investment banks, and corporate deal teams",
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://spacenexus.net/pricing",
+      availability: "https://schema.org/InStock",
+    },
+  };
+
   return (
     <>
       <script
@@ -164,6 +196,12 @@ export default function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(peopleSchema),
         }}
       />
       <script

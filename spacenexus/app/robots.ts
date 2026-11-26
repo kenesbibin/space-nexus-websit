@@ -18,6 +18,7 @@ export default function robots(): MetadataRoute.Robots {
     "/__preview/",
     "/kindora/email-click",
   ];
+  const restrictedPaths = disallow;
 
   return {
     rules: [
