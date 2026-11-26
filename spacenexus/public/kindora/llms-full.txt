@@ -10,7 +10,8 @@
 **Product:** Kindora (Kindora NGO OS)
 **Developer:** SpaceNexus
 **Website:** https://spacenexus.net/kindora
-**Founded:** 2022
+**Parent company founded:** 2022
+**Kindora launched:** 2024
 
 Kindora is an all-in-one nonprofit management platform that brings donor CRM, grants management, case management, accounting, volunteer coordination, and fundraising together in a single system — purpose-built for nonprofits, NGOs, charities, and community organizations.
 

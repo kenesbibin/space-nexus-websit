@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { notFound } from "next/navigation";
 import { getPostBySlug, blogPosts } from "../data/posts";
+import { createBlogPostingSchema } from "../data/article-schema";
 import BlogPostContent from "./BlogPostContent";
-import LastUpdated from "../../../components/LastUpdated";
+
+export const dynamicParams = false;
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -20,6 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title: "Article Not Found",
       description: "The article you are looking for could not be found.",
+      robots: { index: false, follow: false },
     };
   }
 
@@ -52,46 +55,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  if (!post) notFound();
 
-  const blogPostingSchema = post
-    ? {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
-        description: post.excerpt,
-        image: post.image,
-        datePublished: post.publishedAt,
-        dateModified: post.dateModified ?? post.publishedAt,
-        wordCount: Math.round(post.readingTime * 200),
-        inLanguage: "en-US",
-        articleSection: post.category,
-        author: {
-          "@type": "Person",
-          name: post.author.name,
-          url: post.author.url ?? "https://spacenexus.net/kindora/about",
-        },
-        publisher: {
-          "@type": "Organization",
-          "@id": "https://spacenexus.net/kindora/#organization",
-          name: "Kindora",
-        },
-        url: `https://spacenexus.net/kindora/blog/${slug}`,
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": `https://spacenexus.net/kindora/blog/${slug}`,
-        },
-      }
-    : null;
+  const blogPostingSchema = createBlogPostingSchema(post);
 
   return (
     <>
-      {blogPostingSchema && (
-        <Script
-          id={`blog-${slug}-jsonld`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
-        />
-      )}
+      <script
+        id={`blog-${slug}-jsonld`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogPostingSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <BlogPostContent slug={slug} />
     </>
   );

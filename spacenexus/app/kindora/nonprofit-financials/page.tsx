@@ -1,7 +1,7 @@
+import { createKindoraServiceSchema } from "../components/commercial-schema";
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import type { Metadata } from "next";
-import Script from "next/script";
-import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Nonprofit Financial Management Software | Kindora",
@@ -31,38 +31,32 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Kindora Nonprofit Financial Management",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "Nonprofit financial management software for budget tracking, expense management, financial reporting, cost allocation, and audit preparation.",
-      url: "https://spacenexus.net/kindora/nonprofit-financials",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free trial available",
-      },
-    },
+    createKindoraServiceSchema({ name: "Kindora Nonprofit Financial Management Service", description: "Financial management platform for nonprofits: budget tracking, expense management, financial reporting, cost allocation, and audit-ready records. Built for nonprofit accounting needs.", category: "Nonprofit financial management", url: "https://spacenexus.net/kindora/nonprofit-financials" }),
     {
       "@type": "FAQPage",
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is nonprofit financial management software?",
+          name: "How is nonprofit financial management different from regular accounting?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Nonprofit financial management software helps organizations track budgets, manage expenses, allocate costs across programs, generate financial reports, and maintain audit-ready records. It is designed for fund accounting requirements unique to nonprofits.",
+            text: "Nonprofits use fund accounting to track restricted vs. unrestricted funds, must allocate costs across programs for grant reporting, and need to demonstrate fiscal compliance to funders and board members. Kindora is built specifically for these requirements rather than adapting for-profit accounting software.",
           },
         },
         {
           "@type": "Question",
-          name: "How does cost allocation work for nonprofits?",
+          name: "Can Kindora generate audit-ready financial statements?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Cost allocation distributes shared expenses across multiple programs or grants based on predefined rules. Kindora automates this process, ensuring every dollar is properly attributed for grant reporting and compliance purposes.",
+            text: "Yes. Kindora generates statement of activities, statement of financial position, cash flow statements, and functional expense allocations that meet GAAP and audit requirements. All transactions maintain a complete audit trail with supporting documentation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does Kindora integrate with QuickBooks or other accounting tools?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora includes API access for integration with accounting platforms. The platform also serves as a complete financial management solution, reducing the need for separate accounting software by handling fund accounting, cost allocation, and financial reporting natively.",
           },
         },
       ],
@@ -117,8 +111,7 @@ const relatedPages = [
 export default function NonprofitFinancialsPage() {
   return (
     <>
-      <BreadcrumbSchema />
-      <Script id="nonprofit-financials-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-teal-50 to-white py-20 px-4">
           <div className="max-w-5xl mx-auto">
@@ -126,7 +119,7 @@ export default function NonprofitFinancialsPage() {
               Nonprofit Financial Management Software
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mb-8">
-              Kindora's financial management platform handles the unique accounting needs of nonprofits: fund accounting, cost allocation across programs and grants, budget tracking, and audit-ready financial reporting. Replace disconnected accounting tools with a unified system designed for nonprofit finance teams.
+              Kindora&apos;s financial management platform handles nonprofit finance workflows such as fund tracking, cost allocation across programs and grants, budget monitoring, and financial reporting. Replace disconnected accounting tools with a unified system designed for nonprofit finance teams.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/kindora/pricing" className="bg-[#2563eb] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1d4ed8] transition-colors">
@@ -139,6 +132,8 @@ export default function NonprofitFinancialsPage() {
           </div>
         </section>
 
+      <AnswerReadyBlock page="financial" />
+
         <section className="py-16 px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Nonprofit Financial Management Matters</h2>
@@ -146,7 +141,7 @@ export default function NonprofitFinancialsPage() {
               Nonprofit financial management is fundamentally different from for-profit accounting. Nonprofits must track funds by restricted and unrestricted categories, allocate costs across programs and grants, and produce financial reports that meet both GAAP and grantor requirements.
             </p>
             <p className="text-gray-600 mb-12 max-w-3xl">
-              Kindora is built for these requirements from the ground up. Budget management, expense tracking, cost allocation, and financial reporting are integrated with your program and grant data, so financial reports always reflect the full picture of your nonprofit's operations.
+              Kindora is designed for these workflows. Budget management, expense tracking, cost allocation, and financial reporting are integrated with program and grant data, so teams can review their nonprofit&apos;s operations in one place.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Core Features</h2>
@@ -198,7 +193,7 @@ export default function NonprofitFinancialsPage() {
         <section className="py-12 px-4 bg-[#2563eb] text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Simplify your financial management</h2>
-            <p className="text-blue-100 mb-6">Start your free trial today. No credit card required.</p>
+            <p className="text-blue-100 mb-6">Start your free Starter plan today. No credit card required.</p>
             <Link href="/kindora/demo" className="inline-block bg-white text-[#2563eb] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get started free
             </Link>

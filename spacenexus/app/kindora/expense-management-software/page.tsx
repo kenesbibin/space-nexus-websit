@@ -95,7 +95,7 @@ const serviceSchema = {
   description: "Expense management software for nonprofits. Track, categorize, and reconcile expenses across programs, grants, and departments.",
   url: "https://spacenexus.net/kindora/expense-management-software",
   serviceType: "Expense Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -115,7 +115,7 @@ const faqSchema = {
     {
       "@type": "Question",
       name: "How does Kindora handle grant-specific expenses?",
-      approved: {
+      acceptedAnswer: {
         "@type": "Answer",
         text: "Kindora lets you tag every expense to a specific grant, program, or fund. The system enforces grant-specific expense rules, tracks remaining budgets in real time, and generates funder-ready expense reports that satisfy compliance requirements.",
       },
@@ -125,7 +125,7 @@ const faqSchema = {
       name: "Can staff submit expenses from mobile devices?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Kindora provides mobile expense submission with photo receipt capture. Staff can photograph receipts on their phones, and AI auto-extracts vendor, amount, date, and category. Expenses route through approval workflows immediately — no office required.",
+        text: "Yes. Kindora provides mobile expense submission with photo receipt capture. Staff can photograph receipts on their phones, and AI auto-extracts vendor, amount, date, and category. Expenses route through approval workflows immediately.",
       },
     },
     {
@@ -133,7 +133,7 @@ const faqSchema = {
       name: "How quickly can we implement expense management software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora expense management software can be configured within 24 hours. Set up approval workflows, configure expense policies, invite staff, and begin submitting expenses the same day. Pre-built nonprofit expense templates accelerate setup.",
+        text: "Kindora expense management software can be configured within 24 hours. Set up approval workflows, configure expense policies, invite staff, and begin submitting expenses the same day.",
       },
     },
   ],

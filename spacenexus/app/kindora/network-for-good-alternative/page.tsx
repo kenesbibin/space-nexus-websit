@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Network for Good Alternative | Better Donor Management",
@@ -62,9 +63,9 @@ const jsonLd = {
       url: "https://spacenexus.net/kindora/network-for-good-alternative",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan for up to 5 team members; paid plans are custom-quoted",
       },
       featureList: [
         "Donor CRM & tracking",
@@ -239,7 +240,7 @@ const whySwitchReasons = [
   {
     title: "No Consultants Required",
     description:
-      "Network for Good is easy to use — and so is Kindora. Get started in 30 minutes with no implementation consultants or training fees.",
+      "Network for Good is easy to use — and so is Kindora. Starter signup is self-service; any implementation or onboarding needs should be confirmed with sales.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -364,8 +365,8 @@ export default function NetworkForGoodAlternativePage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Setup in 30 minutes",
-                  "Cancel anytime",
+                  "Self-service Starter signup; setup time varies by workflow",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg
@@ -872,7 +873,7 @@ export default function NetworkForGoodAlternativePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Switch to Kindora — Free Trial
+              Explore Kindora Starter — Free plan
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
@@ -979,12 +980,13 @@ export default function NetworkForGoodAlternativePage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Ongoing free Starter plan for up to 5 team members · Paid plans by custom quote
           </p>
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <ComparisonMethodology />
+                <LastUpdated date="2026-11-26" />
             </div></div>
       </section>
     </>

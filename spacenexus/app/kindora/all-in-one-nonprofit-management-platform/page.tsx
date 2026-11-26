@@ -50,19 +50,19 @@ const benefits = [
     description: "Donor management, fundraising, grants, volunteers, events, programmes, reporting, and automation — all in one platform. No more juggling 5-10 tools.",
   },
   {
-    metric: "60%",
+    metric: "Compare",
     title: "Lower Software Costs",
-    description: "Replace multiple subscriptions with one affordable platform. Most nonprofits save thousands per year by consolidating tools.",
+    description: "Compare the Kindora plan that fits your team with the subscriptions you currently use. Savings depend on plan selection and the tools being replaced.",
   },
   {
-    metric: "100%",
+    metric: "Connected",
     title: "Unified Data",
-    description: "Every piece of data lives in one system. No more duplicate records, export/import headaches, or data silos between departments.",
+    description: "Kindora brings donor, grant, program, and financial workflows into one platform, reducing the need to move information between separate tools.",
   },
   {
-    metric: "3x",
+    metric: "One platform",
     title: "Team Productivity",
-    description: "One platform means one login, one interface, one training process. Your team accomplishes more with less time learning new tools.",
+    description: "Teams work across a shared interface. Training time and productivity outcomes depend on each organization’s setup and workflow.",
   },
 ];
 
@@ -144,7 +144,7 @@ const faqs = [
   {
     question: "How long does it take to set up Kindora?",
     answer:
-      "Most nonprofits are up and running with Kindora within 30 minutes. Our onboarding team helps you import existing data, configure your workflows, and train your team. You can start with the features you need and add more as your organisation grows.",
+      "Most nonprofits are up and running with Kindora based on your data and workflow needs. Our onboarding team helps you import existing data, configure your workflows, and train your team. You can start with the features you need and add more as your organisation grows.",
   },
 ];
 
@@ -166,7 +166,7 @@ const jsonLd = {
       description:
         "All-in-one nonprofit management platform — donor management, fundraising, grants, volunteers, and reporting.",
       url: "https://spacenexus.net/kindora/all-in-one-nonprofit-management-platform",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -229,7 +229,7 @@ export default function AllInOneNonprofitManagementPlatformPage() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -440,7 +440,7 @@ export default function AllInOneNonprofitManagementPlatformPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

@@ -64,7 +64,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Cloud-based donor CRM",
@@ -122,10 +122,10 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "Does Kindora offer a free trial?",
+          name: "Does Kindora offer a free Starter plan?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora offers a free trial with no credit card required. You can set up your cloud nonprofit CRM in about 30 minutes and start managing donors, campaigns, and grants immediately.",
+            text: "Yes. Kindora offers a free Starter plan with no credit card required. You can set up your cloud nonprofit CRM in about time varies by data and workflow needs and start managing donors, campaigns, and grants immediately.",
           },
         },
       ],
@@ -285,9 +285,9 @@ const faqs = [
       "Yes. Kindora is fully responsive and works on any device — desktop, tablet, or smartphone. Since it's cloud-based, your data syncs in real time across all devices.",
   },
   {
-    question: "Does Kindora offer a free trial?",
+    question: "Does Kindora offer a free Starter plan?",
     answer:
-      "Yes. Kindora offers a free trial with no credit card required. You can set up your cloud nonprofit CRM in about 30 minutes and start managing donors, campaigns, and grants immediately.",
+      "Yes. Kindora offers a free Starter plan with no credit card required. You can set up your cloud nonprofit CRM in about time varies by data and workflow needs and start managing donors, campaigns, and grants immediately.",
   },
 ];
 
@@ -370,8 +370,8 @@ export default function CloudCRMForNonprofitsPage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Setup in 30 minutes",
-                  "Cancel anytime",
+                  "Setup time varies by data and workflows",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg
@@ -847,7 +847,7 @@ export default function CloudCRMForNonprofitsPage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Free Starter plan · No credit card · Setup time varies by data and workflows · See current plan terms on the pricing page
           </p>
         
             {/* Last Updated */}

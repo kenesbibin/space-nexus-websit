@@ -213,7 +213,7 @@ const faqs = [
   {
     question: "How is Kindora different from Salesforce Nonprofit?",
     answer:
-      "Salesforce Nonprofit Cloud requires expensive consultants, months of implementation, and ongoing customization costs that can exceed $50,000. Kindora is ready to use in under 30 minutes, costs a fraction of the price, and includes nonprofit-specific features like grant lifecycle management, client case management, volunteer coordination, and cost allocation — features that require expensive add-ons in Salesforce.",
+      "Salesforce Nonprofit Cloud requires expensive consultants, months of implementation, and ongoing customization costs that can exceed $50,000. Kindora is ready to use with setup time depending on your data and workflow needs, costs a fraction of the price, and includes nonprofit-specific features like grant lifecycle management, client case management, volunteer coordination, and cost allocation — features that require expensive add-ons in Salesforce.",
   },
   {
     question:
@@ -229,7 +229,7 @@ const faqs = [
   {
     question: "Is Kindora CRM affordable for small nonprofits?",
     answer:
-      "Absolutely. Kindora is priced specifically for small to mid-sized nonprofits. It includes enterprise-grade constituent management features — donor tracking, volunteer management, grant tracking, campaign management, financial management, and impact reporting — at a price nonprofits can actually afford. A free trial is available with no credit card required.",
+      "Absolutely. Kindora is priced specifically for small to mid-sized nonprofits. It includes enterprise-grade constituent management features — donor tracking, volunteer management, grant tracking, campaign management, financial management, and impact reporting — at a price nonprofits can actually afford. A free Starter plan is available with no credit card required.",
   },
   {
     question: "Can I import my existing constituent data?",
@@ -253,7 +253,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Donor profiles and giving history",
@@ -356,8 +356,8 @@ export default function ConstituentRelationshipManagementPage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Set up in 30 minutes",
-                  "Cancel anytime",
+                  "Setup time varies by data and workflows",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg

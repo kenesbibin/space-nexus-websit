@@ -96,9 +96,7 @@ const serviceSchema = {
     url: "https://spacenexus.net/kindora/solutions/housing-nonprofits",
     serviceType: "Housing Nonprofit Management Platform",
     provider: {
-        "@type": "Organization",
-        name: "Kindora",
-        url: "https://spacenexus.net/kindora",
+        "@id": "https://spacenexus.net/kindora/#organization",
     },
     areaServed: { "@type": "Place", name: "Worldwide" },
     offers: {
@@ -287,7 +285,7 @@ export default function HousingNonprofitsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center px-8 py-4 text-base font-semibold text-sky-700 bg-white hover:bg-sky-50 rounded-full shadow-lg transition-all duration-300"
                         >
-                            Start Free Trial
+                            Explore Free Starter Plan
                         </a>
                         <Link
                             href="/kindora/contact"

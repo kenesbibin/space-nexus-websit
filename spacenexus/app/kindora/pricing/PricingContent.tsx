@@ -1,8 +1,11 @@
 "use client";
 
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import Link from "next/link";
 import { useState } from "react";
 import LastUpdated from "../../components/LastUpdated";
+import TrustSignals from "../components/TrustSignals";
+import { pricingFaqs, pricingPlanFaqs } from "./pricing-faqs";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -61,7 +64,7 @@ const pricingTiers = [
     name: "Enterprise",
     description: "For large organizations with advanced requirements",
     price: "Custom",
-    priceNote: "Volume pricing available",
+    priceNote: "Custom volume quote",
     badge: null,
     featured: false,
     color: "border-gray-200",
@@ -133,53 +136,10 @@ const featureCategories = [
   },
 ];
 
-const faqs = [
-  {
-    question: "What types of nonprofits is Kindora designed for?",
-    answer:
-      "Kindora is designed for nonprofits of all sizes — community service organizations, charitable foundations, NGOs, social enterprises, and any mission-driven organization. From a 2-person team to a 200-person organization, Kindora scales with you.",
-  },
-  {
-    question: "Can I export data for board reports?",
-    answer:
-      "Yes. Kindora supports comprehensive exports including Excel (XLSX), branded PDF reports, and JSON data backups. You can generate Statement of Activities reports and custom dashboards tailored for board presentations in one click.",
-  },
-  {
-    question: "Does Kindora support grant compliance reporting?",
-    answer:
-      "Absolutely. Kindora includes full grant lifecycle tracking (prospect → award → close), cost allocation across grants and programs, and compliance-ready financial reporting to help you meet any grantor's requirements.",
-  },
-  {
-    question: "What payment methods are tracked for donations?",
-    answer:
-      "Kindora supports tracking donations made via Cash, Check, Credit Card, Bank Transfer, Online payments, ACH, and Wire transfers. You can also track receipt status and manage one-time and recurring donations.",
-  },
-  {
-    question: "Is there mobile support?",
-    answer:
-      "Kindora is built with a fully responsive design. Access your nonprofit data on tablets or phones from any modern browser — no app install required.",
-  },
-  {
-    question: "How is data secured?",
-    answer:
-      "Kindora uses session-based authentication with configurable timeouts, role-based access control (RBAC), and is built on modern, secure infrastructure. Two-factor authentication (2FA) infrastructure is ready to activate on request.",
-  },
-  {
-    question: "Can I try before committing to a paid plan?",
-    answer:
-      "Yes. The Starter plan is completely free and includes core donor and client management features. You can also request a live demo of Professional features before upgrading — no credit card required.",
-  },
-  {
-    question: "How does Kindora compare to Bloomerang or Salesforce NPSP?",
-    answer:
-      "Kindora uniquely combines donor management, grant tracking, case management, nonprofit accounting, and team tools in one affordable platform — something no single competitor offers. See our detailed comparison at the link below.",
-  },
-];
-
 const trustItems = [
   { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "No credit card required" },
-  { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Set up in under 30 min" },
-  { icon: "M6 18L18 6M6 6l12 12", text: "Cancel anytime" },
+  { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Starter access is self-service" },
+  { icon: "M6 18L18 6M6 6l12 12", text: "Paid plan scope confirmed with sales" },
   { icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z", text: "Your data, always" },
 ];
 
@@ -255,7 +215,7 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-const lastUpdated = "May 15, 2026";
+const lastUpdated = "November 26, 2026";
 export default function PricingContent() {
   return (
     <main className="pt-20 lg:pt-24">
@@ -282,7 +242,7 @@ export default function PricingContent() {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
-            Start Kindora free, scale as your nonprofit grows. No hidden fees, no surprises — just
+            Start with the free Starter plan, then choose a custom-quoted paid plan as your needs grow — just
             tools that help you do more mission.
           </p>
           <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
@@ -303,6 +263,8 @@ export default function PricingContent() {
           </div>
         </div>
       </section>
+
+      <AnswerReadyBlock page="pricing" />
 
       {/* ── Pricing Cards ────────────────────────────────────────────────── */}
       <section className="pb-24 bg-white">
@@ -337,7 +299,7 @@ export default function PricingContent() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900">{tier.name}</h3>
+                      <h2 className="text-lg font-bold text-gray-900">{tier.name}</h2>
                     </div>
                   </div>
 
@@ -416,23 +378,38 @@ export default function PricingContent() {
 
           {/* Below cards note */}
           <p className="text-center text-sm text-gray-500 mt-8">
-            All plans include{" "}
-            <span className="font-semibold text-gray-700">RBAC security</span>,{" "}
-            <span className="font-semibold text-gray-700">99.9% uptime</span>, and{" "}
-            <span className="font-semibold text-gray-700">cloud-based access</span> from any device.
+            All plans include organization-level role permissions, encrypted connections, and cloud-based access.
+            Final control availability may vary by plan; confirm requirements with your team before deployment.
           </p>
         </div>
       </section>
 
       {/* ── Social Proof / Value bar ──────────────────────────────────────── */}
+      <section className="bg-gray-50 py-16" aria-labelledby="plan-facts">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 id="plan-facts" className="mb-3 text-2xl font-bold text-gray-900">Plan facts at a glance</h2>
+          <p className="mb-6 text-sm text-gray-600">Current terms checked November 26, 2026. Starter is an ongoing free plan; Kindora does not advertise a time-limited free Starter plan. Ask Kindora for a written quote and implementation scope for custom-priced plans.</p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <table className="w-full min-w-[850px] text-left text-sm">
+              <thead className="bg-gray-100 text-gray-700"><tr>{["Plan", "Price model", "Team limit", "Included modules", "Trial / access", "Implementation & support", "Best for"].map((heading) => <th key={heading} className="p-4 font-semibold">{heading}</th>)}</tr></thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr><th scope="row" className="p-4 font-semibold">Starter</th><td className="p-4">Free indefinitely</td><td className="p-4">Up to 5 team members</td><td className="p-4">Donors and donations, client and service tracking, basic reporting and exports</td><td className="p-4">No trial period; ongoing Starter access</td><td className="p-4">Self-service signup; email support and community resources; core modules and basic exports</td><td className="p-4">Small nonprofits needing core donor and client records</td></tr>
+                <tr><th scope="row" className="p-4 font-semibold">Professional</th><td className="p-4">Custom quote; contact sales</td><td className="p-4">Up to 25 team members</td><td className="p-4">All modules, including grants, campaigns, accounting, cost allocation, and advanced reporting</td><td className="p-4">No published time-limited trial; request a demo</td><td className="p-4">Scope and onboarding requirements confirmed with sales; priority email support</td><td className="p-4">Growing nonprofits needing integrated operational workflows</td></tr>
+                <tr><th scope="row" className="p-4 font-semibold">Enterprise</th><td className="p-4">Custom volume quote; contact sales</td><td className="p-4">Unlimited team members</td><td className="p-4">Professional modules plus integrations, custom reports, and advanced security options</td><td className="p-4">No published time-limited trial; request a demo</td><td className="p-4">Migration assistance, training, dedicated support, and SLA; confirm scope and terms in quote</td><td className="p-4">Larger nonprofits with migration, integration, or service-level needs</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#1d4ed8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { value: "500+", label: "Nonprofits using Kindora" },
-              { value: "$2M+", label: "Grants tracked on platform" },
-              { value: "10 hrs", label: "Saved per team per week" },
-              { value: "12", label: "Integrated modules" },
+              { value: "Free", label: "Starter plan · up to 5 team members" },
+              { value: "Custom", label: "Professional · up to 25 team members" },
+              { value: "Custom", label: "Enterprise · unlimited team members" },
+              { value: "3 plans", label: "Starter, Professional, Enterprise" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl lg:text-4xl font-black text-white mb-1">{stat.value}</p>
@@ -440,6 +417,7 @@ export default function PricingContent() {
               </div>
             ))}
           </div>
+          <p className="text-center text-xs text-blue-100 mt-6">Plan details checked November 26, 2026 · Owner: SpaceNexus product team · <a className="underline" href="/kindora/pricing#compare">See current plan comparison</a></p>
         </div>
       </section>
 
@@ -570,7 +548,7 @@ export default function PricingContent() {
           </div>
 
           <div className="space-y-3">
-            {faqs.map((faq, i) => (
+            {pricingFaqs.map((faq, i) => (
               <FaqItem key={faq.question} question={faq.question} answer={faq.answer} index={i} />
             ))}
           </div>
@@ -659,42 +637,19 @@ export default function PricingContent() {
             </h2>
           </div>
           <div className="space-y-5">
-            {[
-              {
-                q: "Is there really a free plan?",
-                a: "Yes. The Starter plan is completely free, forever. No credit card required. It covers the core modules for small nonprofits getting started — donor management, client tracking, and basic reporting.",
-              },
-              {
-                q: "How is Kindora's Professional plan priced?",
-                a: "Professional pricing is based on your organization's size and needs. We offer nonprofit-friendly rates and do not charge per-module — all features are included. Contact us for a custom quote.",
-              },
-              {
-                q: "Can I get a nonprofit discount?",
-                a: "Yes. Kindora is purpose-built for nonprofits and our pricing reflects that. We offer additional discounts for organizations serving high-need communities. Reach out to discuss your situation.",
-              },
-              {
-                q: "Do you offer data migration from our current tools?",
-                a: "Yes. Enterprise plan includes data migration assistance. For other plans, we offer import tools and documentation to help you move your existing donor, client, and grant data into Kindora.",
-              },
-              {
-                q: "Is there a long-term contract required?",
-                a: "No. Kindora does not require annual contracts. You can start month-to-month and upgrade, downgrade, or cancel at any time.",
-              },
-              {
-                q: "Can we try Kindora before committing to a paid plan?",
-                a: "Absolutely. The Starter plan is free forever and includes core modules. You can also request a personalized demo with our team before making any decision.",
-              },
-              {
-                q: "How does Kindora handle compliance for grant reporting?",
-                a: "Kindora includes built-in grant lifecycle management, cost allocation, and financial reporting tools designed for nonprofit compliance requirements. You can generate grantor reports directly from the platform.",
-              },
-            ].map((faq) => (
-              <div key={faq.q} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
-                <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
+            {pricingPlanFaqs.map((faq) => (
+              <div key={faq.question} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
+                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <TrustSignals compact />
         </div>
       </section>
 
@@ -732,17 +687,6 @@ export default function PricingContent() {
             </a>
           </div>
 
-          {/* Mini trust row */}
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-gray-500">
-            {["Data encryption", "RBAC security", "99.9% uptime", "24/7 support"].map((item) => (
-              <span key={item} className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
-                {item}
-              </span>
-            ))}
-          </div>
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

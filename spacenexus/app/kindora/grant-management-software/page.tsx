@@ -1,6 +1,7 @@
+import { createKindoraServiceSchema } from "../components/commercial-schema";
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import type { Metadata } from "next";
-import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
@@ -129,16 +130,7 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Kindora Grant Management Software",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "Grant management software for nonprofits — track applications, manage deadlines, automate reporting, and streamline the grant lifecycle.",
-      url: "https://spacenexus.net/kindora/grant-management-software",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
-    },
+    createKindoraServiceSchema({ name: "Kindora Grant Management Service", description: "Kindora grant management software helps nonprofits track applications, manage deadlines, automate reporting, and streamline the entire grant lifecycle from discovery to closeout.", category: "Nonprofit grant lifecycle management", url: "https://spacenexus.net/kindora/grant-management-software" }),
     {
       "@type": "FAQPage",
       mainEntity: faqs.map((faq) => ({
@@ -153,7 +145,7 @@ const jsonLd = {
 export default function GrantManagementSoftwarePage() {
   return (
     <>
-      <Script id="grant-management-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* Hero */}
       <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
@@ -200,7 +192,7 @@ export default function GrantManagementSoftwarePage() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -224,7 +216,7 @@ export default function GrantManagementSoftwarePage() {
                     <span className="text-sm font-semibold text-gray-900">Grant Pipeline</span>
                   </div>
                   <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">
-                    {new Date().getFullYear()} Active
+                    Illustrative sample data
                   </span>
                 </div>
 
@@ -265,6 +257,8 @@ export default function GrantManagementSoftwarePage() {
           </div>
         </div>
       </section>
+
+      <AnswerReadyBlock page="grant" />
 
       {/* Stats */}
       <section className="py-16 bg-white border-t border-gray-100">

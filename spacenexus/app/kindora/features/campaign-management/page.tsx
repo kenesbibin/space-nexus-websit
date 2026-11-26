@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Campaign Management Software for NGOs",
@@ -98,21 +99,7 @@ const features = [
 export default function CampaignManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Campaign Management Software", item: "https://spacenexus.net/kindora/features/campaign-management" },
-            ],
-          }),
-        }}
-      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,7 +129,7 @@ export default function CampaignManagementPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Campaign Management
+              Nonprofit Campaign Management Software
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
@@ -372,6 +359,8 @@ export default function CampaignManagementPage() {
         </div>
       </section>
 
+      <FeatureIntentContent feature="campaign-management" />
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -401,7 +390,7 @@ export default function CampaignManagementPage() {
               />
             </svg>
           </Link>
-        
+
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
                 <LastUpdated date="2026-07-19" />

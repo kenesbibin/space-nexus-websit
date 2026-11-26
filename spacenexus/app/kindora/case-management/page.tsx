@@ -1,7 +1,7 @@
+import { createKindoraServiceSchema } from "../components/commercial-schema";
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import type { Metadata } from "next";
-import Script from "next/script";
-import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Case Management & Program Management Software | Kindora",
@@ -31,38 +31,32 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Kindora Case & Program Management",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "Nonprofit case management and program management platform for client intake, service delivery, outcome tracking, and program reporting.",
-      url: "https://spacenexus.net/kindora/case-management",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free trial available",
-      },
-    },
+    createKindoraServiceSchema({ name: "Kindora Case Management Service", description: "Nonprofit case management and program management platform for client intake, service delivery, outcome tracking, and program reporting. Built for social services and community organizations.", category: "Nonprofit case and program management", url: "https://spacenexus.net/kindora/case-management" }),
     {
       "@type": "FAQPage",
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is case management software for nonprofits?",
+          name: "What types of nonprofits benefit from case management software?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Case management software helps nonprofits manage client intake, track service delivery, monitor program outcomes, and generate impact reports. It replaces paper files and spreadsheets with a centralized system for managing client relationships and program participation.",
+            text: "Social service organizations, community action agencies, youth programs, housing nonprofits, health and human services organizations, and any nonprofit that delivers direct services to clients can benefit from case management software to track intake, services, and outcomes.",
           },
         },
         {
           "@type": "Question",
-          name: "How does program management software improve outcomes?",
+          name: "Can I track multiple funding sources for a single program?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Program management software enables nonprofits to track participant progress, measure outcome achievement, identify service gaps, and generate data-driven impact reports. This helps organizations demonstrate effectiveness to funders and improve program design over time.",
+            text: "Yes. Kindora supports cost allocation and budget tracking across multiple funding sources within a single program. This is essential for organizations that blend funding from federal grants, state contracts, and private foundations to deliver services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does outcome tracking work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You define measurable outcomes for each program, then track participant progress against those outcomes. Kindora calculates completion rates, generates outcome-based reports, and helps you identify which program elements are most effective at achieving desired results.",
           },
         },
       ],
@@ -121,8 +115,7 @@ const relatedPages = [
 export default function CaseManagementPage() {
   return (
     <>
-      <BreadcrumbSchema />
-      <Script id="case-management-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-emerald-50 to-white py-20 px-4">
           <div className="max-w-5xl mx-auto">
@@ -142,6 +135,8 @@ export default function CaseManagementPage() {
             </div>
           </div>
         </section>
+
+      <AnswerReadyBlock page="case" />
 
         <section className="py-16 px-4">
           <div className="max-w-5xl mx-auto">
@@ -202,7 +197,7 @@ export default function CaseManagementPage() {
         <section className="py-12 px-4 bg-[#2563eb] text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Transform your program management</h2>
-            <p className="text-blue-100 mb-6">Start your free trial today. No credit card required.</p>
+            <p className="text-blue-100 mb-6">Start your free Starter plan today. No credit card required.</p>
             <Link href="/kindora/demo" className="inline-block bg-white text-[#2563eb] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get started free
             </Link>

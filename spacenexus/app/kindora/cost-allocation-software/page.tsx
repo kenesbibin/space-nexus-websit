@@ -95,7 +95,7 @@ const serviceSchema = {
   description: "Cost allocation software for nonprofits. Automatically distribute shared costs across programs, departments, and grants.",
   url: "https://spacenexus.net/kindora/cost-allocation-software",
   serviceType: "Cost Allocation Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -109,7 +109,7 @@ const faqSchema = {
       name: "What is cost allocation software for nonprofits?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Cost allocation software automates the distribution of shared and indirect costs — such as facilities, IT, and administrative overhead — across programs, grants, departments, and cost centers. It replaces manual spreadsheet-based allocation with rule-driven automation, full audit trails, and funder-compliant reporting.",
+        text: "Cost allocation software automates the distribution of shared and indirect costs — such as facilities, IT, and administrative overhead — across programs, grants, departments, and cost centers. It replaces manual spreadsheets with rule-driven automation, full audit trails, and funder-compliant reporting.",
       },
     },
     {
@@ -125,7 +125,7 @@ const faqSchema = {
       name: "What allocation methods does Kindora support?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora supports direct allocation, step-down allocation, reciprocal allocation, and custom driver-based methods. Allocate based on headcount, square footage, usage, or any custom metric. Multi-tier cascade models allow complex hierarchies where costs flow from top-level pools through departments to individual grants and programs.",
+        text: "Kindora supports direct allocation, step-down allocation, reciprocal allocation, and custom driver-based methods. Allocate based on headcount, square footage, usage, or any custom metric. Multi-tier cascade models allow complex hierarchies.",
       },
     },
     {
@@ -133,7 +133,7 @@ const faqSchema = {
       name: "How quickly can we implement cost allocation software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora cost allocation software can be configured within 24 hours. Import existing allocation data from Excel, configure allocation bases and rules, map cost pools to departments, and run your first allocation cycle immediately.",
+        text: "Kindora cost allocation software can be configured within 24 hours. Import existing allocation data from Excel, configure allocation bases and rules, map cost pools, and run your first allocation cycle immediately.",
       },
     },
   ],

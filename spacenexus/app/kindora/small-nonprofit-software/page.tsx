@@ -78,7 +78,7 @@ const features = [
   },
   {
     title: "Easy Setup",
-    description: "Get started in 30 minutes with guided onboarding — no IT team, no consultants, no complexity.",
+    description: "Get started in time varies by data and workflow needs with guided onboarding — no IT team, no consultants, no complexity.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -104,7 +104,7 @@ const faqs = [
   {
     question: "Do I need technical skills or an IT team?",
     answer:
-      "No. Kindora is designed for nonprofit staff, not IT departments. If you can use email, you can use Kindora. Setup takes about 30 minutes with guided onboarding — no developer or consultant required.",
+      "No. Kindora is designed for nonprofit staff, not IT departments. If you can use email, you can use Kindora. Setup takes about time varies by data and workflow needs with guided onboarding — no developer or consultant required.",
   },
   {
     question: "Can I start with just the basics and grow later?",
@@ -134,7 +134,7 @@ const jsonLd = {
       description:
         "Affordable nonprofit software for small organizations — manage donors, grants, volunteers, and campaigns in one platform.",
       url: "https://spacenexus.net/kindora/small-nonprofit-software",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -196,7 +196,7 @@ export default function SmallNonprofitSoftwarePage() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

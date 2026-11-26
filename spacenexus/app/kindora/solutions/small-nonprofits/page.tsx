@@ -96,9 +96,7 @@ const serviceSchema = {
     url: "https://spacenexus.net/kindora/solutions/small-nonprofits",
     serviceType: "Nonprofit Management Software for Small Organizations",
     provider: {
-        "@type": "Organization",
-        name: "Kindora",
-        url: "https://spacenexus.net/kindora",
+        "@id": "https://spacenexus.net/kindora/#organization",
     },
     areaServed: { "@type": "Place", name: "Worldwide" },
     offers: {
@@ -317,7 +315,7 @@ export default function SmallNonprofitsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center px-8 py-4 text-base font-semibold text-[#2563eb] bg-white hover:bg-blue-50 rounded-full shadow-lg transition-all duration-300"
                         >
-                            Start Free Trial
+                            Explore Free Starter Plan
                         </a>
                         <Link
                             href="/kindora/pricing"

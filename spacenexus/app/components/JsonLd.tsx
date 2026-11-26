@@ -1,4 +1,4 @@
-import { authorProfiles } from "../blog/data/posts";
+import { kindoraCanonicalUrl } from "../kindora/components/kindora-entity";
 
 export default function JsonLd() {
   const personSchemas = Object.values(authorProfiles).map((m) => ({
@@ -88,21 +88,57 @@ export default function JsonLd() {
             "@id": "https://spacenexus.net/#software",
             name: "SpaceNexus VDR",
             applicationCategory: "BusinessApplication",
+            operatingSystem: "Web Browser",
             url: "https://spacenexus.net",
             publisher: { "@id": "https://spacenexus.net/#organization" },
           },
         },
         {
           "@type": "Offer",
-          itemOffered: {
-            "@type": "SoftwareApplication",
-            name: "Kindora NGO OS",
-            applicationCategory: "BusinessApplication",
-            url: "https://spacenexus.net/kindora",
-          },
+          itemOffered: { "@id": `${kindoraCanonicalUrl}/#software` },
         },
       ],
     },
+  };
+
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "SpaceNexus Virtual Data Room",
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Virtual Data Room",
+    operatingSystem: "Web Browser",
+    url: "https://spacenexus.net",
+    description:
+      "Enterprise Virtual Data Room for secure M&A due diligence, capital raising, and document management. Built on Zero Trust architecture with AES-256 encryption and SOC 2 Type II compliance.",
+    offers: {
+      "@type": "Offer",
+      price: "Contact for pricing",
+      priceCurrency: "USD",
+      description: "Transparent, published pricing — Enterprise plans available",
+    },
+    author: {
+      "@type": "Organization",
+      name: "SpaceNexus",
+      url: "https://spacenexus.net",
+    },
+    featureList: [
+      "Zero Trust architecture",
+      "AES-256 encryption at rest and in transit",
+      "SOC 2 Type II certified",
+      "ISO 27001 aligned",
+      "SEC and FINRA compliance ready",
+      "FCA and UK GDPR compliance ready",
+      "CCPA and GDPR data privacy compliant",
+      "AI-powered document processing and redaction",
+      "Real-time buyer activity analytics",
+      "Granular role-based permissions",
+      "Q&A due diligence workflow management",
+      "Dynamic watermarking and print restrictions",
+      "Full-text search across 100+ file types",
+      "24/7 enterprise support",
+    ],
+    keywords: "virtual data room, VDR, M&A due diligence, secure data room, investment banking data room, private equity data room",
   };
 
   const websiteSchema = {
@@ -114,37 +150,6 @@ export default function JsonLd() {
     url: "https://spacenexus.net",
     publisher: { "@id": "https://spacenexus.net/#organization" },
     inLanguage: "en-US",
-  };
-
-  const peopleSchema = {
-    "@context": "https://schema.org",
-    "@graph": personSchemas,
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://spacenexus.net/#service",
-    name: "SpaceNexus Virtual Data Room",
-    serviceType: "Virtual Data Room",
-    description:
-      "SpaceNexus provides a secure virtual data room for M&A due diligence, capital raising, and legal document sharing, with granular permissions, dynamic watermarking, and a tamper-evident audit trail.",
-    provider: { "@id": "https://spacenexus.net/#organization" },
-    areaServed: [
-      { "@type": "Country", name: "United States" },
-      { "@type": "Country", name: "United Kingdom" },
-      { "@type": "Country", name: "Canada" },
-      { "@type": "Country", name: "Australia" },
-    ],
-    audience: {
-      "@type": "BusinessAudience",
-      audienceType: "M&A advisors, law firms, investment banks, and corporate deal teams",
-    },
-    offers: {
-      "@type": "Offer",
-      url: "https://spacenexus.net/pricing",
-      availability: "https://schema.org/InStock",
-    },
   };
 
   return (
@@ -165,12 +170,6 @@ export default function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(peopleSchema),
         }}
       />
     </>

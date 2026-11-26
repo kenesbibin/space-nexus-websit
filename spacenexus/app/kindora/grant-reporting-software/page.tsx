@@ -62,7 +62,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "One-Click Report Generation",
@@ -208,7 +208,7 @@ const benefits = [
   {
     stat: "30 min",
     label: "Setup Time",
-    description: "Live in under 30 minutes — no consultants required.",
+    description: "Setup time depends on your data and workflow needs; ask Kindora about onboarding options.",
   },
 ];
 
@@ -283,7 +283,7 @@ export default function GrantReportingSoftwarePage() {
                 href="/kindora/contact"
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 rounded-full shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Start Free Trial
+                Explore Free Starter Plan
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"
@@ -309,7 +309,7 @@ export default function GrantReportingSoftwarePage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 { icon: "M5 13l4 4L19 7", label: "No credit card required" },
-                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
+                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Setup time varies by data and workflows" },
                 { icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", label: "Built for nonprofits" },
               ].map(({ icon, label }) => (
                 <span key={label} className="flex items-center gap-1.5">
@@ -622,7 +622,7 @@ export default function GrantReportingSoftwarePage() {
               href="/kindora/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 rounded-full shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 transition-all duration-300"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg
                 className="ml-2 w-5 h-5"
                 fill="none"

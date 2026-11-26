@@ -98,7 +98,7 @@ const faqSchema = {
       name: "Who can add users in Kindora?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Only users with an Owner or Admin role can add and manage users in Kindora. Staff and limited roles cannot invite new team members.",
+        text: "Only users with an Owner or Admin role can add and manage users in Kindora.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "Can I set different permissions for each user in Kindora?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. When you add a user you can assign a role and choose which modules and permissions that team member can access, so each person only sees what they need.",
+        text: "Yes. When you add a user you can assign a role and choose which modules and permissions that team member can access.",
       },
     },
   ],

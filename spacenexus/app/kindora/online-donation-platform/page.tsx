@@ -137,7 +137,7 @@ const jsonLd = {
       description:
         "Online donation platform for nonprofits — accept one-time, recurring, and pledge payments with automated receipting and donor management.",
       url: "https://spacenexus.net/kindora/online-donation-platform",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -200,7 +200,7 @@ export default function OnlineDonationPlatformPage() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "SOC 2 compliant"].map((text) => (
+                {["No credit card required", "Setup time varies by data and workflows", "SOC 2 compliant"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

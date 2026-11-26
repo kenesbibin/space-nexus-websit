@@ -128,7 +128,7 @@ export default function GlobalLocations() {
                   <div className="flex items-center gap-2.5">
                     <Image
                       src={loc.flag}
-                      alt={loc.name}
+                      alt={`Flag of ${loc.name}`}
                       width={64}
                       height={48}
                       loading="lazy"
@@ -180,7 +180,7 @@ export default function GlobalLocations() {
               >
                 <Image
                   src={l.flag}
-                  alt={l.name}
+                  alt={`Flag of ${l.name}`}
                   width={48}
                   height={36}
                   loading="lazy"

@@ -238,7 +238,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -322,8 +322,8 @@ export default function NonprofitDatabaseSoftwarePage() {
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 "No credit card required",
-                "Set up in 30 minutes",
-                "Cancel anytime",
+                "Setup time varies by data and workflows",
+                "See current plan terms on the pricing page",
               ].map((text) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <svg
@@ -623,7 +623,7 @@ export default function NonprofitDatabaseSoftwarePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg
                 className="ml-2 w-5 h-5"
                 fill="none"

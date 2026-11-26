@@ -779,49 +779,49 @@ export default function Header() {
                   <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-5 animate-fade-in ring-1 ring-gray-100">
                     <div className="grid grid-cols-2 gap-2.5">
                       <a href="tel:+16464215740" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/us.png" alt="Flag of the United States" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+1 646 421 5740</p>
                           <p className="text-gray-600 text-[11px]">USA</p>
                         </div>
                       </a>
                       <a href="tel:+19793269493" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/ca.png" alt="Canada" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/ca.png" alt="Flag of Canada" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+1 (979) 326-9493</p>
                           <p className="text-gray-600 text-[11px]">Canada</p>
                         </div>
                       </a>
                       <a href="tel:+971562567509" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/ae.png" alt="UAE" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/ae.png" alt="Flag of the United Arab Emirates" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+971 56 256 7509</p>
                           <p className="text-gray-600 text-[11px]">UAE</p>
                         </div>
                       </a>
                       <a href="tel:+966562081999" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/sa.png" alt="Flag of Saudi Arabia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+966 56 208 1999</p>
                           <p className="text-gray-600 text-[11px]">Saudi Arabia</p>
                         </div>
                       </a>
                       <a href="tel:+96597243755" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/kw.png" alt="Kuwait" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/kw.png" alt="Flag of Kuwait" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+965 9724 3755</p>
                           <p className="text-gray-600 text-[11px]">Kuwait</p>
                         </div>
                       </a>
                       <a href="tel:+6586111900" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/sg.png" alt="Flag of Singapore" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+65 86 111 900</p>
                           <p className="text-gray-600 text-[11px]">Singapore</p>
                         </div>
                       </a>
                       <a href="tel:+60106607357" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
-                        <img src="https://flagcdn.com/w40/my.png" alt="Malaysia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                        <img src="https://flagcdn.com/w40/my.png" alt="Flag of Malaysia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+60 10660 7357</p>
                           <p className="text-gray-600 text-[11px]">Malaysia</p>

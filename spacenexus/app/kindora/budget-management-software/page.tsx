@@ -96,7 +96,7 @@ const serviceSchema = {
   description: "Budget management software for nonprofits. Plan, track, and control budgets across programs, departments, and grants.",
   url: "https://spacenexus.net/kindora/budget-management-software",
   serviceType: "Budget Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -110,7 +110,7 @@ const faqSchema = {
       name: "What is budget management software for nonprofits?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Budget management software for nonprofits is a centralized platform that enables finance teams to plan, create, track, and control organizational budgets across grants, programs, and departments. It replaces spreadsheets with automated workflows, real-time variance tracking, and donor-restricted fund management — giving CFOs and program directors complete visibility into spending against plan.",
+        text: "Budget management software for nonprofits is a centralized platform that enables finance teams to plan, create, track, and control organizational budgets across grants, programs, and departments. It replaces spreadsheets with automated workflows, real-time variance tracking, and donor-restricted fund management.",
       },
     },
     {
@@ -118,7 +118,7 @@ const faqSchema = {
       name: "How does Kindora handle grant-specific budgets?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora supports grant-specific budget templates, restricted and unrestricted fund segregation, and grant compliance reporting. Budgets can be created per grant with funder-required categories, and the system automatically tracks spending against grant-specific limits and reporting requirements.",
+        text: "Kindora supports grant-specific budget templates, restricted and unrestricted fund segregation, and grant compliance reporting. Budgets can be created per grant with funder-required categories, and the system automatically tracks spending against grant-specific limits.",
       },
     },
     {
@@ -126,7 +126,7 @@ const faqSchema = {
       name: "Can nonprofits track program-level budgets?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Kindora supports multi-dimensional budgeting across programs, departments, grants, and cost centers. Program directors can see their specific budgets in real time while finance leadership maintains a consolidated view across the entire organization.",
+        text: "Yes. Kindora supports multi-dimensional budgeting across programs, departments, grants, and cost centers. Program directors can see their specific budgets in real time while finance leadership maintains a consolidated view.",
       },
     },
     {
@@ -134,7 +134,7 @@ const faqSchema = {
       name: "How quickly can we implement budget management software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora budget management software can be configured within 24 hours. Import existing budget data from Excel, configure approval workflows, invite budget owners, and begin tracking immediately. Pre-built nonprofit budget templates accelerate setup.",
+        text: "Kindora budget management software can be configured within 24 hours. Import existing budget data from Excel, configure approval workflows, invite budget owners, and begin tracking immediately.",
       },
     },
   ],

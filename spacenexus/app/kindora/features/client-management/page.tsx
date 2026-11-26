@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Programs — Client Services & Enrollment Management",
@@ -81,21 +82,7 @@ const galleryScreenshots = [
 export default function ProgramsPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Programs", item: "https://spacenexus.net/kindora/features/client-management" },
-            ],
-          }),
-        }}
-      />
+
 
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -115,7 +102,7 @@ export default function ProgramsPage() {
                 Program Management
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Programs
+                Nonprofit Client & Program Management Software
               </h1>
               <p className="text-sm font-medium text-violet-600 mb-4 italic">
                 Deliver impactful services and manage client programs with ease.
@@ -257,6 +244,8 @@ export default function ProgramsPage() {
         </div>
       </section>
 
+      <FeatureIntentContent feature="client-management" />
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -286,7 +275,7 @@ export default function ProgramsPage() {
               </Link>
             </div>
           </div>
-        
+
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
                 <LastUpdated date="2026-07-19" />

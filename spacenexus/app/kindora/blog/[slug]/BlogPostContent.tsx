@@ -135,6 +135,9 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
                                     </svg>
                                     {post.readingTime} min read
                                 </span>
+                                {post.dateModified && post.dateModified !== post.publishedAt && (
+                                    <span>Updated {formatDate(post.dateModified)}</span>
+                                )}
                             </div>
                         </div>
                     </div>

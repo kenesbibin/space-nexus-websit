@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts, authorProfiles } from "../data/posts";
 import LastUpdated from "../../components/LastUpdated";
+import ContextualLinks from "../../kindora/blog/ContextualLinks";
 
 type Params = Promise<{ slug: string }>;
 
@@ -298,6 +299,8 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 </div>
             </article>
 
+            <ContextualLinks category={post.category} />
+
             {/* Author Bio Box */}
             {authorProfile && (
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
@@ -341,9 +344,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             {/* CTA Box */}
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
                 <div className="bg-gradient-to-br from-[#1e3a8a] to-[#2563eb] rounded-2xl p-8 text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h2 className="text-xl font-bold text-white mb-2">
                         Ready to set up your data room?
-                    </h3>
+                    </h2>
                     <p className="text-blue-200 mb-6 text-sm">
                         Get started in under 24 hours. No credit card required.
                     </p>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Expense Management - Track & Categorize Nonprofit Spending",
@@ -99,9 +100,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features/expense-management",
   serviceType: "Nonprofit Expense Tracking Software",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -149,7 +148,7 @@ export default function ExpenseManagementPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Expense Management
+                Nonprofit Expense Management Software
               </h1>
 
               <p className="text-xl text-gray-600 mb-8">
@@ -366,6 +365,8 @@ export default function ExpenseManagementPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="expense-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

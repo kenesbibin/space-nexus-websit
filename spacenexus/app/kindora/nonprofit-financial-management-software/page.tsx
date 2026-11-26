@@ -64,7 +64,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Chart of Accounts",
@@ -125,7 +125,7 @@ const jsonLd = {
           name: "Is Kindora affordable for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora is priced for small to mid-sized nonprofits and includes financial management features that would require separate accounting software with other platforms. Start with a free trial — no credit card required.",
+            text: "Yes. Kindora is priced for small to mid-sized nonprofits and includes financial management features that would require separate accounting software with other platforms. Start with a free Starter plan — no credit card required.",
           },
         },
       ],
@@ -244,7 +244,7 @@ const faqs = [
   {
     question: "Is Kindora affordable for small nonprofits?",
     answer:
-      "Yes. Kindora is priced for small to mid-sized nonprofits and includes financial management features that would require separate accounting software with other platforms. Start with a free trial — no credit card required.",
+      "Yes. Kindora is priced for small to mid-sized nonprofits and includes financial management features that would require separate accounting software with other platforms. Start with a free Starter plan — no credit card required.",
   },
 ];
 
@@ -326,8 +326,8 @@ export default function NonprofitFinancialManagementSoftwarePage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Setup in 30 minutes",
-                  "Cancel anytime",
+                  "Setup time varies by data and workflows",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg
@@ -624,7 +624,7 @@ export default function NonprofitFinancialManagementSoftwarePage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Free Starter plan · No credit card · Setup time varies by data and workflows · See current plan terms on the pricing page
           </p>
         
             {/* Last Updated */}

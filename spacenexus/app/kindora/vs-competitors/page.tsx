@@ -1,19 +1,21 @@
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
-    title: "Kindora vs Competitors | Best Nonprofit Management Software Comparison",
+    title: "Kindora vs Competitors | Nonprofit Software Comparison",
     description:
-        "Compare Kindora vs Bloomerang, Salesforce Nonprofit Cloud, Bonterra, Keela, and spreadsheets. See why nonprofits choose Kindora as the best all-in-one nonprofit management platform.",
+        "Compare Kindora with Bloomerang, Salesforce Nonprofit Cloud, Bonterra Apricot, Keela, and spreadsheets across nonprofit management capabilities.",
     alternates: {
         canonical: "https://spacenexus.net/kindora/vs-competitors",
     },
     openGraph: {
         title: "Kindora vs Competitors — Nonprofit Software Comparison",
         description:
-            "Kindora vs Bloomerang, Salesforce, Bonterra, Keela & more. The only affordable all-in-one platform with donor CRM, grant management, case management, and nonprofit accounting.",
+            "Compare publicly documented donor, grant, case management, accounting, volunteer, fundraising, and reporting capabilities across nonprofit software.",
         url: "https://spacenexus.net/kindora/vs-competitors",
         siteName: "Kindora by Space Nexus",
         type: "website",
@@ -23,7 +25,6 @@ export const metadata: Metadata = {
         "kindora vs salesforce nonprofit",
         "kindora vs bonterra",
         "kindora vs keela",
-        "best nonprofit management software",
         "nonprofit software comparison",
         "bloomerang alternative",
         "salesforce nonprofit alternative",
@@ -41,10 +42,20 @@ const features = [
     "Campaign & Fundraising Tools",
     "Built-in Communications Hub",
     "Export-Ready Board Reports",
-    "Affordable for Small Nonprofits",
-    "Ready in Minutes (No Consultants)",
+    "Official pricing details available",
+    "Published setup-time estimate",
     "API & Integrations",
     "Reporting & Analytics",
+];
+
+const kindoraReferenceLinks = [
+    { label: "Kindora pricing and plan details", url: "/kindora/pricing" },
+    { label: "Donor management", url: "/kindora/features/donor-management" },
+    { label: "Grant management", url: "/kindora/features/grant-management" },
+    { label: "Client programs", url: "/kindora/features/client-management" },
+    { label: "Financials and cost allocation", url: "/kindora/features/financials" },
+    { label: "Reports and analytics", url: "/kindora/features/reporting" },
+    { label: "API and integrations overview", url: "/kindora/cloud-based-nonprofit-crm" },
 ];
 
 type FeatureValue = true | false | "partial";
@@ -57,39 +68,39 @@ const competitors: {
 }[] = [
         {
             name: "Kindora",
-            tagline: "All-in-one",
+            tagline: "Nonprofit platform",
             color: "bg-[#2563eb] text-white",
             values: [true, true, true, true, true, true, true, true, true, true, true, true],
         },
         {
             name: "Bloomerang",
-            tagline: "Donor-only",
+            tagline: "CRM & fundraising",
             color: "bg-gray-100 text-gray-700",
-            values: [true, false, false, false, "partial", true, "partial", "partial", true, true, true, "partial"],
+            values: [true, "partial", false, false, true, true, true, "partial", true, false, "partial", true],
         },
         {
             name: "Salesforce NPC",
-            tagline: "Too complex",
+            tagline: "Nonprofit platform",
             color: "bg-gray-100 text-gray-700",
-            values: [true, "partial", "partial", false, "partial", true, "partial", true, false, false, true, true],
+            values: [true, "partial", "partial", "partial", true, true, "partial", "partial", true, false, true, true],
         },
         {
             name: "Bonterra Apricot",
-            tagline: "Case mgmt only",
+            tagline: "Case management",
             color: "bg-gray-100 text-gray-700",
             values: [false, false, true, false, false, false, false, "partial", false, false, "partial", true],
         },
         {
             name: "Keela",
-            tagline: "Limited scope",
+            tagline: "Fundraising CRM",
             color: "bg-gray-100 text-gray-700",
-            values: [true, false, false, false, false, true, "partial", "partial", true, true, "partial", "partial"],
+            values: [true, false, false, false, true, true, true, "partial", true, false, true, true],
         },
         {
             name: "Spreadsheets",
-            tagline: "Error-prone",
+            tagline: "General-purpose",
             color: "bg-gray-100 text-gray-700",
-            values: [false, false, false, false, false, false, false, false, true, true, false, false],
+            values: [false, false, false, false, false, false, false, false, true, false, false, false],
         },
     ];
 
@@ -98,159 +109,158 @@ const competitorDetails = [
         name: "Bloomerang",
         slug: "bloomerang",
         headline: "Kindora vs Bloomerang",
-        verdict: "Bloomerang is great for donor retention — but that's all it does.",
+        verdict: "Bloomerang's public materials describe donor CRM, fundraising, volunteer engagement, and supporter communications.",
         color: "from-blue-500 to-blue-600",
         bgColor: "bg-blue-50",
         borderColor: "border-blue-200",
         textColor: "text-blue-700",
         bloomerangStrengths: [
-            "Best-in-class donor retention metrics",
-            "Intuitive, easy-to-learn UI",
-            "Strong email marketing integrations",
-            "Good for small fundraising teams",
+            "Donor profiles, giving histories, and constituent timelines",
+            "Fundraising tools including donation forms and event management",
+            "Volunteer engagement is included in its Giving Platform",
+            "Reporting dashboards, donor insights, and automated outreach",
         ],
         bloomerangWeaknesses: [
-            "No grant lifecycle management",
-            "No client case management",
-            "No nonprofit accounting or cost allocation",
-            "No volunteer management module",
-            "Requires add-ons for basic communications",
+            "The reviewed pages describe grant tracking, but not a full grant lifecycle or compliance workflow",
+            "The reviewed pages do not document client case management",
+            "The reviewed pages do not document nonprofit accounting or cost allocation",
         ],
         kindoraAdvantages: [
-            "Everything Bloomerang does for donors — plus grants, clients, and finances",
-            "Donor engagement scoring and lapsed donor alerts built in",
-            "No need to pay for separate grant tracking software",
-            "One platform replaces 3–4 tools",
+            "Donor records and donation history are documented on Kindora's feature page",
+            "Grant lifecycle tracking is documented on Kindora's feature page",
+            "Client programs and nonprofit financial workflows are documented on Kindora's feature pages",
         ],
-        bestFor: "Organizations that only do fundraising",
-        kindoraBestFor: "Nonprofits that also manage grants, programs, or social services",
+        bestFor: "Teams evaluating donor CRM, fundraising, volunteer engagement, and supporter communications",
+        kindoraBestFor: "Nonprofits seeking donor, grant, client-program, and financial workflows in one platform",
+        sourceLinks: [
+            { label: "Bloomerang CRM", url: "https://bloomerang.com/crm" },
+            { label: "Bloomerang pricing and product bundle", url: "https://bloomerang.com/pricing" },
+        ],
     },
     {
         name: "Salesforce Nonprofit Cloud",
         slug: "salesforce",
         headline: "Kindora vs Salesforce Nonprofit Cloud",
-        verdict: "Salesforce is powerful — but it takes months to set up and costs a fortune.",
+        verdict: "Salesforce describes Nonprofit Cloud as a platform spanning fundraising, programs, volunteer management, and outcome management.",
         color: "from-violet-500 to-violet-600",
         bgColor: "bg-violet-50",
         borderColor: "border-violet-200",
         textColor: "text-violet-700",
         bloomerangStrengths: [
-            "Highly customizable for any workflow",
-            "360° view of all organizational data",
-            "Powerful automation and AI features",
-            "Huge ecosystem of integrations",
+            "Fundraising portfolios, donor profiles, gift entry, and segmentation",
+            "Program and outcome management, including targets and assessments",
+            "Volunteer events, roles, shifts, applications, and hours",
+            "Consult vendor current pricing; quotes vary by organization and plan.",
         ],
         bloomerangWeaknesses: [
-            "Requires expensive consultants to implement",
-            "Takes 3–6 months to go live",
-            "Very steep learning curve for staff",
-            "No built-in nonprofit accounting",
-            "Hidden costs: licenses, add-ons, training",
+            "Kindora and Salesforce package, licensing, and implementation costs use different models; compare quotes for your team",
+            "The reviewed Nonprofit Cloud page does not provide a directly comparable setup-time estimate",
         ],
         kindoraAdvantages: [
-            "Ready in under 30 minutes — no consultants needed",
-            "Built specifically for nonprofits, not adapted from a sales CRM",
-            "Open API and pre-built integrations — without needing an integration consultant",
-            "Transparent, affordable pricing",
-            "Includes nonprofit accounting and cost allocation out of the box",
+            "Kindora publishes a free Starter tier for up to five team members",
+            "Kindora documents donor, grant, client-program, and financial workflows in its feature pages",
+            "Kindora lists custom Professional and Enterprise tiers; compare plan details for your requirements",
         ],
-        bestFor: "Large enterprises with dedicated IT teams and big budgets",
-        kindoraBestFor: "Small to mid-sized nonprofits that need power without complexity",
+        bestFor: "Organizations seeking a nonprofit platform for fundraising, programs, volunteers, and outcomes",
+        kindoraBestFor: "Small and mid-sized nonprofits comparing a free entry tier and integrated operating workflows",
+        sourceLinks: [
+            { label: "Salesforce Nonprofit Cloud features and pricing", url: "https://www.salesforce.com/nonprofit/cloud/" },
+        ],
     },
     {
         name: "Bonterra Apricot",
         slug: "bonterra",
         headline: "Kindora vs Bonterra Apricot",
-        verdict: "Bonterra Apricot is strong for case management — but ignores your donors and finances.",
+        verdict: "Bonterra presents Apricot as nonprofit case-management software for participant and program workflows.",
         color: "from-orange-500 to-orange-600",
         bgColor: "bg-orange-50",
         borderColor: "border-orange-200",
         textColor: "text-orange-700",
         bloomerangStrengths: [
-            "Purpose-built for social services case management",
-            "Strong outcome tracking and program reporting",
-            "Configurable intake forms and workflows",
-            "Good for human services organizations",
+            "Participant and program data in a case-management system",
+            "Data capture, forms, workflows, scheduling, and referrals are described",
+            "Reporting, analytics, dashboards, and API access are described for Apricot tiers",
+            "Impact measurement and funder-facing reporting are described",
         ],
         bloomerangWeaknesses: [
-            "No donor CRM or fundraising tools",
-            "No grant lifecycle management",
-            "No nonprofit accounting",
-            "Expensive for small nonprofits",
-            "Requires separate tools for donor management",
+            "Donor CRM is not described on the reviewed Apricot product page",
+            "Grant lifecycle management is not described on the reviewed Apricot product page",
+            "Nonprofit accounting and cost allocation are not described on the reviewed Apricot product page",
         ],
         kindoraAdvantages: [
-            "Full case management AND donor CRM in one platform",
-            "Track clients AND funders without switching tools",
-            "Grant management connects directly to program delivery",
-            "Prove impact to funders with unified reporting",
+            "Kindora documents donor management and grant tracking alongside client-program features",
+            "Kindora's public pricing page lists nonprofit accounting and cost allocation in its Professional tier",
+            "Compare the products against your required case-management and reporting workflows",
         ],
-        bestFor: "Social service agencies that only need case management",
-        kindoraBestFor: "Human services nonprofits that also fundraise and manage grants",
+        bestFor: "Organizations evaluating participant case management, program data, and impact reporting",
+        kindoraBestFor: "Organizations seeking case-management workflows alongside donor, grant, and financial tools",
+        sourceLinks: [
+            { label: "Bonterra Apricot product information", url: "https://www.bonterratech.com/product/apricot" },
+        ],
     },
     {
         name: "Keela",
         slug: "keela",
         headline: "Kindora vs Keela",
-        verdict: "Keela is a solid donor CRM — but lacks grant management and case management.",
+        verdict: "Keela's public materials describe a fundraising CRM with donor management, communications, automation, and reporting.",
         color: "from-emerald-500 to-emerald-600",
         bgColor: "bg-emerald-50",
         borderColor: "border-emerald-200",
         textColor: "text-emerald-700",
         bloomerangStrengths: [
-            "Affordable pricing for small nonprofits",
-            "Built-in email marketing and automation",
-            "Good fundraising campaign tools",
-            "Easy to use for non-technical staff",
+            "Donor database, profiles, and gift history",
+            "Donation forms, email and text communication, and automated journeys",
+            "Dashboards, reporting, and integrations",
+            "Pricing is based on the number of contacts; volunteer management is listed",
         ],
         bloomerangWeaknesses: [
-            "No grant lifecycle management",
-            "No client case management",
-            "No nonprofit accounting or cost allocation",
-            "Limited reporting for board presentations",
-            "No volunteer management",
+            "Grant lifecycle management is not described on the reviewed homepage and pricing page",
+            "Client case management is not described on the reviewed homepage and pricing page",
+            "Nonprofit accounting and cost allocation are not described on the reviewed homepage and pricing page",
         ],
         kindoraAdvantages: [
-            "All of Keela's fundraising tools plus grant and program management",
-            "Full nonprofit accounting with cost allocation",
-            "Board-ready PDF and Excel reports in one click",
-            "Scales with your organization as you grow",
+            "Kindora documents grant lifecycle, client-program, and nonprofit finance workflows",
+            "Kindora pricing lists accounting and cost allocation in the Professional tier",
+            "Review both products' current plan details to compare the capabilities your organization needs",
         ],
-        bestFor: "Small nonprofits focused purely on fundraising",
-        kindoraBestFor: "Growing nonprofits that need more than just a donor CRM",
+        bestFor: "Teams evaluating donor management, fundraising communications, automation, and reporting",
+        kindoraBestFor: "Organizations looking for donor tools alongside grant, program, and financial workflows",
+        sourceLinks: [
+            { label: "Keela product information", url: "https://www.keela.co/" },
+            { label: "Keela pricing", url: "https://www.keela.co/pricing" },
+        ],
     },
     {
         name: "Spreadsheets",
         slug: "spreadsheets",
         headline: "Kindora vs Spreadsheets (Excel / Google Sheets)",
-        verdict: "Spreadsheets are free — but they cost you in errors, time, and missed opportunities.",
+        verdict: "Spreadsheets are flexible general-purpose tools; their nonprofit workflows depend on how each organization builds and maintains them.",
         color: "from-rose-500 to-rose-600",
         bgColor: "bg-rose-50",
         borderColor: "border-rose-200",
         textColor: "text-rose-700",
         bloomerangStrengths: [
-            "Free to use",
-            "Flexible — can be shaped to any workflow",
-            "No learning curve for basic data entry",
-            "Familiar to most staff",
+            "Flexible tables that organizations can configure for their own records",
+            "May be familiar to teams already using spreadsheet software",
+            "Capabilities and licensing depend on the spreadsheet product and existing plan",
         ],
         bloomerangWeaknesses: [
-            "No automation — everything is manual",
-            "Error-prone: formulas break, data gets duplicated",
-            "No donor engagement tracking or alerts",
-            "No grant deadline reminders",
-            "No role-based access control",
-            "Reporting takes hours of manual work",
-            "Data lives in silos across multiple files",
+            "A spreadsheet alone does not provide Kindora's predefined donor, grant, and client-program modules",
+            "Automation, access controls, reporting, and data relationships depend on workbook design and connected tools",
         ],
         kindoraAdvantages: [
-            "Automates donor receipts, grant reminders, and reports",
-            "Single source of truth — no more duplicate spreadsheets",
-            "Role-based access so the right people see the right data",
-            "Saves 10+ hours per week on manual data work",
+            "Kindora documents dedicated donor, grant, client-program, and financial modules",
+            "Kindora's pricing page lists role-based access controls and exports",
+            "Evaluate whether a managed nonprofit platform or configurable spreadsheets better match your workflow",
         ],
-        bestFor: "Organizations just starting out with no budget",
-        kindoraBestFor: "Any nonprofit ready to stop losing time to manual data entry",
+        bestFor: "Teams that prefer to build and maintain their own recordkeeping workflows",
+        kindoraBestFor: "Teams seeking predefined nonprofit modules and shared records",
+        sourceLinks: [
+            { label: "Microsoft Excel product information", url: "https://www.microsoft.com/en-us/microsoft-365/excel" },
+            { label: "Microsoft 365 plan pricing", url: "https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products" },
+            { label: "Google Sheets product information", url: "https://workspace.google.com/products/sheets/" },
+            { label: "Google Workspace plan pricing", url: "https://workspace.google.com/pricing.html" },
+        ],
     },
 ];
 
@@ -282,7 +292,7 @@ function FeatureCell({ value, isKindora }: { value: FeatureValue; isKindora: boo
     if (value === true) {
         return (
             <td className={`px-4 py-4 text-center ${isKindora ? "bg-blue-50/60" : ""}`}>
-                <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full ${isKindora ? "bg-[#2563eb] text-white" : "bg-green-100 text-green-600"}`}>
+                <span aria-label="Documented in reviewed sources" className={`inline-flex items-center justify-center w-7 h-7 rounded-full ${isKindora ? "bg-[#2563eb] text-white" : "bg-green-100 text-green-600"}`}>
                     <CheckIcon className="w-4 h-4" />
                 </span>
             </td>
@@ -291,7 +301,7 @@ function FeatureCell({ value, isKindora }: { value: FeatureValue; isKindora: boo
     if (value === "partial") {
         return (
             <td className={`px-4 py-4 text-center ${isKindora ? "bg-blue-50/60" : ""}`}>
-                <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-yellow-100 text-yellow-600">
+                <span aria-label="Related or partial coverage documented" className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-yellow-100 text-yellow-600">
                     <MinusIcon className="w-4 h-4" />
                 </span>
             </td>
@@ -299,8 +309,8 @@ function FeatureCell({ value, isKindora }: { value: FeatureValue; isKindora: boo
     }
     return (
         <td className={`px-4 py-4 text-center ${isKindora ? "bg-blue-50/60" : ""}`}>
-            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-400">
-                <XIcon className="w-4 h-4" />
+            <span aria-label="Not found on reviewed source page" className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-100 text-gray-500 font-semibold">
+                ?
             </span>
         </td>
     );
@@ -309,7 +319,7 @@ function FeatureCell({ value, isKindora }: { value: FeatureValue; isKindora: boo
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Kindora vs Competitors: Best All-in-One Nonprofit Management Software Comparison",
+  "headline": "Kindora vs Competitors: Nonprofit Software Feature Comparison",
   "description": "Compare Kindora against Bloomerang, Salesforce Nonprofit Cloud, Bonterra Apricot, Keela, and spreadsheets across donor management, grant tracking, case management, accounting, and volunteer features.",
   "about": { "@type": "Thing", "name": "Nonprofit Software Comparison" },
 };
@@ -318,32 +328,65 @@ const vsFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Is Kindora really better than Bloomerang?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora includes everything Bloomerang offers for donor management plus grant lifecycle management, client case management, and nonprofit accounting. If you only do fundraising, Bloomerang is fine. If you manage grants or programs too, Kindora is the better choice." } },
-    { "@type": "Question", "name": "How does Kindora compare to Salesforce Nonprofit Cloud in cost?", "acceptedAnswer": { "@type": "Answer", "text": "Salesforce Nonprofit Cloud typically requires large annual commitments once you factor in licenses, implementation consultants, and customization. Kindora is a fraction of that cost and is ready in under 30 minutes." } },
-    { "@type": "Question", "name": "Can Kindora replace Bonterra Apricot for case management?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora includes full client intake, program enrollment, service delivery tracking, and outcome reporting — the core of what Bonterra Apricot does — plus donor CRM and grant management that Bonterra lacks." } },
-    { "@type": "Question", "name": "Does Kindora offer a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can start a free trial with no credit card required and be fully set up in under 30 minutes." } },
-    { "@type": "Question", "name": "Does Kindora have API access like Salesforce or Bloomerang?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora provides an open API and pre-built integrations for email marketing, accounting, and payment processing. And because Kindora is all-in-one — donor CRM, grants, case management, accounting, and volunteers in one database — most nonprofits need far fewer integrations than they would with single-purpose tools." } },
-    { "@type": "Question", "name": "How does Kindora's reporting compare to enterprise platforms?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora includes built-in financial and program analytics: revenue, expenses, net income, clients served, program enrollment charts, and donor analysis — exportable as board-ready PDF or Excel reports in one click. Most nonprofits get the reports they need without hiring a BI consultant, which enterprise platforms typically require." } },
+    { "@type": "Question", "name": "What is the difference between Kindora and Bloomerang?", "acceptedAnswer": { "@type": "Answer", "text": "Bloomerang's reviewed product pages describe donor CRM, fundraising, volunteer engagement, and supporter communications. Kindora's public materials describe donor management plus grant lifecycle, client-program, and nonprofit financial workflows. Compare the linked product pages and current plan details against your requirements; capabilities not listed in a reviewed page should not be assumed unavailable." } },
+    { "@type": "Question", "name": "How does Kindora compare to Salesforce Nonprofit Cloud?", "acceptedAnswer": { "@type": "Answer", "text": "Salesforce describes Nonprofit Cloud capabilities for fundraising, programs, volunteers, and outcome management, with published per-user editions billed annually. Kindora publishes a free Starter tier for up to five team members and paid custom tiers. Pricing and implementation needs vary by organization, so compare current quotes and required workflows." } },
+    { "@type": "Question", "name": "How does Kindora compare to Bonterra Apricot?", "acceptedAnswer": { "@type": "Answer", "text": "Bonterra's Apricot product page describes nonprofit case management, participant and program data, workflows, and impact reporting. Kindora's public materials also document donor and grant workflows alongside client programs and nonprofit financial tools. The comparison reflects only the linked pages reviewed, not a claim that unlisted features are unavailable." } },
+    { "@type": "Question", "name": "Does Kindora have a free plan?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora's pricing page lists a free Starter plan for up to five team members. Check that page for current plan limits and features." } },
+    { "@type": "Question", "name": "How does Kindora compare to Keela?", "acceptedAnswer": { "@type": "Answer", "text": "Keela's reviewed product and pricing pages describe donor profiles, fundraising forms, communications, automation, reporting, integrations, and volunteer management. Kindora's public materials additionally document grant lifecycle, client-program, and nonprofit financial workflows. Compare the source pages for the modules and plan details relevant to your organization." } },
+    { "@type": "Question", "name": "How does Kindora compare with spreadsheets?", "acceptedAnswer": { "@type": "Answer", "text": "Spreadsheets are general-purpose tools whose functionality depends on workbook design and connected services. Kindora publishes dedicated donor, grant, client-program, and financial modules. Choose based on whether your organization prefers custom-managed workbooks or predefined nonprofit workflows." } },
   ],
 };
 
-const vsBreadcrumbSchema = {
+const comparisonItemListSchema = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
-    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", "position": 3, "name": "Vs Competitors", "item": "https://spacenexus.net/kindora/vs-competitors" },
-  ],
+  "@type": "ItemList",
+  name: "Kindora nonprofit software comparison",
+  description:
+    "A side-by-side comparison of Kindora, Bloomerang, Salesforce Nonprofit Cloud, Bonterra Apricot, Keela, and spreadsheets across the features shown in the comparison table.",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: competitors.length,
+  itemListElement: competitors.map((competitor, index) => {
+    const includedFeatures = features.filter(
+      (_, featureIndex) => competitor.values[featureIndex] === true,
+    );
+    const partiallySupportedFeatures = features.filter(
+      (_, featureIndex) => competitor.values[featureIndex] === "partial",
+    );
+    const featureSummary = [
+      includedFeatures.length > 0
+        ? `Features documented in reviewed sources: ${includedFeatures.join(", ")}.`
+        : "No features from this comparison list were found in the reviewed sources.",
+      partiallySupportedFeatures.length > 0
+        ? `Related or partial coverage documented: ${partiallySupportedFeatures.join(", ")}.`
+        : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      name: competitor.name,
+      description: `${competitor.tagline}. ${featureSummary}`,
+    };
+  }),
 };
 
-const lastUpdated = "May 15, 2026";
+
+
+const lastUpdated = "October 29, 2026";
 export default function VsCompetitorsPage() {
     return (
         <>
             <Script id="vs-competitors-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="vs-competitors-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(vsFaqSchema) }} />
-            <Script id="vs-competitors-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(vsBreadcrumbSchema) }} />
+            <Script
+                id="vs-competitors-itemlist"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(comparisonItemListSchema).replace(/</g, "\\u003c"),
+                }}
+            />
             {/* Hero */}
             <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-20 bg-gradient-to-b from-[#f0f4ff] to-white overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
@@ -361,12 +404,11 @@ export default function VsCompetitorsPage() {
                         </span>
                     </h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                        Bloomerang does donors. Salesforce does complexity. Bonterra does cases. Spreadsheets do nothing automatically.{" "}
-                        <strong className="text-gray-900">Kindora does everything</strong> — at a price nonprofits can actually afford.
+                        Bloomerang and Keela publish donor and fundraising tools. Salesforce Nonprofit Cloud describes fundraising, programs, volunteers, and outcomes. Bonterra Apricot describes participant case management.{" "}
+                        <strong className="text-gray-900">Kindora&apos;s public materials bring donor, grant, client-program, and financial workflows together.</strong>
                     </p>
-                    <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed italic">
-                        According to the 2024 Nonprofit Tech Trends Report, 68% of nonprofits using all-in-one platforms report higher team productivity than those managing 3+ separate tools.<sup className="text-[#2563eb]">[1]</sup>{" "}
-                        A SoftwareReviews data study found that nonprofits waste an average of 14 hours per week switching between disconnected software tools.<sup className="text-[#2563eb]">[2]</sup>
+                    <p className="text-sm text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                        Compare the capabilities each provider describes in its public product materials. This is a feature-scope guide, not an independent product test or a claim that an unlisted capability is unavailable.
                     </p>
                     <p className="text-xs text-gray-400 mb-6 text-center">Last updated: {lastUpdated}</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -390,6 +432,8 @@ export default function VsCompetitorsPage() {
                     </div>
                 </div>
             </section>
+
+      <AnswerReadyBlock page="comparison" />
 
             {/* Quick nav anchors */}
             <section className="py-6 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
@@ -429,7 +473,10 @@ export default function VsCompetitorsPage() {
                             How Kindora stacks up against every alternative
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            10 features that matter most to nonprofits — compared across 6 tools.
+                            12 capabilities checked against the public product sources linked below, across six options.
+                        </p>
+                        <p className="text-sm text-gray-500 max-w-3xl mx-auto mt-4">
+                            Sources reviewed October 29, 2026. A check means a reviewed source explicitly describes the capability; a dash means related or partial coverage; a question mark means we did not find it on the reviewed source page. A question mark does not establish that the product lacks the feature. Scope and packaging can change; confirm details with each provider.
                         </p>
                     </div>
 
@@ -477,7 +524,7 @@ export default function VsCompetitorsPage() {
                             <tfoot>
                                 <tr className="bg-gray-50 border-t border-gray-200">
                                     <td className="px-5 py-4 text-gray-500 font-semibold text-sm">
-                                        Total ✅ Features
+                                        Explicitly documented (of 12)
                                     </td>
                                     {competitors.map((c) => {
                                         const count = c.values.filter((v) => v === true).length;
@@ -505,7 +552,7 @@ export default function VsCompetitorsPage() {
                                                     Try Free
                                                 </a>
                                             ) : (
-                                                <span className="text-xs text-gray-500">Limited</span>
+                                                <span className="text-xs text-gray-500">Check sources</span>
                                             )}
                                         </td>
                                     ))}
@@ -520,20 +567,32 @@ export default function VsCompetitorsPage() {
                             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#2563eb] text-white">
                                 <CheckIcon className="w-3 h-3" />
                             </span>
-                            Full support
+                            Explicitly documented in reviewed source
                         </span>
                         <span className="flex items-center gap-1.5">
                             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-yellow-100 text-yellow-600">
                                 <MinusIcon className="w-3 h-3" />
                             </span>
-                            Partial / add-on required
+                            Related or partial coverage documented
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-100 text-red-400">
-                                <XIcon className="w-3 h-3" />
+                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-100 text-gray-500 font-semibold">
+                                ?
                             </span>
-                            Not available
+                            Not found in reviewed source(s)
                         </span>
+                    </div>
+                    <div className="mt-8 rounded-xl bg-gray-50 border border-gray-200 p-5">
+                        <p className="text-sm font-semibold text-gray-700 mb-3">Kindora product sources reviewed</p>
+                        <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+                            {kindoraReferenceLinks.map((source) => (
+                                <li key={source.url}>
+                                    <Link href={source.url} className="text-sm text-[#2563eb] hover:underline">
+                                        {source.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -568,7 +627,7 @@ export default function VsCompetitorsPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900">{comp.name}</h3>
-                                        <p className={`text-xs font-semibold ${comp.textColor}`}>What they do well</p>
+                                        <p className={`text-xs font-semibold ${comp.textColor}`}>Capabilities on reviewed official pages</p>
                                     </div>
                                 </div>
                                 <ul className="space-y-3 mb-6">
@@ -583,7 +642,7 @@ export default function VsCompetitorsPage() {
                                 </ul>
                                 <div className="border-t border-gray-200 pt-5">
                                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                                        Where they fall short
+                                        Not listed in reviewed source(s)
                                     </p>
                                     <ul className="space-y-2.5">
                                         {comp.bloomerangWeaknesses.map((w) => (
@@ -607,7 +666,7 @@ export default function VsCompetitorsPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900">Kindora</h3>
-                                        <p className="text-xs font-semibold text-[#2563eb]">Why Kindora wins</p>
+                                        <p className="text-xs font-semibold text-[#2563eb]">Kindora&apos;s documented capabilities</p>
                                     </div>
                                 </div>
                                 <ul className="space-y-3 mb-6">
@@ -622,17 +681,36 @@ export default function VsCompetitorsPage() {
                                 </ul>
                                 <div className="border-t border-gray-100 pt-5 space-y-3">
                                     <div className="flex items-start gap-2">
-                                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider w-24 shrink-0 mt-0.5">
-                                            {comp.name} best for:
+                                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider w-36 shrink-0 mt-0.5">
+                                            {comp.name} product focus:
                                         </span>
                                         <span className="text-sm text-gray-600">{comp.bestFor}</span>
                                     </div>
                                     <div className="flex items-start gap-2">
-                                        <span className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider w-24 shrink-0 mt-0.5">
-                                            Kindora best for:
+                                        <span className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider w-36 shrink-0 mt-0.5">
+                                            Kindora may fit when:
                                         </span>
                                         <span className="text-sm text-gray-800 font-medium">{comp.kindoraBestFor}</span>
                                     </div>
+                                </div>
+                                <div className="mt-5 border-t border-gray-100 pt-4">
+                                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                                        Official sources reviewed
+                                    </p>
+                                    <ul className="space-y-1">
+                                        {comp.sourceLinks.map((source) => (
+                                            <li key={source.url}>
+                                                <a
+                                                    href={source.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-sm text-[#2563eb] hover:underline"
+                                                >
+                                                    {source.label}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -645,7 +723,7 @@ export default function VsCompetitorsPage() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
                             >
-                                Switch to Kindora — Free Trial
+                                Explore Kindora Starter — Free plan
                                 <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -655,44 +733,22 @@ export default function VsCompetitorsPage() {
                 </section>
             ))}
 
-            {/* The Kindora Advantage Summary */}
+            {/* Kindora capability summary */}
             <section className="py-20 lg:py-28 bg-gradient-to-b from-[#1e3a8a] to-[#1e40af]">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <p className="text-sm font-semibold text-blue-300 uppercase tracking-wider mb-4">
-                        The Bottom Line
+                        Kindora&apos;s published capabilities
                     </p>
                     <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                        The only platform that does it all — affordably
+                        One set of nonprofit workflows
                     </h2>
                     <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-12 leading-relaxed">
-                        No other nonprofit software combines donor CRM, grant lifecycle management, client case management, nonprofit accounting, and communications in one affordable platform.
+                        Kindora&apos;s public feature pages describe donor management, grant lifecycle tracking, client programs, financial management, and cost allocation. Its pricing page lists a free Starter tier for up to five team members and identifies which modules are included in paid tiers.
                     </p>
 
-                    <div className="grid sm:grid-cols-3 gap-6 mb-12">
-                        {[
-                            {
-                                stat: "10/10",
-                                label: "Features covered",
-                                sub: "vs 2–5 for competitors",
-                            },
-                            {
-                                stat: "30 min",
-                                label: "To get started",
-                                sub: "vs months for Salesforce",
-                            },
-                            {
-                                stat: "1 platform",
-                                label: "Replaces 3–4 tools",
-                                sub: "Saves money and complexity",
-                            },
-                        ].map((item) => (
-                            <div key={item.label} className="bg-white/10 rounded-2xl p-6 border border-white/20">
-                                <p className="text-4xl font-black text-white mb-1">{item.stat}</p>
-                                <p className="text-base font-semibold text-blue-100 mb-1">{item.label}</p>
-                                <p className="text-sm text-blue-300">{item.sub}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <p className="text-sm text-blue-200 mb-8">
+                        See the current <Link href="/kindora/pricing" className="text-white underline">Kindora plan details</Link> and <Link href="/kindora/features" className="text-white underline">documented feature list</Link>.
+                    </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
@@ -715,7 +771,7 @@ export default function VsCompetitorsPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-blue-300">
-                        Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+                        Plan limits and availability may change; confirm current details on the pricing page.
                     </p>
                     <p className="mt-4 text-sm text-blue-200">
                         <Link href="/kindora/pricing" className="text-white hover:underline">View pricing</Link>
@@ -739,32 +795,28 @@ export default function VsCompetitorsPage() {
                     <div className="space-y-4">
                         {[
                             {
-                                q: "Is Kindora really better than Bloomerang?",
-                                a: "Kindora includes everything Bloomerang offers for donor management — engagement scoring, giving history, lapsed donor alerts — plus grant lifecycle management, client case management, nonprofit accounting, and more. If you only do fundraising, Bloomerang is fine. If you manage grants or programs too, Kindora is the better choice.",
+                                q: "What is the difference between Kindora and Bloomerang?",
+                                a: "Bloomerang's reviewed product pages describe donor CRM, fundraising, volunteer engagement, and supporter communications. Kindora's public materials describe donor management plus grant lifecycle, client-program, and nonprofit financial workflows. Compare the linked product pages and current plan details against your requirements; capabilities not listed in a reviewed page should not be assumed unavailable.",
                             },
                             {
-                                q: "How does Kindora compare to Salesforce Nonprofit Cloud in cost?",
-                                a: "Salesforce Nonprofit Cloud typically requires large annual commitments once you factor in licenses, implementation consultants, customization, and training. Kindora is a fraction of that cost, requires no consultants, and is ready in under 30 minutes.",
+                                q: "How does Kindora compare to Salesforce Nonprofit Cloud?",
+                                a: "Salesforce describes Nonprofit Cloud capabilities for fundraising, programs, volunteers, and outcome management, with published per-user editions billed annually. Kindora publishes a free Starter tier for up to five team members and paid custom tiers. Pricing and implementation needs vary by organization, so compare current quotes and required workflows.",
                             },
                             {
-                                q: "Can Kindora replace Bonterra Apricot for case management?",
-                                a: "Yes. Kindora includes full client intake, program enrollment, service delivery tracking, and outcome reporting — the core of what Bonterra Apricot does. And Kindora also adds donor CRM and grant management that Bonterra lacks.",
+                                q: "How does Kindora compare to Bonterra Apricot?",
+                                a: "Bonterra's Apricot product page describes nonprofit case management, participant and program data, workflows, and impact reporting. Kindora's public materials also document donor and grant workflows alongside client programs and nonprofit financial tools. The comparison reflects only the linked pages reviewed, not a claim that unlisted features are unavailable.",
                             },
                             {
-                                q: "Why should I switch from spreadsheets to Kindora?",
-                                a: "Spreadsheets are free but they cost you in errors, duplicated data, and hours of manual work. Kindora automates donor receipts, grant deadline reminders, and board reports — saving most nonprofits 10+ hours per week. And your data is always accurate and in one place.",
+                                q: "Does Kindora have a free plan?",
+                                a: "Kindora's pricing page lists a free Starter plan for up to five team members. Check that page for current plan limits and features.",
                             },
                             {
-                                q: "Does Kindora offer a free trial?",
-                                a: "Yes — you can start a free trial at cad.spaceaiapp.com/kindora with no credit card required. You can be fully set up in under 30 minutes.",
+                                q: "How does Kindora compare to Keela?",
+                                a: "Keela's reviewed product and pricing pages describe donor profiles, fundraising forms, communications, automation, reporting, integrations, and volunteer management. Kindora's public materials additionally document grant lifecycle, client-program, and nonprofit financial workflows. Compare the source pages for the modules and plan details relevant to your organization.",
                             },
                             {
-                                q: "Does Kindora have API access like Salesforce or Bloomerang?",
-                                a: "Yes. Kindora provides an open API and pre-built integrations for email marketing, accounting, and payment processing. And because Kindora is all-in-one — donor CRM, grants, case management, accounting, and volunteers in one shared database — most nonprofits need far fewer integrations than they would with single-purpose tools that have to be stitched together.",
-                            },
-                            {
-                                q: "How does Kindora's reporting compare to enterprise platforms?",
-                                a: "Kindora includes built-in financial and program analytics — revenue, expenses, net income, clients served, program enrollment charts, and donor analysis — exportable as board-ready PDF or Excel reports in one click. Most nonprofits get the reports they need without hiring a BI consultant or buying a separate analytics add-on, which enterprise platforms typically require.",
+                                q: "How does Kindora compare with spreadsheets?",
+                                a: "Spreadsheets are general-purpose tools whose functionality depends on workbook design and connected services. Kindora publishes dedicated donor, grant, client-program, and financial modules. Choose based on whether your organization prefers custom-managed workbooks or predefined nonprofit workflows.",
                             },
                         ].map((faq, i) => (
                             <details
@@ -791,7 +843,8 @@ export default function VsCompetitorsPage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <ComparisonMethodology />
+                <LastUpdated date="2026-11-26" />
             </div></div>
             </section>
         </>

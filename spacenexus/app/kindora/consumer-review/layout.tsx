@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Consumer Reviews",
-  description: "Read real consumer reviews of Kindora nonprofit management software. See why nonprofits trust Kindora for donor management, grant tracking, and program management.",
-  keywords: ["Kindora reviews", "nonprofit software reviews", "NGO management software reviews", "Kindora consumer reviews", "nonprofit CRM reviews"],
-  alternates: { canonical: "https://spacenexus.net/kindora/consumer-review" },
+  title: "Kindora Customer Reviews",
+  description: "A verifiable public set of Kindora customer reviews is not currently available.",
+  robots: { index: false, follow: true },
   openGraph: {
-    title: "Consumer Reviews",
-    description: "Read real reviews from nonprofits using Kindora. See why organizations choose Kindora for their management needs.",
+    title: "Kindora Customer Reviews",
+    description: "A verifiable public set of Kindora customer reviews is not currently available.",
     url: "https://spacenexus.net/kindora/consumer-review",
     type: "website",
   },

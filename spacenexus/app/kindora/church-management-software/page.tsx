@@ -95,7 +95,7 @@ const serviceSchema = {
   description: "Church management software for ministries and congregations. Manage members, track attendance, process giving, coordinate events, schedule volunteers, and grow small groups.",
   url: "https://spacenexus.net/kindora/church-management-software",
   serviceType: "Church Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -133,7 +133,7 @@ const faqSchema = {
       name: "How quickly can we implement church management software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora church management software can be configured within 24 hours. Import your member database, set up groups and ministries, configure giving options, invite staff and volunteers, and start using the platform the same day. Pre-built church templates accelerate setup.",
+        text: "Kindora church management software can be configured within 24 hours. Import your member database, set up groups and ministries, configure giving options, invite staff and volunteers, and start using the platform the same day.",
       },
     },
   ],

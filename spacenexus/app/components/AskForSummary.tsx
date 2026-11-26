@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 type AIAssistant = {
   name: string;
@@ -11,6 +12,9 @@ type AIAssistant = {
 
 const summaryPrompt =
   "Provide a comprehensive summary of SpaceNexus, an AI-powered Virtual Data Room (VDR) software. Include its key features (document management, AI search, Q&A workflow, analytics, security compliance), target industries (M&A, private equity, venture capital, law firms, real estate), pricing model, and how it compares to competitors like Datasite, Intralinks, and iDeals. Highlight its unique AI capabilities and enterprise-grade security features.";
+
+const kindoraSummaryPrompt =
+  "Using https://spacenexus.net/kindora as the canonical source, summarize Kindora nonprofit software. Describe its donor, grant, case, volunteer, and nonprofit financial workflows; who the product is for; what is included in the ongoing free Starter plan and paid plans; and any published limitations. Distinguish facts stated on the Kindora site from information that is not provided. Do not invent customer results, integrations, security certifications, or competitor comparisons.";
 
 const assistants: AIAssistant[] = [
   {
@@ -91,10 +95,13 @@ function ExternalLinkIcon() {
 
 export default function AskForSummary() {
   const [copied, setCopied] = useState(false);
+  const pathname = usePathname();
+  const isKindora = pathname?.startsWith("/kindora") ?? false;
+  const prompt = isKindora ? kindoraSummaryPrompt : summaryPrompt;
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(summaryPrompt);
+      await navigator.clipboard.writeText(prompt);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -112,10 +119,10 @@ export default function AskForSummary() {
                 id="ask-summary-heading"
                 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2"
               >
-                Ask for a Summary of SpaceNexus
+                Ask for a Summary of {isKindora ? "Kindora" : "SpaceNexus"}
               </h2>
               <p className="text-sm text-gray-600 leading-relaxed max-w-md">
-                Open your preferred AI assistant with a ready-made SpaceNexus
+                Open your preferred AI assistant with a ready-made {isKindora ? "Kindora" : "SpaceNexus"}
                 summary prompt.
               </p>
 
@@ -145,7 +152,7 @@ export default function AskForSummary() {
               {assistants.map((assistant) => (
                 <a
                   key={assistant.name}
-                  href={assistant.getUrl(summaryPrompt)}
+                  href={assistant.getUrl(prompt)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200"

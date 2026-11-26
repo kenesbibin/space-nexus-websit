@@ -3,18 +3,19 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
-  title: "Kindora vs Instrumentl | Complete Nonprofit Software Comparison 2026",
+  title: "Kindora vs Instrumentl | Nonprofit Software Comparison",
   description:
-    "Kindora vs Instrumentl: a head-to-head comparison of grant discovery, grant tracking, donor management, accounting, and more. See which platform fits your nonprofit.",
+    "Compare Instrumentl's grant research and lifecycle plans with Kindora's broader nonprofit operations workflows, using published product details.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/kindora-vs-instrumentl",
   },
   openGraph: {
-    title: "Kindora vs Instrumentl — Complete Comparison 2026",
+    title: "Kindora vs Instrumentl — Nonprofit Software Comparison",
     description:
-      "Head-to-head comparison of Kindora and Instrumentl across grant discovery, grant tracking, donor management, accounting, and more. The definitive guide for nonprofits.",
+      "Compare grant research, grant workflows, donor management, program operations, and financial workflows.",
     url: "https://spacenexus.net/kindora/kindora-vs-instrumentl",
     siteName: "Kindora",
     type: "website",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kindora vs Instrumentl — Complete Comparison 2026",
+    title: "Kindora vs Instrumentl — Nonprofit Software Comparison",
     description:
       "Which is right for your nonprofit? See how Kindora and Instrumentl compare across grant discovery, tracking, and nonprofit operations.",
     images: ["https://spacenexus.net/kindora/og-card.png"],
@@ -58,13 +59,13 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "All-in-one nonprofit management software — donor CRM, grant tracking, case management, accounting, and communications. Compared to Instrumentl.",
+        "Nonprofit operations software with donor management, grant tracking, client-program workflows, and financial management.",
       url: "https://spacenexus.net/kindora/kindora-vs-instrumentl",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan for up to 5 team members; paid plans are custom-quoted",
       },
     },
     {
@@ -75,7 +76,7 @@ const jsonLd = {
           name: "Which is better, Kindora or Instrumentl?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "They solve different problems. Instrumentl is a focused grant discovery and tracking tool that helps you find funding opportunities and stay on top of deadlines. Kindora is an all-in-one nonprofit platform that includes grant tracking plus donor CRM, case management, accounting, and more. If your only need is finding grants, Instrumentl is strong. If you also manage donors, programs, finances, or volunteers, Kindora consolidates everything in one system.",
+            text: "They serve different needs. Instrumentl's published plans cover grant research and application workflows, with selected plan-dependent post-award spend tracking and accounting integrations. Kindora's public pages describe donor, grant, client-program, and financial workflows. Choose based on whether grant discovery, broader nonprofit operations, or both matter to your team.",
           },
         },
         {
@@ -83,7 +84,7 @@ const jsonLd = {
           name: "Is Instrumentl the same as Kindora?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No. Instrumentl is primarily a grant discovery and research tool — it helps you find funders and track applications and deadlines. Kindora is a complete nonprofit management platform. Both can track grants, but Kindora also includes donor management, fundraising, case management, nonprofit accounting, and volunteer tools in the same system.",
+            text: "No. Instrumentl's published plans focus on grant research and lifecycle work, while Kindora's published pages describe broader nonprofit operations. Compare the current plan details and confirm the workflows you need with both providers.",
           },
         },
         {
@@ -91,7 +92,7 @@ const jsonLd = {
           name: "Can I use Instrumentl with Kindora together?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Many teams keep Instrumentl for grant discovery (finding funders) and use Kindora for grant tracking plus their broader operations — donors, programs, finances, and reporting. That's a common and sensible setup, though teams that want one system increasingly track grants in Kindora too.",
+            text: "Potentially. An organization may use Instrumentl for grant research and discovery and Kindora for broader donor, program, grant-record, and financial workflows. Confirm integration options and account for any duplicate data entry before choosing a two-product setup.",
           },
         },
         {
@@ -99,7 +100,7 @@ const jsonLd = {
           name: "Does Kindora have grant discovery like Instrumentl?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora includes complete grant lifecycle management — tracking prospects, applications, awards, receipts, deadlines, and compliance reporting. Grant discovery (finding new funders) is Instrumentl's specialty. For teams that already know their funders, Kindora covers the full grant workflow without a separate tool.",
+            text: "Kindora's grant management feature describes grant tracking and lifecycle workflows, not a funder-discovery database equivalent to Instrumentl's. Organizations that depend on grant prospect research should verify that need before choosing Kindora as a replacement.",
           },
         },
         {
@@ -107,7 +108,7 @@ const jsonLd = {
           name: "What does Kindora do that Instrumentl doesn't?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora adds donor and donation management, fundraising campaigns, client case management, volunteer management, and nonprofit accounting with cost allocation. Instrumentl is focused on grant research and tracking only. Kindora replaces multiple tools with one platform.",
+            text: "Kindora's public feature pages describe donor management, client-program workflows, financial management, and reporting alongside grant tracking. Instrumentl's pricing page also describes plan-dependent post-award spend tracking and accounting integrations. Confirm exact feature coverage and integrations with both providers.",
           },
         },
       ],
@@ -128,6 +129,7 @@ const comparisonFeatures: {
       { name: "Grant Lifecycle Tracking", kindora: true, instrumentl: true },
       { name: "Application & Pipeline Management", kindora: true, instrumentl: true },
       { name: "Grant Receipts & Deadlines", kindora: true, instrumentl: true },
+      { name: "Post-Award Spend Tracking", kindora: true, instrumentl: true },
       { name: "Grant Compliance Reporting", kindora: true, instrumentl: "partial" },
       { name: "Grantor Relationship Management", kindora: true, instrumentl: "partial" },
       { name: "Cost Allocation Across Grants", kindora: true, instrumentl: false },
@@ -165,7 +167,7 @@ const comparisonFeatures: {
   {
     category: "Financial Management",
     features: [
-      { name: "Nonprofit Accounting", kindora: true, instrumentl: false },
+      { name: "Native Nonprofit Accounting", kindora: true, instrumentl: false },
       { name: "Cost Allocation", kindora: true, instrumentl: false },
       { name: "Chart of Accounts & Budgets", kindora: true, instrumentl: false },
       { name: "Expense & Bill Management", kindora: true, instrumentl: false },
@@ -197,7 +199,7 @@ const comparisonFeatures: {
       { name: "Simple Setup (No Consultants)", kindora: true, instrumentl: true },
       { name: "Role-Based Access Control", kindora: true, instrumentl: true },
       { name: "Priced for Small to Mid-sized Nonprofits", kindora: true, instrumentl: "partial" },
-      { name: "One Platform Instead of Multiple Tools", kindora: true, instrumentl: "partial" },
+      { name: "Plan Includes Grant Research and Discovery", kindora: "partial", instrumentl: true },
     ],
   },
 ];
@@ -258,14 +260,6 @@ function FeatureCheckInstrumentl({ value }: { value: FeatureValue }) {
   );
 }
 
-const instrumentlScore = comparisonFeatures.reduce((acc, cat) => {
-  return acc + cat.features.filter((f) => f.instrumentl === true).length;
-}, 0);
-
-const kindoraScore = comparisonFeatures.reduce((acc, cat) => {
-  return acc + cat.features.filter((f) => f.kindora === true).length;
-}, 0);
-
 const totalFeatures = comparisonFeatures.reduce(
   (acc, cat) => acc + cat.features.length,
   0
@@ -275,27 +269,27 @@ const faqs = [
   {
     question: "Which is better, Kindora or Instrumentl?",
     answer:
-      "They solve different problems. Instrumentl is a focused grant discovery and tracking tool. Kindora is an all-in-one nonprofit platform with grant tracking plus donor CRM, case management, accounting, and more. If you only need to find grants, Instrumentl works. If you also manage donors, programs, finances, or volunteers, Kindora consolidates everything in one system.",
+      "They serve different needs. Instrumentl's published plans cover grant research and application workflows, with selected plan-dependent post-award spend tracking and accounting integrations. Kindora's public pages describe donor, grant, client-program, and financial workflows. Choose based on whether grant discovery, broader nonprofit operations, or both matter to your team.",
   },
   {
     question: "Is Instrumentl the same as Kindora?",
     answer:
-      "No. Instrumentl is primarily a grant discovery and research tool. Kindora is a complete nonprofit management platform. Both can track grants, but Kindora also includes donor management, fundraising, case management, nonprofit accounting, and volunteer tools.",
+      "No. Instrumentl's published plans focus on grant research and lifecycle work, while Kindora's published pages describe broader nonprofit operations. Compare the current plan details and confirm the workflows you need with both providers.",
   },
   {
     question: "Can I use Instrumentl with Kindora together?",
     answer:
-      "Yes. Many teams keep Instrumentl for grant discovery (finding funders) and use Kindora for grant tracking plus broader operations. That's a common and sensible setup, though teams that want one system increasingly track grants in Kindora too.",
+      "Potentially. An organization may use Instrumentl for grant research and discovery and Kindora for broader donor, program, grant-record, and financial workflows. Confirm integration options and account for any duplicate data entry before choosing a two-product setup.",
   },
   {
     question: "Does Kindora have grant discovery like Instrumentl?",
     answer:
-      "Kindora includes complete grant lifecycle management — prospects, applications, awards, receipts, deadlines, and compliance reporting. Grant discovery (finding new funders) is Instrumentl's specialty. For teams that already know their funders, Kindora covers the full grant workflow in one place.",
+      "Kindora's grant management feature describes grant tracking and lifecycle workflows, not a funder-discovery database equivalent to Instrumentl's. Organizations that depend on grant prospect research should verify that need before choosing Kindora as a replacement.",
   },
   {
     question: "What does Kindora do that Instrumentl doesn't?",
     answer:
-      "Kindora adds donor and donation management, fundraising campaigns, client case management, volunteer management, and nonprofit accounting with cost allocation. Instrumentl is focused on grant research and tracking only.",
+      "Kindora's public feature pages describe donor management, client-program workflows, financial management, and reporting alongside grant tracking. Instrumentl's pricing page also describes plan-dependent post-award spend tracking and accounting integrations. Confirm exact feature coverage and integrations with both providers.",
   },
 ];
 
@@ -326,8 +320,8 @@ export default function KindoraVsInstrumentlPage() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            A complete, feature-by-feature comparison of a grant discovery tool
-            and an all-in-one nonprofit platform.{" "}
+            A practical comparison of Instrumentl&apos;s grant research and
+            lifecycle plans with Kindora&apos;s broader nonprofit workflows.{" "}
             <strong className="text-gray-900">
               See which one is right for your organization.
             </strong>
@@ -355,25 +349,21 @@ export default function KindoraVsInstrumentlPage() {
         </div>
       </section>
 
-      {/* Score Summary */}
+      {/* Product scope summary */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-8 rounded-2xl border-2 border-[#2563eb] bg-blue-50/50">
-              <div className="text-5xl font-black text-[#2563eb] mb-2">{kindoraScore}/{totalFeatures}</div>
-              <div className="text-base font-semibold text-gray-900">Kindora</div>
-              <div className="text-sm text-gray-500 mt-1">Features supported</div>
+              <div className="text-2xl font-bold text-[#2563eb] mb-2">Kindora</div>
+              <div className="text-sm text-gray-600 mt-1">Donor, grant, client-program, and financial workflows</div>
             </div>
             <div className="p-8 rounded-2xl border border-gray-200 bg-gray-50">
-              <div className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">vs</div>
-              <div className="text-5xl font-black text-gray-400 mb-2">{instrumentlScore}/{totalFeatures}</div>
-              <div className="text-base font-semibold text-gray-900">Instrumentl</div>
-              <div className="text-sm text-gray-500 mt-1">Features supported</div>
+              <div className="text-2xl font-bold text-gray-900 mb-2">Instrumentl</div>
+              <div className="text-sm text-gray-600 mt-1">Grant research and lifecycle plans with tier-dependent workflows</div>
             </div>
             <div className="p-8 rounded-2xl border border-gray-200 bg-white">
-              <div className="text-5xl font-black text-green-500 mb-2">2-in-1</div>
-              <div className="text-base font-semibold text-gray-900">One Platform</div>
-              <div className="text-sm text-gray-500 mt-1">Grants + the rest of your operations</div>
+              <div className="text-2xl font-bold text-green-700 mb-2">Choose by workflow</div>
+              <div className="text-sm text-gray-600 mt-1">Some nonprofits may use a discovery tool alongside broader operations software</div>
             </div>
           </div>
         </div>
@@ -387,11 +377,11 @@ export default function KindoraVsInstrumentlPage() {
               Full Feature Comparison
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Every feature, side by side
+              Published feature coverage, side by side
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {totalFeatures} features across {comparisonFeatures.length} categories
-              — compared in detail.
+              {totalFeatures} workflow areas across {comparisonFeatures.length} categories.
+              A feature not listed below is not proof that a product lacks it.
             </p>
           </div>
 
@@ -404,7 +394,6 @@ export default function KindoraVsInstrumentlPage() {
                   </th>
                   <th className="px-6 py-5 bg-[#2563eb] text-white font-bold text-center min-w-[140px]">
                     <div className="flex flex-col items-center gap-1">
-                      <span className="text-xs font-semibold uppercase tracking-wider opacity-80">Best Choice</span>
                       <span className="text-base">Kindora</span>
                     </div>
                   </th>
@@ -445,19 +434,6 @@ export default function KindoraVsInstrumentlPage() {
               </tbody>
               <tfoot>
                 <tr className="bg-gray-50 border-t border-gray-200">
-                  <td className="px-6 py-4 text-gray-500 font-semibold text-sm">
-                    Total Features
-                  </td>
-                  <td className="px-6 py-4 text-center bg-blue-50/60">
-                    <span className="font-black text-2xl text-[#2563eb]">{kindoraScore}</span>
-                    <span className="text-sm text-gray-400">/{totalFeatures}</span>
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <span className="font-black text-2xl text-gray-400">{instrumentlScore}</span>
-                    <span className="text-sm text-gray-400">/{totalFeatures}</span>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
                   <td className="px-6 py-3" />
                   <td className="px-6 py-3 text-center bg-blue-50/60">
                     <a
@@ -470,7 +446,9 @@ export default function KindoraVsInstrumentlPage() {
                     </a>
                   </td>
                   <td className="px-6 py-3 text-center">
-                    <span className="text-xs text-gray-400">Grant-focused</span>
+                    <a href="https://www.instrumentl.com/pricing" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-700 underline">
+                      View Instrumentl plans
+                    </a>
                   </td>
                 </tr>
               </tfoot>
@@ -483,21 +461,26 @@ export default function KindoraVsInstrumentlPage() {
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#2563eb] text-white">
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
               </span>
-              Full support
+              Capability documented
             </span>
             <span className="flex items-center gap-1.5">
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-yellow-100 text-yellow-600">
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M20 12H4" /></svg>
               </span>
-              Partial / limited
+              Plan-dependent or partial
             </span>
             <span className="flex items-center gap-1.5">
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-100 text-red-400">
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
               </span>
-              Not available
+              Not listed in reviewed plan details
             </span>
           </div>
+          <p className="mt-5 text-center text-xs leading-relaxed text-gray-500">
+            Comparison based on Kindora feature pages and Instrumentl&apos;s
+            published pricing page, reviewed September 17, 2026. Verify current
+            plan availability and workflow details with each provider.
+          </p>
         </div>
       </section>
 
@@ -525,10 +508,10 @@ export default function KindoraVsInstrumentlPage() {
               </div>
               <ul className="space-y-3 mb-6">
                 {[
-                  "Excellent grant discovery — find new funders you wouldn't otherwise know about",
-                  "Strong deadline and application tracking",
-                  "Good research dataset for grant-seeking teams",
-                  "Simple, focused interface for grant management",
+                  "Grant research and discovery",
+                  "Grant application and pre-award workflows",
+                  "Post-award spend tracking on the Full Lifecycle plan",
+                  "Accounting integrations and other features vary by plan",
                 ].map((s) => (
                   <li key={s} className="flex items-start gap-2.5 text-sm text-gray-700">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
@@ -539,14 +522,13 @@ export default function KindoraVsInstrumentlPage() {
                 ))}
               </ul>
               <div className="border-t border-gray-200 pt-5">
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Where they fall short</p>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Questions to verify</p>
                 <ul className="space-y-2.5">
                   {[
-                    "No donor management or donation tracking",
-                    "No nonprofit accounting or cost allocation",
-                    "No client case management or program delivery",
-                    "No volunteer or employee management",
-                    "Requires a separate system for day-to-day operations",
+                    "Which tier includes the grant and post-award workflows you need?",
+                    "Does your team need a broader nonprofit operations platform as well?",
+                    "Check accounting integrations and data flow with your existing ledger",
+                    "Confirm whether donor, client-program, and volunteer workflows fit your current tools",
                   ].map((w) => (
                     <li key={w} className="flex items-start gap-2.5 text-sm text-gray-600">
                       <span className="mt-0.5 w-5 h-5 rounded-full bg-red-100 text-red-400 flex items-center justify-center shrink-0">
@@ -566,16 +548,16 @@ export default function KindoraVsInstrumentlPage() {
                 <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center text-white font-bold text-sm">K</div>
                 <div>
                   <h3 className="font-bold text-gray-900">Kindora</h3>
-                  <p className="text-xs font-semibold text-[#2563eb]">Why Kindora wins</p>
+                  <p className="text-xs font-semibold text-[#2563eb]">Documented workflow areas</p>
                 </div>
               </div>
               <ul className="space-y-3 mb-6">
                 {[
-                  "Complete grant lifecycle tracking — prospects, awards, receipts, and compliance",
-                  "Donor CRM, fundraising, case management, and accounting in one system",
-                  "One platform replaces 3–4 separate tools",
-                  "Grant budgets and cost allocation built into your financial reports",
-                  "No need to stitch together software for operations",
+                  "Donor management and fundraising workflows",
+                  "Grant tracking and grant lifecycle workflows",
+                  "Client and program management",
+                  "Nonprofit financial management and cost allocation",
+                  "Reporting across documented product workflows",
                 ].map((a) => (
                   <li key={a} className="flex items-start gap-2.5 text-sm text-gray-700">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center shrink-0">
@@ -588,11 +570,11 @@ export default function KindoraVsInstrumentlPage() {
               <div className="border-t border-gray-100 pt-5 space-y-3">
                 <div className="flex items-start gap-2">
                   <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider w-24 shrink-0 mt-0.5">Instrumentl best for:</span>
-                  <span className="text-sm text-gray-600">Teams that mainly need to discover new funders and want a grant research specialist</span>
+                  <span className="text-sm text-gray-600">Teams prioritizing grant research and funder discovery, after verifying the tier-specific workflows they need</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider w-24 shrink-0 mt-0.5">Kindora best for:</span>
-                  <span className="text-sm text-gray-800 font-medium">Nonprofits that also manage donors, programs, finances, or volunteers and want one system</span>
+                  <span className="text-sm text-gray-800 font-medium">Nonprofits comparing grant workflows with broader donor, client-program, and financial operations</span>
                 </div>
               </div>
             </div>
@@ -605,7 +587,7 @@ export default function KindoraVsInstrumentlPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Switch to Kindora — Free Trial
+              Explore Kindora Starter — Free plan
               <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -648,8 +630,8 @@ export default function KindoraVsInstrumentlPage() {
             Ready to see the difference?
           </h2>
           <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Try Kindora free and see why nonprofits choose one platform for grants,
-            donors, and operations — instead of stitching together separate tools.
+            Review Kindora&apos;s grant, donor, program, and financial workflows,
+            then compare them with your organization&apos;s requirements.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -669,14 +651,21 @@ export default function KindoraVsInstrumentlPage() {
             >
               View Pricing
             </Link>
+            <Link
+              href="/kindora/instrumentl-alternative"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
+            >
+              Read the Instrumentl alternative guide
+            </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Compare current plans and confirm feature availability with each provider.
           </p>
 
           {/* Last Updated */}
           <div className="py-6 text-center border-t border-gray-100 mt-8">
-            <LastUpdated date="2026-09-01" />
+            <ComparisonMethodology />
+            <LastUpdated date="2026-11-26" />
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title:
@@ -66,9 +67,9 @@ const jsonLd = {
       url: "https://spacenexus.net/kindora/salesforce-nonprofit-cloud-alternative",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan for up to 5 team members; paid plans are custom-quoted",
       },
       featureList: [
         "Donor CRM & tracking",
@@ -105,7 +106,7 @@ const jsonLd = {
           name: "How does Kindora compare to Salesforce Nonprofit Cloud on pricing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Salesforce Nonprofit Cloud requires per-user licenses that can cost $60–$150+ per user per month, plus implementation fees of $10,000–$50,000+. Kindora is priced for nonprofits of all sizes with transparent, affordable pricing — no hidden fees, no consultants needed.",
+            text: "Consult vendor current pricing; quotes vary by organization and plan.",
           },
         },
         {
@@ -183,18 +184,18 @@ const comparisonRows = [
   },
   {
     feature: "Setup Time",
-    kindora: { value: "30 minutes — no consultants", positive: true },
+    kindora: { value: "Setup time varies by workflow; confirm onboarding scope", positive: true },
     salesforce: { value: "Weeks to months with implementation partner", positive: false },
   },
   {
     feature: "Implementation Cost",
-    kindora: { value: "Free — self-service setup", positive: true },
-    salesforce: { value: "$10,000–$50,000+ with consultants", positive: false },
+    kindora: { value: "Starter is free for up to 5 members; paid plan pricing is custom-quoted", positive: true },
+    salesforce: { value: "Consult vendor current pricing; quotes vary by organization and plan.", positive: false },
   },
   {
     feature: "Per-User Pricing",
-    kindora: { value: "Affordable flat-rate pricing", positive: true },
-    salesforce: { value: "$60–$150+ per user per month", positive: false },
+    kindora: { value: "Free Starter; Professional and Enterprise are custom-quoted", positive: true },
+    salesforce: { value: "Consult vendor current pricing; quotes vary by organization and plan.", positive: false },
   },
   {
     feature: "Export-Ready Reports",
@@ -227,22 +228,22 @@ const salesforceWeaknesses = [
 
 const kindoraAdvantages = [
   "Everything Salesforce does for nonprofits — without the enterprise complexity",
-  "Ready in 30 minutes with no consultants or training fees",
+  "Starter signup is self-service; implementation scope for paid plans is confirmed with sales",
   "Built-in nonprofit accounting and cost allocation — no add-ons needed",
-  "One affordable subscription replaces Salesforce licenses plus third-party tools",
+      "Compare the published Kindora plan limits and included modules with your Salesforce licenses and connected tools",
 ];
 
 const whySwitchReasons = [
   {
     title: "No Consultants Required",
     description:
-      "Salesforce needs certified implementation partners. Kindora is designed for nonprofits to set up themselves in 30 minutes.",
+      "Salesforce implementation needs depend on the organization's configuration and scope. Kindora Starter signup is self-service; confirm implementation scope for paid plans with sales.",
     icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
   },
   {
     title: "Save Thousands Per Year",
     description:
-      "Salesforce charges $60–$150+ per user per month plus implementation fees. Kindora offers transparent, affordable pricing for nonprofits.",
+      "Consult vendor current pricing; quotes vary by organization and plan.",
     icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
@@ -254,7 +255,7 @@ const whySwitchReasons = [
   {
     title: "Ready in Minutes",
     description:
-      "Salesforce implementation takes weeks or months. Kindora gets you running in 30 minutes with no training required.",
+      "Implementation time depends on the product, data, and workflows being configured. Kindora offers self-service Starter access and Enterprise migration assistance; confirm requirements with each vendor.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -273,7 +274,7 @@ const faqs = [
   {
     question: "How does Kindora compare to Salesforce Nonprofit Cloud on pricing?",
     answer:
-      "Salesforce Nonprofit Cloud requires per-user licenses that can cost $60–$150+ per user per month, plus implementation fees of $10,000–$50,000+. Kindora is priced for nonprofits of all sizes with transparent, affordable pricing — no hidden fees, no consultants needed.",
+      "Consult vendor current pricing; quotes vary by organization and plan.",
   },
   {
     question: "What does Salesforce Nonprofit Cloud do that Kindora also does?",
@@ -377,8 +378,8 @@ export default function SalesforceNonprofitCloudAlternativePage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Setup in 30 minutes",
-                  "Cancel anytime",
+                  "Self-service Starter signup; setup time varies by workflow",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg
@@ -948,7 +949,7 @@ export default function SalesforceNonprofitCloudAlternativePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Switch to Kindora — Free Trial
+              Explore Kindora Starter — Free plan
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
@@ -1057,12 +1058,13 @@ export default function SalesforceNonprofitCloudAlternativePage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Ongoing free Starter plan for up to 5 team members · Paid plans by custom quote
           </p>
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <ComparisonMethodology />
+                <LastUpdated date="2026-11-26" />
             </div></div>
       </section>
     </>

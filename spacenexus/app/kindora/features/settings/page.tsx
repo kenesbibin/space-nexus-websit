@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Settings & Configuration - Customize Your Kindora Experience",
@@ -121,9 +122,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features/settings",
   serviceType: "Nonprofit Software Configuration Tools",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -170,7 +169,7 @@ export default function SettingsPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Settings & Configuration
+              Nonprofit Organization Management & Settings
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
@@ -289,7 +288,7 @@ export default function SettingsPage() {
                   "Travel",
                   "Equipment",
                   "Professional Services",
-                ].map((category, idx) => (
+                ].map((category) => (
                   <div
                     key={category}
                     className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
@@ -365,6 +364,8 @@ export default function SettingsPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="settings" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

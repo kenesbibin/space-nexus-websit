@@ -149,7 +149,7 @@ const jsonLd = {
       description:
         "Donor retention software for nonprofits — keep donors engaged with segmentation, automation, and engagement tracking.",
       url: "https://spacenexus.net/kindora/donor-retention-software",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -212,7 +212,7 @@ export default function DonorRetentionSoftwarePage() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import { kindoraCanonicalUrl } from "../components/kindora-entity";
 
 export const metadata: Metadata = {
   title: "Space AI Product Ecosystem",
@@ -42,11 +43,7 @@ const organizationJsonLd = {
       {
         "@type": "Offer",
         itemOffered: {
-          "@type": "SoftwareApplication",
-          name: "Kindora",
-          url: "https://spacenexus.net/kindora",
-          applicationCategory: "BusinessApplication",
-          description: "All-in-one nonprofit management software for donors, grants, programs, finances, and volunteers.",
+          "@id": `${kindoraCanonicalUrl}/#software`,
         },
       },
       {

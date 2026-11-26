@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "File Management - Secure Document Organization",
@@ -81,9 +82,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features/file-management",
   serviceType: "Nonprofit Document Management Software",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -131,7 +130,7 @@ export default function FileManagementPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                File Management
+                Nonprofit Document Management Software
               </h1>
 
               <p className="text-xl text-gray-600 mb-8">
@@ -335,7 +334,7 @@ export default function FileManagementPage() {
                   label: "Done",
                   desc: "File is linked to the record",
                 },
-              ].map((item, idx) => (
+              ].map((item) => (
                 <div
                   key={item.step}
                   className="flex flex-col items-center text-center max-w-[140px]"
@@ -353,6 +352,8 @@ export default function FileManagementPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="file-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Reports — Financial & Program Analytics",
@@ -74,21 +75,7 @@ const features = [
 export default function ReportsPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Reports", item: "https://spacenexus.net/kindora/features/reporting" },
-            ],
-          }),
-        }}
-      />
+
 
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -108,7 +95,7 @@ export default function ReportsPage() {
                 Reporting
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Reports
+                Nonprofit Reporting & Analytics Software
               </h1>
               <p className="text-sm font-medium text-amber-600 mb-4 italic">
                 Gain insights with powerful financial and program analytics.
@@ -244,6 +231,8 @@ export default function ReportsPage() {
         </div>
       </section>
 
+      <FeatureIntentContent feature="reporting" />
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -273,7 +262,7 @@ export default function ReportsPage() {
               </Link>
             </div>
           </div>
-        
+
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
                 <LastUpdated date="2026-07-19" />

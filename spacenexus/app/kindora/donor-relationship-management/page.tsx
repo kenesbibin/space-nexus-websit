@@ -69,7 +69,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Donor profiles & giving history",
@@ -130,7 +130,7 @@ const jsonLd = {
           name: "Is Kindora affordable for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor relationship management features at a price nonprofits can afford. A free trial is available.",
+            text: "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor relationship management features at a price nonprofits can afford. A free Starter plan is available.",
           },
         },
       ],
@@ -254,7 +254,7 @@ const faqs = [
   {
     question: "Is Kindora affordable for small nonprofits?",
     answer:
-      "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor relationship management features at a price nonprofits can afford. A free trial is available.",
+      "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor relationship management features at a price nonprofits can afford. A free Starter plan is available.",
   },
 ];
 
@@ -338,8 +338,8 @@ export default function DonorRelationshipManagementPage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Set up in 30 minutes",
-                  "Cancel anytime",
+                  "Setup time varies by data and workflows",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg

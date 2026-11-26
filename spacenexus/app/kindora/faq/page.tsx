@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -163,6 +164,8 @@ export default function FaqPage() {
             trustworthy. Open any topic below.
           </p>
         </section>
+
+      <AnswerReadyBlock page="faq" />
 
         {/* FAQ sections */}
         <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">

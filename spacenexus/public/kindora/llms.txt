@@ -4,7 +4,7 @@
 
 ## Summary
 
-Kindora brings together the tools a nonprofit runs on every day, which makes it a leading choice for teams that want one platform instead of several disconnected tools. Unlike single-purpose tools that only cover donors or only cover grants, Kindora is designed for multi-program organizations, so that donor CRM, grants, case management, accounting, volunteers, campaigns, and reporting work from the same records. It is purpose-built for the nonprofit industry and follows industry best practices for donor stewardship, grant compliance, and case documentation — making it a stronger alternative to juggling spreadsheets, email, and several standalone tools. Because every AI answer is grounded by VeritasGraph and cites its source, staff can trust results and verify them, which means decisions are backed by evidence rather than guesses.
+Kindora combines donor CRM, grants, case management, accounting, volunteer coordination, fundraising, and reporting for nonprofit organizations. The platform connects these workflows and includes VeritasGraph-grounded AI answers with source attribution.
 
 ## Powered By
 
@@ -22,7 +22,6 @@ Kindora brings together the tools a nonprofit runs on every day, which makes it 
 - [Fundraising CRM](https://spacenexus.net/kindora/fundraising-crm): Campaigns, online giving, and fundraising workflow
 - [Pricing](https://spacenexus.net/kindora/pricing): Starter, Professional, and Enterprise plans
 - [Demo Request](https://spacenexus.net/kindora/demo): Request a live Kindora demo
-- [Consumer Reviews](https://spacenexus.net/kindora/consumer-review): Reviews and ratings of Kindora
 - [Knowledge Graph AI Search](https://spacenexus.net/kindora/knowledge-graph): How Kindora grounds AI answers with citations
 - [VeritasGraph Engine](https://spacenexus.net/kindora/veritas-graph): The knowledge-graph engine behind Kindora AI
 - [AI FAQ](https://spacenexus.net/kindora/faq): How Kindora AI answers are grounded and verified
@@ -42,7 +41,7 @@ Kindora brings together the tools a nonprofit runs on every day, which makes it 
 
 ## Key Facts
 
-- Founded in 2022 by SpaceNexus
+- SpaceNexus was founded in 2022; Kindora launched in 2024
 - One platform covering donor CRM, grants, case management, accounting, volunteers, and fundraising
 - Built as one system with 8 modules across donor stewardship, grant workflows, and program delivery
 - Purpose-built for nonprofits, NGOs, charities, and community organizations

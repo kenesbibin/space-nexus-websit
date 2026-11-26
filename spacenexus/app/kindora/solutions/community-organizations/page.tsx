@@ -96,9 +96,7 @@ const serviceSchema = {
     url: "https://spacenexus.net/kindora/solutions/community-organizations",
     serviceType: "Community Organization Nonprofit Management Software",
     provider: {
-        "@type": "Organization",
-        name: "Kindora",
-        url: "https://spacenexus.net/kindora",
+        "@id": "https://spacenexus.net/kindora/#organization",
     },
     areaServed: { "@type": "Place", name: "Worldwide" },
     offers: {
@@ -252,7 +250,7 @@ export default function CommunityOrganizationsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center px-8 py-4 text-base font-semibold text-violet-700 bg-white hover:bg-violet-50 rounded-full shadow-lg transition-all duration-300"
                         >
-                            Start Free Trial
+                            Explore Free Starter Plan
                         </a>
                         <Link
                             href="/kindora/pricing"

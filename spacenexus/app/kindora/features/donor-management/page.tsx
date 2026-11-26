@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Donor Management Software for Nonprofits",
@@ -115,21 +116,7 @@ const reports = [
 export default function DonorManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Donor Management Software", item: "https://spacenexus.net/kindora/features/donor-management" },
-            ],
-          }),
-        }}
-      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,7 +147,7 @@ export default function DonorManagementPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Donor Management
+                Nonprofit Donor Management Software
               </h1>
 
               <p className="text-xl text-gray-600 mb-8">
@@ -216,6 +203,23 @@ export default function DonorManagementPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            What is nonprofit donor management?
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Nonprofit donor management is the process of organizing donor
+            contact details, giving history, communication preferences, and
+            engagement activity so a nonprofit can maintain relationships and
+            coordinate fundraising. Donor management software keeps this
+            information in a shared system, helping staff record gifts, review
+            donor histories, plan follow-up, and prepare reports rather than
+            tracking each interaction in separate spreadsheets.
+          </p>
         </div>
       </section>
 
@@ -372,6 +376,8 @@ export default function DonorManagementPage() {
         </div>
       </section>
 
+      <FeatureIntentContent feature="donor-management" />
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -401,7 +407,7 @@ export default function DonorManagementPage() {
               />
             </svg>
           </Link>
-        
+
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
                 <LastUpdated date="2026-07-19" />

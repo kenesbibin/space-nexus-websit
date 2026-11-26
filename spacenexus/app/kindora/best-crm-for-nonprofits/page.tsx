@@ -106,7 +106,7 @@ const faqs = [
   {
     question: "Why do nonprofits choose Kindora?",
     answer:
-      "Kindora combines donor management, fundraising, grants, volunteers, programmes, and financials in one platform. Unlike general-purpose CRMs, it's purpose-built for nonprofit workflows with no consulting fees and 30-minute setup.",
+      "Kindora combines donor management, fundraising, grants, volunteers, programmes, and financials in one platform. Unlike general-purpose CRMs, it's purpose-built for nonprofit workflows with no consulting fees and setup based on your data and workflow needs.",
   },
   {
     question: "How does Kindora compare to Bloomerang?",
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: "How long does it take to set up Kindora?",
     answer:
-      "Kindora sets up in 30 minutes with guided onboarding. Import your existing data from spreadsheets or other CRMs and start using the platform immediately.",
+      "Kindora sets up in time varies by data and workflow needs with guided onboarding. Import your existing data from spreadsheets or other CRMs and start using the platform immediately.",
   },
 ];
 
@@ -148,7 +148,7 @@ const jsonLd = {
       description:
         "Best CRM for nonprofits \u2014 donor management, fundraising, grants, volunteers, and reporting in one platform.",
       url: "https://spacenexus.net/kindora/best-crm-for-nonprofits",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -210,7 +210,7 @@ export default function BestCrmForNonprofitsPage() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -406,7 +406,7 @@ export default function BestCrmForNonprofitsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-emerald-600 bg-white hover:bg-emerald-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

@@ -64,7 +64,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Self-service shift sign-up",
@@ -327,8 +327,8 @@ export default function VolunteerPortalPage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Setup in 30 minutes",
-                  "Cancel anytime",
+                  "Setup time varies by data and workflows",
+                  "See current plan terms on the pricing page",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg
@@ -638,7 +638,7 @@ export default function VolunteerPortalPage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Free Starter plan · No credit card · Setup time varies by data and workflows · See current plan terms on the pricing page
           </p>
         
             {/* Last Updated */}

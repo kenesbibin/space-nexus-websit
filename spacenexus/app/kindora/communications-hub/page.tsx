@@ -316,8 +316,8 @@ const articleSchema = {
   headline: "Communications Hub for Nonprofits 2026 — Complete Guide for Operations Teams",
   description:
     "The complete 2026 guide to nonprofit communications hubs. Unified inbox, donor workflows, team collaboration, and campaign management for operations leaders.",
-  author: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
-  publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+  author: { "@id": "https://spacenexus.net/kindora/#organization" },
+  publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
   datePublished: "2026-07-01",
   dateModified: "2026-07-01",
   mainEntityOfPage: "https://spacenexus.net/kindora/communications-hub",
@@ -333,15 +333,7 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-    { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", position: 3, name: "Communications Hub for Nonprofits", item: "https://spacenexus.net/kindora/communications-hub" },
-  ],
-};
+
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -350,7 +342,7 @@ const serviceSchema = {
   description: "Unified nonprofit communications hub. Centralize donor outreach, internal team messaging, and stakeholder communications in one platform.",
   url: "https://spacenexus.net/kindora/communications-hub",
   serviceType: "Nonprofit Communications Hub",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -377,7 +369,6 @@ export default function KindoraCommunicationsHubPage() {
       <Script id="kindora-comm-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="kindora-comm-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="kindora-comm-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="kindora-comm-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="pt-20 lg:pt-24">
 
@@ -428,10 +419,10 @@ export default function KindoraCommunicationsHubPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { metric: "60%", label: "faster response times" },
-                { metric: "45%", label: "increase in donor engagement" },
-                { metric: "50%", label: "reduction in missed communications" },
-                { metric: "100%", label: "communication audit trail" },
+                { metric: "Templates", label: "Reusable messages" },
+                { metric: "History", label: "Logged interactions" },
+                { metric: "Follow-ups", label: "Scheduled reminders" },
+                { metric: "Records", label: "Communication activity" },
               ].map((b) => (
                 <div key={b.label} className="text-center">
                   <p className="text-3xl sm:text-4xl font-bold text-[#2563eb] mb-1">{b.metric}</p>

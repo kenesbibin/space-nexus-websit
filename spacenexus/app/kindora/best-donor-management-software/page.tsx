@@ -125,7 +125,7 @@ const faqs = [
   {
     question: "Is Kindora affordable for small nonprofits?",
     answer:
-      "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor management features at a price nonprofits can afford. A free trial is available with no credit card required.",
+      "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor management features at a price nonprofits can afford. A free Starter plan is available with no credit card required.",
   },
   {
     question: "Can I import my existing donor data?",
@@ -160,7 +160,7 @@ const jsonLd = {
       description:
         "Best donor management software for nonprofits -- donor tracking, fundraising automation, reporting, and engagement tools.",
       url: "https://spacenexus.net/kindora/best-donor-management-software",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -223,7 +223,7 @@ export default function BestDonorManagementSoftwarePage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -348,7 +348,7 @@ export default function BestDonorManagementSoftwarePage() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 { icon: "M5 13l4 4L19 7", label: "No credit card required" },
-                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
+                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Setup time varies by data and workflows" },
                 { icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", label: "Built for nonprofits" },
               ].map(({ icon, label }) => (
                 <span key={label} className="flex items-center gap-1.5">
@@ -398,7 +398,7 @@ export default function BestDonorManagementSoftwarePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm font-semibold text-indigo-500 uppercase tracking-wider mb-3">How It Works</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">From signup to impact in 30 minutes</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">From signup to impact in time varies by data and workflow needs</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Get started with the best donor management software fast.</p>
           </div>
 

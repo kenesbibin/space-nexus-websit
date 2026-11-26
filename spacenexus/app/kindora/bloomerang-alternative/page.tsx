@@ -2,18 +2,19 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Bloomerang Alternative | Better Donor Management",
   description:
-    "Looking for a Bloomerang alternative? Kindora offers everything Bloomerang does for donor management — plus grant tracking, case management, nonprofit accounting, and more. Try it free.",
+    "Compare Bloomerang and Kindora for nonprofit donor management. Review donor, grant, volunteer, program, and finance capabilities with official sources.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/bloomerang-alternative",
   },
   openGraph: {
     title: "Bloomerang Alternative",
     description:
-      "Kindora offers everything Bloomerang does for donor management — plus grant tracking, case management, and nonprofit accounting. The all-in-one alternative.",
+      "Compare Bloomerang and Kindora using their published product and pricing information.",
     url: "https://spacenexus.net/kindora/bloomerang-alternative",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bloomerang Alternative",
     description:
-      "Everything Bloomerang does for donors — plus grants, case management, and nonprofit accounting. Try Kindora free.",
+      "Compare Bloomerang and Kindora donor, grant, program, and financial workflows.",
     images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
@@ -58,13 +59,13 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "The all-in-one Bloomerang alternative. Everything Bloomerang does for donors — plus grant tracking, case management, nonprofit accounting, and communications.",
+        "A nonprofit management platform with donor management, grant tracking, client programs, nonprofit financial workflows, and communications.",
       url: "https://spacenexus.net/kindora/bloomerang-alternative",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan for up to 5 team members; paid plans are custom-quoted",
       },
       featureList: [
         "Donor CRM & tracking",
@@ -85,7 +86,7 @@ const jsonLd = {
           name: "Why switch from Bloomerang to Kindora?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Bloomerang is a solid donor management tool, but it only handles donor CRM and fundraising. If you also manage grants, programs, clients, volunteers, or need nonprofit accounting, you'll end up paying for 3–4 separate tools. Kindora does all of that in one platform at an affordable price.",
+            text: "Bloomerang's public product pages describe donor CRM, fundraising, volunteer engagement, supporter communications, reporting, and grant tracking. Kindora's public pages describe donor management alongside grant lifecycle, client-program, and financial workflows. Compare current plans and source pages against your requirements.",
           },
         },
         {
@@ -93,7 +94,7 @@ const jsonLd = {
           name: "Does Kindora offer the same donor management features as Bloomerang?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora includes everything Bloomerang offers — donor profiles, giving history, engagement scoring, lapsed donor alerts, email marketing, and campaign tracking. Plus Kindora adds grant management, case management, accounting, and volunteer tools that Bloomerang doesn't have.",
+            text: "Both products document donor profiles, giving history, communications, and reporting. Bloomerang also lists grant tracking and volunteer engagement in its public materials. Kindora's public materials describe donor management together with grant lifecycle, client-program, and nonprofit financial workflows. Feature depth and plan availability should be checked with each provider.",
           },
         },
         {
@@ -101,7 +102,7 @@ const jsonLd = {
           name: "How does Kindora compare to Bloomerang on pricing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora is priced for small to mid-sized nonprofits and includes features that would require separate tools (and separate subscriptions) with Bloomerang. You get more for less — no need to budget for additional grant, accounting, or case management software.",
+            text: "Bloomerang publishes pricing for its products, including CRM pricing based on database contacts and annual billing. Kindora publishes a free Starter tier for up to five team members and custom-priced Professional and Enterprise tiers. These plans use different packaging and pricing models, so compare current quotes and included modules.",
           },
         },
         {
@@ -109,15 +110,15 @@ const jsonLd = {
           name: "What does Bloomerang do that Kindora also does?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Bloomerang's strengths — donor retention metrics, engagement scoring, intuitive UI, email integrations, and fundraising tools — are all included in Kindora. You won't lose any donor management functionality by switching.",
+            text: "Bloomerang describes donor insights, constituent profiles, donor groups, automated outreach, email campaigns, and fundraising tools. Kindora describes donor profiles, giving history, communication tracking, and donation analytics. Review both products and test the workflows you rely on before switching.",
           },
         },
         {
           "@type": "Question",
-          name: "What does Kindora do that Bloomerang doesn't?",
+          name: "How do Kindora's broader workflows compare?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora adds grant lifecycle management, client case management, nonprofit accounting with cost allocation, volunteer management, and a built-in communications hub. These are features Bloomerang simply doesn't offer.",
+            text: "Kindora's public feature pages describe grant lifecycle management, client programs, nonprofit financial workflows, cost allocation, volunteer tools, and communications. Bloomerang's public pages also list grant tracking and volunteer engagement; the reviewed pages do not establish feature parity for every workflow, so verify your requirements directly.",
           },
         },
         {
@@ -125,7 +126,7 @@ const jsonLd = {
           name: "Can I migrate my data from Bloomerang to Kindora?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora supports data import from Bloomerang and other donor management platforms. Our team can help you migrate your donor records, giving history, and campaign data smoothly.",
+            text: "Ask Kindora about supported import formats, migration scope, and assistance before switching. Confirm that donor records, giving history, and any campaign data you need can be transferred.",
           },
         },
         {
@@ -133,7 +134,7 @@ const jsonLd = {
           name: "Is Kindora really better than Bloomerang for nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "If you only do fundraising, Bloomerang is fine. If you also manage grants, deliver programs, handle client services, or need nonprofit accounting, Kindora is the better choice — it replaces 3–4 tools with one affordable platform.",
+            text: "The right fit depends on your workflows. Bloomerang's published pages describe a donor and fundraising platform with volunteer engagement and grant tracking. Kindora's published pages cover donor, grant, client-program, and financial workflows. Compare the linked plan details and confirm functionality with each vendor.",
           },
         },
       ],
@@ -144,102 +145,100 @@ const jsonLd = {
 const comparisonRows = [
   {
     feature: "Donor CRM & Tracking",
-    kindora: { value: "Full CRM with engagement scoring", positive: true },
-    bloomerang: { value: "Strong donor retention focus", positive: true },
+    kindora: { value: "Donor profiles, giving history, and analytics", positive: true },
+    bloomerang: { value: "Donor management, profiles, and donor insights", positive: true },
   },
   {
-    feature: "Grant Lifecycle Management",
-    kindora: { value: "Full grant tracking from prospect to award", positive: true },
-    bloomerang: { value: "Not available", positive: false },
+    feature: "Grant Tracking",
+    kindora: { value: "Grant lifecycle tracking", positive: true },
+    bloomerang: { value: "Grant tracking is listed; workflow depth may differ", positive: true },
   },
   {
     feature: "Client Case Management",
     kindora: { value: "Full intake, services, and outcomes", positive: true },
-    bloomerang: { value: "Not available", positive: false },
+    bloomerang: { value: "Not described on reviewed product pages", positive: false },
   },
   {
-    feature: "Nonprofit Accounting",
+    feature: "Nonprofit Accounting & Cost Allocation",
     kindora: { value: "Built-in with cost allocation", positive: true },
-    bloomerang: { value: "Not available", positive: false },
+    bloomerang: { value: "Not described on reviewed product pages", positive: false },
   },
   {
     feature: "Volunteer Management",
-    kindora: { value: "Hours, scheduling, and recognition", positive: true },
-    bloomerang: { value: "Partial — limited features", positive: false },
+    kindora: { value: "Volunteer management tools", positive: true },
+    bloomerang: { value: "Volunteer engagement is included in its Giving Platform", positive: true },
   },
   {
-    feature: "Communications Hub",
-    kindora: { value: "Built-in email and bulk messaging", positive: true },
-    bloomerang: { value: "Requires third-party integrations", positive: false },
+    feature: "Email & Supporter Communications",
+    kindora: { value: "Email and communication history", positive: true },
+    bloomerang: { value: "Email campaigns and automated outreach", positive: true },
   },
   {
     feature: "Campaign Management",
-    kindora: { value: "Full campaign creation and tracking", positive: true },
-    bloomerang: { value: "Good campaign tools", positive: true },
+    kindora: { value: "Fundraising campaign tools", positive: true },
+    bloomerang: { value: "Fundraising and event tools", positive: true },
   },
   {
-    feature: "Export-Ready Reports",
-    kindora: { value: "PDF, Excel, board-ready formats", positive: true },
-    bloomerang: { value: "Partial — limited export options", positive: false },
+    feature: "Reporting & Analytics",
+    kindora: { value: "Financial and program analytics", positive: true },
+    bloomerang: { value: "Dashboards, donor insights, and campaign reports", positive: true },
   },
   {
-    feature: "Affordable for Small Nonprofits",
-    kindora: { value: "Yes — priced for small nonprofits", positive: true },
-    bloomerang: { value: "Yes — affordable for small teams", positive: true },
+    feature: "Published Pricing",
+    kindora: { value: "Free Starter (up to 5 users); paid plans custom-priced", positive: true },
+    bloomerang: { value: "Consult vendor current pricing; quotes vary by organization and plan.", positive: true },
   },
   {
-    feature: "Ready in Minutes",
-    kindora: { value: "Yes — no consultants needed", positive: true },
-    bloomerang: { value: "Yes — easy onboarding", positive: true },
+    feature: "Plan Details",
+    kindora: { value: "Modules and user limits listed by plan", positive: true },
+    bloomerang: { value: "Product bundles and feature lists published", positive: true },
   },
 ];
 
 const bloomerangStrengths = [
-  "Best-in-class donor retention metrics",
-  "Intuitive, easy-to-learn user interface",
-  "Strong email marketing integrations",
-  "Good for small fundraising-focused teams",
-  "Solid donor engagement scoring",
+  "Donor CRM with supporter profiles, giving history, and donor insights",
+  "Fundraising tools including donation forms and event management",
+  "Volunteer engagement within its Giving Platform",
+  "Email campaigns, automated outreach, dashboards, and campaign reporting",
+  "Grant tracking is listed among CRM features",
 ];
 
 const bloomerangWeaknesses = [
-  "No grant lifecycle management",
-  "No client case management",
-  "No nonprofit accounting or cost allocation",
-  "No volunteer management module",
-  "Requires add-ons for communications",
+  "Its public pages reviewed here do not describe client case management",
+  "Its public pages reviewed here do not describe nonprofit accounting or cost allocation",
+  "Its grant tracking listing does not establish feature parity with a full grant lifecycle workflow",
 ];
 
 const kindoraAdvantages = [
-  "Everything Bloomerang does for donors — plus grants, clients, and finances",
-  "Donor engagement scoring and lapsed donor alerts built in",
-  "No need to pay for separate grant tracking software",
-  "One platform replaces 3–4 tools",
+  "Donor management documented alongside grant lifecycle workflows",
+  "Client program and service tracking documented in the platform",
+  "Nonprofit financial management and cost allocation listed in paid plans",
+  "Review current plans to determine whether consolidated workflows fit your organization",
 ];
 
 const whySwitchReasons = [
   {
     title: "More Than Donors",
     description:
-      "Bloomerang only handles donor management. If you also manage grants, programs, or clients, you'll need multiple tools. Kindora does it all.",
+      "Bloomerang describes donor, fundraising, volunteer, communication, and grant-tracking capabilities. Kindora's public materials additionally describe client-program and nonprofit financial workflows. Compare scope against your own needs.",
     icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
   },
   {
     title: "Save Money",
     description:
-      "Stop paying for Bloomerang plus a grant tracker, an accounting tool, and a case management system. One Kindora subscription replaces all of them.",
+      "Pricing models and included modules differ. Bloomerang publishes contact-based product pricing; Kindora lists a free Starter tier and custom-priced paid tiers. Compare quotes and the additional tools your team currently uses.",
     icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
     title: "Unified Reporting",
     description:
-      "Generate board reports, grant compliance documents, and financial statements from one platform — no more stitching data from multiple tools.",
+      "Kindora's public materials describe financial and program reporting alongside donor and grant workflows. Review its reporting pages and confirm that the required outputs match your board and funder needs.",
     icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
   },
   {
-    title: "No Consultants Required",
+    title: "Compare Implementation Needs",
     description:
-      "Bloomerang is easy to use — and so is Kindora. Get started in 30 minutes with no implementation consultants or training fees.",
+      "Implementation time depends on data, configuration, and team needs. Ask both vendors about migration support, onboarding, training, and any implementation fees.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -248,38 +247,38 @@ const faqs = [
   {
     question: "Why switch from Bloomerang to Kindora?",
     answer:
-      "Bloomerang is a solid donor management tool, but it only handles donor CRM and fundraising. If you also manage grants, programs, clients, volunteers, or need nonprofit accounting, you'll end up paying for 3–4 separate tools. Kindora does all of that in one platform at an affordable price.",
+      "Bloomerang's public product pages describe donor CRM, fundraising, volunteer engagement, supporter communications, reporting, and grant tracking. Kindora's public pages describe donor management alongside grant lifecycle, client-program, and financial workflows. Compare current plans and source pages against your requirements.",
   },
   {
     question:
       "Does Kindora offer the same donor management features as Bloomerang?",
     answer:
-      "Yes. Kindora includes everything Bloomerang offers — donor profiles, giving history, engagement scoring, lapsed donor alerts, email marketing, and campaign tracking. Plus Kindora adds grant management, case management, accounting, and volunteer tools that Bloomerang doesn't have.",
+      "Both products document donor profiles, giving history, communications, and reporting. Bloomerang also lists grant tracking and volunteer engagement in its public materials. Kindora's public materials describe donor management together with grant lifecycle, client-program, and nonprofit financial workflows. Feature depth and plan availability should be checked with each provider.",
   },
   {
     question: "How does Kindora compare to Bloomerang on pricing?",
     answer:
-      "Kindora is priced for small to mid-sized nonprofits and includes features that would require separate tools (and separate subscriptions) with Bloomerang. You get more for less — no need to budget for additional grant, accounting, or case management software.",
+      "Bloomerang publishes pricing for its products, including CRM pricing based on database contacts and annual billing. Kindora publishes a free Starter tier for up to five team members and custom-priced Professional and Enterprise tiers. These plans use different packaging and pricing models, so compare current quotes and included modules.",
   },
   {
     question: "What does Bloomerang do that Kindora also does?",
     answer:
-      "Bloomerang's strengths — donor retention metrics, engagement scoring, intuitive UI, email integrations, and fundraising tools — are all included in Kindora. You won't lose any donor management functionality by switching.",
+      "Bloomerang describes donor insights, constituent profiles, donor groups, automated outreach, email campaigns, and fundraising tools. Kindora describes donor profiles, giving history, communication tracking, and donation analytics. Review both products and test the workflows you rely on before switching.",
   },
   {
-    question: "What does Kindora do that Bloomerang doesn't?",
+    question: "How do Kindora's broader workflows compare?",
     answer:
-      "Kindora adds grant lifecycle management, client case management, nonprofit accounting with cost allocation, volunteer management, and a built-in communications hub. These are features Bloomerang simply doesn't offer.",
+      "Kindora's public feature pages describe grant lifecycle management, client programs, nonprofit financial workflows, cost allocation, volunteer tools, and communications. Bloomerang's public pages also list grant tracking and volunteer engagement; the reviewed pages do not establish feature parity for every workflow, so verify your requirements directly.",
   },
   {
     question: "Can I migrate my data from Bloomerang to Kindora?",
     answer:
-      "Yes. Kindora supports data import from Bloomerang and other donor management platforms. Our team can help you migrate your donor records, giving history, and campaign data smoothly.",
+      "Ask Kindora about supported import formats, migration scope, and assistance before switching. Confirm that donor records, giving history, and any campaign data you need can be transferred.",
   },
   {
     question: "Is Kindora really better than Bloomerang for nonprofits?",
     answer:
-      "If you only do fundraising, Bloomerang is fine. If you also manage grants, deliver programs, handle client services, or need nonprofit accounting, Kindora is the better choice — it replaces 3–4 tools with one affordable platform.",
+      "The right fit depends on your workflows. Bloomerang's published pages describe a donor and fundraising platform with volunteer engagement and grant tracking. Kindora's published pages cover donor, grant, client-program, and financial workflows. Compare the linked plan details and confirm functionality with each vendor.",
   },
 ];
 
@@ -324,10 +323,11 @@ export default function BloomerangAlternativePage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Bloomerang is great for donor retention — but that&apos;s all
-                it does. If you also manage grants, deliver programs, or need
-                nonprofit accounting, you&apos;ll end up paying for 3–4 separate
-                tools. Kindora does everything in one affordable platform.
+                  Comparing Bloomerang with Kindora? Both document donor and
+                  fundraising workflows. Bloomerang also lists grant tracking
+                  and volunteer engagement; Kindora brings together donor,
+                  grant, client-program, and financial workflows. Review current
+                  plans and feature details to find the fit for your organization.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
@@ -363,8 +363,9 @@ export default function BloomerangAlternativePage() {
               <div className="flex items-center gap-6 text-sm text-gray-500">
                 {[
                   "No credit card required",
-                  "Setup in 30 minutes",
-                  "Cancel anytime",
+                  "Compare published features",
+                  "Explore product details",
+                  "Choose based on your needs",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg
@@ -402,13 +403,13 @@ export default function BloomerangAlternativePage() {
                 <div className="space-y-3">
                   {[
                     { feature: "Donor CRM", kindora: true, bloomerang: true },
-                    { feature: "Grant Tracking", kindora: true, bloomerang: false },
+                    { feature: "Grant Tracking", kindora: true, bloomerang: true },
                     { feature: "Case Management", kindora: true, bloomerang: false },
                     { feature: "Nonprofit Accounting", kindora: true, bloomerang: false },
-                    { feature: "Volunteer Tools", kindora: true, bloomerang: false },
+                    { feature: "Volunteer Tools", kindora: true, bloomerang: true },
                     { feature: "Campaign Tools", kindora: true, bloomerang: true },
-                    { feature: "Communications", kindora: true, bloomerang: false },
-                    { feature: "Board Reports", kindora: true, bloomerang: false },
+                    { feature: "Communications", kindora: true, bloomerang: true },
+                    { feature: "Reporting", kindora: true, bloomerang: true },
                   ].map((row) => (
                     <div
                       key={row.feature}
@@ -497,11 +498,9 @@ export default function BloomerangAlternativePage() {
 
                 <div className="mt-4 pt-4 border-t border-gray-100 text-center">
                   <span className="text-sm text-gray-500">
-                    Kindora:{" "}
-                    <span className="font-bold text-[#2563eb]">8/8</span>{" "}
-                    features · Bloomerang:{" "}
-                    <span className="font-bold text-gray-500">2/8</span>{" "}
-                    features
+                    Marks reflect features documented on reviewed public pages;
+                    a missing mark does not establish that a product lacks a
+                    capability.
                   </span>
                 </div>
               </div>
@@ -518,12 +517,13 @@ export default function BloomerangAlternativePage() {
               Why Switch
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Bloomerang is great for donors. Kindora does donors + everything
-              else.
+              Compare donor tools with broader nonprofit workflows
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              If your nonprofit manages grants, delivers programs, or needs
-              accounting — you&apos;re outgrowing Bloomerang.
+              Both platforms document donor and fundraising workflows.
+              Kindora&apos;s public materials also cover client programs and
+              nonprofit financial management; check each product&apos;s scope
+              against your needs.
             </p>
           </div>
 
@@ -585,7 +585,7 @@ export default function BloomerangAlternativePage() {
                   <th className="px-6 py-4 bg-[#2563eb] text-white font-bold text-center min-w-[140px]">
                     <div className="flex flex-col items-center gap-1">
                       <span className="text-xs font-semibold uppercase tracking-wider opacity-80">
-                        Best Choice
+                        Kindora
                       </span>
                       <span className="text-base">Kindora</span>
                     </div>
@@ -721,7 +721,7 @@ export default function BloomerangAlternativePage() {
                             />
                           </svg>
                         </span>
-                        Not available
+                        Not described in reviewed sources
                       </span>
                     </div>
                   </td>
@@ -871,7 +871,7 @@ export default function BloomerangAlternativePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Switch to Kindora — Free Trial
+              Explore Kindora Starter — Free plan
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
@@ -938,15 +938,58 @@ export default function BloomerangAlternativePage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Compare product details and explore Kindora features
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Comparison notes reflect information on the public pages below,
+            reviewed September 17, 2026. A feature not described on a reviewed
+            page should not be read as proof that the product lacks it. Confirm
+            plan availability and workflow details directly with each provider.
+          </p>
+          <ul className="list-disc pl-5 space-y-2 mb-8 text-blue-700">
+            <li>
+              <a href="https://bloomerang.com/crm" target="_blank" rel="noopener noreferrer" className="underline">
+                Bloomerang CRM product page
+              </a>
+            </li>
+            <li>
+              <a href="https://bloomerang.com/pricing" target="_blank" rel="noopener noreferrer" className="underline">
+                Bloomerang pricing and Giving Platform details
+              </a>
+            </li>
+            <li>
+              <Link href="/kindora/pricing" className="underline">
+                Kindora plan details
+              </Link>
+            </li>
+          </ul>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            Explore Kindora&apos;s relevant nonprofit workflows
+          </h3>
+          <div className="flex flex-wrap gap-x-5 gap-y-3">
+            <Link href="/kindora/features/donor-management" className="text-blue-700 underline">Donor management</Link>
+            <Link href="/kindora/features/grant-management" className="text-blue-700 underline">Grant management</Link>
+            <Link href="/kindora/features/client-management" className="text-blue-700 underline">Client and program management</Link>
+            <Link href="/kindora/features/financials" className="text-blue-700 underline">Financial management</Link>
+            <Link href="/kindora/features/people-management" className="text-blue-700 underline">People and volunteer management</Link>
+            <Link href="/kindora/features/reporting" className="text-blue-700 underline">Reporting</Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8f9fa] to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to switch from Bloomerang?
+            See whether Kindora fits your nonprofit
           </h2>
           <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Get started with Kindora today. Everything Bloomerang does for
-            donors — plus grants, case management, accounting, and more.
+            Review Kindora&apos;s donor, grant, client-program, and financial
+            workflows, then compare them with your organization&apos;s
+            requirements.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -978,12 +1021,14 @@ export default function BloomerangAlternativePage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Review plan details and confirm current feature availability with
+            each provider.
           </p>
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <ComparisonMethodology />
+                <LastUpdated date="2026-11-26" />
             </div></div>
       </section>
     </>

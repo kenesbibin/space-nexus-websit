@@ -4,15 +4,15 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Management Software | Donor CRM Software",
+  title: "Donor Management Software for Small Nonprofits | Kindora",
   description:
-    "Kindora donor management software helps you track donors, manage giving history, automate thank-yous, and build lasting relationships — all from one integrated platform.",
+    "Find donor management software for a small nonprofit. Kindora's free Starter plan supports up to 5 team members with donor and donation management, giving history, and basic reporting.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-management-software",
   },
   openGraph: {
-    title: "Donor Management Software",
-    description: "Track donors, manage giving history, and build lasting relationships with Kindora donor management software.",
+    title: "Donor Management Software for Small Nonprofits",
+    description: "Manage donor records and giving history with Kindora. The free Starter plan supports up to 5 team members.",
     url: "https://spacenexus.net/kindora/donor-management-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -27,12 +27,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Management Software",
-    description: "Track donors, manage giving history, and build lasting relationships with Kindora donor management software.",
+    title: "Donor Management Software for Small Nonprofits",
+    description: "Manage donor records and giving history with Kindora. The free Starter plan supports up to 5 team members.",
     images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "donor management software",
+    "donor management software for small nonprofits",
+    "affordable donor management software",
+    "free donor management software for nonprofits",
+    "donor CRM for small nonprofits",
     "donor crm software",
     "donor tracking software",
     "donor database software",
@@ -52,114 +56,102 @@ export const metadata: Metadata = {
 
 const benefits = [
   {
-    metric: "3x",
-    title: "Higher Donor Retention",
-    description: "Track giving patterns, identify at-risk donors, and send timely follow-ups — organisations using donor management software retain 3x more donors.",
+    title: "Keep donor details together",
+    description: "Store donor contact information, giving history, and relationship notes in donor profiles instead of maintaining disconnected records.",
   },
   {
-    metric: "100%",
-    title: "Complete Donor View",
-    description: "See every gift, communication, event, and interaction in one timeline. No more scattered spreadsheets or lost donor history.",
+    title: "See giving history at a glance",
+    description: "Review gifts, dates, payment methods, campaign attribution, and receipt status from the donor record.",
   },
   {
-    metric: "80%",
-    title: "Less Manual Work",
-    description: "Automated thank-yous, receipt generation, and data entry free your team to focus on building relationships instead of managing records.",
+    title: "Follow up with context",
+    description: "Record donor communications and use active, inactive, and prospect statuses to organize stewardship follow-up.",
   },
   {
-    metric: "5x",
-    title: "Better Fundraising",
-    description: "Identify major gift prospects, segment donors by giving capacity, and personalise asks based on complete giving history.",
+    title: "Start with a free plan",
+    description: "Kindora's Starter plan is listed at no cost for up to five team members and includes donor and donation management plus basic reporting.",
   },
 ];
 
 const features = [
   {
     title: "Donor Profiles",
-    description: "Complete donor records with contact info, giving history, communication log, and engagement score — all in one place.",
+    description: "Keep donor contact information, addresses, communication preferences, and relationship notes in each donor profile.",
     icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
   },
   {
     title: "Giving History",
-    description: "Track every gift — one-time, recurring, in-kind, pledged — with full transaction history and tax receipts.",
+    description: "Review gift amounts, dates, payment methods, campaign attribution, and receipt status from the donor record.",
     icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
-    title: "Donor Segmentation",
-    description: "Segment donors by giving level, recency, frequency, programme interest, or custom fields for targeted outreach.",
+    title: "Donor Statuses",
+    description: "Organize records as active, inactive, or prospect so your small team can see which relationships need attention.",
     icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
   },
   {
-    title: "Engagement Scoring",
-    description: "Automatically score donor engagement based on giving frequency, event attendance, email opens, and volunteer activity.",
+    title: "Recurring Giving",
+    description: "Manage monthly giving programs and recurring donation schedules alongside each donor's giving history.",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+  },
+  {
+    title: "Communication History",
+    description: "Log emails, calls, meetings, and thank-you notes to maintain relationship context with each donor record.",
     icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
   },
   {
-    title: "Automated Thank-Yous",
-    description: "Instant personalised thank-you emails sent automatically after every donation — no manual work, no missed acknowledgements.",
+    title: "Direct Email",
+    description: "Send an email from a donor profile using a template or a custom message, without leaving the platform.",
     icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
   },
   {
-    title: "Donor Portal",
-    description: "Self-service portal for donors to view giving history, update payment methods, and download tax receipts.",
+    title: "Donation Analytics",
+    description: "Review total giving, average and largest gift, and most recent donation to inform donor stewardship.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
   {
-    title: "Communication Tracking",
-    description: "Log every email, phone call, mail piece, and meeting — complete communication history for every donor.",
-    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-  },
-  {
-    title: "Lapsed Donor Alerts",
-    description: "Automatic alerts when donors haven't given in a defined period — triggers re-engagement workflows.",
+    title: "Receipt Status",
+    description: "Track whether a donation receipt is pending, sent, or not required.",
     icon: "M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9",
   },
-];
-
-const comparisonData = [
-  { feature: "Donor Profiles", kindora: true, bloomerang: true, blackbaud: true, salesforce: true },
-  { feature: "Giving History", kindora: true, bloomerang: true, blackbaud: true, salesforce: true },
-  { feature: "Donor Segmentation", kindora: true, bloomerang: true, blackbaud: true, salesforce: "partial" },
-  { feature: "Engagement Scoring", kindora: true, bloomerang: true, blackbaud: false, salesforce: true },
-  { feature: "Automated Thank-Yous", kindora: true, bloomerang: true, blackbaud: false, salesforce: false },
-  { feature: "Donor Portal", kindora: true, bloomerang: false, blackbaud: false, salesforce: false },
-  { feature: "Lapsed Donor Alerts", kindora: true, bloomerang: true, blackbaud: false, salesforce: false },
-  { feature: "All-in-One Platform", kindora: true, bloomerang: false, blackbaud: true, salesforce: false },
 ];
 
 const faqs = [
   {
     question: "What is donor management software?",
     answer:
-      "Donor management software is a system that helps nonprofits track donor relationships, giving history, communications, and engagement. It centralises donor data, automates thank-yous, and gives teams the information they need to build lasting donor relationships.",
+      "Donor management software helps nonprofits organize donor contact details, giving history, communications, and receipt records. A shared donor record gives staff a consistent place to review relationship context and plan follow-up.",
   },
   {
     question: "How does donor management software improve retention?",
     answer:
-      "Donor management software tracks giving patterns, identifies at-risk donors, and triggers timely follow-ups. Automated thank-yous, personalised communication, and engagement scoring help nonprofits retain more donors and increase lifetime value.",
+      "Donor management software makes giving history and communication notes easier to review together. Teams can use that context to plan timely, personal follow-up; software alone does not guarantee donor retention.",
   },
   {
     question: "What features should I look for in donor management software?",
     answer:
-      "Key features include donor profiles, giving history, segmentation, automated thank-yous, communication tracking, lapsed donor alerts, and reporting. Advanced features like engagement scoring, donor portals, and CRM integration are also valuable.",
+      "Small nonprofits commonly need donor profiles, gift history, communication notes, donation reporting, and receipt tracking. Consider the number of users included, which modules are in each plan, and whether the product fits your existing fundraising process.",
   },
   {
     question: "How is Kindora different from other donor management software?",
     answer:
-      "Most donor management tools only handle donors. Kindora includes donor management plus grant tracking, volunteer management, programme tracking, events, and reporting — all in one platform. You get complete organisational visibility, not just donor data.",
+      "Kindora documents donor profiles, donation history, donor statuses, communication history, direct email, donation analytics, and receipt status. Its free Starter plan includes donor and donation management for up to five team members; paid plans have custom pricing and additional modules.",
   },
   {
     question: "Can I migrate my donor data from spreadsheets to Kindora?",
     answer:
-      "Yes. Kindora provides full data migration support. Our team helps you import donor records from spreadsheets, other CRMs, or any data source — so nothing is lost in the switch.",
+      "Before switching, ask Kindora about supported import formats and migration assistance for your specific donor records. Confirm which fields and gift history can be transferred before starting a migration.",
   },
-];
-
-const platformStats = [
-  { metric: "3x", label: "Higher donor retention" },
-  { metric: "100%", label: "Complete donor view" },
-  { metric: "80%", label: "Less manual work" },
-  { metric: "5x", label: "Better fundraising" },
+  {
+    question: "Is Kindora affordable for a small nonprofit?",
+    answer:
+      "Kindora lists its Starter plan as free forever for up to five team members, with donor and donation management, client and service tracking, and basic reporting and exports. Professional and Enterprise plans are custom-priced. Review the current plan details to confirm which modules and limits fit your organization.",
+  },
+  {
+    question: "Is Kindora donor management easy for a small team to use?",
+    answer:
+      "Kindora keeps donor profiles, giving history, communication notes, and receipt status together, so staff can review the same donor context in one place. Ask for a demo to check the workflow against your team's daily tasks and existing records.",
+  },
 ];
 
 const jsonLd = {
@@ -171,13 +163,13 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "Donor management software — track donors, manage giving history, automate thank-yous, and build lasting relationships.",
+        "Donor management software for small nonprofits with donor profiles, donation history, communication records, receipt tracking, and a free Starter plan for up to five team members.",
       url: "https://spacenexus.net/kindora/donor-management-software",
       offers: {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Free Starter plan for up to five team members; see current plan details.",
       },
     },
     {
@@ -210,12 +202,12 @@ export default function DonorManagementSoftwarePage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-              Donor Management Software That{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">Builds Relationships</span>
+              Donor Management Software for{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">Small Nonprofits</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Track every donor, every gift, every interaction — and turn data into lasting relationships. The donor management software nonprofits trust.
+              Small nonprofit teams need donor records they can keep current without adding unnecessary cost or complexity. Keep donor profiles, giving history, communication notes, and receipt status together with Kindora.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -225,44 +217,45 @@ export default function DonorManagementSoftwarePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-cyan-600 hover:to-blue-700 rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Try for Free
+                Start with the free plan
                 <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
               <Link
-                href="/kindora/contact"
+                href="/kindora/features/donor-management"
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
               >
-                Request a Demo
+                Explore donor management features
               </Link>
             </div>
 
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
-                <span key={text} className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {text}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {platformStats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">{stat.metric}</p>
-                <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
-              </div>
-            ))}
+      {/* Small nonprofit plan */}
+      <section className="border-y border-gray-100 bg-white py-12">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-4 text-center sm:px-6 md:flex-row md:text-left lg:px-8">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
+              A clear starting point for small teams
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">
+              Start with Kindora&apos;s free Starter plan
+            </h2>
+            <p className="mt-2 max-w-2xl text-gray-600">
+              Starter is listed at $0 for up to five team members and includes
+              donor and donation management, basic reporting, and exports.
+              Professional and Enterprise plans are custom-priced.
+            </p>
           </div>
+          <Link
+            href="/kindora/pricing"
+            className="shrink-0 rounded-full border border-blue-700 px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
+          >
+            Compare plans
+          </Link>
         </div>
       </section>
 
@@ -271,18 +264,15 @@ export default function DonorManagementSoftwarePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">Why Donor Management</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Donors Deserve Better Than Spreadsheets</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">A manageable donor workflow for a small team</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Without donor management software, nonprofits lose track of giving history, miss follow-ups, and struggle to retain donors. Kindora changes that.
+              Keep core donor work in a consistent place: profile details, gifts, communications, and receipt status. This gives staff a shared record to refer to when planning stewardship and reporting.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="group p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white text-xl font-bold mb-5">
-                  {benefit.metric}
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
               </div>
@@ -296,9 +286,9 @@ export default function DonorManagementSoftwarePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-600 text-sm font-semibold mb-4">Features</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Everything You Need to Manage Donors</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Donor management features for day-to-day work</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              From profiles to portals, Kindora donor management covers every aspect of donor relationships.
+              Review the donor and donation workflows Kindora documents, from profile details and gift history to communication records and receipts.
             </p>
           </div>
 
@@ -315,67 +305,55 @@ export default function DonorManagementSoftwarePage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/kindora/features/donor-management"
+              className="inline-flex items-center font-semibold text-blue-700 underline decoration-blue-200 underline-offset-4 hover:text-blue-900"
+            >
+              See Kindora&apos;s donor management feature details
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Comparison */}
-      <section className="py-20 lg:py-28 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">How We Compare</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Kindora vs Other Donor Software</h2>
-            <p className="text-lg text-gray-600">See why nonprofits choose Kindora over generic donor management tools.</p>
+      {/* Affordability and next steps */}
+      <section className="bg-gray-50 py-20 lg:py-24">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
+              What should a small nonprofit compare?
+            </h2>
+            <p className="mb-5 leading-relaxed text-gray-600">
+              Check whether the plan fits your team size and includes the donor
+              workflows you actually use. Kindora&apos;s published Starter plan
+              is free for up to five team members and includes core donor and
+              donation management. Its plan page lists Professional and
+              Enterprise pricing as custom, so request a quote before budgeting
+              for paid modules.
+            </p>
+            <Link
+              href="/kindora/pricing"
+              className="font-semibold text-blue-700 underline decoration-blue-200 underline-offset-4 hover:text-blue-900"
+            >
+              See current Kindora plan details
+            </Link>
           </div>
-
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-100">
-                    <th className="text-left py-4 px-6 text-sm font-semibold text-gray-500">Feature</th>
-                    <th className="text-center py-4 px-6 text-sm font-semibold text-blue-600">Kindora</th>
-                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Bloomerang</th>
-                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Blackbaud</th>
-                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Salesforce</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonData.map((row, i) => (
-                    <tr key={row.feature} className={i < comparisonData.length - 1 ? "border-b border-gray-50" : ""}>
-                      <td className="py-4 px-6 text-sm text-gray-900 font-medium">{row.feature}</td>
-                      <td className="py-4 px-6 text-center">
-                        {typeof row.kindora === "boolean" ? (
-                          row.kindora ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
-                        ) : (
-                          <span className="text-yellow-500 text-sm">Partial</span>
-                        )}
-                      </td>
-                      <td className="py-4 px-6 text-center">
-                        {typeof row.bloomerang === "boolean" ? (
-                          row.bloomerang ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
-                        ) : (
-                          <span className="text-yellow-500 text-sm">Partial</span>
-                        )}
-                      </td>
-                      <td className="py-4 px-6 text-center">
-                        {typeof row.blackbaud === "boolean" ? (
-                          row.blackbaud ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
-                        ) : (
-                          <span className="text-yellow-500 text-sm">Partial</span>
-                        )}
-                      </td>
-                      <td className="py-4 px-6 text-center">
-                        {typeof row.salesforce === "boolean" ? (
-                          row.salesforce ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
-                        ) : (
-                          <span className="text-yellow-500 text-sm">Partial</span>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          <div>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
+              Keep the workflow simple and verifiable
+            </h2>
+            <p className="mb-5 leading-relaxed text-gray-600">
+              Before adopting any donor system, test a representative task:
+              open a donor profile, review recent gifts, record a conversation,
+              and check receipt status. Kindora&apos;s feature page describes
+              these steps and the available donor record fields.
+            </p>
+            <Link
+              href="/kindora/features/donor-management"
+              className="font-semibold text-blue-700 underline decoration-blue-200 underline-offset-4 hover:text-blue-900"
+            >
+              Review the donor management workflow
+            </Link>
           </div>
         </div>
       </section>
@@ -404,7 +382,7 @@ export default function DonorManagementSoftwarePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Manage Donors Better?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing spreadsheets with professional donor management software.
+          Review donor management features and plan details, then decide whether Kindora fits your team&apos;s workflow and budget.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -413,7 +391,7 @@ export default function DonorManagementSoftwarePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Start with the free Starter plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -428,7 +406,7 @@ export default function DonorManagementSoftwarePage() {
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <LastUpdated date="2026-10-29" />
             </div></div>
       </section>
     </>

@@ -2,10 +2,20 @@ import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = "https://spacenexus.net";
-  const restrictedPaths = [
+  const userAgents = [
+    "GPTBot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "ClaudeBot",
+    "PerplexityBot",
+    "Google-Extended",
+  ];
+  const disallow = [
     "/api/",
     "/admin/",
     "/private/",
+    "/preview/",
+    "/__preview/",
     "/kindora/email-click",
   ];
 
@@ -40,8 +50,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: restrictedPaths,
+        disallow,
       },
+      ...userAgents.map((userAgent) => ({
+        userAgent,
+        allow: "/",
+        disallow,
+      })),
     ],
     sitemap: [
       `${baseUrl}/sitemap.xml`,

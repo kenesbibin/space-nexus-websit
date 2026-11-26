@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
-import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Donor Management Software for Nonprofits | Kindora",
@@ -43,7 +42,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -51,26 +50,26 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is donor management software?",
+          name: "What features should donor management software have?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Donor management software helps nonprofits track donations, manage donor relationships, automate communications, and analyze fundraising performance. It replaces spreadsheets with a centralized database that captures donor history, preferences, communication logs, and giving patterns.",
+            text: "Essential features include contact management with giving history, donation tracking (one-time and recurring), communication logs, reporting dashboards, and integration with your existing email and accounting tools. Kindora includes all of these plus volunteer coordination, grant tracking, and case management in a single platform.",
           },
         },
         {
           "@type": "Question",
-          name: "How much does donor management software cost for small nonprofits?",
+          name: "How does donor management software improve fundraising?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora offers a free trial with no credit card required. Paid plans start at an affordable flat rate per month with no per-contact fees, making it accessible for small to mid-sized nonprofits with limited budgets.",
+            text: "By centralizing donor data, you can segment your audience, personalize communications, identify major gift prospects, and track campaign effectiveness. Nonprofits using donor management software typically see higher donor retention and larger average gifts because they can build stronger relationships based on donor history and preferences.",
           },
         },
         {
           "@type": "Question",
-          name: "Can donor management software integrate with my existing tools?",
+          name: "Is Kindora suitable for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora integrates with email marketing platforms, accounting software, and payment processors. The platform also offers API access for custom integrations with your existing tech stack.",
+            text: "Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free Starter plan lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.",
           },
         },
       ],
@@ -145,7 +144,6 @@ const relatedPages = [
 export default function DonorManagementPage() {
   return (
     <>
-      <BreadcrumbSchema />
       <Script id="donor-management-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-rose-50 to-white py-20 px-4">
@@ -217,7 +215,7 @@ export default function DonorManagementPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Is Kindora suitable for small nonprofits?</h3>
-                <p className="text-gray-600">Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free trial lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.</p>
+                <p className="text-gray-600">Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free Starter plan lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.</p>
               </div>
             </div>
           </div>
@@ -226,7 +224,7 @@ export default function DonorManagementPage() {
         <section className="py-12 px-4 bg-[#2563eb] text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Ready to transform your donor management?</h2>
-            <p className="text-blue-100 mb-6">Start your free trial today. No credit card required.</p>
+            <p className="text-blue-100 mb-6">Start your free Starter plan today. No credit card required.</p>
             <Link href="/kindora/demo" className="inline-block bg-white text-[#2563eb] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get started free
             </Link>
