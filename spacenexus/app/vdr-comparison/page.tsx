@@ -5,7 +5,7 @@ import LastUpdated from "../components/LastUpdated";
 import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix | SpaceNexus",
+    title: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix",
     description: "Independent data room comparison of top VDR providers. See pricing, features, security, setup time, and ratings side-by-side in our 2026 feature matrix.",
     alternates: {
         canonical: "https://spacenexus.net/vdr-comparison",
@@ -754,7 +754,7 @@ export default function VDRComparisonPage() {
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-11-25" />
             </div></div>
                 </section>
             </main>

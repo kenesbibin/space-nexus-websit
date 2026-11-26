@@ -155,32 +155,34 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
     const articleSchema = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         headline: post.title,
         description: post.description,
         datePublished: post.publishedAt,
         ...(post.lastReviewed && { dateModified: post.lastReviewed }),
         author: {
             "@type": "Person",
+            ...(authorProfile && { "@id": `https://spacenexus.net/about#${authorProfile.slug}` }),
             name: post.author.name,
             jobTitle: post.author.role,
             ...(authorProfile && {
                 url: `https://spacenexus.net/about#${authorProfile.slug}`,
                 description: authorProfile.bio,
                 sameAs: [authorProfile.linkedin],
-                hasCredential: authorProfile.credentials,
+                worksFor: { "@id": "https://spacenexus.net/#organization" },
             }),
         },
         publisher: {
-            "@type": "Organization",
-            name: "SpaceNexus",
-            url: "https://spacenexus.net",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://spacenexus.net/logo.png",
-            },
+            "@id": "https://spacenexus.net/#organization",
         },
+        isPartOf: { "@id": "https://spacenexus.net/#website" },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://spacenexus.net/blog/${slug}`,
+        },
+        image: "https://spacenexus.net/og-image.png",
         url: `https://spacenexus.net/blog/${slug}`,
+        inLanguage: "en-US",
     };
 
     const breadcrumbSchema = {

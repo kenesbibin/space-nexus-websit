@@ -1,6 +1,17 @@
 import { kindoraCanonicalUrl } from "../kindora/components/kindora-entity";
 
 export default function JsonLd() {
+  const personSchemas = Object.values(authorProfiles).map((m) => ({
+    "@type": "Person",
+    "@id": `https://spacenexus.net/about#${m.slug}`,
+    name: m.name,
+    jobTitle: m.role,
+    description: m.bio,
+    url: `https://spacenexus.net/about#${m.slug}`,
+    sameAs: [m.linkedin],
+    worksFor: { "@id": "https://spacenexus.net/#organization" },
+  }));
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -19,19 +30,13 @@ export default function JsonLd() {
     description:
       "SpaceNexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams.",
     foundingDate: "2022",
-    numberOfEmployees: {
-      "@type": "QuantitativeValue",
-      minValue: 10,
-      maxValue: 50,
-    },
+    employee: personSchemas.map((p) => ({ "@id": p["@id"] })),
     knowsAbout: [
       "Virtual Data Rooms",
       "M&A Due Diligence",
       "Secure Document Sharing",
       "Investment Banking Technology",
       "Legal Technology",
-      "SOC 2 Compliance",
-      "ISO 27001",
     ],
     sameAs: [
       "https://x.com/spacenexus111",
@@ -80,10 +85,12 @@ export default function JsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "SoftwareApplication",
+            "@id": "https://spacenexus.net/#software",
             name: "SpaceNexus VDR",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web Browser",
             url: "https://spacenexus.net",
+            publisher: { "@id": "https://spacenexus.net/#organization" },
           },
         },
         {
@@ -137,17 +144,12 @@ export default function JsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://spacenexus.net/#website",
     name: "SpaceNexus",
     alternateName: "Space Nexus",
     url: "https://spacenexus.net",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://spacenexus.net/search?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
+    publisher: { "@id": "https://spacenexus.net/#organization" },
+    inLanguage: "en-US",
   };
 
   return (
@@ -161,13 +163,13 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(softwareApplicationSchema),
+          __html: JSON.stringify(websiteSchema),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
+          __html: JSON.stringify(serviceSchema),
         }}
       />
     </>

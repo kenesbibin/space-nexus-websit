@@ -4,7 +4,7 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "VDR Compliance FAQ — SOC 2, GDPR, HIPAA, SEC | SpaceNexus",
+    title: "VDR Compliance FAQ — SOC 2, GDPR, HIPAA, SEC",
     description: "Comprehensive FAQ on virtual data room compliance. SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4, FINRA, and 25+ more compliance questions answered.",
     alternates: {
         canonical: "https://spacenexus.net/faq/vdr-compliance",

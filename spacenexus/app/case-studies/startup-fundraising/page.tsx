@@ -454,7 +454,7 @@ export default function StartupFundraisingCaseStudiesPage() {
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
                         <div className="flex flex-wrap gap-3 justify-center">
-                            <Link href="/m-a-case-studies" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/ma-case-studies" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 M&amp;A Case Studies →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -466,7 +466,7 @@ export default function StartupFundraisingCaseStudiesPage() {
                                 Investor Data Room →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/fundraising-and-investor-due-diligence" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/investor-due-diligence" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 Fundraising &amp; Investor Due Diligence Guide →
                             </Link>
                         </div>
@@ -494,7 +494,7 @@ export default function StartupFundraisingCaseStudiesPage() {
                                 <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Series A fundraising data room →</h3>
                             </Link>
                             <Link
-                                href="/fundraising-and-investor-due-diligence"
+                                href="/investor-due-diligence"
                                 className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                             >
                                 <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Complete guide.</p>

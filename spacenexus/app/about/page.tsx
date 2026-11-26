@@ -82,6 +82,7 @@ export default function AboutPage() {
                             },
                             ...teamMembers.map((m) => ({
                                 "@type": "Person",
+                                "@id": `https://spacenexus.net/about#${m.slug}`,
                                 name: m.name,
                                 jobTitle: m.role,
                                 description: m.bio,

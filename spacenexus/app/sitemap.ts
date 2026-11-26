@@ -87,7 +87,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // VDR blog posts
   const vdrBlogPosts = [
     "what-is-a-virtual-data-room",
-    "ma-due-diligence-checklist-2025",
     "virtual-data-room-for-private-equity",
     "vdr-security-what-to-look-for",
     "how-to-set-up-virtual-data-room-series-a",
@@ -124,7 +123,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // VDR feature pages
   const vdrFeaturePages = [
     "data-room",
-    "vdr-data-room",
     "dashboard",
     "security-compliance",
     "users-permissions",

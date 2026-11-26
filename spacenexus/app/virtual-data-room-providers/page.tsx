@@ -807,25 +807,11 @@ export default function VirtualDataRoomProvidersPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
                         </Link>
                         <Link
-                            href="/m-a-data-room-providers"
+                            href="/ma-data-room-providers"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Top providers for M&A.</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A data room providers →</h3>
-                        </Link>
-                        <Link
-                            href="/data-room-providers"
-                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
-                        >
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Comprehensive provider list.</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room providers →</h3>
-                        </Link>
-                        <Link
-                            href="/vdr-providers"
-                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
-                        >
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">All VDR providers compared.</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR providers →</h3>
                         </Link>
                         <Link
                             href="/data-room-software"
