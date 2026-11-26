@@ -52,14 +52,14 @@ export const metadata: Metadata = {
 
 const benefits = [
   {
-    metric: "2x",
+    metric: "Engagement",
     title: "Higher Volunteer Retention",
-    description: "Track engagement, recognise contributions, and send timely follow-ups — organisations using volunteer management software retain 2x more volunteers.",
+    description: "Track engagement, recognize contributions, and send follow-ups. Volunteer retention outcomes vary by organization.",
   },
   {
-    metric: "100%",
+    metric: "Recorded",
     title: "Complete Hour Tracking",
-    description: "Log every hour, every shift, every activity — no more manual timesheets or lost volunteer time. Accurate records for reporting and recognition.",
+    description: "Record volunteer hours by shift and activity to support internal tracking and reporting.",
   },
   {
     metric: "Auto",
@@ -177,7 +177,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -243,7 +243,7 @@ export default function VolunteerManagementSoftwarePage() {
             </div>
 
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+              {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -283,7 +283,7 @@ export default function VolunteerManagementSoftwarePage() {
             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">Why Volunteer Management</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Volunteers Deserve Better Than Spreadsheets</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Volunteer management software helps nonprofits track hours, avoid scheduling conflicts, and improve volunteer retention. Organisations using Kindora&apos;s engagement tracking and automated follow-ups retain 2x more volunteers than those relying on spreadsheets.
+              Volunteer management software helps nonprofits track hours, coordinate schedules, and plan follow-ups. Retention outcomes depend on each organization and its volunteer program.
             </p>
           </div>
 
@@ -423,7 +423,7 @@ export default function VolunteerManagementSoftwarePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

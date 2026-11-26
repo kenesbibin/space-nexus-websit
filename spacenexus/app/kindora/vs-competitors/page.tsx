@@ -1,7 +1,9 @@
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
     title: "Kindora vs Competitors | Nonprofit Software Comparison",
@@ -148,7 +150,7 @@ const competitorDetails = [
             "Fundraising portfolios, donor profiles, gift entry, and segmentation",
             "Program and outcome management, including targets and assessments",
             "Volunteer events, roles, shifts, applications, and hours",
-            "Official pricing lists editions at $70 and $125 USD per user/month, billed annually",
+            "Consult vendor current pricing; quotes vary by organization and plan.",
         ],
         bloomerangWeaknesses: [
             "Kindora and Salesforce package, licensing, and implementation costs use different models; compare quotes for your team",
@@ -370,15 +372,7 @@ const comparisonItemListSchema = {
   }),
 };
 
-const vsBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
-    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", "position": 3, "name": "Vs Competitors", "item": "https://spacenexus.net/kindora/vs-competitors" },
-  ],
-};
+
 
 const lastUpdated = "October 29, 2026";
 export default function VsCompetitorsPage() {
@@ -393,7 +387,6 @@ export default function VsCompetitorsPage() {
                     __html: JSON.stringify(comparisonItemListSchema).replace(/</g, "\\u003c"),
                 }}
             />
-            <Script id="vs-competitors-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(vsBreadcrumbSchema) }} />
             {/* Hero */}
             <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-20 bg-gradient-to-b from-[#f0f4ff] to-white overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
@@ -439,6 +432,8 @@ export default function VsCompetitorsPage() {
                     </div>
                 </div>
             </section>
+
+      <AnswerReadyBlock page="comparison" />
 
             {/* Quick nav anchors */}
             <section className="py-6 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
@@ -728,7 +723,7 @@ export default function VsCompetitorsPage() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
                             >
-                                Switch to Kindora — Free Trial
+                                Explore Kindora Starter — Free plan
                                 <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -848,7 +843,8 @@ export default function VsCompetitorsPage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-10-29" />
+                <ComparisonMethodology />
+                <LastUpdated date="2026-11-26" />
             </div></div>
             </section>
         </>

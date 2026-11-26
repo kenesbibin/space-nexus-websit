@@ -326,8 +326,8 @@ const articleSchema = {
   headline: "Nonprofit Document Management 2026 — Complete Guide for Operations Teams",
   description:
     "The complete 2026 guide to nonprofit document management. Secure storage, version control, compliance tracking, and best practices for operations leaders.",
-  author: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
-  publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+  author: { "@id": "https://spacenexus.net/kindora/#organization" },
+  publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
   datePublished: "2026-07-01",
   dateModified: "2026-07-01",
   mainEntityOfPage: "https://spacenexus.net/kindora/nonprofit-document-management",
@@ -343,15 +343,7 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-    { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", position: 3, name: "Nonprofit Document Management", item: "https://spacenexus.net/kindora/nonprofit-document-management" },
-  ],
-};
+
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -360,7 +352,7 @@ const serviceSchema = {
   description: "Nonprofit document management for organizing, storing, and sharing documents with version control and compliance.",
   url: "https://spacenexus.net/kindora/nonprofit-document-management",
   serviceType: "Nonprofit Document Management",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -387,7 +379,6 @@ export default function KindoraNonprofitDocumentManagementPage() {
       <Script id="kindora-doc-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="kindora-doc-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="kindora-doc-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="kindora-doc-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="pt-20 lg:pt-24">
 

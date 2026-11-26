@@ -95,7 +95,7 @@ const serviceSchema = {
   description: "Expense management software for nonprofits. Track, categorize, and reconcile expenses across programs, grants, and departments.",
   url: "https://spacenexus.net/kindora/expense-management-software",
   serviceType: "Expense Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };

@@ -184,9 +184,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features",
   serviceType: "Nonprofit Management Software Platform",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -370,31 +368,7 @@ export default function FeaturesPage() {
 
             <div className="relative">
               <div className="bg-gradient-to-br from-[#2563eb]/5 to-violet-500/5 rounded-2xl p-8 border border-gray-200">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-xl p-4 border border-blue-100 col-span-2">
-                    <p className="text-sm font-semibold text-[#2563eb] mb-1">Nonprofits using Kindora</p>
-                    <p className="text-2xl font-black text-gray-900">500+</p>
-                    <p className="text-xs text-gray-500 mt-1">According to Kindora platform data, over 500 nonprofits use Kindora to manage donors, grants, programs, and finances — saving an average of 10 hours per team per week.</p>
-                  </div>
-                  {[
-                    { label: "User Roles", value: "4 access levels" },
-                    { label: "Donor Types", value: "8 categories" },
-                    { label: "Expense Categories", value: "10 types" },
-                    { label: "Service Categories", value: "8 types" },
-                    { label: "Payment Methods", value: "7 options" },
-                    { label: "Languages", value: "4 supported" },
-                  ].map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="bg-white rounded-xl p-4 border border-gray-100"
-                    >
-                      <p className="text-sm text-gray-500 mb-1">{stat.label}</p>
-                      <p className="text-lg font-semibold text-gray-900">
-                        {stat.value}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <div className="rounded-xl bg-white p-6 border border-blue-100"><p className="text-sm font-semibold text-[#2563eb] mb-2">Role-based access</p><p className="text-2xl font-black text-gray-900">4 access roles</p><p className="text-sm text-gray-600 mt-2">Admin, Manager, Staff, and Viewer. See the <Link href="/kindora/how-to-add-users" className="text-[#2563eb] underline">user-access guide</Link> for role setup.</p><p className="text-xs text-gray-500 mt-3">Product configuration, checked November 26, 2026.</p></div>
               </div>
             </div>
           </div>

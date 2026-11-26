@@ -1,4 +1,4 @@
-﻿﻿"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -234,7 +234,7 @@ export default function KindoraNav() {
               )}
             </div>
 
-            {quickLinks.map((link) => (
+            {quickLinks.filter((link) => link.label !== "Reviews").map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -517,7 +517,7 @@ export default function KindoraNav() {
                 </svg>
               </Link>
 
-              {quickLinks.map((link) => (
+              {quickLinks.filter((link) => link.label !== "Reviews").map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}

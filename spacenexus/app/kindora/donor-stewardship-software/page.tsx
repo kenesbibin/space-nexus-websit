@@ -52,14 +52,14 @@ export const metadata: Metadata = {
 
 const benefits = [
   {
-    metric: "3x",
+    metric: "Tracked",
     title: "Higher Donor Retention",
-    description: "Track giving patterns, identify at-risk donors, and send timely follow-ups — organisations using donor stewardship software retain 3x more donors.",
+    description: "Track giving patterns, identify donors who may need follow-up, and record stewardship activity. Retention outcomes vary by organization.",
   },
   {
-    metric: "45%",
+    metric: "Personalized",
     title: "Increased Lifetime Value",
-    description: "Personalised stewardship journeys increase donor lifetime value by 45%. Every touchpoint builds deeper connection and commitment.",
+    description: "Personalized stewardship journeys help teams coordinate communications and follow-ups with supporters.",
   },
   {
     metric: "Auto",
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: "How does donor stewardship software improve retention?",
     answer:
-      "Donor stewardship software improves retention by automating personalised touchpoints, tracking donor engagement, identifying at-risk donors, and triggering timely re-engagement campaigns. Organisations using stewardship software typically see 2-3x higher donor retention rates.",
+      "Donor stewardship software can help teams coordinate personalized touchpoints, track donor engagement, identify donors for follow-up, and plan re-engagement campaigns. Retention outcomes depend on each organization and its program.",
   },
   {
     question: "What features should I look for in donor stewardship software?",
@@ -156,8 +156,6 @@ const faqs = [
 ];
 
 const platformStats = [
-  { metric: "3x", label: "Higher Retention" },
-  { metric: "45%", label: "Increased Lifetime Value" },
   { metric: "Auto", label: "Automated Stewardship" },
   { metric: "Real-Time", label: "Engagement Scoring" },
 ];
@@ -177,7 +175,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -239,7 +237,7 @@ export default function DonorStewardshipSoftwarePage() {
             </div>
 
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+              {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -413,7 +411,7 @@ export default function DonorStewardshipSoftwarePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

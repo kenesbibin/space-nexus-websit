@@ -1,0 +1,2 @@
+event_id,event_date_local,event_type,reference,description,related_urls,environment,status,evidence_ref,annotated_by
+KAI-01-15-source-batch,2026-11-26,implementation_batch,KAI-01 through KAI-15,"Source changes are in the repository; production release date not confirmed","https://spacenexus.net/kindora|https://spacenexus.net/kindora/pricing|https://spacenexus.net/kindora/vs-competitors",repository,pending_deployment,,

@@ -312,8 +312,8 @@ const articleSchema = {
   headline: "Foundation Management Software 2026 — Complete Guide for Foundation Operations",
   description:
     "The complete 2026 guide to foundation management software. Grant tracking, fund management, compliance, and impact reporting for foundation operations leaders.",
-  author: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
-  publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+  author: { "@id": "https://spacenexus.net/kindora/#organization" },
+  publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
   datePublished: "2026-07-01",
   dateModified: "2026-07-01",
   mainEntityOfPage: "https://spacenexus.net/kindora/foundation-management-software",
@@ -329,15 +329,7 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-    { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", position: 3, name: "Foundation Management Software", item: "https://spacenexus.net/kindora/foundation-management-software" },
-  ],
-};
+
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -346,7 +338,7 @@ const serviceSchema = {
   description: "Manage foundation grants, donor funds, and philanthropic programs with grant lifecycle tracking, fund accounting, and impact reporting.",
   url: "https://spacenexus.net/kindora/foundation-management-software",
   serviceType: "Foundation Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -373,7 +365,6 @@ export default function FoundationManagementSoftwarePage() {
       <Script id="kindora-fm-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="kindora-fm-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="kindora-fm-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="kindora-fm-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="pt-20 lg:pt-24">
 

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
-import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
@@ -123,9 +122,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features/settings",
   serviceType: "Nonprofit Software Configuration Tools",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -139,15 +136,6 @@ const serviceSchema = {
 export default function SettingsPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <BreadcrumbJsonLd
-        id="feature-settings"
-        items={[
-          { name: "Home", url: "https://spacenexus.net/" },
-          { name: "Kindora", url: "https://spacenexus.net/kindora" },
-          { name: "Features", url: "https://spacenexus.net/kindora/features" },
-          { name: "Settings & Configuration", url: "https://spacenexus.net/kindora/features/settings" },
-        ]}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -300,7 +288,7 @@ export default function SettingsPage() {
                   "Travel",
                   "Equipment",
                   "Professional Services",
-                ].map((category, idx) => (
+                ].map((category) => (
                   <div
                     key={category}
                     className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"

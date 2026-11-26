@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
-import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
@@ -83,9 +82,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features/file-management",
   serviceType: "Nonprofit Document Management Software",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -99,15 +96,6 @@ const serviceSchema = {
 export default function FileManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <BreadcrumbJsonLd
-        id="feature-file-management"
-        items={[
-          { name: "Home", url: "https://spacenexus.net/" },
-          { name: "Kindora", url: "https://spacenexus.net/kindora" },
-          { name: "Features", url: "https://spacenexus.net/kindora/features" },
-          { name: "File Management", url: "https://spacenexus.net/kindora/features/file-management" },
-        ]}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -346,7 +334,7 @@ export default function FileManagementPage() {
                   label: "Done",
                   desc: "File is linked to the record",
                 },
-              ].map((item, idx) => (
+              ].map((item) => (
                 <div
                   key={item.step}
                   className="flex flex-col items-center text-center max-w-[140px]"

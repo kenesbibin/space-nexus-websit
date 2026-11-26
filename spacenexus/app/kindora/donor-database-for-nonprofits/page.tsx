@@ -195,7 +195,7 @@ const jsonLd = {
       description:
         "Donor database for nonprofits -- centralized donor records, giving history, search, segmentation, and reporting.",
       url: "https://spacenexus.net/kindora/donor-database-for-nonprofits",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",

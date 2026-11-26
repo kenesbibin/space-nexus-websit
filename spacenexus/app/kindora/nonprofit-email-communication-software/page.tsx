@@ -316,8 +316,8 @@ const articleSchema = {
   headline: "Nonprofit Email Communication Software 2026 — Complete Guide for Communications Teams",
   description:
     "The complete 2026 guide to nonprofit email communication software. Campaign creation, donor segmentation, automation, and analytics for communications leaders.",
-  author: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
-  publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+  author: { "@id": "https://spacenexus.net/kindora/#organization" },
+  publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
   datePublished: "2026-07-01",
   dateModified: "2026-07-01",
   mainEntityOfPage: "https://spacenexus.net/kindora/nonprofit-email-communication-software",
@@ -333,15 +333,7 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-    { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", position: 3, name: "Nonprofit Email Communication Software", item: "https://spacenexus.net/kindora/nonprofit-email-communication-software" },
-  ],
-};
+
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -350,7 +342,7 @@ const serviceSchema = {
   description: "Nonprofit email communication software for creating, sending, and tracking email campaigns with donor segmentation and engagement analytics.",
   url: "https://spacenexus.net/kindora/nonprofit-email-communication-software",
   serviceType: "Nonprofit Email Communication Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -377,7 +369,6 @@ export default function KindoraNonprofitEmailCommunicationSoftwarePage() {
       <Script id="kindora-email-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="kindora-email-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="kindora-email-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="kindora-email-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="pt-20 lg:pt-24">
 

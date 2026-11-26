@@ -151,7 +151,7 @@ const faqs = [
   {
     question: "How long does it take to set up Kindora CRM for nonprofits?",
     answer:
-      "Most nonprofits are up and running with Kindora in 30 minutes. Our team provides free data migration support to import your existing records from spreadsheets or other systems — so nothing is lost in the switch.",
+      "Most nonprofits are up and running with Kindora in time varies by data and workflow needs. Our team provides free data migration support to import your existing records from spreadsheets or other systems — so nothing is lost in the switch.",
   },
 ];
 
@@ -177,7 +177,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -239,7 +239,7 @@ export default function CrmForNonprofitsPage() {
             </div>
 
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+              {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -413,7 +413,7 @@ export default function CrmForNonprofitsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

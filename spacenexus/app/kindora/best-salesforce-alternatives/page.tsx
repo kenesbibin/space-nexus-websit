@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Best Salesforce Alternatives for Nonprofits (2026)",
@@ -60,7 +61,7 @@ const jsonLd = {
       url: "https://spacenexus.net/kindora/best-salesforce-alternatives",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
         description: "Free plan for up to 5 members; paid tiers quoted as custom",
       },
@@ -98,7 +99,7 @@ const jsonLd = {
           name: "Is Salesforce Nonprofit Cloud free?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Salesforce's Power of Us program offers up to 10 free Nonprofit Cloud Enterprise licenses to eligible organizations. Paid plans are commonly quoted around $60, $100, and $325 per user per month depending on edition.",
+            text: "Consult vendor current pricing; quotes vary by organization and plan.",
           },
         },
         {
@@ -155,49 +156,49 @@ const alternatives = [
   {
     name: "Kindora",
     tag: "Best all-in-one alternative",
-    price: "Free for up to 5 members; paid tiers custom-quoted",
+    price: "Free Starter (up to 5 team members); paid plans custom-quoted",
     bestFor: "Nonprofits that want donor CRM plus grants, case management, accounting, and volunteers in one platform",
     honestNote:
       "Kindora's paid-tier pricing is not published, so total cost depends on your team size and modules.",
   },
   {
     name: "Bloomerang",
-    price: "~$79–$125/month",
+    price: "See vendor current pricing",
     bestFor: "Fundraising-focused nonprofits that only need donor management and retention tools",
     honestNote:
       "Bloomerang is donor-CRM only; grants, case management, and accounting require separate tools.",
   },
   {
     name: "DonorPerfect",
-    price: "Tiered ~$99–$649/month depending on edition (not per-user)",
+    price: "See vendor current pricing",
     bestFor: "Nonprofits that want mature donor management and are comfortable with tiered pricing",
     honestNote:
       "DonorPerfect's pricing is not per-user; the higher tiers add features and can add up.",
   },
   {
     name: "Neon One",
-    price: "~$99–$399/month for core; modular add-ons extra",
+    price: "See vendor current pricing",
     bestFor: "Nonprofits that want donor CRM plus fundraising, built from modular products",
     honestNote:
       "Neon One sells modules separately, so the final price depends on how many products you add.",
   },
   {
     name: "Little Green Light",
-    price: "~$45–$135/month, unlimited users",
+    price: "See vendor current pricing",
     bestFor: "Small nonprofits that want affordable, simple donor management",
     honestNote:
       "LGL is affordable and user-friendly but focused on donor management rather than full operations.",
   },
   {
     name: "DonorDock",
-    price: "~$500/month plus a one-time onboarding fee",
+    price: "See vendor current pricing",
     bestFor: "Mid-size nonprofits that want polished donor management and are willing to pay for it",
     honestNote:
       "DonorDock is a premium-priced option; onboarding is not included in the monthly fee.",
   },
   {
     name: "Network for Good",
-    price: "Custom quote",
+    price: "See vendor current pricing",
     bestFor: "Nonprofits that want giving and donor tools bundled with coaching",
     honestNote:
       "Network for Good requires contacting sales for pricing.",
@@ -232,7 +233,7 @@ const comparisonRows = [
   },
   {
     feature: "Setup & admin burden",
-    kindora: { value: "Usable in 30 minutes, no admin", positive: true },
+    kindora: { value: "Self-service Starter; paid implementation scope confirmed with sales", positive: true },
     salesforce: { value: "Consultants or admin typically required", positive: false },
   },
   {
@@ -261,7 +262,7 @@ const recommendations = [
   {
     bestFor: "Best value for a small nonprofit",
     pick: "Little Green Light",
-    why: "Low monthly cost with unlimited users makes it very budget-friendly.",
+    why: "Review the vendor's current plan and user-limit terms to see whether they fit your budget.",
   },
 ];
 
@@ -279,7 +280,7 @@ const faqs = [
   {
     question: "Is Salesforce Nonprofit Cloud free?",
     answer:
-      "Salesforce's Power of Us program offers up to 10 free Nonprofit Cloud Enterprise licenses to eligible organizations. Paid plans are commonly quoted around $60, $100, and $325 per user per month depending on edition.",
+      "Consult vendor current pricing; quotes vary by organization and plan.",
   },
   {
     question: "What should I look for in a Salesforce alternative?",
@@ -584,10 +585,11 @@ export default function BestSalesforceAlternativesPage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Ongoing free Starter plan for up to 5 team members · Paid plans by custom quote
           </p>
           <div className="py-6 text-center border-t border-gray-100 mt-8">
-            <LastUpdated date="2026-08-05" />
+            <ComparisonMethodology />
+            <LastUpdated date="2026-11-26" />
           </div>
         </div>
       </section>

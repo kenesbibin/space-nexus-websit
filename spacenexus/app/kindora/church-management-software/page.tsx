@@ -95,7 +95,7 @@ const serviceSchema = {
   description: "Church management software for ministries and congregations. Manage members, track attendance, process giving, coordinate events, schedule volunteers, and grow small groups.",
   url: "https://spacenexus.net/kindora/church-management-software",
   serviceType: "Church Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };

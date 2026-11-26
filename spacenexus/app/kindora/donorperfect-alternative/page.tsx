@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "DonorPerfect Alternative | Better Nonprofit Software",
@@ -64,9 +65,9 @@ const jsonLd = {
       url: "https://spacenexus.net/kindora/donorperfect-alternative",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan for up to 5 team members; paid plans are custom-quoted",
       },
       featureList: [
         "Donor CRM & tracking",
@@ -103,7 +104,7 @@ const jsonLd = {
           name: "How does DonorPerfect pricing compare to Kindora?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "DonorPerfect charges per-user fees that add up quickly as your team grows. Kindora offers flat-rate pricing that includes unlimited users — no per-seat fees, no hidden costs, no surprises when you add staff.",
+            text: "Compare the current vendor quote with Kindora's published plan limits: Starter supports up to five team members, Professional up to 25, and Enterprise has an unlimited team-member limit. Professional and Enterprise pricing is custom-quoted.",
           },
         },
         {
@@ -119,7 +120,7 @@ const jsonLd = {
           name: "Is Kindora better than DonorPerfect for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora is designed for nonprofits of all sizes. Small organisations benefit from having one affordable system instead of managing DonorPerfect plus separate tools for grants, volunteers, and events. The flat-rate pricing scales with your needs.",
+            text: "Kindora offers Starter for up to five team members, Professional for up to 25, and Enterprise with an unlimited team-member limit. Compare the modules in each plan with your requirements and request a current quote for the paid plans.",
           },
         },
       ],
@@ -131,7 +132,7 @@ const benefits = [
   {
     icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4",
     title: "No Per-User Fees",
-    description: "DonorPerfect charges per user. Kindora includes unlimited users on every plan — add your entire team without extra costs.",
+    description: "Compare the vendors' published plan limits and current quotes; Kindora Starter supports up to five members, Professional up to 25, and Enterprise has an unlimited team-member limit.",
   },
   {
     icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
@@ -158,7 +159,7 @@ const comparisonData = [
   { feature: "Volunteer Management", kindora: true, donorperfect: false },
   { feature: "Programme Tracking", kindora: true, donorperfect: false },
   { feature: "Event Management", kindora: true, donorperfect: false },
-  { feature: "Unlimited Users", kindora: true, donorperfect: false },
+  { feature: "Team member limit", kindora: "Starter: 5; Professional: 25; Enterprise: unlimited", donorperfect: "Check current vendor plan terms" },
 ];
 
 const alternatives = [
@@ -386,7 +387,7 @@ export default function DonorPerfectAlternativePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -401,7 +402,8 @@ export default function DonorPerfectAlternativePage() {
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <ComparisonMethodology />
+                <LastUpdated date="2026-11-26" />
             </div></div>
       </section>
     </>

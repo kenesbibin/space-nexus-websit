@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Best DonorPerfect Alternatives for Nonprofits (2026)",
@@ -59,7 +60,7 @@ const jsonLd = {
       url: "https://spacenexus.net/kindora/best-donorperfect-alternatives",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
         description: "Free plan for up to 5 members; paid tiers quoted as custom",
       },
@@ -97,7 +98,7 @@ const jsonLd = {
           name: "How much does DonorPerfect cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "DonorPerfect uses tiered pricing commonly quoted around $99–$119/month for Core, $199/month for Plus, and $499–$649/month for Pro. It is priced per organization, not per user.",
+            text: "Consult vendor current pricing; quotes vary by organization and plan.",
           },
         },
         {
@@ -154,49 +155,49 @@ const alternatives = [
   {
     name: "Kindora",
     tag: "Best all-in-one alternative",
-    price: "Free for up to 5 members; paid tiers custom-quoted",
+    price: "Free Starter (up to 5 team members); paid plans custom-quoted",
     bestFor: "Nonprofits that want DonorPerfect-level donor tools plus grants, case management, accounting, and volunteers in one platform",
     honestNote:
       "Kindora's paid-tier pricing is not published, so total cost depends on your team size and modules.",
   },
   {
     name: "Bloomerang",
-    price: "~$79–$125/month",
+    price: "See vendor current pricing",
     bestFor: "Fundraising-focused nonprofits that want strong donor retention tools",
     honestNote:
       "Bloomerang is donor-CRM only; grants, case management, and accounting require separate tools.",
   },
   {
     name: "Neon One",
-    price: "~$99–$399/month for core; modular add-ons extra",
+    price: "See vendor current pricing",
     bestFor: "Nonprofits that want donor CRM plus fundraising modules",
     honestNote:
       "Neon One sells modules separately, so the final price depends on which products you add.",
   },
   {
     name: "Little Green Light",
-    price: "~$45–$135/month, unlimited users",
+    price: "See vendor current pricing",
     bestFor: "Small nonprofits that want simple, affordable donor management",
     honestNote:
       "LGL is affordable and user-friendly but focused on donor management rather than full operations.",
   },
   {
     name: "DonorDock",
-    price: "~$500/month plus a one-time onboarding fee",
+    price: "See vendor current pricing",
     bestFor: "Mid-size nonprofits that want polished donor management and will pay for it",
     honestNote:
       "DonorDock is premium-priced; onboarding is not included in the monthly fee.",
   },
   {
     name: "Bonterra",
-    price: "Custom quote",
+    price: "See vendor current pricing",
     bestFor: "Larger nonprofits evaluating an integrated suite of purpose-built products",
     honestNote:
       "Bonterra is positioned at the enterprise end and requires contacting sales for pricing.",
   },
   {
     name: "Network for Good",
-    price: "Custom quote",
+    price: "See vendor current pricing",
     bestFor: "Nonprofits that want giving and donor tools bundled with coaching",
     honestNote:
       "Network for Good requires contacting sales for pricing.",
@@ -260,7 +261,7 @@ const recommendations = [
   {
     bestFor: "Best value for a small nonprofit",
     pick: "Little Green Light",
-    why: "Low monthly cost with unlimited users makes it very budget-friendly.",
+    why: "Review the vendor's current plan and user-limit terms to see whether they fit your budget.",
   },
 ];
 
@@ -278,7 +279,7 @@ const faqs = [
   {
     question: "How much does DonorPerfect cost?",
     answer:
-      "DonorPerfect uses tiered pricing commonly quoted around $99–$119/month for Core, $199/month for Plus, and $499–$649/month for Pro. It is priced per organization, not per user.",
+      "Consult vendor current pricing; quotes vary by organization and plan.",
   },
   {
     question: "What should I look for in a DonorPerfect alternative?",
@@ -580,10 +581,11 @@ export default function BestDonorPerfectAlternativesPage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Ongoing free Starter plan for up to 5 team members · Paid plans by custom quote
           </p>
           <div className="py-6 text-center border-t border-gray-100 mt-8">
-            <LastUpdated date="2026-08-05" />
+            <ComparisonMethodology />
+            <LastUpdated date="2026-11-26" />
           </div>
         </div>
       </section>

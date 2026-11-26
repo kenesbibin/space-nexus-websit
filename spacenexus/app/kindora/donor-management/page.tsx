@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
-import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Donor Management Software for Nonprofits | Kindora",
@@ -43,7 +42,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -70,7 +69,7 @@ const jsonLd = {
           name: "Is Kindora suitable for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free trial lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.",
+            text: "Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free Starter plan lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.",
           },
         },
       ],
@@ -145,7 +144,6 @@ const relatedPages = [
 export default function DonorManagementPage() {
   return (
     <>
-      <BreadcrumbSchema />
       <Script id="donor-management-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-rose-50 to-white py-20 px-4">
@@ -217,7 +215,7 @@ export default function DonorManagementPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Is Kindora suitable for small nonprofits?</h3>
-                <p className="text-gray-600">Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free trial lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.</p>
+                <p className="text-gray-600">Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free Starter plan lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.</p>
               </div>
             </div>
           </div>
@@ -226,7 +224,7 @@ export default function DonorManagementPage() {
         <section className="py-12 px-4 bg-[#2563eb] text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Ready to transform your donor management?</h2>
-            <p className="text-blue-100 mb-6">Start your free trial today. No credit card required.</p>
+            <p className="text-blue-100 mb-6">Start your free Starter plan today. No credit card required.</p>
             <Link href="/kindora/demo" className="inline-block bg-white text-[#2563eb] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get started free
             </Link>

@@ -1,6 +1,7 @@
+import { createKindoraServiceSchema } from "../components/commercial-schema";
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import type { Metadata } from "next";
-import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
@@ -96,20 +97,20 @@ const benefits = [
   {
     title: "Increase Retention",
     description: "Targeted communication, timely follow-ups, and personalised engagement strategies that keep donors coming back.",
-    stat: "2.5x",
-    statLabel: "higher retention",
+    stat: "Targeted",
+    statLabel: "donor follow-ups",
   },
   {
     title: "Save Time Daily",
     description: "Stop switching between spreadsheets, email, and notes. Everything lives in one CRM.",
-    stat: "10+ hrs/week",
-    statLabel: "saved",
+    stat: "One CRM",
+    statLabel: "for relationship records",
   },
   {
     title: "Report with Confidence",
     description: "Board-ready reports, donor summaries, and campaign analytics — generated in seconds.",
-    stat: "90%",
-    statLabel: "faster reporting",
+    stat: "Shared",
+    statLabel: "donor reporting",
   },
 ];
 
@@ -163,16 +164,7 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Kindora Donor CRM",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "Donor CRM for nonprofits — manage donor relationships, track interactions, run campaigns, and build engagement.",
-      url: "https://spacenexus.net/kindora/donor-crm",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
-    },
+    createKindoraServiceSchema({ name: "Kindora Donor CRM Service", description: "Kindora Donor CRM helps nonprofits manage donor relationships, track giving history, run campaigns, and build long-term supporter engagement ? all in one platform.", category: "Nonprofit donor relationship management", url: "https://spacenexus.net/kindora/donor-crm" }),
     {
       "@type": "FAQPage",
       mainEntity: faqs.map((faq) => ({
@@ -187,7 +179,7 @@ const jsonLd = {
 export default function DonorCRM() {
   return (
     <>
-      <Script id="donor-crm-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* Hero */}
       <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
@@ -234,7 +226,7 @@ export default function DonorCRM() {
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                {["No credit card required", "See current plan terms on the pricing page"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -260,7 +252,7 @@ export default function DonorCRM() {
                   </div>
                   <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full flex items-center gap-1">
                     <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                    Live
+                    Sample activity
                   </span>
                 </div>
 
@@ -313,15 +305,18 @@ export default function DonorCRM() {
                     <svg className="w-3 h-3 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                    SOC 2 compliant
+                    Role-based access
                   </span>
                   <span>Real-time activity feed</span>
                 </div>
+                <p className="mt-3 text-center text-[11px] leading-4 text-gray-400">Illustrative activity; names and timestamps are sample data.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <AnswerReadyBlock page="donor" />
 
       {/* Benefits */}
       <section className="py-20 lg:py-28 bg-white">

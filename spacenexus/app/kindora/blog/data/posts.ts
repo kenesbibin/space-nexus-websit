@@ -1,3 +1,5 @@
+import { assertBlogPostsValid } from "./article-schema";
+
 export type BlogCategory =
   | "Donor Management"
   | "Grant Management"
@@ -47,6 +49,7 @@ export interface BlogPost {
   };
 }
 
+/** Published-post registry. Draft and preview content must not be added here. */
 export const blogPosts: BlogPost[] = [
   {
     slug: "complete-guide-nonprofit-management-software",
@@ -685,7 +688,7 @@ export const blogPosts: BlogPost[] = [
           heading: "Get Started with Kindora Today",
           body: "Kindora is available now. You can:",
           listItems: [
-            "Start a free trial at cad.spaceaiapp.com/kindora â€” no credit card required",
+            "Start a free Starter plan at cad.spaceaiapp.com/kindora â€” no credit card required",
             "Request a personalized demo to see Kindora configured for your specific programs",
             "Explore our pricing at /kindora/pricing â€” transparent, nonprofit-friendly plans",
             "Read our feature documentation to see how each module works in detail",
@@ -1280,6 +1283,8 @@ export const blogPosts: BlogPost[] = [
     },
   },
 ];
+
+assertBlogPostsValid(blogPosts);
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

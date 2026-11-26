@@ -95,7 +95,7 @@ const serviceSchema = {
   description: "Cost allocation software for nonprofits. Automatically distribute shared costs across programs, departments, and grants.",
   url: "https://spacenexus.net/kindora/cost-allocation-software",
   serviceType: "Cost Allocation Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };

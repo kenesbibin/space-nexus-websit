@@ -1,8 +1,9 @@
 import Link from "next/link";
+import AnswerReadyBlock from "./components/AnswerReadyBlock";
 import type { Metadata } from "next";
-import Script from "next/script";
 import LastUpdated from "./components/LastUpdated";
 import TrustSignals from "./components/TrustSignals";
+import { kindoraCanonicalUrl } from "./components/kindora-entity";
 import {
   AnimatedStatsBar,
   AnimatedHowItWorks,
@@ -13,7 +14,7 @@ import {
   AnimatedValueProps,
   AnimatedScreenshotGallery,
 } from "./components/AnimatedSections";
-const lastUpdated = "May 15, 2026";
+const lastUpdated = "November 26, 2026";
 export const metadata: Metadata = {
   title: {
     absolute: "Kindora | All-in-One Nonprofit Management Software",
@@ -60,139 +61,61 @@ export const metadata: Metadata = {
   ],
 };
 
+const faqs = [
+  {
+    question: "What is Kindora, and who is it for?",
+    answer:
+      "Kindora is an all-in-one nonprofit management platform for small to mid-sized nonprofits, including social service agencies, community organizations, and youth-serving nonprofits.",
+  },
+  {
+    question: "What donor, grant, and case management work can nonprofits do in Kindora?",
+    answer:
+      "Kindora helps nonprofits manage donor profiles and giving history, track grants through their lifecycle, and organize client records, program enrollment, and service outcomes.",
+  },
+  {
+    question: "How does Kindora pricing work, and is there a free plan?",
+    answer:
+      "Kindora offers a free Starter plan and custom-priced Professional and Enterprise plans. Starter includes donor and client tracking plus basic reporting, and no credit card is required to get started.",
+  },
+  {
+    question: "Does Kindora integrate with other software?",
+    answer:
+      "Kindora's modules work together in one platform, and custom integrations are available on the Enterprise plan. Ask the Kindora team whether a specific external system is supported before you depend on that connection.",
+  },
+  {
+    question: "How does Kindora protect nonprofit data?",
+    answer:
+      "Kindora says all plans include organization-level role permissions, encrypted connections, and cloud-based access. Advanced security options are available on the Enterprise plan.",
+  },
+  {
+    question: "Can nonprofits migrate existing data to Kindora?",
+    answer:
+      "Yes. Enterprise includes data migration assistance. Other plans provide import tools and documentation to help move donor, client, and grant data into Kindora.",
+  },
+  {
+    question: "What nonprofit teams use Kindora?",
+    answer:
+      "Kindora is designed for small to mid-sized nonprofit teams, including social service agencies, community organizations, youth-serving nonprofits, housing assistance organizations, food banks, and educational nonprofits.",
+  },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "SoftwareApplication",
+      "@type": "WebPage",
+      "@id": kindoraCanonicalUrl,
       name: "Kindora",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "All-in-one nonprofit management software for donor tracking, grant management, client services, volunteer coordination, and financial reporting.",
-      url: "https://spacenexus.net/kindora",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free trial available",
-      },
-      featureList: [
-        "Donor Management",
-        "Grant Tracking",
-        "Client Case Management",
-        "Volunteer Management",
-        "Campaign Management",
-        "Nonprofit Accounting",
-        "Cost Allocation",
-        "Reports & Analytics",
-      ],
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://spacenexus.net/kindora/#organization",
-      name: "Kindora",
-      alternateName: "Kindora NGO OS",
-      url: "https://spacenexus.net/kindora",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
-        width: 512,
-        height: 512,
-      },
-      description:
-        "Kindora is an all-in-one nonprofit management platform for donor tracking, grant management, program delivery, financial reporting, volunteers, and impact measurement.",
-      sameAs: [
-        "https://www.youtube.com/@KindoraNGOOS1",
-        "https://www.instagram.com/space_kindora_/",
-        "https://x.com/space_kindora",
-        "https://www.linkedin.com/company/space-kindora/",
-        "https://www.facebook.com/kindora.ngo.os",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "sales",
-        email: "contact@spacenexus.net",
-        url: "https://spacenexus.net/kindora/contact",
-        availableLanguage: ["English"],
-      },
+      url: kindoraCanonicalUrl,
+      mainEntity: { "@id": `${kindoraCanonicalUrl}/#software` },
     },
     {
       "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is Kindora?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora is an all-in-one nonprofit management software platform that replaces disconnected spreadsheets and siloed tools with a single unified web application. It manages donor relationships, grant tracking, client services, financial management, volunteer coordination, and team collaboration.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What does Kindora do?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora helps nonprofits run their entire organization in one platform: manage donors and donations, run fundraising campaigns, track grants from application to compliance reporting, deliver client programs and case management, oversee volunteers, and handle nonprofit accounting and financial reports.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Who is Kindora for?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora is designed for small to mid-sized nonprofits — social service agencies, community development organizations, youth-serving nonprofits, housing assistance organizations, food banks, and educational nonprofits. Primary users include Executive Directors, Development Directors, Program Managers, and Finance Officers.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How does Kindora compare to Salesforce Nonprofit?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora is purpose-built for nonprofits and is significantly more affordable and easier to use than Salesforce Nonprofit. While Salesforce requires expensive consultants and months of setup, Kindora is ready to use immediately with nonprofit-specific modules like grant lifecycle management, client case management, and cost allocation built in from day one.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does Kindora handle grant management?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Kindora includes a complete grant lifecycle management system — track grants from prospect to award, manage grantor relationships, record grant receipts, set deadline reminders, and allocate costs across multiple grants for compliance reporting.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is Kindora affordable for small nonprofits?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade features at a price nonprofits can afford. A free trial is available so you can explore the platform before committing.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I try Kindora for free?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes! You can start a free trial with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What modules does Kindora include?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora includes: Donor & Donation Management, Grant Tracking & Receipts, Client Case Management, Program Enrollment, Campaign Management, Volunteer Management, Expense & Bill Management, Chart of Accounts & Budgets, Cost Allocation, Communications Hub, Employee Management, and Reports & Analytics.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does Kindora replace spreadsheets?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Kindora is designed to replace Excel and Google Sheets for nonprofits. It provides automated tracking, real-time dashboards, and export-ready reports — eliminating manual data entry errors and saving your team hours every week.",
-          },
-        },
-      ],
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
     },
   ],
 };
@@ -343,59 +266,11 @@ const featureGrid = [
   },
 ];
 
-const faqs = [
-  {
-    question: "What is Kindora?",
-    answer:
-      "Kindora is an all-in-one nonprofit management software platform that replaces disconnected spreadsheets and siloed tools with a single unified web application. It manages donor relationships, grant tracking, client services, financial management, volunteer coordination, and team collaboration.",
-  },
-  {
-    question: "What does Kindora do?",
-    answer:
-      "Kindora helps nonprofits run their entire organization in one platform: manage donors and donations, run fundraising campaigns, track grants from application to compliance reporting, deliver client programs and case management, oversee volunteers, and handle nonprofit accounting and financial reports.",
-  },
-  {
-    question: "Who is Kindora for?",
-    answer:
-      "Kindora is designed for small to mid-sized nonprofits — social service agencies, community development organizations, youth-serving nonprofits, housing assistance organizations, food banks, and educational nonprofits. Primary users include Executive Directors, Development Directors, Program Managers, and Finance Officers.",
-  },
-  {
-    question: "How does Kindora compare to Salesforce Nonprofit?",
-    answer:
-      "Kindora is purpose-built for nonprofits and is significantly more affordable and easier to use than Salesforce Nonprofit. While Salesforce requires expensive consultants and months of setup, Kindora is ready to use immediately with nonprofit-specific modules like grant lifecycle management, client case management, and cost allocation built in from day one.",
-  },
-  {
-    question: "Does Kindora handle grant management?",
-    answer:
-      "Yes. Kindora includes a complete grant lifecycle management system — track grants from prospect to award, manage grantor relationships, record grant receipts, set deadline reminders, and allocate costs across multiple grants for compliance reporting.",
-  },
-  {
-    question: "Is Kindora affordable for small nonprofits?",
-    answer:
-      "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade features at a price nonprofits can afford. A free trial is available so you can explore the platform before committing.",
-  },
-  {
-    question: "Can I try Kindora for free?",
-    answer:
-      "Yes! You can start a free trial with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
-  },
-  {
-    question: "What modules does Kindora include?",
-    answer:
-      "Kindora includes: Donor & Donation Management, Grant Tracking & Receipts, Client Case Management, Program Enrollment, Campaign Management, Volunteer Management, Expense & Bill Management, Chart of Accounts & Budgets, Cost Allocation, Communications Hub, Employee Management, and Reports & Analytics.",
-  },
-  {
-    question: "Does Kindora replace spreadsheets?",
-    answer:
-      "Yes. Kindora is designed to replace Excel and Google Sheets for nonprofits. It provides automated tracking, real-time dashboards, and export-ready reports — eliminating manual data entry errors and saving your team hours every week.",
-  },
-];
-
 export default function KindoraHomePage() {
   return (
     <>
       {/* JSON-LD Structured Data */}
-      <Script
+      <script
         id="kindora-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -574,7 +449,6 @@ export default function KindoraHomePage() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 { icon: "M5 13l4 4L19 7", label: "No credit card required" },
-                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
                 { icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", label: "Built for nonprofits" },
               ].map(({ icon, label }) => (
                 <span key={label} className="flex items-center gap-1.5">
@@ -589,64 +463,7 @@ export default function KindoraHomePage() {
         </div>
       </section>
 
-      {/* What is Kindora? */}
-      <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
-            The Short Answer
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            What is Kindora?
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-3">
-            Kindora is nonprofit management software that brings donor records,
-            grant tracking, client and program management, financial workflows,
-            and volunteer coordination together in one web-based platform.
-            Nonprofit teams use it to organize operational information, follow
-            donations and grant deadlines, manage services, and review activity
-            without maintaining separate spreadsheets for each function. It is
-            designed for small and mid-sized nonprofits.
-          </p>
-          <p className="text-base text-gray-500">
-            Purpose-built for small to mid-sized nonprofits, Kindora removes the
-            need for 3–4 separate subscriptions and the manual data entry between
-            them.
-          </p>
-          <p className="text-base text-gray-600 leading-relaxed mt-4">
-            What makes Kindora different: unlike point solutions that cover only
-            donors or only accounting, Kindora keeps every module in one
-            database, so grant receipts flow into the chart of accounts, client
-            enrollment updates program dashboards, and volunteers stay linked to
-            the campaigns that need them. Because nothing has to be stitched
-            together, no integrations or consultants are required to deploy it.
-          </p>
-          <div className="flex flex-wrap justify-center gap-2.5 mt-7">
-            {[
-              "Donor CRM & Fundraising",
-              "Grant Lifecycle Tracking",
-              "Client Case Management",
-              "Nonprofit Accounting",
-              "Volunteer Management",
-              "Reports & Dashboards",
-            ].map((tag) => (
-              <span
-                key={tag}
-                className="px-4 py-1.5 rounded-full bg-[#2563eb]/10 text-[#2563eb] text-sm font-semibold"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm">
-            <Link href="/kindora/about#team" className="font-semibold text-[#2563eb] hover:text-[#1d4ed8] hover:underline">
-              Meet the Kindora team →
-            </Link>
-            <Link href="/kindora/about" className="text-gray-500 hover:text-[#2563eb] hover:underline">
-              About Kindora, Inc.
-            </Link>
-          </div>
-        </div>
-      </section>
+      <AnswerReadyBlock page="home" />
 
       <AnimatedStatsBar />
 
@@ -703,10 +520,9 @@ export default function KindoraHomePage() {
 
           {/* Where Kindora wins — competitive positioning */}
           <p className="text-lg text-gray-600 leading-relaxed text-center max-w-3xl mx-auto mb-10">
-            Where Kindora wins: it is the only option in this comparison that
-            covers donor CRM, grant lifecycle management, client case management,
-            and nonprofit accounting with cost allocation out of the box — the
-            features the market leaders either leave out or sell as add-ons.
+            Kindora brings donor, grant, client case, and nonprofit financial
+            workflows into one platform. Review the comparison criteria and
+            each provider&apos;s current product details to determine fit for your organization.
           </p>
 
           {/* Comparison Table */}
@@ -1098,9 +914,9 @@ export default function KindoraHomePage() {
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TrustSignals variant="dark" compact />
-          {/* Free trial callout */}
+          {/* Free Starter plan callout */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 border-t border-white/10">
-            {["Free trial — no credit card required", "Set up in under 30 minutes", "Cancel anytime"].map((text) => (
+            {["Ongoing free Starter plan", "Plan details on the pricing page"].map((text) => (
               <div key={text} className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
                   <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1123,8 +939,8 @@ export default function KindoraHomePage() {
           <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
             Kindora is an all-in-one nonprofit management platform that helps
             small to mid-sized nonprofits manage donors, track grants, deliver
-            programs, and report impact from one system, with a free trial and
-            no credit card required.
+            programs, and report impact from one system. Kindora offers an
+            ongoing free Starter plan; paid plan details are listed on the pricing page.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -1181,6 +997,7 @@ export default function KindoraHomePage() {
             >
               Kindora for NGOs →
             </a>
+            <a href="/kindora/about" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-[#2563eb] transition-colors">About Kindora</a>
           </div>
         </div>
       </section>
@@ -1203,9 +1020,8 @@ export default function KindoraHomePage() {
             built for modern nonprofits, social service organizations, and community NGOs. Our
             integrated platform replaces scattered spreadsheets with a unified nonprofit CRM that
             tracks every donor relationship, grant lifecycle, and program outcome in one place.
-            According to Giving USA 2024, charitable giving in the United States reached $557 billion
-            in 2023 — making donor management and grant tracking more critical than ever for
-            nonprofit sustainability.
+            Nonprofit teams can use Kindora to organize donor relationships, grant lifecycles, and
+            program outcomes. The workflows available depend on the selected plan and team needs.
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             From{" "}
@@ -1247,12 +1063,12 @@ export default function KindoraHomePage() {
             <a href="/kindora/pricing" className="text-[#2563eb] hover:underline">
               view Kindora&apos;s pricing plans
             </a>{" "}
-            to get started free today.
+            to explore the free Starter plan.
           </p>
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <LastUpdated date="2026-11-26" />
             </div></div>
       </section>
     </>

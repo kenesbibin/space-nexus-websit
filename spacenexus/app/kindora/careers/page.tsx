@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import { kindoraOrganizationId } from "../components/kindora-entity";
 
 export const metadata: Metadata = {
   title: "Careers at Kindora — Join the Team Building Nonprofit Software",
@@ -91,20 +92,10 @@ const benefits = [
 export default function CareersPage() {
   const careersSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora/careers",
-    description:
-      "Remote careers at Kindora — the all-in-one nonprofit management platform for NGOs and charities.",
-    parentOrganization: {
-      "@type": "Organization",
-      name: "SpaceAI App",
-      url: "https://spacenexus.net",
-    },
-    jobOpenings: openRoles.map((role) => ({
+    "@graph": openRoles.map((role) => ({
       "@type": "JobPosting",
       title: role.title,
-      hiringOrganization: { "@type": "Organization", name: "Kindora" },
+      hiringOrganization: { "@id": kindoraOrganizationId },
       employmentType: role.tags[0],
       jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Remote" } },
       description: role.description,
@@ -137,7 +128,7 @@ export default function CareersPage() {
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Kindora empowers NGOs, charities, and community organizations to manage donors, grants,
-                programs, and finances from one platform. We're looking for builders who care about mission-driven impact.
+                programs, and finances from one platform. We&apos;re looking for builders who care about mission-driven impact.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3">
                 <Link
@@ -216,7 +207,7 @@ export default function CareersPage() {
               <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-widest mb-2">
                 Why Kindora
               </p>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">What it's like to work with us</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What it&apos;s like to work with us</h2>
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
               {benefits.map((benefit) => (
@@ -245,10 +236,10 @@ export default function CareersPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Don't see a position that fits your skills?
+                Don&apos;t see a position that fits your skills?
               </h2>
               <p className="text-blue-100 mb-8">
-                We're always looking for great people. Send us your resume and we'll keep you in mind for future openings.
+                We&apos;re always looking for great people. Send us your resume and we&apos;ll keep you in mind for future openings.
               </p>
               <a
                 href="mailto:careers@spacenexus.net"
@@ -268,7 +259,7 @@ export default function CareersPage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Learn more about Kindora</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Explore the platform you'll help build, or get in touch with our team.
+              Explore the platform you&apos;ll help build, or get in touch with our team.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Link

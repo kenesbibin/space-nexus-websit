@@ -62,7 +62,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Compliance Deadline Tracking",
@@ -220,7 +220,7 @@ const benefits = [
   {
     stat: "30 min",
     label: "Setup Time",
-    description: "Live in under 30 minutes — no consultants required.",
+    description: "Setup time depends on your data and workflow needs; ask Kindora about onboarding options.",
   },
 ];
 
@@ -294,7 +294,7 @@ export default function GrantComplianceSoftwarePage() {
                 href="/kindora/contact"
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 rounded-full shadow-xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Start Free Trial
+                Explore Free Starter Plan
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"
@@ -320,7 +320,7 @@ export default function GrantComplianceSoftwarePage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 { icon: "M5 13l4 4L19 7", label: "No credit card required" },
-                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
+                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Setup time varies by data and workflows" },
                 { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Audit-ready security" },
               ].map(({ icon, label }) => (
                 <span key={label} className="flex items-center gap-1.5">
@@ -639,7 +639,7 @@ export default function GrantComplianceSoftwarePage() {
               href="/kindora/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 rounded-full shadow-xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg
                 className="ml-2 w-5 h-5"
                 fill="none"

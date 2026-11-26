@@ -60,7 +60,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Donor Management",
@@ -105,7 +105,7 @@ const jsonLd = {
           name: "How much does charity management software cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Pricing varies widely — from free tiers for small charities to enterprise plans costing thousands per month. Kindora is priced specifically for small to mid-sized charities with a free trial available, so you can evaluate the platform before committing.",
+            text: "Pricing varies widely — from free tiers for small charities to enterprise plans costing thousands per month. Kindora is priced specifically for small to mid-sized charities with a ongoing free Starter plan; paid plans are custom-quoted, so you can evaluate the platform before committing.",
           },
         },
         {
@@ -121,7 +121,7 @@ const jsonLd = {
           name: "Can I try Kindora for free?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. You can start a free trial with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
+            text: "Yes. You can start a free Starter plan with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
           },
         },
       ],
@@ -183,24 +183,24 @@ const features = [
 
 const benefits = [
   {
-    stat: "80%",
-    label: "Less Time on Admin",
+    stat: "Automation",
+    label: "Routine work",
     description: "Automate donor follow-ups, grant reminders, and reporting.",
   },
   {
-    stat: "3x",
-    label: "Faster Reporting",
+    stat: "Reporting",
+    label: "Connected workflows",
     description: "Generate trustee-ready reports in minutes, not days.",
   },
   {
-    stat: "100%",
-    label: "Data Visibility",
+    stat: "Role-based",
+    label: "Data visibility",
     description: "Real-time dashboards across donors, grants, and programs.",
   },
   {
-    stat: "30 min",
-    label: "Setup Time",
-    description: "Live in under 30 minutes — no consultants required.",
+    stat: "Guided",
+    label: "Setup support",
+    description: "Discuss setup needs with the Kindora team before getting started.",
   },
 ];
 
@@ -223,7 +223,7 @@ const faqs = [
   {
     question: "How much does charity management software cost?",
     answer:
-      "Pricing varies widely — from free tiers for small charities to enterprise plans costing thousands per month. Kindora is priced specifically for small to mid-sized charities with a free trial available, so you can evaluate the platform before committing.",
+      "Pricing varies widely — from free tiers for small charities to enterprise plans costing thousands per month. Kindora is priced specifically for small to mid-sized charities with a ongoing free Starter plan; paid plans are custom-quoted, so you can evaluate the platform before committing.",
   },
   {
     question: "Is Kindora a good charity management software?",
@@ -233,7 +233,7 @@ const faqs = [
   {
     question: "Can I try Kindora for free?",
     answer:
-      "Yes. You can start a free trial with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
+      "Yes. You can start a free Starter plan with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
   },
 ];
 
@@ -305,7 +305,7 @@ export default function CharityManagementSoftwarePage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 { icon: "M5 13l4 4L19 7", label: "No credit card required" },
-                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
+                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Guided setup" },
                 { icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", label: "Built for charities" },
               ].map(({ icon, label }) => (
                 <span key={label} className="flex items-center gap-1.5">
@@ -666,18 +666,17 @@ export default function CharityManagementSoftwarePage() {
       <section className="py-16 bg-[#f8f9fa] border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            The Best Charity Management Software for Organizations of Every Size
+            Charity Management Software for Organizations of Every Size
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Kindora is the leading{" "}
+            Kindora is a charity management platform with{" "}
             <Link
               href="/kindora/features/donor-management"
               className="text-rose-600 hover:underline"
             >
               donor management software
             </Link>{" "}
-            and charity operations platform trusted by organizations
-            nationwide. Our comprehensive{" "}
+            and charity operations features for organizations. Our{" "}
             <Link
               href="/kindora/features/grant-management"
               className="text-rose-600 hover:underline"

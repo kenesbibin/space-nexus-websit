@@ -96,7 +96,7 @@ const serviceSchema = {
   description: "Budget management software for nonprofits. Plan, track, and control budgets across programs, departments, and grants.",
   url: "https://spacenexus.net/kindora/budget-management-software",
   serviceType: "Budget Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };

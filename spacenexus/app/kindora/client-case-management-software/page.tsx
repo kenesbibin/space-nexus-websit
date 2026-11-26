@@ -62,7 +62,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
       featureList: [
         "Client Enrollment Tracking",
@@ -191,8 +191,8 @@ const useCases = [
 
 const benefits = [
   {
-    stat: "100%",
-    label: "Client Visibility",
+    stat: "Connected",
+    label: "Client records",
     description: "Complete view of every client's journey from intake to outcomes.",
   },
   {
@@ -206,9 +206,9 @@ const benefits = [
     description: "Role-based access and encryption protect sensitive information.",
   },
   {
-    stat: "30 min",
-    label: "Setup Time",
-    description: "Live in under 30 minutes — no consultants required.",
+    stat: "Guided",
+    label: "Setup support",
+    description: "Discuss setup needs with the Kindora team before getting started.",
   },
 ];
 
@@ -282,7 +282,7 @@ export default function ClientCaseManagementSoftwarePage() {
                 href="/kindora/contact"
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Start Free Trial
+                Explore Free Starter Plan
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"
@@ -308,7 +308,7 @@ export default function ClientCaseManagementSoftwarePage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               {[
                 { icon: "M5 13l4 4L19 7", label: "No credit card required" },
-                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
+                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Guided setup" },
                 { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Secure client data" },
               ].map(({ icon, label }) => (
                 <span key={label} className="flex items-center gap-1.5">
@@ -401,15 +401,16 @@ export default function ClientCaseManagementSoftwarePage() {
                     Client Dashboard
                   </h3>
                   <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
-                    12 Active Clients
+                    Sample dashboard
                   </span>
                 </div>
+                <p className="text-xs text-gray-500 mb-3">Illustrative sample records and values; these are not customer data or reported outcomes.</p>
                 <div className="space-y-3">
                   {[
-                    { name: "Maria S.", program: "Housing Assistance", status: "Active", progress: "75%" },
-                    { name: "James T.", program: "Youth Development", status: "Active", progress: "60%" },
-                    { name: "Aisha K.", program: "Food Assistance", status: "Completed", progress: "100%" },
-                    { name: "Robert L.", program: "Job Training", status: "Active", progress: "45%" },
+                    { name: "Sample participant", program: "Housing Assistance", status: "Active", progress: "75%" },
+                    { name: "Sample participant", program: "Youth Development", status: "Active", progress: "60%" },
+                    { name: "Sample participant", program: "Food Assistance", status: "Completed", progress: "100%" },
+                    { name: "Sample participant", program: "Job Training", status: "Active", progress: "45%" },
                   ].map((client) => (
                     <div
                       key={client.name}
@@ -621,7 +622,7 @@ export default function ClientCaseManagementSoftwarePage() {
               href="/kindora/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg
                 className="ml-2 w-5 h-5"
                 fill="none"
@@ -663,19 +664,18 @@ export default function ClientCaseManagementSoftwarePage() {
       <section className="py-16 bg-[#f8f9fa] border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            The Best Client Case Management Software for Nonprofits of Every
+            Client Case Management Software for Nonprofits of Every
             Size
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Kindora is the leading{" "}
+            Kindora offers{" "}
             <Link
               href="/kindora/features/client-management"
               className="text-blue-600 hover:underline"
             >
               client case management software
             </Link>{" "}
-            and nonprofit operations platform trusted by organizations
-            nationwide. Our comprehensive{" "}
+            and nonprofit operations tools. The platform{" "}
             <Link
               href="/kindora/features/donor-management"
               className="text-blue-600 hover:underline"

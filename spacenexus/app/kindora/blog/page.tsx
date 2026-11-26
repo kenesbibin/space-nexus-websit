@@ -49,18 +49,10 @@ const blogSchema = {
   "@type": "Blog",
   "name": "Kindora Blog — Nonprofit Management Tips & Guides",
   "description": "Expert articles on donor management, grant writing, volunteer engagement, financial compliance, and nonprofit operations for small to mid-sized organizations.",
-  "publisher": { "@type": "Organization", "name": "Kindora" },
+  "publisher": { "@id": "https://spacenexus.net/kindora/#organization" },
 };
 
-const blogBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
-    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://spacenexus.net/kindora/blog" },
-  ],
-};
+
 
 const lastUpdated = "October 28, 2026";
 export default function BlogPage() {
@@ -81,7 +73,6 @@ export default function BlogPage() {
     return (
         <>
             <Script id="blog-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
-            <Script id="blog-breadcrumb-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadcrumbSchema) }} />
             <Script id="blog-collectionpage-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
             <main className="pt-20 lg:pt-24">
             {/* ── Hero / Header ─────────────────────────────────────────────────── */}

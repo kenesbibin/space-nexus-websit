@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
-import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
     title: "Youth Nonprofit Management Software",
@@ -97,9 +96,7 @@ const serviceSchema = {
     url: "https://spacenexus.net/kindora/solutions/youth-nonprofits",
     serviceType: "Youth Nonprofit Management Platform",
     provider: {
-        "@type": "Organization",
-        name: "Kindora",
-        url: "https://spacenexus.net/kindora",
+        "@id": "https://spacenexus.net/kindora/#organization",
     },
     areaServed: { "@type": "Place", name: "Worldwide" },
     offers: {
@@ -123,15 +120,6 @@ const faqSchema = {
 export default function YouthNonprofitsPage() {
     return (
         <main className="pt-20 lg:pt-24">
-            <BreadcrumbJsonLd
-                id="solution-youth-nonprofits"
-                items={[
-                    { name: "Home", url: "https://spacenexus.net/" },
-                    { name: "Kindora", url: "https://spacenexus.net/kindora" },
-                    { name: "Solutions", url: "https://spacenexus.net/kindora/solutions" },
-                    { name: "Youth Nonprofits", url: "https://spacenexus.net/kindora/solutions/youth-nonprofits" },
-                ]}
-            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -262,7 +250,7 @@ export default function YouthNonprofitsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center px-8 py-4 text-base font-semibold text-orange-600 bg-white hover:bg-orange-50 rounded-full shadow-lg transition-all duration-300"
                         >
-                            Start Free Trial
+                            Explore Free Starter Plan
                         </a>
                         <Link
                             href="/kindora/contact"

@@ -75,21 +75,7 @@ const features = [
 export default function FinancePage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Finance", item: "https://spacenexus.net/kindora/features/financial-management" },
-            ],
-          }),
-        }}
-      />
+
 
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -276,7 +262,7 @@ export default function FinancePage() {
               </Link>
             </div>
           </div>
-        
+
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
                 <LastUpdated date="2026-07-19" />

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
-import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
@@ -101,9 +100,7 @@ const serviceSchema = {
   url: "https://spacenexus.net/kindora/features/expense-management",
   serviceType: "Nonprofit Expense Tracking Software",
   provider: {
-    "@type": "Organization",
-    name: "Kindora",
-    url: "https://spacenexus.net/kindora",
+    "@id": "https://spacenexus.net/kindora/#organization",
   },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: {
@@ -117,15 +114,6 @@ const serviceSchema = {
 export default function ExpenseManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
-      <BreadcrumbJsonLd
-        id="feature-expense-management"
-        items={[
-          { name: "Home", url: "https://spacenexus.net/" },
-          { name: "Kindora", url: "https://spacenexus.net/kindora" },
-          { name: "Features", url: "https://spacenexus.net/kindora/features" },
-          { name: "Expense Management", url: "https://spacenexus.net/kindora/features/expense-management" },
-        ]}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

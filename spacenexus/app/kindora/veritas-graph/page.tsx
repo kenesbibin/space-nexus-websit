@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { kindoraCanonicalUrl, kindoraOrganizationId } from "../components/kindora-entity";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -28,9 +29,13 @@ export const metadata: Metadata = {
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Kindora NGO OS",
+  "@id": `${kindoraCanonicalUrl}/#software`,
+  name: "Kindora",
+  alternateName: "Kindora NGO OS",
   applicationCategory: "BusinessApplication",
-  url: "https://spacenexus.net/kindora",
+  url: kindoraCanonicalUrl,
+  provider: { "@id": kindoraOrganizationId },
+  publisher: { "@id": kindoraOrganizationId },
   featureList: [
     "AI search with source attribution",
     "Knowledge graph reasoning",
@@ -42,7 +47,6 @@ const softwareSchema = {
     codeRepository: "https://github.com/bibinprathap/VeritasGraph",
     url: "https://bibinprathap.github.io/VeritasGraph/index.html",
   },
-  sameAs: ["https://github.com/bibinprathap/VeritasGraph"],
   author: { "@type": "Person", name: "Bibin Prathap" },
 };
 

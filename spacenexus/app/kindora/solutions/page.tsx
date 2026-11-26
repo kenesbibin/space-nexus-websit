@@ -231,22 +231,13 @@ const solutionsArticleSchema = {
   "about": { "@type": "Thing", "name": "Nonprofit Software Solutions" },
 };
 
-const solutionsBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
-    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://spacenexus.net/kindora/solutions" },
-  ],
-};
+
 
 const lastUpdated = "May 15, 2026";
 export default function SolutionsPage() {
   return (
     <main className="pt-20 lg:pt-24">
       <Script id="kindora-solutions-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsArticleSchema) }} />
-      <Script id="kindora-solutions-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsBreadcrumbSchema) }} />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

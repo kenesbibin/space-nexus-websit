@@ -94,7 +94,7 @@ const serviceSchema = {
   description: "Association management software for nonprofits. Manage membership, events, dues, communications, and advocacy for associations and professional societies.",
   url: "https://spacenexus.net/kindora/association-management-software",
   serviceType: "Association Management Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };

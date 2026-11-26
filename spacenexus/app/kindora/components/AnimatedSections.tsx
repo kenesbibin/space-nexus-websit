@@ -5,11 +5,8 @@ import {
     FadeInUp,
     StaggerContainer,
     StaggerItem,
-    AnimatedCounter,
     ScaleIn,
     HeroEntrance,
-    FadeInLeft,
-    FadeInRight,
 } from "./Animations";
 
 // ─── Animated Hero Entrance ──────────────────────────────────────────────────
@@ -36,10 +33,10 @@ export function AnimatedHeroDashboard({ children }: { children: React.ReactNode 
 // ─── Animated Stats Bar ──────────────────────────────────────────────────────
 export function AnimatedStatsBar() {
     const stats = [
-        { value: "500+", label: "Nonprofits Served", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" },
-        { value: "$2M+", label: "Grants Tracked", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
-        { value: "10hrs", label: "Saved Per Week", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
-        { value: "12", label: "Integrated Modules", icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" },
+        { value: "2024", label: "Kindora launched", icon: "M8 7V3m8 4V3M5 11h14M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" },
+        { value: "4", label: "Access roles", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" },
+        { value: "Free", label: "Starter plan", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V7m0 1v8m9-4a9 9 0 11-18 0 9 9 0 0118 0z" },
+        { value: "5 / 25 / Unlimited", label: "Plan user limits", icon: "M4 6h16M4 12h16M4 18h16" },
     ];
 
     return (
@@ -55,13 +52,16 @@ export function AnimatedStatsBar() {
                                     </svg>
                                 </div>
                                 <p className="text-3xl lg:text-4xl font-black text-white mb-1">
-                                    <AnimatedCounter value={stat.value} />
+                                    {stat.value}
                                 </p>
                                 <p className="text-sm text-blue-200 font-medium">{stat.label}</p>
                             </div>
                         </StaggerItem>
                     ))}
                 </StaggerContainer>
+                <p className="mt-6 text-center text-xs text-blue-100">
+                    Owner: SpaceNexus Inc. Checked November 26, 2026. Sources: <Link className="underline" href="/about">company timeline</Link>, <Link className="underline" href="/kindora/features">access roles</Link>, and <Link className="underline" href="/kindora/pricing">current plan limits</Link>.
+                </p>
             </div>
         </section>
     );
@@ -116,7 +116,7 @@ export function AnimatedHowItWorks() {
         {
             step: "01",
             title: "Set Up Your Organization",
-            description: "Import your donors, add team members with role-based access, and configure your chart of accounts. Takes less than 30 minutes.",
+            description: "Import available records, add team members with role-based access, and configure workflows included in your plan. Setup time depends on your data and requirements.",
             icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
             color: "bg-[#2563eb]",
             textColor: "text-[#2563eb]",
@@ -148,7 +148,7 @@ export function AnimatedHowItWorks() {
                 <AnimatedSectionHeader
                     eyebrow="Get Started in Minutes"
                     heading="How Kindora works"
-                    subtext="No consultants. No months of setup. Just sign up and start managing your nonprofit."
+                    subtext="Starter signup is self-service. Setup and onboarding needs depend on your data, workflows, and selected plan."
                 />
                 <div className="relative">
                     <div className="hidden lg:block absolute top-16 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-0.5 bg-gradient-to-r from-[#2563eb]/30 via-[#2563eb] to-[#2563eb]/30" />
@@ -192,7 +192,7 @@ export function AnimatedHowItWorks() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
                     >
-                        Start Free — No Credit Card Required
+                        Explore the free Starter plan
                         <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -207,43 +207,43 @@ export function AnimatedHowItWorks() {
 export function AnimatedStrengthCards() {
     const cards = [
         {
-            title: "Donor Retention Intelligence",
-            subtitle: "Bloomerang's #1 strength — built into Kindora",
-            description: "Track donor engagement scores, giving history, lapsed donor alerts, and communication logs — all in one donor profile.",
+            title: "Donor and Donation Records",
+            subtitle: "Donor workflows",
+            description: "Manage donor profiles, giving history, and communication records in one place.",
             color: "from-blue-500 to-blue-600",
             icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
         },
         {
-            title: "360° Operations View",
-            subtitle: "Salesforce's power — without the complexity",
-            description: "A unified dashboard showing donors, grants, clients, finances, and team activity — no consultants or months of setup required.",
+            title: "Organization Overview",
+            subtitle: "Connected nonprofit workflows",
+            description: "Review donor, grant, client, financial, and team activity through Kindora's shared platform.",
             color: "from-violet-500 to-violet-600",
             icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
         },
         {
             title: "Grant Lifecycle Management",
-            subtitle: "Instrumentl's specialty — plus full operations",
+            subtitle: "Grant workflows",
             description: "Track every grant from prospect to award. Manage funder relationships, record receipts, set deadline reminders, and allocate costs for compliance.",
             color: "from-emerald-500 to-emerald-600",
             icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
         },
         {
             title: "Social Services Case Management",
-            subtitle: "Bonterra Apricot's strength — at a fraction of the cost",
+            subtitle: "Program workflows",
             description: "Manage client intake, program enrollment, service delivery, and outcome tracking. Prove impact to funders with structured data.",
             color: "from-orange-500 to-orange-600",
             icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
         },
         {
             title: "Nonprofit Accounting & Cost Allocation",
-            subtitle: "Aplos's specialty — integrated with your full platform",
+            subtitle: "Financial workflows",
             description: "Chart of accounts, expense tracking, budget management, and multi-grant cost allocation — all synced with your donor and program data.",
             color: "from-rose-500 to-rose-600",
             icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
         },
         {
             title: "Multi-Channel Communications",
-            subtitle: "Bonterra's engagement tools — built right in",
+            subtitle: "Communications workflows",
             description: "Send targeted email campaigns to donor segments, automate grant deadline notifications, and manage client appointment reminders from one hub.",
             color: "from-cyan-500 to-cyan-600",
             icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
@@ -280,7 +280,7 @@ export function AnimatedComparisonHeader() {
                 Why nonprofits choose Kindora over the alternatives
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Other tools do one thing well. Kindora does everything — at a price nonprofits can actually afford.
+                Compare Kindora&apos;s documented workflows and plan details with your organization&apos;s requirements.
             </p>
         </FadeInUp>
     );
@@ -289,12 +289,12 @@ export function AnimatedComparisonHeader() {
 // ─── Animated Trusted Strip ──────────────────────────────────────────────────
 export function AnimatedTrustBadges() {
     const badges = [
-        { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", label: "Data Encryption" },
+        { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", label: "Encrypted connections" },
         { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Role-Based Access" },
-        { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", label: "Audit Trail Logs" },
-        { icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z", label: "Cloud-Based" },
-        { icon: "M12 18h.01M8 21h8a2 2 0 002-2v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2a2 2 0 002 2zM12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707", label: "99.9% Uptime" },
-        { icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z", label: "24/7 Support" },
+        { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", label: "Email support on Starter" },
+        { icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z", label: "Cloud-based access" },
+        { icon: "M12 18h.01M8 21h8a2 2 0 002-2v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2a2 2 0 002 2zM12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707", label: "Priority email support on Professional" },
+        { icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z", label: "Dedicated Enterprise support manager" },
     ];
 
     return (

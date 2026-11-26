@@ -1,3 +1,5 @@
+import { kindoraCanonicalUrl } from "../kindora/components/kindora-entity";
+
 export default function JsonLd() {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -86,13 +88,7 @@ export default function JsonLd() {
         },
         {
           "@type": "Offer",
-          itemOffered: {
-            "@type": "SoftwareApplication",
-            name: "Kindora NGO OS",
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web Browser",
-            url: "https://spacenexus.net/kindora",
-          },
+          itemOffered: { "@id": `${kindoraCanonicalUrl}/#software` },
         },
       ],
     },
@@ -114,33 +110,10 @@ export default function JsonLd() {
       priceCurrency: "USD",
       description: "Transparent, published pricing — Enterprise plans available",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "500",
-      bestRating: "5",
-      worstRating: "1",
-    },
     author: {
       "@type": "Organization",
       name: "SpaceNexus",
       url: "https://spacenexus.net",
-    },
-    review: {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Michael Chen",
-        jobTitle: "Managing Director",
-        worksFor: { "@type": "Organization", name: "Apex Capital Partners" },
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      reviewBody:
-        "SpaceNexus cut our due diligence timeline from 8 weeks to 3. The AI document processing alone is worth the investment.",
     },
     featureList: [
       "Zero Trust architecture",
@@ -177,31 +150,6 @@ export default function JsonLd() {
     },
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://spacenexus.net",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Features",
-        item: "https://spacenexus.net/features",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Industries",
-        item: "https://spacenexus.net/industries",
-      },
-    ],
-  };
-
   return (
     <>
       <script
@@ -220,12 +168,6 @@ export default function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
     </>

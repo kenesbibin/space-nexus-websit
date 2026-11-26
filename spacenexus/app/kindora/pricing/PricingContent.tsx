@@ -1,5 +1,6 @@
 "use client";
 
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import Link from "next/link";
 import { useState } from "react";
 import LastUpdated from "../../components/LastUpdated";
@@ -63,7 +64,7 @@ const pricingTiers = [
     name: "Enterprise",
     description: "For large organizations with advanced requirements",
     price: "Custom",
-    priceNote: "Volume pricing available",
+    priceNote: "Custom volume quote",
     badge: null,
     featured: false,
     color: "border-gray-200",
@@ -137,8 +138,8 @@ const featureCategories = [
 
 const trustItems = [
   { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "No credit card required" },
-  { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Set up in under 30 min" },
-  { icon: "M6 18L18 6M6 6l12 12", text: "Cancel anytime" },
+  { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Starter access is self-service" },
+  { icon: "M6 18L18 6M6 6l12 12", text: "Paid plan scope confirmed with sales" },
   { icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z", text: "Your data, always" },
 ];
 
@@ -214,7 +215,7 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-const lastUpdated = "May 15, 2026";
+const lastUpdated = "November 26, 2026";
 export default function PricingContent() {
   return (
     <main className="pt-20 lg:pt-24">
@@ -241,7 +242,7 @@ export default function PricingContent() {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
-            Start Kindora free, scale as your nonprofit grows. No hidden fees, no surprises — just
+            Start with the free Starter plan, then choose a custom-quoted paid plan as your needs grow — just
             tools that help you do more mission.
           </p>
           <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
@@ -262,6 +263,8 @@ export default function PricingContent() {
           </div>
         </div>
       </section>
+
+      <AnswerReadyBlock page="pricing" />
 
       {/* ── Pricing Cards ────────────────────────────────────────────────── */}
       <section className="pb-24 bg-white">
@@ -382,14 +385,31 @@ export default function PricingContent() {
       </section>
 
       {/* ── Social Proof / Value bar ──────────────────────────────────────── */}
+      <section className="bg-gray-50 py-16" aria-labelledby="plan-facts">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 id="plan-facts" className="mb-3 text-2xl font-bold text-gray-900">Plan facts at a glance</h2>
+          <p className="mb-6 text-sm text-gray-600">Current terms checked November 26, 2026. Starter is an ongoing free plan; Kindora does not advertise a time-limited free Starter plan. Ask Kindora for a written quote and implementation scope for custom-priced plans.</p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+            <table className="w-full min-w-[850px] text-left text-sm">
+              <thead className="bg-gray-100 text-gray-700"><tr>{["Plan", "Price model", "Team limit", "Included modules", "Trial / access", "Implementation & support", "Best for"].map((heading) => <th key={heading} className="p-4 font-semibold">{heading}</th>)}</tr></thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr><th scope="row" className="p-4 font-semibold">Starter</th><td className="p-4">Free indefinitely</td><td className="p-4">Up to 5 team members</td><td className="p-4">Donors and donations, client and service tracking, basic reporting and exports</td><td className="p-4">No trial period; ongoing Starter access</td><td className="p-4">Self-service signup; email support and community resources; core modules and basic exports</td><td className="p-4">Small nonprofits needing core donor and client records</td></tr>
+                <tr><th scope="row" className="p-4 font-semibold">Professional</th><td className="p-4">Custom quote; contact sales</td><td className="p-4">Up to 25 team members</td><td className="p-4">All modules, including grants, campaigns, accounting, cost allocation, and advanced reporting</td><td className="p-4">No published time-limited trial; request a demo</td><td className="p-4">Scope and onboarding requirements confirmed with sales; priority email support</td><td className="p-4">Growing nonprofits needing integrated operational workflows</td></tr>
+                <tr><th scope="row" className="p-4 font-semibold">Enterprise</th><td className="p-4">Custom volume quote; contact sales</td><td className="p-4">Unlimited team members</td><td className="p-4">Professional modules plus integrations, custom reports, and advanced security options</td><td className="p-4">No published time-limited trial; request a demo</td><td className="p-4">Migration assistance, training, dedicated support, and SLA; confirm scope and terms in quote</td><td className="p-4">Larger nonprofits with migration, integration, or service-level needs</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#1d4ed8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { value: "500+", label: "Nonprofits using Kindora" },
-              { value: "$2M+", label: "Grants tracked on platform" },
-              { value: "10 hrs", label: "Saved per team per week" },
-              { value: "12", label: "Integrated modules" },
+              { value: "Free", label: "Starter plan · up to 5 team members" },
+              { value: "Custom", label: "Professional · up to 25 team members" },
+              { value: "Custom", label: "Enterprise · unlimited team members" },
+              { value: "3 plans", label: "Starter, Professional, Enterprise" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl lg:text-4xl font-black text-white mb-1">{stat.value}</p>
@@ -397,6 +417,7 @@ export default function PricingContent() {
               </div>
             ))}
           </div>
+          <p className="text-center text-xs text-blue-100 mt-6">Plan details checked November 26, 2026 · Owner: SpaceNexus product team · <a className="underline" href="/kindora/pricing#compare">See current plan comparison</a></p>
         </div>
       </section>
 

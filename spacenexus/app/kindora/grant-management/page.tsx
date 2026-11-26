@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
-import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Grant Management Software for Nonprofits | Kindora",
@@ -42,7 +41,7 @@ const jsonLd = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan; paid plans are custom-quoted",
       },
     },
     {
@@ -124,7 +123,6 @@ const relatedPages = [
 export default function GrantManagementPage() {
   return (
     <>
-      <BreadcrumbSchema />
       <Script id="grant-management-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-4">
@@ -205,7 +203,7 @@ export default function GrantManagementPage() {
         <section className="py-12 px-4 bg-[#2563eb] text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Streamline your grant management</h2>
-            <p className="text-blue-100 mb-6">Start your free trial. No credit card required.</p>
+            <p className="text-blue-100 mb-6">Start your free Starter plan. No credit card required.</p>
             <Link href="/kindora/demo" className="inline-block bg-white text-[#2563eb] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get started free
             </Link>

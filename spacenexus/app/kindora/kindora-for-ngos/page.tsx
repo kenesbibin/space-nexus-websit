@@ -96,7 +96,7 @@ const whyNgos = [
       "Affordable flat-rate pricing with unlimited users. No per-seat fees, no consultants required, no six-month implementation.",
   },
   {
-    title: "Ready in 30 minutes",
+    title: "Ready in time varies by data and workflow needs",
     description:
       "Import your data, set up your modules, and start working. Your team learns one system instead of several different tools.",
   },
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: "How much does Kindora for NGOs cost?",
     answer:
-      "Kindora is priced specifically for NGOs and nonprofits with an affordable flat rate and no per-user fees. A free trial is available — start at cad.spaceaiapp.com/kindora with no credit card required.",
+      "Kindora is priced specifically for NGOs and nonprofits with an affordable flat rate and no per-user fees. A free Starter plan is available — start at cad.spaceaiapp.com/kindora with no credit card required.",
   },
 ];
 
@@ -141,7 +141,7 @@ const jsonLd = {
       description:
         "All-in-one NGO management platform — donor CRM, grant tracking, programme management, volunteer coordination, and nonprofit accounting in a single system.",
       url: "https://spacenexus.net/kindora/kindora-for-ngos",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -211,7 +211,7 @@ export default function KindoraForNgosPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-gray-500">
-              {["No credit card required", "Set up in 30 minutes", "Unlimited users", "Cancel anytime"].map((text) => (
+              {["No credit card required", "Setup time varies by data and workflows", "Unlimited users", "See current plan terms on the pricing page"].map((text) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -328,7 +328,7 @@ export default function KindoraForNgosPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-[#2563eb] bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

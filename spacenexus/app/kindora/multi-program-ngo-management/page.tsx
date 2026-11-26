@@ -312,8 +312,8 @@ const articleSchema = {
   headline: "Multi-Program NGO Management 2026 — Complete Guide for Operations Teams",
   description:
     "The complete 2026 guide to multi-program NGO management. Cross-program visibility, shared resources, and consolidated reporting for operations leaders.",
-  author: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
-  publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+  author: { "@id": "https://spacenexus.net/kindora/#organization" },
+  publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
   datePublished: "2026-07-01",
   dateModified: "2026-07-01",
   mainEntityOfPage: "https://spacenexus.net/kindora/multi-program-ngo-management",
@@ -329,15 +329,7 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-    { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", position: 3, name: "Multi-Program NGO Management", item: "https://spacenexus.net/kindora/multi-program-ngo-management" },
-  ],
-};
+
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -346,7 +338,7 @@ const serviceSchema = {
   description: "Manage multiple programs, grants, and teams from one unified platform with cross-program visibility and consolidated reporting.",
   url: "https://spacenexus.net/kindora/multi-program-ngo-management",
   serviceType: "Multi-Program NGO Management",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };
@@ -373,7 +365,6 @@ export default function MultiProgramNGOManagementPage() {
       <Script id="kindora-mp-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="kindora-mp-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="kindora-mp-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="kindora-mp-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="pt-20 lg:pt-24">
 

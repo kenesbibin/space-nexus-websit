@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Kindora vs Instrumentl | Nonprofit Software Comparison",
@@ -62,9 +63,9 @@ const jsonLd = {
       url: "https://spacenexus.net/kindora/kindora-vs-instrumentl",
       offers: {
         "@type": "Offer",
-        price: "0",
+    price: "See vendor current pricing",
         priceCurrency: "USD",
-        description: "Free trial available",
+        description: "Ongoing free Starter plan for up to 5 team members; paid plans are custom-quoted",
       },
     },
     {
@@ -586,7 +587,7 @@ export default function KindoraVsInstrumentlPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Switch to Kindora — Free Trial
+              Explore Kindora Starter — Free plan
               <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -663,7 +664,8 @@ export default function KindoraVsInstrumentlPage() {
 
           {/* Last Updated */}
           <div className="py-6 text-center border-t border-gray-100 mt-8">
-            <LastUpdated date="2026-09-17" />
+            <ComparisonMethodology />
+            <LastUpdated date="2026-11-26" />
           </div>
         </div>
       </section>

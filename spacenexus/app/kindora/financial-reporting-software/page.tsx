@@ -94,7 +94,7 @@ const serviceSchema = {
   description: "Financial reporting software for nonprofits. Generate board-ready financial statements, grant reports, and compliance documents in minutes.",
   url: "https://spacenexus.net/kindora/financial-reporting-software",
   serviceType: "Financial Reporting Software",
-  provider: { "@type": "Organization", name: "Kindora", url: "https://spacenexus.net/kindora" },
+  provider: { "@id": "https://spacenexus.net/kindora/#organization" },
   areaServed: { "@type": "Place", name: "Worldwide" },
   offers: { "@type": "Offer", url: "https://spacenexus.net/kindora/pricing", availability: "https://schema.org/InStock", priceCurrency: "USD" },
 };

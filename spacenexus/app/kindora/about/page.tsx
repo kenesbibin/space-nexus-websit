@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "About Kindora — The Complete Operating System for Nonprofits",
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   },
 };
 
-const stats = [
-  { value: "1", label: "Unified platform" },
-  { value: "12+", label: "Integrated modules" },
-  { value: "24h", label: "Average setup time" },
-  { value: "100%", label: "Built for nonprofits" },
+const evidenceFacts = [
+  { value: "2022", label: "SpaceNexus founded", owner: "SpaceNexus Inc.", href: "/about", source: "Company timeline" },
+  { value: "2024", label: "Kindora launched", owner: "SpaceNexus Inc.", href: "/about", source: "Company timeline" },
+  { value: "4", label: "Access roles: Admin, Manager, Staff, Viewer", owner: "Product", href: "/kindora/features", source: "Features catalog" },
+  { value: "5 / 25 / unlimited", label: "Team-member limits: Starter / Professional / Enterprise", owner: "Product", href: "/kindora/pricing", source: "Current plan details" },
 ];
 
 const values = [
@@ -43,7 +43,7 @@ const values = [
   {
     title: "Accessible for every NGO",
     description:
-      "Kindora is priced for small to mid-sized nonprofits, not just enterprise organizations. A free trial lets teams explore the platform before committing — no consultants required.",
+      "Kindora offers a free Starter plan and custom-priced paid plans. Teams can review the public plan details before contacting sales.",
     icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z",
   },
   {
@@ -57,22 +57,16 @@ const values = [
 export default function AboutPage() {
   const aboutSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Kindora",
-    alternateName: "Kindora NGO OS",
-    description:
-      "All-in-one nonprofit management platform for donors, grants, programs, finances, and volunteers.",
+    "@type": "AboutPage",
+    "@id": "https://spacenexus.net/kindora/about#about",
+    name: "About Kindora",
     url: "https://spacenexus.net/kindora/about",
-    parentOrganization: {
-      "@type": "Organization",
-      name: "SpaceAI App",
-      url: "https://spacenexus.net",
-    },
+    about: { "@id": "https://spacenexus.net/kindora/#organization" },
   };
 
   return (
     <>
-      <Script id="about-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
+      <script id="about-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema).replace(/</g, "\\u003c") }} />
       <main className="min-h-screen bg-[#f8f9fa]">
         {/* Hero */}
         <div className="relative overflow-hidden">
@@ -117,19 +111,62 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-                <p className="text-3xl font-bold bg-gradient-to-r from-[#2563eb] to-[#7c3aed] bg-clip-text text-transparent mb-1">
-                  {stat.value}
+        <AnswerReadyBlock page="about" />
+
+        <section id="ownership" aria-labelledby="ownership-heading" className="bg-white py-16 border-y border-gray-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-widest mb-2">Company and team</p>
+            <h2 id="ownership-heading" className="text-3xl font-bold text-gray-900 mb-8">Who owns and builds Kindora?</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="rounded-2xl border border-gray-200 p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Ownership and product</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Kindora is a nonprofit software product developed by SpaceNexus Inc. SpaceNexus was founded in 2022, and the company launched Kindora in 2024. Product ownership sits with SpaceNexus; the company has not publicly named an individual Kindora product owner or editor.
                 </p>
-                <p className="text-sm text-gray-500">{stat.label}</p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Team and experience</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  SpaceNexus describes its team as engineers, strategists, and creators. It has not published individual biographies for Kindora leadership, so names and experience are not attributed here.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Location and service area</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  SpaceNexus lists its company location in Sacramento, California, USA. Kindora serves nonprofits, NGOs, charities, and community organizations; its public materials do not specify a geographic service territory.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 p-6">
+                <h3 className="font-bold text-gray-900 mb-2">Contact and public profiles</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Contact the Kindora team at <a className="text-[#2563eb] hover:underline" href="mailto:contact@spacenexus.net">contact@spacenexus.net</a> or use the <Link className="text-[#2563eb] hover:underline" href="/kindora/contact">contact form</Link>.
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                  <li><a className="text-[#2563eb] hover:underline" href="https://www.linkedin.com/company/space-kindora/" rel="me noopener noreferrer">LinkedIn</a></li>
+                  <li><a className="text-[#2563eb] hover:underline" href="https://www.youtube.com/@KindoraNGOOS1" rel="me noopener noreferrer">YouTube</a></li>
+                  <li><a className="text-[#2563eb] hover:underline" href="https://www.instagram.com/space_kindora_/" rel="me noopener noreferrer">Instagram</a></li>
+                  <li><a className="text-[#2563eb] hover:underline" href="https://x.com/space_kindora" rel="me noopener noreferrer">X</a></li>
+                  <li><a className="text-[#2563eb] hover:underline" href="https://www.facebook.com/kindora.ngo.os" rel="me noopener noreferrer">Facebook</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="evidence-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+          <h2 id="evidence-heading" className="text-2xl font-bold text-gray-900 mb-2">Dated company and product facts</h2>
+          <p className="text-sm text-gray-500 mb-6">Checked November 26, 2026. Company-history facts come from the SpaceNexus timeline; product configuration and plan limits link to their current public pages. These are not customer outcome claims.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {evidenceFacts.map((fact) => (
+              <div key={fact.label} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                <p className="text-2xl font-bold text-[#2563eb] mb-2">{fact.value}</p>
+                <p className="text-sm font-semibold text-gray-900">{fact.label}</p>
+                <p className="text-xs text-gray-500 mt-3">Owner: {fact.owner}</p>
+                <Link className="text-xs text-[#2563eb] hover:underline mt-1 inline-block" href={fact.href}>Source: {fact.source}</Link>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Values */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
@@ -176,13 +213,13 @@ export default function AboutPage() {
                 </span>
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We regularly attend nonprofit and tech meetups to learn, connect, and share what we're building — because real impact starts with real conversations.
+                We regularly attend nonprofit and tech meetups to learn, connect, and share what we&apos;re building — because real impact starts with real conversations.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-6">
               {[
-                { src: "/kindora/meetups/ceo.jpeg", caption: "Kindora co-founders leading the nonprofit software mission", tag: "Leadership", sub: "Leading the mission to empower nonprofits" },
+                { src: "/kindora/meetups/ceo.jpeg", caption: "Kindora team members at a nonprofit software meetup", tag: "Team", sub: "Discussing nonprofit software and product workflows" },
                 { src: "/kindora/meetups/tm.jpeg", caption: "Kindora team collaborating on nonprofit technology", tag: "Culture", sub: "Building together, every single day" },
                 { src: "/kindora/meetups/colg.jpeg", caption: "Kindora team engaging with nonprofit leaders at a community meetup", tag: "Events", sub: "Engaging with nonprofit leaders and changemakers" },
               ].map((shot) => (
@@ -287,8 +324,6 @@ export default function AboutPage() {
             </div>
             <p className="text-sm text-gray-400 mt-6">
               <Link href="/kindora/blog" className="text-[#2563eb] hover:underline">Read our blog</Link>
-              {" · "}
-              <Link href="/kindora/consumer-review" className="text-[#2563eb] hover:underline">See reviews</Link>
             </p>
           </div>
         </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Instrumentl Alternative for Nonprofits | Kindora",
@@ -257,7 +258,8 @@ export default function InstrumentlAlternativePage() {
       </section>
 
       <div className="border-t border-gray-100 py-6 text-center">
-        <LastUpdated date="2026-09-17" />
+        <ComparisonMethodology />
+        <LastUpdated date="2026-11-26" />
       </div>
     </>
   );

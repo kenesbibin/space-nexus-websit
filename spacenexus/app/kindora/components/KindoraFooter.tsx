@@ -376,7 +376,6 @@ export default function KindoraFooter() {
               <li><Link href="/kindora/blog" className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">Donor Management Guide</Link></li>
               <li><Link href="/kindora/blog" className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">Grant Management 101</Link></li>
               <li><Link href="/kindora/blog" className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">Fundraising Guide</Link></li>
-              <li><Link href="/kindora/consumer-review" className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">Consumer Reviews</Link></li>
             </ul>
           </div>
 

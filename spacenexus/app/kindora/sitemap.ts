@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/blog", priority: 0.9 },
     { route: "/vs-competitors", priority: 0.9 },
     { route: "/ecosystem", priority: 0.8 },
-    { route: "/consumer-review", priority: 0.7 },
     { route: "/social-media", priority: 0.7 },
     { route: "/about", priority: 0.8 },
     { route: "/careers", priority: 0.8 },

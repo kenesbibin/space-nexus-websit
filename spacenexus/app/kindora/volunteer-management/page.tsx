@@ -1,7 +1,7 @@
+import { createKindoraServiceSchema } from "../components/commercial-schema";
 import Link from "next/link";
+import AnswerReadyBlock from "../components/AnswerReadyBlock";
 import type { Metadata } from "next";
-import Script from "next/script";
-import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Volunteer Management Software for Nonprofits | Kindora",
@@ -31,21 +31,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Kindora Volunteer Management",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "Volunteer management software for nonprofits including recruitment, scheduling, hour tracking, volunteer portal, and impact reporting.",
-      url: "https://spacenexus.net/kindora/volunteer-management",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free trial available",
-      },
-    },
+    createKindoraServiceSchema({ name: "Kindora Volunteer Management Service", description: "Complete volunteer management platform for nonprofits: recruitment, scheduling, hour tracking, volunteer portal, and impact reporting. Built for organizations that rely on volunteers.", category: "Nonprofit volunteer management", url: "https://spacenexus.net/kindora/volunteer-management" }),
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -125,8 +111,7 @@ const relatedPages = [
 export default function VolunteerManagementPage() {
   return (
     <>
-      <BreadcrumbSchema />
-      <Script id="volunteer-management-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-violet-50 to-white py-20 px-4">
           <div className="max-w-5xl mx-auto">
@@ -134,7 +119,7 @@ export default function VolunteerManagementPage() {
               Volunteer Management Software for Nonprofits
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mb-8">
-              Kindora's volunteer management platform helps nonprofits recruit, schedule, track, and engage volunteers. From hour tracking and scheduling to volunteer portals and impact reporting, manage your entire volunteer program from a single system built for organizations that rely on volunteer contributions.
+              Kindora&apos;s volunteer management platform helps nonprofits recruit, schedule, track, and engage volunteers. From hour tracking and scheduling to volunteer portals and impact reporting, manage your volunteer program from a single system built for organizations that rely on volunteer contributions.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/kindora/pricing" className="bg-[#2563eb] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#1d4ed8] transition-colors">
@@ -146,6 +131,8 @@ export default function VolunteerManagementPage() {
             </div>
           </div>
         </section>
+
+      <AnswerReadyBlock page="volunteer" />
 
         <section className="py-16 px-4">
           <div className="max-w-5xl mx-auto">
@@ -206,7 +193,7 @@ export default function VolunteerManagementPage() {
         <section className="py-12 px-4 bg-[#2563eb] text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Empower your volunteer program</h2>
-            <p className="text-blue-100 mb-6">Start your free trial today. No credit card required.</p>
+            <p className="text-blue-100 mb-6">Start your free Starter plan today. No credit card required.</p>
             <Link href="/kindora/demo" className="inline-block bg-white text-[#2563eb] px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Get started free
             </Link>

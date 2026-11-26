@@ -104,7 +104,7 @@ const features = [
   },
   {
     title: "Easy Setup",
-    description: "Get started in 30 minutes. Import from spreadsheets, no consultants needed.",
+    description: "Get started in time varies by data and workflow needs. Import from spreadsheets, no consultants needed.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -141,7 +141,7 @@ const faqs = [
   {
     question: "Is Kindora really free to try?",
     answer:
-      "Yes. Kindora offers a free trial with no credit card required. You get full access to every feature — donor CRM, grants, volunteers, email, and reporting — so you can evaluate the platform before committing.",
+      "Yes. Kindora offers a free Starter plan with no credit card required. You get full access to every feature — donor CRM, grants, volunteers, email, and reporting — so you can evaluate the platform before committing.",
   },
   {
     question: "What nonprofit types benefit most from affordable CRM?",
@@ -168,7 +168,7 @@ const jsonLd = {
       description:
         "Affordable nonprofit CRM — donor management, grant tracking, and unlimited users at a flat rate.",
       url: "https://spacenexus.net/kindora/affordable-nonprofit-crm",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Ongoing free Starter plan; paid plans are custom-quoted" },
     },
     {
       "@type": "FAQPage",
@@ -230,7 +230,7 @@ export default function AffordableNonprofitCrmPage() {
             </div>
 
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+              {["No credit card required", "Setup time varies by data and workflows", "See current plan terms on the pricing page"].map((text) => (
                 <span key={text} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -384,7 +384,7 @@ export default function AffordableNonprofitCrmPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-green-600 bg-white hover:bg-green-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free Trial
+              Explore Free Starter Plan
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

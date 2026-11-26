@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import ComparisonMethodology from "../components/ComparisonMethodology";
 
 export const metadata: Metadata = {
   title: "Nonprofit Software Alternatives | Kindora vs Competitors",
@@ -106,7 +107,7 @@ const alternativePages = [
     name: "DonorDock Alternative",
     slug: "donordock-alternative",
     tagline: "Powerful donor management without the high monthly fee or onboarding cost.",
-    bestFor: "Nonprofits that like DonorDock but not its $500+/month price",
+    bestFor: "Nonprofits comparing donor management features and current vendor quotes",
   },
   {
     name: "Little Green Light Alternative",
@@ -160,9 +161,9 @@ const reasonsToMove = [
     icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
-    title: "Setup in 30 Minutes",
+    title: "Implementation Scope",
     description:
-      "No implementation consultants, no weeks of configuration, no admin courses. Import your data and start — Kindora is designed to be used on day one.",
+      "Starter signup is self-service. Data migration assistance, training, integrations, and service-level terms depend on plan and scope; discuss requirements with Kindora before choosing a paid tier.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
   {
@@ -407,10 +408,11 @@ export default function AlternativesPage() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+            Ongoing free Starter plan for up to 5 team members · Paid plans by custom quote
           </p>
           <div className="py-6 text-center border-t border-gray-100 mt-8">
-            <LastUpdated date="2026-08-05" />
+            <ComparisonMethodology />
+            <LastUpdated date="2026-11-26" />
           </div>
         </div>
       </section>
