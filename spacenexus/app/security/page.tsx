@@ -5,7 +5,7 @@ import LastUpdated from "../components/LastUpdated";
 import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "VDR Security & Compliance | SpaceNexus",
+    title: "VDR Security & Compliance",
     description: "SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4. How SpaceNexus protects your deal documents end-to-end.",
     alternates: { canonical: "https://spacenexus.net/security" },
     openGraph: {
@@ -292,7 +292,7 @@ export default function SecurityPage() {
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-11-25" />
             </div></div>
     );
 }

@@ -5,7 +5,7 @@ import LastUpdated from "../../components/LastUpdated";
 import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "VDR Alternatives 2026 | SpaceNexus",
+    title: "VDR Alternatives 2026",
     description: "Compare the top 7 alternatives to legacy VDR providers. Modern UX, transparent pricing, AI included.",
     alternates: {
         canonical: "https://spacenexus.net/competitors/vdr-alternatives",

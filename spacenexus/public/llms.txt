@@ -1,8 +1,8 @@
 # SpaceNexus
 
-> SpaceNexus is an AI-powered virtual data room (VDR) platform for M&A due diligence, fundraising, and secure document sharing, trusted by 500+ enterprises.
+> SpaceNexus is an AI-powered virtual data room (VDR) platform for M&A due diligence, fundraising, and secure document sharing.
 
-SpaceNexus provides encrypted document management, deal room collaboration, Q&A workflows, real-time buyer analytics, and compliance-grade audit trails with setup in under 24 hours and no software installation required. Because SpaceNexus runs in any modern browser, you can access the deal room on mobile, which means teams can review documents from anywhere. SpaceNexus also develops Kindora, an all-in-one nonprofit management platform (see the Kindora section below).
+SpaceNexus provides encrypted document management, deal room collaboration, Q&A workflows, real-time buyer analytics, and compliance-grade audit trails with browser-based access and no software installation required. Because SpaceNexus runs in any modern browser, you can access the deal room on mobile, which means teams can review documents from anywhere. SpaceNexus also develops Kindora, an all-in-one nonprofit management platform (see the Kindora section below).
 
 ## Powered By
 
@@ -15,7 +15,7 @@ AI search and answers on SpaceNexus are grounded by [VeritasGraph](https://githu
 
 - [Knowledge Graph AI Search](https://spacenexus.net/knowledge-graph): how SpaceNexus grounds AI answers with citations
 - [Kindora Knowledge Graph AI Search](https://spacenexus.net/kindora/knowledge-graph): how Kindora grounds AI answers with citations
-- [VeritasGraph — Knowledge-Graph Engine Behind Kindora AI](https://spacenexus.net/kindora/veritas-graph): the open-source framework behind Kindora AI
+- [VeritasGraph â€” Knowledge-Graph Engine Behind Kindora AI](https://spacenexus.net/kindora/veritas-graph): the open-source framework behind Kindora AI
 - [Kindora AI FAQ](https://spacenexus.net/kindora/faq): how Kindora AI answers are grounded and verified
 
 ## Keywords
@@ -32,12 +32,12 @@ knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasonin
 ## Key Features
 
 - AI-powered document processing and auto-redaction
-- AES-256 encryption (at rest) and TLS 1.3 (in transit)
+- Encryption in transit and at rest
 - Granular role-based access controls and permissions
 - Dynamic watermarking on all documents
 - Real-time activity analytics and buyer intelligence
 - Structured due diligence Q&A workflows
-- SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4 certified compliance
+- Controls designed to support common compliance requirements (SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4); confirm current certifications directly with SpaceNexus
 - Drag-and-drop bulk upload with AI auto-indexing
 - Mobile access from any browser
 - 99.9% uptime SLA
@@ -55,10 +55,13 @@ knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasonin
 - [Case Studies](https://spacenexus.net/case-studies): Customer case studies and outcomes
 - [Demo Request](https://spacenexus.net/demo): Request a live product demo
 - [Get Started](https://spacenexus.net/get-started): Start the free 14-day trial, no credit card required
+- [Due Diligence Software](https://spacenexus.net/due-diligence-software): Guide and comparison for M&A due diligence software
+- [Data Room Due Diligence](https://spacenexus.net/data-room-due-diligence): Guide to due diligence data rooms and preparation
 
 ## Solutions
 
 - [M&A Virtual Data Room](https://spacenexus.net/solutions/mergers-and-acquisitions-vdr): VDR for mergers and acquisitions due diligence
+- [M&A Document Sharing](https://spacenexus.net/solutions/ma-document-sharing): Page about document sharing in M&A workflows
 - [Investor Data Room](https://spacenexus.net/solutions/investor-data-room): Data room for investor relations and fundraising
 - [Startup Fundraising Data Room](https://spacenexus.net/solutions/startup-data-room): Data room for startup fundraising rounds
 - [Secure Document Sharing for Legal](https://spacenexus.net/solutions/secure-document-sharing-for-legal): Document exchange for legal teams
@@ -69,7 +72,7 @@ knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasonin
 
 ## Pricing
 
-- [Pricing](https://spacenexus.net/pricing): Plans — Starter (per deal), Professional (monthly or annual), Enterprise (custom volume)
+- [Pricing](https://spacenexus.net/pricing): Plans â€” Starter (per deal), Professional (monthly or annual), Enterprise (custom volume)
 - [Pricing Comparison](https://spacenexus.net/pricing-comparison): Compare VDR pricing plans side by side
 - [Data Room Pricing Guide](https://spacenexus.net/data-room-pricing): Guide to data room pricing models
 

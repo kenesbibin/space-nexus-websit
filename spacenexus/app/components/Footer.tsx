@@ -74,7 +74,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Restructuring", href: "/industries/investment-banking/restructuring" },
       { name: "Private Equity", href: "/industries/private-equity" },
       { name: "Buy-Side Diligence", href: "/industries/private-equity/buy-side-diligence" },
-      { name: "Sell-Side Exit", href: "/industries/private-equity/sell-side-exit" },
+      { name: "Sell-Side Exit", href: "/industries/private-equity/exit-sell-side" },
       { name: "Add-On Acquisitions", href: "/industries/private-equity/add-on-acquisitions" },
       { name: "Portfolio Management", href: "/industries/private-equity/portfolio-management" },
       { name: "LP Fundraising", href: "/industries/private-equity/lp-fundraising" },

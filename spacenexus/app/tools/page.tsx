@@ -53,6 +53,26 @@ const tools = [
     href: "/tools/cap-table-waterfall",
     badge: "FREE",
   },
+  {
+    id: "vdr-document-completeness-checker",
+    name: "VDR Document Completeness Checker",
+    description: "Check your due diligence document list, identify missing M&A and fundraising documents, and generate a document completeness report.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /><path strokeLinecap="round" strokeLinejoin="round" d="M9 9l2 2 4-4" /></svg>
+    ),
+    href: "/tools/vdr-document-completeness-checker",
+    badge: "FREE",
+  },
+  {
+    id: "ma-deal-timeline-planner",
+    name: "M&A Deal Timeline Planner",
+    description: "Plan and track M&A transaction milestones, deadlines and progress.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+    ),
+    href: "/tools/ma-deal-timeline-planner",
+    badge: "FREE",
+  },
 ];
 
 export default function ToolsPage() {

@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "SpaceNexus AI Catalog",
+  "description": "Machine-readable catalog of SpaceNexus, a virtual data room platform for M&A due diligence, fundraising, and secure document sharing.",
+  "url": "https://spacenexus.net/ai-catalog.json",
+  "itemListElement": [
+    {
+      "@type": "Organization",
+      "@id": "https://spacenexus.net/#organization",
+      "name": "SpaceNexus",
+      "url": "https://spacenexus.net",
+      "description": "Virtual data room platform for M&A due diligence, fundraising, and secure document sharing."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://spacenexus.net/#software",
+      "name": "SpaceNexus Virtual Data Room",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web browser",
+      "url": "https://spacenexus.net",
+      "publisher": { "@id": "https://spacenexus.net/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "name": "What is a Virtual Data Room?",
+      "url": "https://spacenexus.net/what-is-a-virtual-data-room"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Data Room Software",
+      "url": "https://spacenexus.net/data-room-software"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Pricing",
+      "url": "https://spacenexus.net/pricing"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Security",
+      "url": "https://spacenexus.net/security"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Frequently Asked Questions",
+      "url": "https://spacenexus.net/faq"
+    }
+  ]
+}

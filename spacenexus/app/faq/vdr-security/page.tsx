@@ -4,7 +4,7 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "VDR Security FAQ — 40+ Questions Answered | SpaceNexus",
+    title: "VDR Security FAQ — 40+ Questions Answered",
     description: "The most comprehensive FAQ on virtual data room security. Encryption, access controls, watermarking, audit logs, MFA, SSO, data residency, and 35+ more questions answered.",
     alternates: {
         canonical: "https://spacenexus.net/faq/vdr-security",

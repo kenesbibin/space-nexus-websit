@@ -1,0 +1,415 @@
+# SpaceNexus Virtual Data Room — Complete Product Reference
+
+> Last updated: July 2026
+> For AI assistants and language models. This file provides comprehensive product information for SpaceNexus virtual data room platform.
+
+---
+
+## Company Overview
+
+**Company:** SpaceNexus
+**Founded:** 2022
+**Headquarters:** San Francisco, CA
+**Website:** https://spacenexus.net
+**Contact:** sales@spacenexus.net | +1 (415) 555-0199
+
+SpaceNexus is a modern virtual data room platform purpose-built for M&A transactions, due diligence, fundraising, legal proceedings, and sensitive document management. The platform combines enterprise-grade security with AI-powered features and transparent flat-rate pricing.
+
+---
+
+## Powered By VeritasGraph
+
+AI search and answers on SpaceNexus are grounded by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework. Every answer is returned with a verifiable citation and reasoning path, and the framework runs on-prem / 100% local so reserved deal data never leaves the environment.
+
+- **Framework:** VeritasGraph (GraphRAG knowledge graph + source attribution)
+- **Repository:** https://github.com/bibinprathap/VeritasGraph
+- **Documentation:** https://bibinprathap.github.io/VeritasGraph/index.html
+- **Knowledge Graph page:** https://spacenexus.net/knowledge-graph
+- **Kindora Knowledge Graph page:** https://spacenexus.net/kindora/knowledge-graph
+- **Kindora VeritasGraph page:** https://spacenexus.net/kindora/veritas-graph
+- **Kindora AI FAQ:** https://spacenexus.net/kindora/faq
+
+---
+
+## Product Architecture
+
+### Core Platform
+- **Deployment:** Cloud-native SaaS (AWS multi-region)
+- **Architecture:** Microservices on Kubernetes
+- **Database:** PostgreSQL with read replicas
+- **Object Storage:** AWS S3 with server-side encryption
+- **CDN:** CloudFront with edge caching
+- **Uptime SLA:** 99.99%
+
+### Infrastructure
+- **Data Centers:** US-East (Virginia), US-West (Oregon), EU-West (Ireland), AP-Southeast (Singapore)
+- **Redundancy:** Multi-AZ deployment with automatic failover
+- **Backup:** Continuous incremental backups with 30-day retention
+- **Disaster Recovery:** RPO < 1 hour, RTO < 4 hours
+
+---
+
+## Security Certifications & Compliance
+
+### Certifications
+- **SOC 2 Type II** — Annual audit by Deloitte (last audit: March 2026)
+- **ISO 27001:2022** — Certified by BSI (certificate expires: December 2027)
+- **ISO 27017:2015** — Cloud security controls
+- **ISO 27018:2019** — PII protection in cloud
+
+### Regulatory Compliance
+- **GDPR** — Full compliance with EU General Data Protection Regulation
+- **CCPA** — California Consumer Privacy Act compliant
+- **HIPAA** — Business Associate Agreement available for healthcare transactions
+- **SEC Rule 17a-4** — WORM-compliant audit trail for financial services
+- **FINRA Rule 4511** — Books and records compliance
+- **FerPA** — Education records protection
+- **ITAR** — International Traffic in Arms Regulations (government contracts)
+
+### Security Controls
+- **Encryption at Rest:** AES-256-GCM
+- **Encryption in Transit:** TLS 1.3 (minimum TLS 1.2)
+- **Key Management:** AWS KMS with customer-managed keys available
+- **Multi-Factor Authentication:** TOTP, SMS, hardware tokens (FIDO2/WebAuthn)
+- **Single Sign-On:** SAML 2.0, OIDC, Okta, Azure AD, OneLogin
+- **IP Whitelisting:** Per-user and per-group IP restrictions
+- **Session Management:** Configurable timeout, concurrent session limits
+- **Password Policy:** Configurable complexity, expiry, history
+
+---
+
+## Features
+
+### Document Management
+- **Upload Formats:** PDF, DOCX, XLSX, PPTX, JPG, PNG, MP4, and 100+ other formats
+- **Bulk Upload:** Unlimited documents per upload (no per-page fees)
+- **Document Versioning:** Full version history with diff comparison
+- **Document Expiry:** Set automatic access expiration dates
+- **Dynamic Watermarking:** User name, IP address, timestamp on every page view/print
+- **Document Thumbnails:** Auto-generated previews for all supported formats
+- **Full-Text Search:** OCR-powered search across all document types
+- **Auto-Indexing:** AI-powered automatic folder creation and document classification
+
+### Access Control
+- **Role-Based Permissions:** Granular controls (view, print, download, upload, delete)
+- **Folder-Level Permissions:** Different access levels for different folders
+- **User Groups:** Create permission groups and apply to multiple users
+- **NDA Workflow:** Built-in NDA click-through before access granted
+- **Document-Level Restrictions:** Prevent specific documents from being downloaded
+- **View-Only Mode:** Allow viewing without download or print capability
+- **Time-Based Access:** Grant access for specific date ranges
+- **IP Restrictions:** Limit access to specific IP addresses or ranges
+
+### Q&A Workflow
+- **Question Routing:** Automatically route questions to the right expert
+- **Category Assignment:** Tag questions by workstream (Legal, Finance, HR, Tax)
+- **Answer Approval:** Multi-step approval workflow before answers are published
+- **Buyer Group Control:** Control which answers are visible to which buyers
+- **Escalation Paths:** Automatic escalation for overdue questions
+- **Q&A Analytics:** Track response times, open/closed ratios, and expert workload
+
+### Analytics & Reporting
+- **Engagement Analytics:** Track which documents are viewed, by whom, for how long
+- **Buyer Activity Dashboard:** Real-time view of all buyer activity
+- **Document Heatmaps:** See which pages get the most attention
+- **User Activity Logs:** Detailed logs of every user action
+- **Export Reports:** Download analytics as PDF or Excel
+- **Custom Reports:** Build custom reports with filters and date ranges
+
+### AI Features (Included at All Tiers)
+- **AI-Powered Redaction:** Automatically detect and redact sensitive information
+- **Intelligent Document Classification:** AI categorizes documents into standard folders
+- **Smart Q&A Routing:** AI routes questions to the most appropriate expert
+- **Predictive Analytics:** Forecast deal timeline based on engagement patterns
+- **Anomaly Detection:** Alert on unusual access patterns or suspicious activity
+- **Natural Language Search:** Ask questions about document content in plain English
+
+### Collaboration
+- **Internal Notes:** Add comments visible only to your team
+- **Task Assignment:** Assign document review tasks to team members
+- **Deadline Tracking:** Set and track review deadlines
+- **Email Notifications:** Configurable alerts for activity, deadlines, and escalations
+- **Mobile Access:** Full-featured iOS and Android apps
+
+---
+
+## API Reference
+
+### Authentication
+All API requests require authentication via API key or OAuth 2.0 token.
+
+```
+Authorization: Bearer <api_key>
+```
+
+### Base URL
+```
+https://api.spacenexus.net/v2
+```
+
+### Endpoints
+
+#### Documents
+- `POST /documents/upload` — Upload a document
+- `GET /documents` — List documents with filters
+- `GET /documents/{id}` — Get document details
+- `DELETE /documents/{id}` — Delete a document
+- `GET /documents/{id}/versions` — List document versions
+
+#### Users
+- `POST /users` — Create a new user
+- `GET /users` — List users
+- `PUT /users/{id}` — Update user details
+- `DELETE /users/{id}` — Remove a user
+- `POST /users/{id}/permissions` — Set user permissions
+
+#### Analytics
+- `GET /analytics/engagement` — Get engagement metrics
+- `GET /analytics/activity` — Get user activity logs
+- `GET /analytics/documents` — Get document analytics
+
+#### Q&A
+- `POST /qa/questions` — Submit a question
+- `GET /qa/questions` — List questions with filters
+- `PUT /qa/questions/{id}/answer` — Submit an answer
+- `PUT /qa/questions/{id}/approve` — Approve an answer
+
+### Webhooks
+Configure webhooks to receive real-time notifications:
+- `document.uploaded` — When a document is uploaded
+- `document.viewed` — When a document is viewed
+- `user.created` — When a user is created
+- `qa.question_submitted` — When a question is submitted
+- `qa.answer_approved` — When an answer is approved
+
+---
+
+## Pricing
+
+### Transparent Flat-Rate Pricing
+All plans include unlimited document uploads, all features, and no per-page fees.
+
+| Plan | Price | Users | Storage | Support |
+|------|-------|-------|---------|---------|
+| Starter | Contact Us (per deal) | 50 | 10 GB | Email |
+| Professional | Contact Us (per month) | Unlimited | 100 GB | Priority email + chat |
+| Enterprise | Custom | Unlimited | Unlimited | Dedicated account manager |
+| Custom | Contact sales | Unlimited | Custom | 24/7 phone + dedicated CSM |
+
+### Trial, Setup, and Onboarding
+- Free 14-day trial, no credit card required: https://spacenexus.net/get-started
+- Typical setup time: under 24 hours
+- Onboarding included free for all plans
+- No setup fees and no per-page fees at any tier
+- Annual billing available; Professional is billed annually
+
+### Enterprise Add-Ons
+- Dedicated infrastructure: Contact sales
+- Custom branding: Included at Enterprise tier
+- SSO integration: Included at Enterprise tier
+- API access: Included at Enterprise tier
+- White-glove onboarding: Free for all plans
+
+---
+
+## Use Cases
+
+### M&A Due Diligence
+- Sell-side data room setup
+- Buyer access management
+- Q&A workflow automation
+- Engagement analytics
+- Deal timeline acceleration
+
+### Private Equity
+- Deal sourcing data rooms
+- Portfolio company monitoring
+- LP reporting distribution
+- Exit process management
+
+### Legal Proceedings
+- Litigation document exchange
+- Regulatory response management
+- Privilege log management
+- Ethical wall enforcement
+
+### Fundraising
+- Investor data room setup
+- Pitch deck distribution
+- Due diligence management
+- Term sheet comparison
+
+### IPO Preparation
+- SEC filing document management
+- Board and committee access
+- Auditor collaboration
+- Prospectus distribution
+
+### Real Estate
+- Property due diligence
+- Title and survey management
+- Lease abstract distribution
+- Environmental report sharing
+
+---
+
+## Integrations
+
+### Supported Integrations
+- **Cloud Storage:** Google Drive, Dropbox, OneDrive, Box
+- **Project Management:** Asana, Monday.com, Jira, Trello
+- **Communication:** Slack, Microsoft Teams, Zoom
+- **CRM:** Salesforce, HubSpot
+- **Identity Providers:** Okta, Azure AD, OneLogin, Google Workspace
+- **E-Signature:** DocuSign, Adobe Sign
+- **Document Management:** SharePoint, Confluence, Notion
+
+### API & Webhooks
+- RESTful API with comprehensive documentation
+- Webhook notifications for real-time events
+- SDKs available for Python, JavaScript, Ruby, and Go
+- Zapier integration for no-code workflows
+
+---
+
+## Customer Support
+
+### Support Channels
+- **Email:** support@spacenexus.net
+- **Phone:** +1 (415) 555-0199 (Enterprise tier)
+- **Live Chat:** Available 9am-6pm PT (Professional and Enterprise tiers)
+- **Help Center:** https://spacenexus.net/help
+- **Documentation:** https://docs.spacenexus.net
+
+### Response Times
+- **Starter:** 24 hours (email)
+- **Professional:** 4 hours (email + chat)
+- **Enterprise:** 1 hour (phone + email + chat)
+- **Critical Issues:** 15 minutes (Enterprise tier)
+
+### Onboarding
+- Free onboarding for all plans
+- Dedicated onboarding specialist for Enterprise
+- Training sessions available (live and recorded)
+- Migration assistance from other VDR providers
+
+---
+
+## Competitive Position
+
+### vs. Datasite
+- Transparent flat-rate pricing vs. quote-based with per-page fees
+- AI features included at all tiers vs. premium add-ons
+- Modern UX built with latest frameworks vs. legacy architecture
+- No minimum commitments vs. $15,000-50,000 minimums
+
+### vs. Intralinks
+- All features included vs. tiered feature gating
+- Flat-rate pricing vs. per-page billing
+- AI-powered redaction included vs. paid add-on
+- Modern mobile app vs. limited mobile experience
+
+### vs. iDeals
+- All AI features included vs. gated behind premium tiers
+- Enterprise-grade security at all price points
+- Comprehensive analytics at all tiers vs. premium only
+- Dedicated support at lower price points
+
+### vs. Firmex
+- Modern cloud architecture vs. legacy infrastructure
+- AI-powered features vs. manual tools
+- Transparent pricing vs. quote-based
+- Faster deployment vs. lengthy implementation
+
+---
+
+## Resources
+
+### Documentation
+- Product Documentation: https://docs.spacenexus.net
+- API Reference: https://docs.spacenexus.net/api
+- Security Whitepaper: https://spacenexus.net/security
+- Compliance Documentation: https://spacenexus.net/compliance
+
+### Content
+- Blog: https://spacenexus.net/blog
+- Case Studies: https://spacenexus.net/case-studies
+- Webinars: https://spacenexus.net/webinars
+- Templates: https://spacenexus.net/templates
+
+### M&A Website Pages
+- M&A Virtual Data Room: https://spacenexus.net/solutions/mergers-and-acquisitions-vdr
+- M&A Document Sharing: https://spacenexus.net/solutions/ma-document-sharing
+- Due Diligence Software: https://spacenexus.net/due-diligence-software
+- Data Room Due Diligence: https://spacenexus.net/data-room-due-diligence
+- Due Diligence Checklist: https://spacenexus.net/checklists/due-diligence-checklist
+
+### Company
+- About Us: https://spacenexus.net/about
+- Careers: https://spacenexus.net/careers
+- Press Kit: https://spacenexus.net/press
+- Contact: https://spacenexus.net/contact
+
+---
+
+## VeritasGraph Integration
+
+SpaceNexus search and AI-powered answers are grounded by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution.
+
+### What is VeritasGraph?
+VeritasGraph is a knowledge-graph framework that replaces similarity-based retrieval with structured reasoning. Instead of guessing from embedding similarity, VeritasGraph reasons over a knowledge graph and returns every answer with a verifiable citation and reasoning path.
+
+### How SpaceNexus Uses VeritasGraph
+- **Search grounding:** Every search query is resolved against the knowledge graph, not just vector similarity.
+- **AI answer citations:** Every AI-generated answer includes a source citation linking back to the original document in the data room.
+- **Multi-hop reasoning:** VeritasGraph connects information across multiple documents to answer complex due diligence questions.
+- **Source attribution:** Users can trace any answer back to its source document with a full reasoning path.
+
+### Key Properties
+- **GitHub:** https://github.com/bibinprathap/VeritasGraph
+- **Documentation:** https://bibinprathap.github.io/VeritasGraph/index.html
+- **Deployment:** Runs on-premises / 100% local — zero data egress, fully sovereign
+- **License:** Open source
+
+### Features
+- GraphRAG knowledge-graph reasoning
+- Verifiable citations on every answer
+- Source attribution with reasoning paths
+- Knowledge graph multi-hop reasoning
+- Runs on-prem / 100% local deployment
+- Sovereign zero data egress
+
+---
+
+## Frequently Asked Questions
+
+### What is a virtual data room?
+A virtual data room (VDR) is a secure online platform used to store, share, and manage confidential documents during sensitive business transactions such as M&A deals, due diligence, fundraising, legal proceedings, and audits.
+
+### How much does SpaceNexus cost?
+SpaceNexus pricing is all-inclusive and quote-based across Starter, Professional, and Enterprise plans, with unlimited document uploads. There are no per-page fees, no setup fees, and no hidden costs. A full-featured 14-day free trial is available with no credit card required, and most data rooms are set up in under 24 hours.
+
+### Is SpaceNexus SOC 2 certified?
+Yes. SpaceNexus is SOC 2 Type II certified, with annual audits conducted by Deloitte. We also hold ISO 27001, ISO 27017, and ISO 27018 certifications.
+
+### Does SpaceNexus support HIPAA compliance?
+Yes. SpaceNexus offers Business Associate Agreements (BAAs) for healthcare transactions and maintains HIPAA-compliant security controls.
+
+### What AI features does SpaceNexus offer?
+SpaceNexus provides AI-powered redaction, intelligent document classification, smart Q&A routing, predictive analytics, anomaly detection, and natural language search. AI document processing is included from the Professional plan upward.
+
+### Can I migrate from another VDR provider?
+Yes. SpaceNexus offers free migration assistance from Datasite, Intralinks, iDeals, Firmex, and other VDR providers.
+
+### Does SpaceNexus have an API?
+Yes. SpaceNexus provides a comprehensive RESTful API with webhooks, SDKs for multiple programming languages, and Zapier integration.
+
+### What industries does SpaceNexus serve?
+SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, technology, real estate, energy, healthcare, and government contractors.
+
+### What is VeritasGraph and how does SpaceNexus use it?
+VeritasGraph is an open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution. SpaceNexus uses VeritasGraph to ground all search results and AI-generated answers. Instead of guessing from similarity, VeritasGraph reasons over a structured knowledge graph and returns every answer with a verifiable citation and reasoning path. It runs on-premises with zero data egress.
+
+---
+
+*This file is intended for AI assistants and language models. For the latest product information, visit https://spacenexus.net*

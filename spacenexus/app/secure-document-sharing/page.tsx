@@ -2,9 +2,10 @@ import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "Secure Document Sharing 2026 | SpaceNexus",
+    title: "Secure Document Sharing 2026",
     description: "Compare secure document sharing platforms. Encryption, compliance, access controls, and best use cases.",
     alternates: {
         canonical: "https://spacenexus.net/secure-document-sharing",
@@ -158,7 +159,7 @@ const industryUseCases = [
         title: "Board & Governance",
         description:
             "Corporate boards share confidential board materials, resolutions, and minutes with directors and advisors. Board portals provide secure sharing with D&O liability protection.",
-        link: "/board-portals",
+        link: "/board-portal-software",
     },
     {
         title: "Real Estate Transactions",
@@ -429,6 +430,8 @@ export default function SecureDocumentSharingPage() {
                     </div>
                 </section>
 
+                <AnswerBlock text="Secure document sharing is the controlled exchange of confidential files using encrypted transfer, granular access permissions, and audit trails that record who viewed or downloaded each document. Unlike email attachments or public cloud links, it lets teams revoke access, apply watermarks, and track engagement. SpaceNexus applies these controls to M&A, fundraising, and legal document exchange." />
+
                 {/* What is secure document sharing */}
                 <section className="py-14 bg-white">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -599,7 +602,7 @@ export default function SecureDocumentSharingPage() {
                                 Data Room Software →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/features/vdr-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/features/data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 VDR Data Room →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -661,7 +664,7 @@ export default function SecureDocumentSharingPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing for legal →</h3>
                         </Link>
                         <Link
-                            href="/fundraising-and-investor-due-diligence"
+                            href="/investor-due-diligence"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Investor communications.</p>
@@ -678,7 +681,7 @@ export default function SecureDocumentSharingPage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-11-25" />
             </div></div>
             </section>
 

@@ -3,21 +3,22 @@ import Link from "next/link";
 import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "VDR Reviews & Testimonials | SpaceNexus",
-  description: "Read verified reviews of SpaceNexus VDR from investment banks, PE firms, law firms, and corporate teams.",
+  title: "VDR Reviews & Customer Feedback",
+  description:
+    "See how deal professionals evaluate SpaceNexus for M&A, fundraising and legal document sharing, and find independent review platforms to research virtual data room software.",
   alternates: {
     canonical: "https://spacenexus.net/reviews",
   },
   openGraph: {
-    title: "VDR Reviews & Testimonials | SpaceNexus",
+    title: "VDR Reviews & Customer Feedback",
     description:
-      "Read verified reviews of SpaceNexus VDR from investment banks, PE firms, law firms, and...",
+      "How deal teams evaluate SpaceNexus, and where to research virtual data room software independently.",
     url: "https://spacenexus.net/reviews",
   },
   twitter: {
-    title: "SpaceNexus Reviews — Rated 4.9/5 by Deal Professionals",
+    title: "SpaceNexus Reviews & Customer Feedback",
     description:
-      "Read verified reviews from law firms, PE funds, and investment banks using SpaceNexus VDR.",
+      "How deal professionals evaluate SpaceNexus for M&A, fundraising and legal document sharing.",
   },
 };
 
@@ -27,122 +28,82 @@ const reviewPlatforms = [
     category: "Virtual Data Room Software",
     url: "https://www.g2.com/products/spacenexus/reviews",
     description:
-      "G2 is the world's largest B2B software review marketplace with over 2 million verified reviews. SpaceNexus is listed under Virtual Data Room and Legal Document Management categories.",
-    icon: "⭐",
-    cta: "Read Reviews on G2",
+      "G2 is a large B2B software review marketplace. Reviews are submitted and moderated by G2 under its own verification process.",
+    cta: "Visit G2",
   },
   {
     name: "Capterra",
     category: "Virtual Data Room Software",
     url: "https://www.capterra.com/p/spacenexus/",
     description:
-      "Capterra helps businesses find the right software with verified user reviews and detailed product comparisons. Part of the Gartner Digital Markets network.",
-    icon: "📊",
-    cta: "Read Reviews on Capterra",
+      "Capterra is a software comparison site operated by Gartner Digital Markets, with reviews moderated on its platform.",
+    cta: "Visit Capterra",
   },
   {
     name: "TrustRadius",
     category: "Virtual Data Room",
     url: "https://www.trustradius.com/products/spacenexus/reviews",
     description:
-      "TrustRadius features in-depth, authenticated reviews from verified users. Known for detailed, long-form reviews that cover real-world implementation experiences.",
-    icon: "🛡️",
-    cta: "Read Reviews on TrustRadius",
+      "TrustRadius hosts in-depth software reviews and is known for longer, implementation-focused write-ups.",
+    cta: "Visit TrustRadius",
   },
   {
     name: "GetApp",
     category: "Data Room Software",
     url: "https://www.getapp.com/p/spacenexus/",
     description:
-      "GetApp provides tailored software recommendations based on your specific business needs. Part of the Gartner Digital Markets network alongside Capterra and Software Advice.",
-    icon: "📋",
-    cta: "Read Reviews on GetApp",
+      "GetApp is a software discovery platform in the Gartner Digital Markets network, alongside Capterra and Software Advice.",
+    cta: "Visit GetApp",
   },
   {
     name: "Software Advice",
     category: "Virtual Data Room",
     url: "https://www.softwareadvice.com/vdr/spacenexus-profile/",
     description:
-      "Software Advice offers free, personalised software recommendations from expert advisors who help narrow down the best VDR solutions for your deal type and team size.",
-    icon: "💡",
-    cta: "Read Reviews on Software Advice",
+      "Software Advice offers software recommendations and comparisons from Gartner Digital Markets.",
+    cta: "Visit Software Advice",
   },
 ];
 
-const customerQuotes = [
+const evaluationPoints = [
   {
-    quote:
-      "SpaceNexus transformed how we manage M&A due diligence. The Q&A workflow alone saved us 15+ hours per deal compared to our previous data room.",
-    author: "Managing Director",
-    company: "Mid-Market Investment Bank",
-    useCase: "Sell-Side M&A",
+    title: "Security and access control",
+    body: "Check how a provider handles encryption in transit and at rest, granular permissions, multi-factor authentication, SSO, dynamic watermarking, and tamper-evident audit logs. Ask which controls are included by default versus an add-on.",
   },
   {
-    quote:
-      "The security controls and audit trails give our clients confidence that their privileged documents are protected. Dynamic watermarking is a must-have for litigation-sensitive deals.",
-    author: "Senior Partner",
-    company: "Am Law 200 Firm",
-    useCase: "Legal Due Diligence",
+    title: "Deal workflows",
+    body: "Evaluate structured Q&A, bidder or investor permission templates, document indexing, redaction, and engagement analytics against the workflows your team actually runs during diligence.",
   },
   {
-    quote:
-      "We evaluated Datasite, Intralinks, and three other providers. SpaceNexus had the best combination of security, usability, and pricing for our fund size.",
-    author: "VP of Operations",
-    company: "Growth Equity Fund",
-    useCase: "Fundraising & LP Reporting",
+    title: "Pricing transparency",
+    body: "Compare how each provider prices storage, pages, users, and add-ons, and request a written quote for your expected document volume and number of participants.",
   },
   {
-    quote:
-      "Setting up our first data room took under 30 minutes. The bulk upload, auto-indexing, and permission templates made it painless — our previous provider required a full day of admin work.",
-    author: "Corporate Development Lead",
-    company: "FTSE 250 Company",
-    useCase: "Corporate M&A",
+    title: "Onboarding and support",
+    body: "Confirm setup time, migration support, training, and the support channels available during a live transaction, plus any uptime or service commitments in the contract.",
   },
-  {
-    quote:
-      "HIPAA-compliant configurations were critical for our healthcare portfolio acquisitions. SpaceNexus handled PHI access controls exactly the way our compliance team needed.",
-    author: "Principal",
-    company: "Healthcare-Focused PE Firm",
-    useCase: "Healthcare M&A",
-  },
-  {
-    quote:
-      "The real-time analytics dashboard shows exactly which buyers are engaged and which sections they focus on. It completely changed how we manage competitive auction dynamics.",
-    author: "Associate Director",
-    company: "Boutique Advisory Firm",
-    useCase: "Buyer Analytics",
-  },
-];
-
-const ratingCategories = [
-  { label: "Overall Rating", value: "4.9", bar: 98 },
-  { label: "Ease of Use", value: "4.8", bar: 96 },
-  { label: "Security & Compliance", value: "5.0", bar: 100 },
-  { label: "Customer Support", value: "4.9", bar: 98 },
-  { label: "Value for Money", value: "4.7", bar: 94 },
-  { label: "Document Management", value: "4.8", bar: 96 },
 ];
 
 const faqs = [
   {
-    question: "Where can I read verified SpaceNexus reviews?",
+    question: "Where can I read third-party reviews of SpaceNexus?",
     answer:
-      "SpaceNexus is listed on G2, Capterra, TrustRadius, GetApp, and Software Advice under the Virtual Data Room and Legal Document Management categories. Each platform verifies reviewers through LinkedIn authentication, email verification, or proof of purchase to ensure review authenticity.",
+      "Independent reviews, where they exist, are hosted by third-party software directories such as G2, Capterra, TrustRadius, GetApp, and Software Advice. Each platform controls its own review verification and publication.",
+  },
+  {
+    question: "How should I evaluate a virtual data room provider?",
+    answer:
+      "Compare security controls, deal workflows, pricing transparency, and onboarding against your actual transaction. Request a written quote and, where possible, a trial or demo using your own document set.",
   },
   {
     question: "How does SpaceNexus compare to Datasite and Intralinks?",
     answer:
-      "SpaceNexus offers the same enterprise-grade security (SOC 2 Type II, ISO 27001, AES-256 encryption) at a more accessible price point. Key differentiators include AI-powered document processing, real-time buyer analytics, and a modern interface that requires minimal training. See our detailed comparison pages for feature-by-feature breakdowns.",
+      "SpaceNexus positions itself as a modern virtual data room focused on AI-assisted document processing, granular permissions, structured Q&A, and transparent pricing. See the comparison pages for a feature-by-feature breakdown.",
   },
   {
-    question: "What do customers say about SpaceNexus security?",
+    question: "Can I share my own feedback about SpaceNexus?",
     answer:
-      "Security consistently receives the highest ratings from SpaceNexus users. Customers highlight SOC 2 Type II certification, mandatory MFA, dynamic watermarking, and immutable audit trails as standout features. Legal teams particularly value the granular permission controls and ethical wall enforcement for privilege protection.",
-  },
-  {
-    question: "Can I leave a review of SpaceNexus?",
-    answer:
-      "Yes. If you are a current or former SpaceNexus customer, you can leave a verified review on G2, Capterra, TrustRadius, GetApp, or Software Advice. Your feedback helps other deal professionals evaluate VDR solutions and helps us improve our platform.",
+      "Yes. Current and former customers can submit feedback directly to SpaceNexus, or post a review on the third-party platform of their choice, subject to that platform's verification rules.",
   },
 ];
 
@@ -173,32 +134,6 @@ export default function ReviewsPage() {
                 ],
               },
               {
-                "@type": "SoftwareApplication",
-                name: "SpaceNexus Virtual Data Room",
-                applicationCategory: "BusinessApplication",
-                url: "https://spacenexus.net",
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "4.9",
-                  reviewCount: "500",
-                  bestRating: "5",
-                  worstRating: "1",
-                },
-                review: customerQuotes.map((r) => ({
-                  "@type": "Review",
-                  reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: "5",
-                    bestRating: "5",
-                  },
-                  author: {
-                    "@type": "Person",
-                    name: `${r.author}, ${r.company}`,
-                  },
-                  reviewBody: r.quote,
-                })),
-              },
-              {
                 "@type": "FAQPage",
                 mainEntity: faqs.map((faq) => ({
                   "@type": "Question",
@@ -218,15 +153,15 @@ export default function ReviewsPage() {
       <section className="relative py-20 lg:py-28 bg-gradient-to-b from-[#f0f4ff] to-white overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
-            Customer Reviews
+            Reviews & Evaluation
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
-            Trusted by Deal Teams Worldwide
+            How Deal Teams Evaluate SpaceNexus
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            See why law firms, investment banks, and private equity teams rate
-            SpaceNexus as the top virtual data room for secure M&A due
-            diligence, fundraising, and document sharing.
+            Guidance on evaluating SpaceNexus and other virtual data room
+            providers for M&amp;A due diligence, fundraising, and secure
+            document sharing, plus links to independent review platforms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -245,80 +180,30 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* Rating Summary */}
+      {/* Evaluation guidance */}
       <section className="py-16 lg:py-20 bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              Rated 4.9 out of 5
-            </h2>
-            <p className="text-gray-600">
-              Based on verified reviews across major software review platforms
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            {ratingCategories.map((cat) => (
-              <div
-                key={cat.label}
-                className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-5"
-              >
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-gray-700">
-                    {cat.label}
-                  </span>
-                  <span className="text-sm font-bold text-gray-900">
-                    {cat.value}/5
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    className="bg-[#2563eb] h-2 rounded-full transition-all"
-                    style={{ width: `${cat.bar}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Customer Quotes */}
-      <section className="py-16 lg:py-20 bg-[#f8f9fa] border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Deal Professionals Say
+              What to evaluate in a virtual data room
             </h2>
-            <p className="text-gray-600">
-              Real feedback from legal teams, investment banks, and private
-              equity firms using SpaceNexus
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Use the same criteria whether you are reviewing SpaceNexus or any
+              other provider.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {customerQuotes.map((review, i) => (
+          <div className="grid sm:grid-cols-2 gap-6">
+            {evaluationPoints.map((point) => (
               <div
-                key={i}
-                className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col"
+                key={point.title}
+                className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6"
               >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <span key={j} className="text-amber-400 text-lg">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <blockquote className="text-gray-700 text-sm leading-relaxed mb-6 flex-1">
-                  &ldquo;{review.quote}&rdquo;
-                </blockquote>
-                <div className="border-t border-gray-100 pt-4">
-                  <p className="text-sm font-semibold text-gray-900">
-                    {review.author}
-                  </p>
-                  <p className="text-xs text-gray-600">{review.company}</p>
-                  <span className="inline-block mt-2 text-xs font-medium text-[#2563eb] bg-blue-50 px-2 py-1 rounded-full">
-                    {review.useCase}
-                  </span>
-                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {point.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {point.body}
+                </p>
               </div>
             ))}
           </div>
@@ -330,11 +215,12 @@ export default function ReviewsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Find Us on Leading Review Platforms
+              Independent Review Platforms
             </h2>
             <p className="text-gray-600">
-              SpaceNexus is listed on the top B2B software review sites under
-              Virtual Data Room and Legal Document Management categories
+              Research virtual data room software on independent B2B review
+              directories. Reviews and verification are managed by each
+              platform, not by SpaceNexus.
             </p>
           </div>
           <div className="space-y-4">
@@ -346,7 +232,6 @@ export default function ReviewsPage() {
                 rel="noopener noreferrer"
                 className="group flex flex-col sm:flex-row sm:items-center gap-4 bg-[#f8f9fa] rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors"
               >
-                <div className="text-3xl sm:text-4xl shrink-0">{platform.icon}</div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#2563eb]">
@@ -377,8 +262,8 @@ export default function ReviewsPage() {
               Compare SpaceNexus to Other VDR Providers
             </h2>
             <p className="text-gray-600">
-              See detailed feature-by-feature comparisons with the leading
-              virtual data room providers
+              See detailed feature-by-feature comparisons with other virtual
+              data room providers
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-4">
@@ -412,7 +297,7 @@ export default function ReviewsPage() {
                 VDR Alternatives 2026
               </h3>
               <p className="text-sm text-gray-600">
-                Compare 6 providers side-by-side
+                Compare providers side-by-side
               </p>
             </Link>
           </div>
@@ -449,11 +334,10 @@ export default function ReviewsPage() {
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to See Why Teams Choose SpaceNexus?
+            Want to see SpaceNexus for yourself?
           </h2>
           <p className="text-gray-600 mb-8 text-lg">
-            Book a free demo and experience the VDR that deal professionals
-            trust for their most sensitive transactions.
+            Book a demo to review the platform against your own deal workflows.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -469,11 +353,12 @@ export default function ReviewsPage() {
               View Pricing
             </Link>
           </div>
-        
-            {/* Last Updated */}
-            <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
-            </div></div>
+
+          {/* Last Updated */}
+          <div className="py-6 text-center border-t border-gray-100 mt-8">
+            <LastUpdated date="2026-11-25" />
+          </div>
+        </div>
       </section>
     </>
   );

@@ -375,7 +375,7 @@ export default function KnowledgeGraphPage() {
           <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Resources</p>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Continue exploring</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/features/vdr-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+            <Link href="/features/data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
               <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Feature</p>
               <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR Data Room →</h3>
               <p className="text-xs text-gray-600 mt-2">How VeritasGraph integrates with your data room for automated entity extraction.</p>

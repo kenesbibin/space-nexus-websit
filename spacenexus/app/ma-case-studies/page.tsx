@@ -455,11 +455,11 @@ export default function MACaseStudiesPage() {
                                 M&A VDR Guide →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/m-a-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/ma-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 M&A Data Room Providers →
                             </Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/features/vdr-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            <Link href="/features/data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 VDR Data Room →
                             </Link>
                             <span className="text-gray-300">|</span>
@@ -477,7 +477,7 @@ export default function MACaseStudiesPage() {
                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring M&A resources</h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             <Link
-                                href="/m-a-data-room-providers"
+                                href="/ma-data-room-providers"
                                 className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                             >
                                 <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Top providers ranked.</p>
@@ -498,7 +498,7 @@ export default function MACaseStudiesPage() {
                                 <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room due diligence →</h3>
                             </Link>
                             <Link
-                                href="/deal-room-software"
+                                href="/data-room-software"
                                 className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                             >
                                 <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Platform comparison.</p>
