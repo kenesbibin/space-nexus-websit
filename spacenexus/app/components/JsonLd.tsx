@@ -182,6 +182,12 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(peopleSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
         }}
       />
