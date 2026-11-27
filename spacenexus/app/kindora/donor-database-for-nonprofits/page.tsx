@@ -136,8 +136,8 @@ const testimonials = [
 
 const stats = [
   { metric: "2,847+", label: "Records managed" },
-  { metric: "30 min", label: "Setup time" },
-  { metric: "SOC 2", label: "Compliant" },
+  { metric: "varies", label: "Setup time" },
+  { metric: "Ask us", label: "for current security documentation" },
   { metric: "Free", label: "Trial available" },
 ];
 
@@ -160,7 +160,7 @@ const faqs = [
   {
     question: "Is my donor data secure?",
     answer:
-      "Yes. Kindora is SOC 2 compliant with encrypted data storage, role-based access control, and automated backups. Your donor data is protected with enterprise-grade security.",
+      "Kindora describes role-based access controls. Ask the team for current data storage, backup, and security documentation before uploading donor records.",
   },
   {
     question: "How is Kindora different from keeping records in Excel?",
@@ -258,7 +258,7 @@ export default function DonorDatabaseForNonprofitsPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-                {["Centralized records", "Real-time updates", "SOC 2 compliant"].map((text) => (
+                {["Centralized records", "Real-time updates", "Ask about current security controls"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

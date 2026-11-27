@@ -418,7 +418,7 @@ export default function MultiProgramNGOManagementPage() {
                 { metric: "80%", label: "less time on admin" },
                 { metric: "3x", label: "faster reporting" },
                 { metric: "100%", label: "cross-program visibility" },
-                { metric: "30 min", label: "setup time" },
+                { metric: "varies", label: "setup time" },
               ].map((b) => (
                 <div key={b.label} className="text-center">
                   <p className="text-3xl sm:text-4xl font-bold text-[#2563eb] mb-1">{b.metric}</p>
@@ -629,7 +629,7 @@ export default function MultiProgramNGOManagementPage() {
                 See Pricing
               </Link>
             </div>
-            <p className="text-sm text-gray-500 mt-6">SOC 2 Type II · AES-256 encryption · Unlimited programs · No credit card required</p>
+            <p className="text-sm text-gray-500 mt-6">Role-based access controls · Audit logs</p>
           </div>
         </section>
 

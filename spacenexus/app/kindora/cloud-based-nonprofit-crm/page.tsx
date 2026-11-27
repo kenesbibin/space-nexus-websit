@@ -55,9 +55,9 @@ const benefits = [
     description: "No servers to buy, no software to install, no maintenance to worry about. Kindora handles all the technical overhead.",
   },
   {
-    metric: "99.9%",
-    title: "Uptime Guarantee",
-    description: "Enterprise-grade hosting with automatic backups, disaster recovery, and security updates — your data is always safe and available.",
+    metric: "Service terms",
+    title: "Availability commitments",
+    description: "Ask Kindora for current service availability, backup, and disaster recovery documentation.",
   },
   {
     metric: "Real-Time",
@@ -84,7 +84,7 @@ const features = [
   },
   {
     title: "Data Security",
-    description: "SOC 2 compliant, encrypted data, role-based access control, and audit logs protect your sensitive information.",
+    description: "Ask Kindora for current documentation on encryption, role-based access, audit logs, and other security controls.",
     icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
   },
   {
@@ -113,7 +113,7 @@ const comparisonData = [
   { feature: "Cloud-Based Access", kindora: true, blackbaud: true, salesforce: true, bloomerang: true },
   { feature: "Mobile App", kindora: true, blackbaud: false, salesforce: true, bloomerang: false },
   { feature: "Multi-User Real-Time Sync", kindora: true, blackbaud: false, salesforce: true, bloomerang: false },
-  { feature: "SOC 2 Compliant", kindora: true, blackbaud: true, salesforce: true, bloomerang: true },
+  { feature: "Security controls", kindora: true, blackbaud: true, salesforce: true, bloomerang: true },
   { feature: "Automatic Backups", kindora: true, blackbaud: true, salesforce: true, bloomerang: true },
   { feature: "No IT Staff Needed", kindora: true, blackbaud: false, salesforce: false, bloomerang: true },
   { feature: "All-In-One Platform", kindora: true, blackbaud: true, salesforce: false, bloomerang: false },
@@ -134,7 +134,7 @@ const faqs = [
   {
     question: "Is my data secure in a cloud CRM?",
     answer:
-      "Yes. Kindora uses SOC 2 compliant infrastructure with encrypted data, role-based access control, and audit logs. Your data is backed up daily with disaster recovery built in. Cloud security is typically stronger than on-premise setups for most nonprofits.",
+      "Kindora provides role-based access controls and audit logs. Ask the team for current hosting, backup, disaster recovery, and security documentation when evaluating your requirements.",
   },
   {
     question: "Can I access Kindora on my phone?",
@@ -151,7 +151,7 @@ const faqs = [
 const platformStats = [
   { metric: "100%", label: "Access from anywhere" },
   { metric: "Zero", label: "IT infrastructure" },
-  { metric: "99.9%", label: "Uptime guarantee" },
+  { metric: "Service terms", label: "Confirm availability commitment" },
   { metric: "Real-Time", label: "Automatic updates" },
 ];
 
@@ -254,12 +254,12 @@ export default function CloudBasedNonprofitCrmPage() {
                   </svg>
                   <div>
                     <p className="text-white text-sm font-semibold">Connected to Cloud</p>
-                    <p className="text-blue-100 text-xs">All data synced and secure</p>
+                    <p className="text-blue-100 text-xs">Cloud data access</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {[
-                    { label: "Uptime", value: "99.9%" },
+                    { label: "Availability", value: "See current terms" },
                     { label: "Users", value: "Unlimited" },
                     { label: "Storage", value: "Included" },
                   ].map((stat) => (
@@ -439,7 +439,7 @@ export default function CloudBasedNonprofitCrmPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Move to the Cloud?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing outdated on-premise software with modern cloud CRM.
+            Evaluate cloud CRM workflows for modern cloud CRM.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

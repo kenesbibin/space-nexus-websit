@@ -201,7 +201,7 @@ const benefits = [
     description: "Generate funder reports and board presentations in seconds.",
   },
   {
-    stat: "30 min",
+    stat: "varies",
     label: "Setup Time",
     description: "Setup time depends on your data and workflow needs; ask Kindora about onboarding options.",
   },

@@ -1,905 +1,658 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light">
-<title>Discover Space Kindora</title>
-
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  background: #eef1f8;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #252747;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-.wrapper {
-  width: 100%;
-  padding: 30px 12px;
-}
-
-.email-container {
-  max-width: 660px;
-  width: 100%;
-  margin: auto;
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.header {
-  padding: 23px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #3730a3;
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.brand img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-}
-
-.header-label {
-  color: #7b8197;
-  font-size: 11px;
-}
-
-/* HERO */
-
-.hero {
-  padding: 45px 32px;
-  background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed);
-  color: #ffffff;
-}
-
-.badge {
-  display: inline-block;
-  padding: 8px 13px;
-  border: 1px solid rgba(255,255,255,.5);
-  border-radius: 30px;
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 22px 0 15px;
-  max-width: 510px;
-  font-size: 39px;
-  line-height: 1.2;
-  letter-spacing: -1px;
-}
-
-.hero p {
-  max-width: 490px;
-  color: #e8eaff;
-  font-size: 15px;
-  line-height: 1.9;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 14px 23px;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #4338ca !important;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.button:hover {
-  background: #ede9fe;
-}
-
-.button-outline {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 12px 20px;
-  border: 1px solid #d9d6fe;
-  border-radius: 8px;
-  color: #4f46e5 !important;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* SECTIONS */
-
-.section {
-  padding: 35px 30px;
-}
-
-.eyebrow {
-  margin: 0 0 10px;
-  color: #5b50d9;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.section h2 {
-  margin: 0 0 14px;
-  color: #252747;
-  font-size: 27px;
-  line-height: 1.35;
-}
-
-.description {
-  color: #697089;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-/* DASHBOARD PREVIEW */
-
-.dashboard {
-  margin-top: 24px;
-  padding: 22px;
-  border: 1px solid #e4e5f5;
-  border-radius: 14px;
-  background: #f8f9ff;
-}
-
-.dashboard-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.dashboard-top strong {
-  color: #303254;
-  font-size: 15px;
-}
-
-.live-label {
-  padding: 6px 10px;
-  border-radius: 20px;
-  background: #e7f8ed;
-  color: #18794e;
-  font-size: 10px;
-  font-weight: bold;
-}
-
-.metric-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.metric {
-  padding: 17px;
-  border: 1px solid #e8e9f5;
-  border-radius: 10px;
-  background: #ffffff;
-  transition: border-color .2s, transform .2s;
-}
-
-.metric:hover {
-  border-color: #8178ed;
-  transform: translateY(-3px);
-}
-
-.metric-icon {
-  margin-bottom: 12px;
-  color: #5145d5;
-  font-size: 21px;
-}
-
-.metric strong {
-  display: block;
-  margin-bottom: 6px;
-  color: #303254;
-  font-size: 14px;
-}
-
-.metric span {
-  color: #7b8197;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-/* PRODUCT CARDS */
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 13px;
-  margin-top: 24px;
-}
-
-.product-card {
-  padding: 21px;
-  border: 1px solid #e5e7f3;
-  border-radius: 13px;
-  background: #ffffff;
-  transition: border-color .2s, background .2s, transform .2s;
-}
-
-.product-card:hover {
-  border-color: #8178ed;
-  background: #f8f7ff;
-  transform: translateY(-3px);
-}
-
-.product-icon {
-  display: flex;
-  width: 43px;
-  height: 43px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  background: #eeecff;
-  color: #4f46e5;
-  font-size: 22px;
-}
-
-.product-card h3 {
-  margin: 0 0 9px;
-  color: #303254;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.product-card p {
-  margin: 0;
-  color: #70768d;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* WORKFLOW */
-
-.workflow {
-  background: #f7f7ff;
-}
-
-.step {
-  display: flex;
-  gap: 16px;
-  padding: 17px 0;
-  border-bottom: 1px solid #e5e7f3;
-}
-
-.step:last-child {
-  border-bottom: none;
-}
-
-.step-number {
-  display: flex;
-  flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 11px;
-  background: #e9e7ff;
-  color: #4f46e5;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.step h3 {
-  margin: 2px 0 7px;
-  color: #303254;
-  font-size: 15px;
-}
-
-.step p {
-  margin: 0;
-  color: #70768d;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-/* BENEFITS */
-
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.benefit {
-  padding: 17px;
-  border-radius: 10px;
-  background: #f4f3ff;
-}
-
-.benefit strong {
-  display: block;
-  margin-bottom: 7px;
-  color: #3730a3;
-  font-size: 13px;
-}
-
-.benefit p {
-  margin: 0;
-  color: #70768d;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-/* CTA */
-
-.cta {
-  padding: 42px 30px;
-  text-align: center;
-  color: #ffffff;
-  background: linear-gradient(135deg, #312e81, #4f46e5, #6d28d9);
-}
-
-.cta h2 {
-  margin: 0 0 14px;
-  font-size: 29px;
-  line-height: 1.35;
-}
-
-.cta p {
-  max-width: 460px;
-  margin: 0 auto 18px;
-  color: #e6e7ff;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-/* FOOTER */
-
-.footer {
-  padding: 27px 25px;
-  text-align: center;
-  background: #ffffff;
-}
-
-.footer-brand {
-  color: #3730a3;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.footer p {
-  color: #858ba0;
-  font-size: 11px;
-  line-height: 1.9;
-}
-
-.footer a {
-  color: #5145d5;
-}
-
-.footer-links {
-  margin: 15px 0;
-  font-size: 12px;
-}
-
-.footer-links a {
-  display: inline-block;
-  margin: 5px 8px;
-}
-
-@media only screen and (max-width: 600px) {
-  .wrapper {
-    padding: 10px 5px;
-  }
-
-  .header {
-    padding: 20px 17px;
-  }
-
-  .brand {
-    font-size: 18px;
-  }
-
-  .header-label {
-    display: none;
-  }
-
-  .hero {
-    padding: 36px 22px;
-  }
-
-  .hero h1 {
-    font-size: 31px;
-  }
-
-  .section {
-    padding: 29px 21px;
-  }
-
-  .section h2 {
-    font-size: 24px;
-  }
-
-  .dashboard {
-    padding: 15px;
-  }
-
-  .product-grid,
-  .metric-grid,
-  .benefits {
-    grid-template-columns: 1fr;
-  }
-
-  .product-card {
-    padding: 18px;
-  }
-
-  .cta {
-    padding: 35px 22px;
-  }
-
-  .cta h2 {
-    font-size: 25px;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>SpaceKindora — All-in-One Nonprofit Management Software</title>
+  <!--
+    SpaceKindora Email Template (modern SaaS single-email format)
+    Brand: SpaceKindora (SPACE KINDORA) — styled after the Kindora site brand.
+    Color theme: Kindora blue (#2563eb) -> violet (#7c3aed) identity.
+    Content mapped from the actual Kindora homepage (donor, grant, program,
+    volunteer, and finance modules). No invented features or claims.
+    Links currently point to spacenexus.net/kindora/* — swap to the SpaceKindora
+    domain when live.
+    Personalization token: {{first_name}}
+    Table-based + inline CSS for Gmail, Outlook, Apple Mail, mobile.
+  -->
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; line-height: 100%; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  </style>
+  <![endif]-->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #f1f5f9;
+      font-family: 'Segoe UI', Roboto, Arial, 'Helvetica Neue', sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    img {
+      border: 0;
+      line-height: 100%;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f1f5f9;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .grad-bar {
+      height: 5px;
+      background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+    }
+
+    /* Kindora gradient tokens */
+    .g-blue {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+
+    .g-violet {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    }
+
+    .g-indigo {
+      background: linear-gradient(135deg, #4f46e5, #4338ca);
+    }
+
+    .text-ink {
+      color: #0f172a;
+    }
+
+    .text-body {
+      color: #475569;
+    }
+
+    .text-muted {
+      color: #64748b;
+    }
+
+    .cta-primary {
+      display: inline-block;
+      color: #ffffff !important;
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 999px;
+    }
+
+    .chip {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .container {
+        width: 100% !important;
+      }
+
+      .hero-h1 {
+        font-size: 27px !important;
+      }
+
+      .cta-primary {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+      }
+
+      .stack {
+        display: block !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+  </style>
 </head>
 
 <body>
-
-<div class="wrapper">
-<div class="email-container">
-
-  <!-- HEADER -->
-  <div class="header">
-    <a class="brand" href="https://kindora.pmspace.ai/login?redirectTo=%2F">
-      <img
-        src="https://spacenexus.net/icononly_transparent_nobuffer.png"
-        alt="Space Kindora logo">
-      <span>Space Kindora</span>
-    </a>
-
-    <span class="header-label">Nonprofit Management Platform</span>
-  </div>
-
-  <!-- HERO -->
-  <div class="hero">
-    <span class="badge">One Platform. Your Entire Mission.</span>
-
-    <h1>Run Your Nonprofit Without the Complexity.</h1>
-
-    <p>
-      Manage donors, track grants, coordinate programs and monitor
-      finances in one connected workspace built for nonprofit
-      organizations.
-    </p>
-
-    <a class="button"
-       href="https://kindora.pmspace.ai/login?redirectTo=%2F">
-      Explore Your Workspace &rarr;
-    </a>
-  </div>
-
-  <!-- INTRODUCTION -->
-  <div class="section">
-    <p class="eyebrow">Meet Space Kindora</p>
-
-    <h2>Everything Your Organization Needs, Connected.</h2>
-
-    <p class="description">
-      Switching between spreadsheets, separate tools and disconnected
-      records can make nonprofit management harder than it needs to be.
-      Space Kindora brings key organizational activities together in
-      one platform.
-    </p>
-
-    <p class="description">
-      From donor relationships to grant reporting, your team can work
-      with a more organized view of the information that supports
-      your mission.
-    </p>
-
-    <!-- DASHBOARD-STYLE PREVIEW -->
-    <!-- <div class="dashboard">
-      <div class="dashboard-top">
-        <strong>Your Organization at a Glance</strong>
-        <span class="live-label">Unified Workspace</span>
-      </div>
-
-      <div class="metric-grid">
-
-        <div class="metric">
-          <div class="metric-icon">&#9825;</div>
-          <strong>Donors</strong>
-          <span>Keep donor profiles and giving history organized.</span>
-        </div>
-
-        <div class="metric">
-          <div class="metric-icon">&#9670;</div>
-          <strong>Grants</strong>
-          <span>Follow grant progress, records and reporting needs.</span>
-        </div>
-
-        <div class="metric">
-          <div class="metric-icon">&#9783;</div>
-          <strong>Programs</strong>
-          <span>Organize client services and program activities.</span>
-        </div>
-
-        <div class="metric">
-          <div class="metric-icon">&#9636;</div>
-          <strong>Finances</strong>
-          <span>Keep budgets, expenses and financial records structured.</span>
-        </div>
-
-      </div>
-    </div> -->
-  </div>
-
-  <!-- PRODUCT AREAS -->
-  <div class="section" style="padding-top:0;">
-
-    <p class="eyebrow">Explore the Platform</p>
-
-    <h2>More Clarity Across Every Part of Your Work.</h2>
-
-    <p class="description">
-      Discover the different areas that help your organization stay
-      coordinated, informed and focused.
-    </p>
-
-    <div class="product-grid">
-
-      <div class="product-card">
-        <div class="product-icon">&#9825;</div>
-        <h3>Donor Management</h3>
-        <p>
-          Organize donor information, giving history and relationships
-          to support your fundraising activities.
-        </p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">&#9670;</div>
-        <h3>Grant Tracking</h3>
-        <p>
-          Keep grant information, progress, receipts and reporting
-          responsibilities organized.
-        </p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">&#9783;</div>
-        <h3>Program & Client Management</h3>
-        <p>
-          Coordinate program enrollment, client records, service
-          activities and outcomes.
-        </p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">&#9636;</div>
-        <h3>Financial Management</h3>
-        <p>
-          Bring structure to budgets, expenses, accounts and
-          financial reporting.
-        </p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">&#9822;</div>
-        <h3>Volunteer Management</h3>
-        <p>
-          Organize volunteer information and support the coordination
-          of volunteer activities.
-        </p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">&#9638;</div>
-        <h3>Reports & Dashboards</h3>
-        <p>
-          Review organizational information and prepare reports
-          to communicate progress and impact.
-        </p>
-      </div>
-
-    </div>
-
-    <a class="button-outline"
-       href="https://kindora.pmspace.ai/login?redirectTo=%2F">
-      Open Space Kindora &rarr;
-    </a>
-  </div>
-
-  <!-- HOW IT WORKS -->
-  <div class="section workflow">
-
-    <p class="eyebrow">Getting Started</p>
-
-    <h2>From Setup to Impact Reporting.</h2>
-
-    <p class="description">
-      Bring your organizational work into a more structured workflow.
-    </p>
-
-    <div class="step">
-      <div class="step-number">01</div>
-      <div>
-        <h3>Set Up Your Organization</h3>
-        <p>
-          Add your organizational information, bring together relevant
-          records and configure access for your team.
-        </p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-number">02</div>
-      <div>
-        <h3>Manage Your Everyday Work</h3>
-        <p>
-          Organize donors, grants, programs, volunteers and financial
-          activities from your workspace.
-        </p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-number">03</div>
-      <div>
-        <h3>Review and Report Your Progress</h3>
-        <p>
-          Use dashboards and available reporting tools to review
-          information and communicate organizational progress.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  
-<!-- Centered Dashboard Image -->
-<!-- Kindora Dashboard Section -->
-<table
-  role="presentation"
-  width="100%"
-  cellpadding="0"
-  cellspacing="0"
-  border="0"
-  style="width:100%; background-color:#f4f7ff;"
->
-  <tr>
-    <td align="center" style="padding:35px 20px;">
-
-      <!-- Main Content -->
-      <table
-        role="presentation"
-        width="600"
-        cellpadding="0"
-        cellspacing="0"
-        border="0"
-        style="width:100%; max-width:600px; background-color:#ffffff;
-               border-radius:14px;"
-      >
-        <tr>
-          <td align="center" style="padding:30px 25px 15px;">
-
-            <h5 style="
-              margin:0 0 12px;
-              font-family:Arial,Helvetica,sans-serif;
-              font-size:26px;
-              line-height:1.3;
-              color:#253b80;
-              text-align:center;
-            ">
-              Manage Your Impact with Space Kindora
-            </h5>
-
-            <p style="
-              margin:0;
-              font-family:Arial,Helvetica,sans-serif;
-              font-size:15px;
-              line-height:1.7;
-              color:#626b7a;
-              text-align:center;
-            ">
-              Track donations, manage programs, monitor finances,
-              and keep everything organized in one place.
-            </p>
-
-          </td>
-        </tr>
-
-        <!-- Dashboard GIF -->
-        <tr>
-          <td align="center" style="padding:20px 25px 30px;">
-
-            <img
-              src="https://spacenexus.net/kindora/screenshots/Dashboard/Dashboard.gif"
-              alt="Space Kindora Dashboard Gif"
-              width="550"
-              style="
-                display:block;
-                width:100%;
-                max-width:600px;
-                height: auto;
-                margin:0 auto;
-                border:1px solid #e5e9f5;
-                border-radius:10px;
-              "
-            >
-
-          </td>
-        </tr>
-      </table>
-
-    </td>
-  </tr>
-
-          <!-- Additional Kindora Dashboard Screenshots -->
-        <!-- <tr>
-          <td align="center" style="padding:0 25px 20px;">
-            <img
-              src="https://spacenexus.net/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20113054.webp"
-              alt="Space Kindora Dashboard Screenshot 1"
-              width="550"
-              style="
-                display:block;
-                width:100%;
-                max-width:600px;
-                height:auto;
-                margin:0 auto;
-                border:1px solid #e5e9f5;
-                border-radius:10px;
-              "
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td align="center" style="padding:0 25px 30px;">
-            <img
-              src="https://spacenexus.net/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.webp"
-              alt="Space Kindora Dashboard Screenshot 2"
-              width="550"
-              style="
-                display:block;
-                width:100%;
-                max-width:600px;
-                height:auto;
-                margin:0 auto;
-                border:1px solid #e5e9f5;
-                border-radius:10px;
-              "
-            >
-          </td>
-        </tr> -->
-</table>
-
-
-
-
-  <!-- BENEFITS -->
-  <!-- <div class="section">
-
-    <p class="eyebrow">Why a Connected Workspace?</p>
-
-    <h2>Spend Less Time Juggling Tools.</h2>
-
-    <p class="description">
-      A more connected approach can help your team organize work
-      and keep important information easier to manage.
-    </p>
-
-    <div class="benefits">
-
-      <div class="benefit">
-        <strong>&#10003; Centralized Information</strong>
-        <p>
-          Keep important organizational records together instead
-          of relying entirely on scattered files.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <strong>&#10003; Better Coordination</strong>
-        <p>
-          Give team members a more structured way to manage
-          organizational responsibilities.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <strong>&#10003; Clearer Reporting</strong>
-        <p>
-          Prepare and review organizational information for
-          reporting and decision-making.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <strong>&#10003; Mission-Focused Work</strong>
-        <p>
-          Make organizational information easier to manage so your
-          team can focus on its priorities.
-        </p>
-      </div>
-
-    </div>
-  </div> -->
-
-  <!-- CTA -->
-  <div class="cta" style="margin-top: 40px;">
-
-    <h2>Bring Your Organization Together.</h2>
-
-    <p>
-      Discover a more connected way to manage your nonprofit's
-      everyday operations with Space Kindora.
-    </p>
-
-    <a class="button"
-       href="https://kindora.pmspace.ai/login?redirectTo=%2F">
-      Visit Space Kindora &rarr;
-    </a>
-
-  </div>
-
-
-  <!-- FOOTER -->
-  <div class="footer">
-
-    <div class="footer-brand">Space Kindora</div>
-
-    <p>
-      One connected workspace for nonprofit management.
-    </p>
-
-    <div class="footer-links">
-      <a href="https://kindora.pmspace.ai/login?redirectTo=%2F">
-        Access Kindora
-      </a>
-
-      <a href="https://spacenexus.net/kindora">
-        Learn More
-      </a>
-
-      <a href="https://spacenexus.net">
-        Space Nexus
-      </a>
-    </div>
-
-    <p>
-      This email introduces Space Kindora and its nonprofit
-      management capabilities.
-    </p>
-
-    <p>
-      &copy; 2026 Space Kindora. All rights reserved.
-    </p>
-
-  </div>
-
-</div>
-</div>
-
+  <span
+    style="display:none !important; visibility:hidden; opacity:0; color:#ffffff; height:0; width:0; mso-hide:all; font-size:1px; line-height:1px; max-height:0; max-width:0; overflow:hidden;">
+    Donor management, grant tracking, programs, volunteers, and nonprofit finances — one platform for your whole
+    organization.
+  </span>
+
+  <table role="presentation" class="wrap" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" style="background-color:#f1f5f9; padding: 24px 8px 32px 8px;">
+
+        <table role="presentation" class="container" width="100%" border="0" cellpadding="0" cellspacing="0">
+
+          <!-- Top gradient accent bar -->
+          <tr>
+            <td class="grad-bar"
+              style="height:5px; background:linear-gradient(90deg,#2563eb 0%,#7c3aed 100%); font-size:0; line-height:0;">
+            </td>
+          </tr>
+
+          <!-- ============ HEADER / NAV ============ -->
+          <tr>
+            <td style="padding:18px 26px 16px 26px;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="left" style="vertical-align:middle;">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="vertical-align:middle;">
+                          <img
+                            src="https://spacenexus.net/icononly_transparent_nobuffer.png"
+                            alt="SpaceNexus S logo"
+                            width="27"
+                            height="34"
+                            style="display:block; width:27px; height:34px; border:0;">
+                        </td>
+                        <td style="vertical-align:middle; padding-left:10px;">
+                          <div class="text-ink" style="font-size:17px; font-weight:800; letter-spacing:1px;">SPACE
+                            KINDORA</div>
+                          <div
+                            style="color:#94a3b8; font-size:10px; letter-spacing:1px; text-transform:uppercase; margin-top:1px;">
+                            Nonprofit OS</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td align="right" style="vertical-align:middle;">
+                    <!-- <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=header_explore" class="cta-primary"
+                      style="display:inline-block; color:#ffffff !important; background:linear-gradient(135deg,#2563eb 0%,#4f46e5 100%); font-size:14px; font-weight:700; padding:10px 20px; border-radius:999px;">Explore
+                      &#8594;</a> -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ============ HERO ============ -->
+          <tr>
+            <td
+              style="background:linear-gradient(180deg,#eef2ff 0%,#f5f3ff 100%); padding:38px 26px 34px 26px; text-align:center;">
+              <span class="chip"
+                style="display:inline-block; background-color:#ffffff; border:1px solid #e2e8f0; color:#7c3aed; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:7px 16px; border-radius:999px; margin-bottom:20px; box-shadow:0 1px 2px rgba(15,23,42,0.05);">&#10022;
+                One platform &middot; Five modules</span>
+
+              <h1 class="hero-h1"
+                style="margin:0 0 14px 0; font-size:32px; line-height:1.2; color:#0f172a; font-weight:800; letter-spacing:-0.5px;">
+                From spreadsheets to one unified nonprofit platform</h1>
+              <p style="margin:0 auto 24px auto; max-width:560px; font-size:16px; line-height:1.6; color:#475569;">
+                Donors, grants, programs, volunteers, and finances &mdash; one system.
+              </p>
+
+                    <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=mid_explore" class="cta-primary"
+                    style="display:inline-block; color:#ffffff !important; background:linear-gradient(135deg,#2563eb 0%,#4f46e5 100%); font-size:16px; font-weight:700; padding:15px 30px; border-radius:999px; box-shadow:0 6px 16px -6px rgba(37,99,235,0.5);">Explore
+                    SPACE KINDORA &#8594;</a>
+
+              <!-- Glass app preview card -->
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"
+                style="margin-top:30px;">
+                <tr>
+                  <td
+                    style="background-color:rgba(255,255,255,0.92); border:1px solid #e2e8f0; border-radius:18px; padding:20px 18px; text-align:left; box-shadow:0 12px 30px -10px rgba(76,29,149,0.18);">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="vertical-align:middle;">
+                          <div class="text-ink" style="font-size:14px; font-weight:700;">Fundraising Snapshot</div>
+                          <div style="color:#94a3b8; font-size:11px; margin-top:2px;">Space Kindora dashboard &middot;
+                            this week</div>
+                        </td>
+                        <td align="right" style="vertical-align:middle;">
+                          <span
+                            style="display:inline-block; background-color:#ecfdf5; color:#059669; font-size:11px; font-weight:700; padding:4px 10px; border-radius:999px;">&#9679;
+                            Live</span>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Stat tiles -->
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"
+                      style="margin-top:16px;">
+                      <tr>
+                        <td width="25%" style="padding-right:8px;">
+                          <div
+                            style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 12px;">
+                            <div
+                              style="color:#94a3b8; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+                              Donations</div>
+                            <div class="text-ink" style="font-size:18px; font-weight:800; margin-top:2px;">$128k</div>
+                          </div>
+                        </td>
+                        <td width="25%" style="padding:0 8px;">
+                          <div
+                            style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 12px;">
+                            <div
+                              style="color:#94a3b8; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+                              Grants</div>
+                            <div class="text-ink" style="font-size:18px; font-weight:800; margin-top:2px;">24</div>
+                          </div>
+                        </td>
+                        <td width="25%" style="padding:0 8px;">
+                          <div
+                            style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 12px;">
+                            <div
+                              style="color:#94a3b8; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+                              Volunteers</div>
+                            <div class="text-ink" style="font-size:18px; font-weight:800; margin-top:2px;">312</div>
+                          </div>
+                        </td>
+                        <td width="25%" style="padding-left:8px;">
+                          <div
+                            style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 12px;">
+                            <div
+                              style="color:#94a3b8; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">
+                              Programs</div>
+                            <div class="text-ink" style="font-size:18px; font-weight:800; margin-top:2px;">18</div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Mini bar chart -->
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0"
+                      style="margin-top:16px;">
+                      <tr>
+                        <td
+                          style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:12px 14px 6px 14px;">
+                          <div
+                            style="color:#94a3b8; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; padding-bottom:10px;">
+                            Monthly donations</div>
+                          <div style="height:64px; font-size:0; line-height:0;">
+                            <div
+                              style="display:inline-block; width:9%; height:26px; background:linear-gradient(180deg,#93c5fd,#60a5fa); border-radius:4px 4px 0 0;">
+                            </div>
+                            <div style="display:inline-block; width:3%;"></div>
+                            <div
+                              style="display:inline-block; width:9%; height:38px; background:linear-gradient(180deg,#7c3aed,#a78bfa); border-radius:4px 4px 0 0;">
+                            </div>
+                            <div style="display:inline-block; width:3%;"></div>
+                            <div
+                              style="display:inline-block; width:9%; height:30px; background:linear-gradient(180deg,#93c5fd,#60a5fa); border-radius:4px 4px 0 0;">
+                            </div>
+                            <div style="display:inline-block; width:3%;"></div>
+                            <div
+                              style="display:inline-block; width:9%; height:50px; background:linear-gradient(180deg,#7c3aed,#a78bfa); border-radius:4px 4px 0 0;">
+                            </div>
+                            <div style="display:inline-block; width:3%;"></div>
+                            <div
+                              style="display:inline-block; width:9%; height:44px; background:linear-gradient(180deg,#93c5fd,#60a5fa); border-radius:4px 4px 0 0;">
+                            </div>
+                            <div style="display:inline-block; width:3%;"></div>
+                            <div
+                              style="display:inline-block; width:9%; height:58px; background:linear-gradient(180deg,#4f46e5,#818cf8); border-radius:4px 4px 0 0;">
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ============ MODULE CHIP STRIP ============ -->
+          <tr>
+            <td style="background-color:#ffffff; padding:26px 20px 28px 20px;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="20%" align="center" style="padding:0 5px;">
+                    <div
+                      style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 6px;">
+                      <div class="g-blue"
+                        style="width:26px; height:26px; border-radius:8px; line-height:26px; text-align:center; color:#ffffff; font-size:12px; font-weight:800; margin:0 auto 6px auto;">
+                        &#9829;</div>
+                      <div style="color:#475569; font-size:11px; font-weight:700;">Donors</div>
+                    </div>
+                  </td>
+                  <td width="20%" align="center" style="padding:0 5px;">
+                    <div
+                      style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 6px;">
+                      <div class="g-violet"
+                        style="width:26px; height:26px; border-radius:8px; line-height:26px; text-align:center; color:#ffffff; font-size:12px; font-weight:800; margin:0 auto 6px auto;">
+                        &#10003;</div>
+                      <div style="color:#475569; font-size:11px; font-weight:700;">Grants</div>
+                    </div>
+                  </td>
+                  <td width="20%" align="center" style="padding:0 5px;">
+                    <div
+                      style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 6px;">
+                      <div class="g-indigo"
+                        style="width:26px; height:26px; border-radius:8px; line-height:26px; text-align:center; color:#ffffff; font-size:12px; font-weight:800; margin:0 auto 6px auto;">
+                        &#9733;</div>
+                      <div style="color:#475569; font-size:11px; font-weight:700;">Programs</div>
+                    </div>
+                  </td>
+                  <td width="20%" align="center" style="padding:0 5px;">
+                    <div
+                      style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 6px;">
+                      <div
+                        style="width:26px; height:26px; border-radius:8px; line-height:26px; text-align:center; color:#ffffff; font-size:12px; font-weight:800; margin:0 auto 6px auto; background:linear-gradient(135deg,#2563eb,#7c3aed);">
+                        &#9993;</div>
+                      <div style="color:#475569; font-size:11px; font-weight:700;">Volunteers</div>
+                    </div>
+                  </td>
+                  <td width="20%" align="center" style="padding:0 5px;">
+                    <div
+                      style="background-color:#f8fafc; border:1px solid #eef2f7; border-radius:12px; padding:10px 6px;">
+                      <div class="g-blue"
+                        style="width:26px; height:26px; border-radius:8px; line-height:26px; text-align:center; color:#ffffff; font-size:12px; font-weight:800; margin:0 auto 6px auto;">
+                        &#36;</div>
+                      <div style="color:#475569; font-size:11px; font-weight:700;">Finance</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ============ FEATURE CARDS ============ -->
+          <tr>
+            <td style="background-color:#f8fafc; padding:28px 16px 28px 16px;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <!-- Card 1 -->
+                  <td width="33.33%" style="vertical-align:top; padding:0 8px 0 0;">
+                    <div
+                      style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 18px; box-shadow:0 4px 12px -4px rgba(15,23,42,0.08);">
+                      <div class="g-blue"
+                        style="width:44px; height:44px; border-radius:12px; font-size:20px; font-weight:800; color:#ffffff; line-height:44px; text-align:center; margin-bottom:14px;">
+                        &#9829;</div>
+                      <div class="text-ink" style="font-size:16px; font-weight:700; margin:0 0 6px 0;">Donor &amp;
+                        Donation Management</div>
+                      <div style="font-size:14px; color:#475569; line-height:1.55; margin:0;">Donors, donations,
+                        receipts, and giving history in one CRM.</div>
+                      <div
+                        style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#6366f1; margin-top:14px;">
+                        Donor CRM &nbsp;&middot;&nbsp; Receipts</div>
+                    </div>
+                  </td>
+                  <!-- Card 2 -->
+                  <td width="33.33%" style="vertical-align:top; padding:0 8px;">
+                    <div
+                      style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 18px; box-shadow:0 4px 12px -4px rgba(15,23,42,0.08);">
+                      <div class="g-violet"
+                        style="width:44px; height:44px; border-radius:12px; font-size:20px; font-weight:800; color:#ffffff; line-height:44px; text-align:center; margin-bottom:14px;">
+                        &#10003;</div>
+                      <div class="text-ink" style="font-size:16px; font-weight:700; margin:0 0 6px 0;">Grant Lifecycle
+                        Tracking</div>
+                      <div style="font-size:14px; color:#475569; line-height:1.55; margin:0;">Track every grant from
+                        prospect to compliance.</div>
+                      <div
+                        style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#7c3aed; margin-top:14px;">
+                        Pipeline &nbsp;&middot;&nbsp; Compliance</div>
+                    </div>
+                  </td>
+                  <!-- Card 3 -->
+                  <td width="33.33%" style="vertical-align:top; padding:0 0 0 8px;">
+                    <div
+                      style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 18px; box-shadow:0 4px 12px -4px rgba(15,23,42,0.08);">
+                      <div class="g-indigo"
+                        style="width:44px; height:44px; border-radius:12px; font-size:20px; font-weight:800; color:#ffffff; line-height:44px; text-align:center; margin-bottom:14px;">
+                        &#36;</div>
+                      <div class="text-ink" style="font-size:16px; font-weight:700; margin:0 0 6px 0;">Financial &amp;
+                        Expense Reporting</div>
+                      <div style="font-size:14px; color:#475569; line-height:1.55; margin:0;">Budgets, cost allocation,
+                        and nonprofit reports in one place.</div>
+                      <div
+                        style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#4338ca; margin-top:14px;">
+                        Budgets &nbsp;&middot;&nbsp; Reports</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ============ MAIN CONTENT ============ -->
+          <tr>
+            <td
+              style="background-color:#ffffff; padding:32px 28px 22px 28px; font-size:16px; line-height:1.65; color:#475569;">
+              <p style="font-size:22px; font-weight:800; color:#0f172a; margin:0 0 14px 0;">Hi ,</p>
+              <p style="margin:0 0 16px 0;">
+                <strong>Space Kindora</strong> unifies <strong>donors, grants, programs, volunteers & finances</strong>
+                in one place.
+              </p>
+              <p style="margin:0 0 6px 0; color:#0f172a;">
+               And we’ve got you covered with guides, feature walkthroughs, solution pages, and free tools — all designed to help you plan and act faster.
+              </p>
+            </td>
+          </tr>
+
+          <!-- ============ SPLIT SECTION ============ -->
+          <tr>
+            <td style="background-color:#f8fafc; padding:34px 28px;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="50%" class="stack" style="vertical-align:top; padding-right:24px;">
+                    <div
+                      style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#7c3aed;">
+                      Why Space Kindora</div>
+                    <div class="text-ink"
+                      style="font-size:24px; font-weight:800; letter-spacing:-0.3px; margin:8px 0 12px 0; line-height:1.25;">
+                      One platform. Every department.</div>
+                    <div style="font-size:15px; line-height:1.6; color:#475569; margin:0 0 20px 0;">One source of truth,
+                      from the development office to the finance team.</div>
+              <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=hero_explore" class="cta-primary"
+                      style="display:inline-block; color:#ffffff !important; background:linear-gradient(135deg,#2563eb 0%,#4f46e5 100%); font-size:14px; font-weight:700; padding:12px 24px; border-radius:999px;">Explore
+                      all features &#8594;</a>
+                  </td>
+                  <td width="50%" class="stack" style="vertical-align:top;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="padding:0 0 14px 0;">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="vertical-align:top;">
+                                <div class="g-blue"
+                                  style="width:32px; height:32px; border-radius:9px; line-height:32px; text-align:center; color:#ffffff; font-size:14px; font-weight:800;">
+                                  &#9829;</div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:12px;">
+                                <div class="text-ink" style="font-size:14px; font-weight:700;">Donor CRM</div>
+                                <div style="font-size:13px; color:#64748b; line-height:1.5; margin-top:2px;">Profiles,
+                                  history, and receipts in one view.</div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:0 0 14px 0;">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="vertical-align:top;">
+                                <div class="g-violet"
+                                  style="width:32px; height:32px; border-radius:9px; line-height:32px; text-align:center; color:#ffffff; font-size:14px; font-weight:800;">
+                                  &#10003;</div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:12px;">
+                                <div class="text-ink" style="font-size:14px; font-weight:700;">Grant Pipeline</div>
+                                <div style="font-size:13px; color:#64748b; line-height:1.5; margin-top:2px;">Every
+                                  grant, prospect to closeout.</div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:0 0 14px 0;">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="vertical-align:top;">
+                                <div
+                                  style="width:32px; height:32px; border-radius:9px; line-height:32px; text-align:center; color:#ffffff; font-size:14px; font-weight:800; background:linear-gradient(135deg,#2563eb,#7c3aed);">
+                                  &#9993;</div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:12px;">
+                                <div class="text-ink" style="font-size:14px; font-weight:700;">Volunteer Hub</div>
+                                <div style="font-size:13px; color:#64748b; line-height:1.5; margin-top:2px;">Scheduling
+                                  and hours, simplified.</div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:0;">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="vertical-align:top;">
+                                <div class="g-indigo"
+                                  style="width:32px; height:32px; border-radius:9px; line-height:32px; text-align:center; color:#ffffff; font-size:14px; font-weight:800;">
+                                  &#36;</div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:12px;">
+                                <div class="text-ink" style="font-size:14px; font-weight:700;">Finance &amp; Budgets
+                                </div>
+                                <div style="font-size:13px; color:#64748b; line-height:1.5; margin-top:2px;">Allocation
+                                  and reports, built for nonprofits.</div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ============ DEMO CTA ============ -->
+          <tr>
+            <td style="background-color:#ffffff; padding:24px 22px 28px 22px;">
+              <img
+                src="https://res.cloudinary.com/xguqzogx/image/upload/kindoraDashboard_gif.gif"
+                alt="Space Kindora dashboard preview"
+                width="550"
+                style="display:block; width:100%; max-width:600px; height:auto; margin:0 auto 20px; border:1px solid #e5e9f5; border-radius:10px;">
+              <div style="background-image:linear-gradient(135deg,#2563eb 0%,#1d4ed8 50%,#7c3aed 100%),url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27%3E%3Ccircle cx=%274%27 cy=%274%27 r=%271.5%27 fill=%27%23ffffff%27 fill-opacity=%270.14%27/%3E%3C/svg%3E'); background-color:#2563eb; background-size:auto,40px 40px; border-radius:18px; padding:24px 22px; text-align:center;">
+                <span style="display:inline-block; background-color:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.25); color:#f5f3ff; font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:12px;">Live demo</span>
+                <h2 style="margin:0 0 10px 0; font-size:22px; font-weight:800; color:#ffffff; letter-spacing:-0.3px;">See Space Kindora in action</h2>
+                <p style="margin:0 auto 18px auto; max-width:400px; font-size:14px; color:#e0e7ff; line-height:1.6;">
+                  See how Space Kindora brings your operations together &mdash; live. Pick a time that works for you.
+                </p>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fcal.com%2Fspace-ai%2Fspace-kindora-product-demo&n=book_live_demo" style="display:inline-block; color:#2563eb !important; background-color:#ffffff; font-size:14px; font-weight:700; padding:12px 24px; border-radius:999px;">Book a Live Demo &#8594;</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ============ FOOTER ============ -->
+          <tr>
+            <td style="background-color:#0f172a; padding:28px 24px 24px 24px; text-align:center;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                  <td style="vertical-align:middle;">
+                    <div class="g-blue"
+                      style="width:30px; height:30px; border-radius:9px; line-height:30px; text-align:center; color:#ffffff; font-size:13px; font-weight:800;">
+                      SK</div>
+                  </td>
+                  <td style="vertical-align:middle; padding-left:10px;">
+                    <div style="color:#f8fafc; font-size:15px; font-weight:800; letter-spacing:1px; text-align:left;">
+                      SPACE KINDORA</div>
+                    <div
+                      style="color:#64748b; font-size:10px; letter-spacing:1px; text-transform:uppercase; text-align:left;">
+                      Nonprofit OS</div>
+                  </td>
+                </tr>
+              </table>
+
+              <div style="margin:18px 0 0 0;">
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fwww.youtube.com%2F%40KindoraNGOOS1&n=social_youtube"
+                  style="display:inline-block; width:34px; height:34px; line-height:34px; text-align:center; border-radius:999px; background-color:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); color:#c7d2fe !important; font-size:13px; font-weight:700; margin:0 4px;">&#9658;</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fwww.instagram.com%2Fspace_kindora_%2F&n=social_instagram"
+                  style="display:inline-block; width:34px; height:34px; line-height:34px; text-align:center; border-radius:999px; background-color:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); color:#c7d2fe !important; font-size:11px; font-weight:700; margin:0 4px;">IG</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fx.com%2Fspace_kindora&n=social_x"
+                  style="display:inline-block; width:34px; height:34px; line-height:34px; text-align:center; border-radius:999px; background-color:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); color:#c7d2fe !important; font-size:13px; font-weight:700; margin:0 4px;">X</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fspace-kindora%2F&n=social_linkedin"
+                  style="display:inline-block; width:34px; height:34px; line-height:34px; text-align:center; border-radius:999px; background-color:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); color:#c7d2fe !important; font-size:13px; font-weight:700; margin:0 4px;">in</a>
+              </div>
+
+              <div
+                style="width:120px; height:1px; background:linear-gradient(90deg,rgba(255,255,255,0.04),rgba(255,255,255,0.25),rgba(255,255,255,0.04)); margin:18px auto 16px auto;">
+              </div>
+
+              <div style="font-size:13px;">
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora&n=footer_website"
+                  style="color:#c7d2fe; margin:0 8px; font-size:13px;">Website</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Ffree-tools&n=footer_tools"
+                  style="color:#c7d2fe; margin:0 8px; font-size:13px;">Tools</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Fblog&n=footer_blog"
+                  style="color:#c7d2fe; margin:0 8px; font-size:13px;">Blog</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Fabout&n=footer_about"
+                  style="color:#c7d2fe; margin:0 8px; font-size:13px;">About</a>
+                <a href="https://spacenexus.net/kindora/email-click?to=https%3A%2F%2Fspacenexus.net%2Fkindora%2Fcontact&n=footer_contact"
+                  style="color:#c7d2fe; margin:0 8px; font-size:13px;">Contact</a>
+              </div>
+
+              <div style="color:#64748b; font-size:12px; margin-top:12px;">
+                <a href="{{unsubscribe_url}}" style="color:#94a3b8;">Unsubscribe</a>
+              </div>
+
+              <div style="color:#64748b; font-size:11px; margin-top:8px;">
+                &copy; 2026 SpaceKindora by SpaceNexus. All rights reserved.
+              </div>
+
+              <div style="color:#475569; font-size:11px; max-width:480px; margin:16px auto 0 auto; line-height:1.6;">
+                You’re receiving this because your organization may benefit from Space Kindora.
+Received in error? Unsubscribe above.
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
-</html>
 
+</html>

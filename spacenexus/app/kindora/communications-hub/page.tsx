@@ -633,7 +633,7 @@ export default function KindoraCommunicationsHubPage() {
                 See Pricing
               </Link>
             </div>
-            <p className="text-sm text-gray-500 mt-6">SOC 2 Type II · AES-256 encryption · CAN-SPAM & GDPR compliant · No credit card required</p>
+            <p className="text-sm text-gray-500 mt-6">Role-based access controls · Audit logs</p>
           </div>
         </section>
 

@@ -153,35 +153,16 @@ export default function JsonLd() {
     inLanguage: "en-US",
   };
 
-  const peopleSchema = {
-    "@context": "https://schema.org",
-    "@graph": personSchemas,
-  };
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://spacenexus.net/#service",
     name: "SpaceNexus Virtual Data Room",
     serviceType: "Virtual Data Room",
     description:
-      "SpaceNexus provides a secure virtual data room for M&A due diligence, capital raising, and legal document sharing, with granular permissions, dynamic watermarking, and a tamper-evident audit trail.",
+      "A secure online workspace for sharing and reviewing documents during M&A due diligence and capital raising.",
+    url: "https://spacenexus.net",
     provider: { "@id": "https://spacenexus.net/#organization" },
-    areaServed: [
-      { "@type": "Country", name: "United States" },
-      { "@type": "Country", name: "United Kingdom" },
-      { "@type": "Country", name: "Canada" },
-      { "@type": "Country", name: "Australia" },
-    ],
-    audience: {
-      "@type": "BusinessAudience",
-      audienceType: "M&A advisors, law firms, investment banks, and corporate deal teams",
-    },
-    offers: {
-      "@type": "Offer",
-      url: "https://spacenexus.net/pricing",
-      availability: "https://schema.org/InStock",
-    },
+    areaServed: { "@type": "Place", name: "Worldwide" },
   };
 
   return (

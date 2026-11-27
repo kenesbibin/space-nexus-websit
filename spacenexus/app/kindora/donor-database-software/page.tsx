@@ -67,7 +67,7 @@ const benefits = [
     description: "Your entire team accesses the same database in real time. No more emailing spreadsheets or wondering who has the latest version.",
   },
   {
-    metric: "99.9%",
+    metric: "Role-based",
     title: "Data Security",
     description: "Encrypted storage, role-based access, and automatic backups protect your most sensitive donor information.",
   },
@@ -159,7 +159,7 @@ const platformStats = [
   { metric: "1", label: "Source of truth" },
   { metric: "100%", label: "Data integrity" },
   { metric: "Real-Time", label: "Instant access" },
-  { metric: "99.9%", label: "Data security" },
+  { metric: "Access controls", label: "Ask for current security details" },
 ];
 
 const jsonLd = {
@@ -404,7 +404,7 @@ export default function DonorDatabaseSoftwarePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Clean Up Your Donor Data?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing spreadsheets with professional donor database software.
+            Explore Kindora tools for professional donor database software.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

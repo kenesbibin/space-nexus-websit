@@ -1,5 +1,12 @@
 # AI Crawler Access Report: spacenexus.net (Kindora)
 
+## KAI-02 production verification — 2026-11-26
+
+- `curl -I https://spacenexus.net/robots.txt`: **200 OK**, `Content-Type: text/plain`.
+- `curl https://spacenexus.net/robots.txt`: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, and Google-Extended are allowed. The live rules disallow `/api/`, `/admin/`, `/private/`, and `/kindora/email-click`; the sitemap directives include the root and Kindora sitemap URLs.
+- `curl -I https://spacenexus.net/kindora/sitemap.xml`: **200 OK**, `Content-Type: application/xml`.
+- Production is still serving the earlier policy and does not disallow preview paths. The updated `app/robots.ts` policy has not been deployed, so KAI-02 remains in progress pending deployment and repeat verification.
+
 **Analysis Date:** 2026-10-08
 **Domain:** spacenexus.net
 **Kindora scope:** /kindora/* shares the same `<root>` robots.txt, meta robots, and headers — this map applies to every Kindora page.

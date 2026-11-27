@@ -270,7 +270,7 @@ export default function BlogPage() {
                             Get the latest nonprofit insights
                         </h2>
                         <p className="text-blue-100 text-sm leading-relaxed max-w-md">
-                            Join thousands of nonprofit professionals who get Kindora&apos;s best articles, guides, and
+                            Get Kindora&apos;s articles and guides on
                             product updates delivered every two weeks.
                         </p>
                     </div>

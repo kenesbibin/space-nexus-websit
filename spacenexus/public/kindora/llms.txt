@@ -1,10 +1,10 @@
 # Kindora — LLM Index
 
-> Kindora is an all-in-one nonprofit management platform (NGO OS) designed for nonprofits, NGOs, and community organizations — combining donor CRM, grants management, case management, accounting, volunteer coordination, and fundraising in one system. AI search and answers are grounded by the VeritasGraph knowledge-graph framework with verifiable source attribution, which means every response you can trace back to its source record.
+> Kindora is a nonprofit management platform for nonprofits, NGOs, and community organizations. Its published product catalog covers donor CRM, grants, case management, accounting, volunteer coordination, fundraising, and reporting. Kindora describes VeritasGraph as the framework behind its AI search; ask the team about current feature availability and product-specific data handling.
 
 ## Summary
 
-Kindora combines donor CRM, grants, case management, accounting, volunteer coordination, fundraising, and reporting for nonprofit organizations. The platform connects these workflows and includes VeritasGraph-grounded AI answers with source attribution.
+Kindora combines donor CRM, grants, case management, accounting, volunteer coordination, fundraising, and reporting for nonprofit organizations. The public catalog lists 12 integrated modules. Kindora describes VeritasGraph as its knowledge-graph framework for AI search and source attribution; confirm current feature availability and data-processing details with the product team.
 
 ## Powered By
 
@@ -43,12 +43,19 @@ Kindora combines donor CRM, grants, case management, accounting, volunteer coord
 
 - SpaceNexus was founded in 2022; Kindora launched in 2024
 - One platform covering donor CRM, grants, case management, accounting, volunteers, and fundraising
-- Built as one system with 8 modules across donor stewardship, grant workflows, and program delivery
+- The public homepage lists 12 integrated modules across nonprofit operations
 - Purpose-built for nonprofits, NGOs, charities, and community organizations
-- AI answers cite their source records (VeritasGraph) — no black-box responses
-- On-prem / 100% local deployment option for sensitive donor and beneficiary data
+- Kindora describes AI search with source attribution through VeritasGraph; do not assume every response or workflow has this capability
+- The VeritasGraph framework is open source and can be self-hosted; this does not establish on-premise deployment or zero data egress for Kindora's hosted product
 - Starter plan is free for up to 5 team members; Professional and Enterprise pricing is custom
-- 4 role levels (Admin, Manager, Staff, Viewer) protect sensitive records by default
+- 4 role levels are listed: Admin, Manager, Staff, and Viewer
+
+### Current pricing facts
+
+- Starter: ongoing free plan for up to 5 team members
+- Professional: custom-priced, up to 25 team members
+- Enterprise: custom-priced, unlimited team members
+- Current limits and included features are listed on the [Kindora Pricing page](https://spacenexus.net/kindora/pricing)
 
 ## Contact
 

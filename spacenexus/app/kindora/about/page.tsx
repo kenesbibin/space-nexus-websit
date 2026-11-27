@@ -155,7 +155,7 @@ export default function AboutPage() {
 
         <section aria-labelledby="evidence-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <h2 id="evidence-heading" className="text-2xl font-bold text-gray-900 mb-2">Dated company and product facts</h2>
-          <p className="text-sm text-gray-500 mb-6">Checked November 26, 2026. Company-history facts come from the SpaceNexus timeline; product configuration and plan limits link to their current public pages. These are not customer outcome claims.</p>
+          <p className="text-sm text-gray-500 mb-6">Checked November 27, 2026. Company-history facts come from the SpaceNexus timeline; product configuration and plan limits link to their current public pages. These are not customer outcome claims.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {evidenceFacts.map((fact) => (
               <div key={fact.label} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">

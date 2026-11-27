@@ -441,7 +441,7 @@ export default function NonprofitAnalyticsDashboardPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to See Your Data Clearly?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing spreadsheets with real-time analytics dashboards.
+            Explore Kindora tools for real-time analytics dashboards.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

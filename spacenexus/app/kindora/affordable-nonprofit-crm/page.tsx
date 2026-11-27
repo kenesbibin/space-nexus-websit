@@ -104,7 +104,7 @@ const features = [
   },
   {
     title: "Easy Setup",
-    description: "Get started in time varies by data and workflow needs. Import from spreadsheets, no consultants needed.",
+    description: "Import your records from spreadsheets and use guided onboarding. Setup needs depend on your data and workflows.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -119,7 +119,7 @@ const comparisonData = [
   { feature: "Unlimited Users", kindora: true, bloomerang: false, salesforce: false },
   { feature: "Flat-Rate Pricing", kindora: true, bloomerang: false, salesforce: false },
   { feature: "No Per-Seat Fees", kindora: true, bloomerang: false, salesforce: false },
-  { feature: "Setup in 30 Minutes", kindora: true, bloomerang: true, salesforce: false },
+  { feature: "Setup time varies", kindora: true, bloomerang: true, salesforce: false },
 ];
 
 const faqs = [

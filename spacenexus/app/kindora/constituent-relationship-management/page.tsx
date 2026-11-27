@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
 const benefits = [
   {
-    stat: "10+ hrs/week",
+    stat: "Automated",
     title: "Replace Manual Tracking",
     description:
       "Eliminate spreadsheets, duplicate data entry, and disconnected tools. Automate constituent data management and reclaim hours every week.",
@@ -72,14 +72,14 @@ const benefits = [
     icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z",
   },
   {
-    stat: "2.5x",
+    stat: "Personalized",
     title: "Grow Engagement",
     description:
       "Personalized outreach, automated stewardship workflows, and engagement scoring help you deepen relationships and retain more constituents.",
     icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
   },
   {
-    stat: "90%",
+    stat: "Flexible",
     title: "Report Instantly",
     description:
       "Generate board-ready reports, constituent statements, and impact summaries in seconds — not hours of manual spreadsheet work.",

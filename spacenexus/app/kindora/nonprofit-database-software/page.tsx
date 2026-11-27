@@ -220,7 +220,7 @@ const platformStats = [
   { metric: "1", label: "Single Source of Truth" },
   { metric: "100%", label: "Data Integrity" },
   { metric: "Real-Time", label: "Multi-User Access" },
-  { metric: "99.9%", label: "Uptime" },
+  { metric: "Service terms", label: "Confirm current availability commitment" },
 ];
 
 const jsonLd = {
@@ -613,7 +613,7 @@ export default function NonprofitDatabaseSoftwarePage() {
             Ready to Unify Your Nonprofit Data?
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing spreadsheets with
+            Explore Kindora tools for
             professional database software that scales with your mission.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -402,7 +402,7 @@ export default function DonorStewardshipSoftwarePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Retain More Donors?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits turning one-time givers into lifelong donors with professional stewardship software.
+            Explore professional stewardship software.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

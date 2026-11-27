@@ -1,5 +1,9 @@
 # SpaceNexus AI Visibility Tracking
 
+> Kindora baseline specification: [KINDORA-AI-VISIBILITY-BASELINE.md](KINDORA-AI-VISIBILITY-BASELINE.md)
+
+The Kindora tracker is now defined separately from SpaceNexus VDR tracking. Use the fixed Kindora URL set, 20 neutral prompts, and four-engine protocol in the linked baseline for KAI-01. Do not mix the two products in one score.
+
 > Monthly tracking of AI search visibility across ChatGPT, Perplexity, and Google AI Overviews
 
 ---

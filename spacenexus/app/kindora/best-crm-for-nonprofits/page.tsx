@@ -94,7 +94,7 @@ const comparisonData = [
   { feature: "Programme Reporting", kindora: true, bloomerrang: false, neontwo: false, salesforce: "partial" },
   { feature: "Email Marketing", kindora: true, bloomerrang: false, neontwo: true, salesforce: true },
   { feature: "Financial Management", kindora: true, bloomerrang: false, neontwo: false, salesforce: false },
-  { feature: "Setup Time", kindora: "30 min", bloomerrang: "1 week", neontwo: "1 week", salesforce: "3-6 months" },
+  { feature: "Setup Time", kindora: "varies", bloomerrang: "1 week", neontwo: "1 week", salesforce: "3-6 months" },
 ];
 
 const faqs = [
@@ -126,13 +126,13 @@ const faqs = [
   {
     question: "How long does it take to set up Kindora?",
     answer:
-      "Kindora sets up in time varies by data and workflow needs with guided onboarding. Import your existing data from spreadsheets or other CRMs and start using the platform immediately.",
+      "Kindora offers guided onboarding. Import your existing data from spreadsheets or other CRMs; setup time depends on your data and workflows.",
   },
 ];
 
 const platformStats = [
   { metric: "5-in-1", label: "All-in-one CRM" },
-  { metric: "30 min", label: "Setup time" },
+  { metric: "varies", label: "Setup time" },
   { metric: "All", label: "Nonprofit operations" },
   { metric: "0", label: "Consulting fees" },
 ];

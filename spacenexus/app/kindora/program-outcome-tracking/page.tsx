@@ -205,7 +205,7 @@ const benefits = [
     description: "See outcome progress as it happens — not months after the fact.",
   },
   {
-    stat: "30 min",
+    stat: "varies",
     label: "Setup Time",
     description: "Setup time depends on your data and workflow needs; ask Kindora about onboarding options.",
   },

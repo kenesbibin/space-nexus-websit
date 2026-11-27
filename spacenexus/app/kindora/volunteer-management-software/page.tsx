@@ -414,7 +414,7 @@ export default function VolunteerManagementSoftwarePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Manage Volunteers Better?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing spreadsheets with professional volunteer management software.
+            Explore Kindora tools for professional volunteer management software.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

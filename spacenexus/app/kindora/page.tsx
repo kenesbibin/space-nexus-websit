@@ -14,7 +14,7 @@ import {
   AnimatedValueProps,
   AnimatedScreenshotGallery,
 } from "./components/AnimatedSections";
-const lastUpdated = "November 26, 2026";
+const lastUpdated = "November 27, 2026";
 export const metadata: Metadata = {
   title: {
     absolute: "Kindora | All-in-One Nonprofit Management Software",
@@ -372,6 +372,31 @@ export default function KindoraHomePage() {
                 </svg>
                 Explore Features
               </Link>
+            </div>
+
+            {/* A quick visual of the work Kindora brings together */}
+            <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-blue-100 bg-white/80 p-3 shadow-lg shadow-blue-900/5 backdrop-blur sm:p-4">
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+                {[
+                  { label: "Donors", icon: "M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2m16-11a4 4 0 010 8m4 3v-2a4 4 0 00-3-3.87M9 11a4 4 0 100-8 4 4 0 000 8z" },
+                  { label: "Grants", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V7m0 1v8m9-4a9 9 0 11-18 0 9 9 0 0118 0z" },
+                  { label: "Programs", icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" },
+                  { label: "Finances", icon: "M3 3v18h18M18 17V9m-5 8V5m-5 12v-5" },
+                ].map(({ label, icon }, index) => (
+                  <div key={label} className="flex items-center gap-2">
+                    <div className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 px-3 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-blue-100/80 sm:px-4">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white text-[#2563eb] shadow-sm">
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d={icon} />
+                        </svg>
+                      </span>
+                      {label}
+                    </div>
+                    {index < 3 && <span className="hidden text-blue-300 sm:inline" aria-hidden="true">＋</span>}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-xs font-medium tracking-wide text-slate-500">One shared workspace for your mission</p>
             </div>
           </div>
 
@@ -1068,7 +1093,7 @@ export default function KindoraHomePage() {
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-11-26" />
+                <LastUpdated date="2026-11-27" />
             </div></div>
       </section>
     </>
