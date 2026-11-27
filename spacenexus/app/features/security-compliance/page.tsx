@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
@@ -216,11 +217,13 @@ export default function SecurityCompliancePage() {
                 </div>
               </div>
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+                <Image
                   src="/spacenexus/screenshots/security%20complince.jpeg"
                   alt="SpaceNexus VDR Security & Compliance — enterprise security controls dashboard"
+                  width={1578}
+                  height={713}
                   className="w-full h-auto"
-                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </div>

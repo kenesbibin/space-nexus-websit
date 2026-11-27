@@ -153,6 +153,62 @@ export default function SecurityPage() {
 
             <AnswerBlock text="SpaceNexus security includes SOC 2 Type II certification, ISO 27001 compliance, AES-256 encryption at rest and in transit, dynamic watermarking, granular role-based permissions, immutable audit logs, IP whitelisting, and SSO/SAML integration with FIDO2 MFA support." />
 
+            {/* Safeguarding Your Data */}
+            <section className="py-16 bg-white border-b border-gray-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-10 leading-tight">
+                        <span className="text-[#2563eb]">Safeguarding Your Data,</span>
+                        <br />
+                        Ensuring Confidentiality
+                    </h2>
+                    <div className="grid lg:grid-cols-2 gap-6">
+                        <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm flex flex-col">
+                            <h3 className="text-2xl font-semibold text-gray-900 text-center mb-3">
+                                Local Data Servers
+                            </h3>
+                            <p className="text-gray-600 text-center max-w-md mx-auto mb-6">
+                                Customer data is locally hosted in Saudi Arabia, UAE, United States of
+                                America, Singapore &amp; India.
+                            </p>
+                            <img
+                                src="/spacenexus/images/global-data-map.svg"
+                                alt="World map showing local data servers in USA, KSA, UAE, India and Singapore"
+                                className="w-full h-auto mt-auto"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm flex-1 flex flex-col justify-center">
+                                <h3 className="text-2xl font-semibold text-gray-900 text-center mb-3">
+                                    On-premise Setup
+                                </h3>
+                                <p className="text-gray-600 text-center max-w-md mx-auto">
+                                    Take control of your data with enterprise on-premise setup ensuring
+                                    your data stays only on your network.
+                                </p>
+                            </div>
+                            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm flex-1 flex flex-col justify-center">
+                                <h3 className="text-2xl font-semibold text-gray-900 text-center mb-3">
+                                    PII Tokenization
+                                </h3>
+                                <p className="text-gray-600 text-center max-w-md mx-auto">
+                                    Send messages and conduct surveys without sharing personal data
+                                    &amp; enable secure sharing across organization with token access.
+                                </p>
+                            </div>
+                            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm flex-1 flex flex-col justify-center">
+                                <h3 className="text-2xl font-semibold text-gray-900 text-center mb-3">
+                                    24/7 Local Support
+                                </h3>
+                                <p className="text-gray-600 text-center max-w-md mx-auto">
+                                    Get 24/7 localised support for any platform related queries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Certifications strip */}
             <section className="py-8 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,7 +6,7 @@ import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
   title: "Industries — VDR Solutions by Sector | SpaceNexus",
-  description: "Virtual data room solutions for Private Equity, Investment Banking, Law Firms, Real Estate, Life Sciences, Technology, and Energy sectors.",
+  description: "Virtual data room solutions for Private Equity, Venture Capital, Investment Banking, Law Firms, Real Estate, Healthcare, Life Sciences, Technology, and Energy sectors.",
   keywords: [
     "VDR industry solutions",
     "virtual data room by industry",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industries — VDR Solutions by Sector | SpaceNexus",
     description:
-      "Virtual data room solutions for Private Equity, Investment Banking, Law Firms, Real Estate, Life Sciences, Technology, and Energy sectors.",
+      "Virtual data room solutions for Private Equity, Venture Capital, Investment Banking, Law Firms, Real Estate, Healthcare, Life Sciences, Technology, and Energy sectors.",
     url: "https://spacenexus.net/industries",
     type: "website",
   },
@@ -48,6 +48,28 @@ const industries = [
       </svg>
     ),
     color: "purple",
+  },
+  {
+    name: "Venture Capital",
+    href: "/industries/venture-capital",
+    description:
+      "Run seed-to-Series B diligence, LP reporting, and portfolio company data rooms from one secure platform.",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+        />
+      </svg>
+    ),
+    color: "pink",
   },
   {
     name: "Investment Banking",
@@ -136,6 +158,28 @@ const industries = [
       </svg>
     ),
     color: "rose",
+  },
+  {
+    name: "Healthcare",
+    href: "/industries/healthcare",
+    description:
+      "Handle hospital and clinic M&A with HIPAA-compliant sharing for clinical, financial, and regulatory documents.",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+        />
+      </svg>
+    ),
+    color: "teal",
   },
   {
     name: "Technology",
@@ -237,13 +281,15 @@ const colorClasses: Record<
     text: "text-indigo-600",
     border: "border-indigo-200",
   },
+  teal: { bg: "bg-teal-50", text: "text-teal-600", border: "border-teal-200" },
+  pink: { bg: "bg-pink-50", text: "text-pink-600", border: "border-pink-200" },
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Virtual Data Room for Industries",
-  description: "Industry-specific virtual data room solutions for Private Equity, Investment Banking, Law Firms, Real Estate, Life Sciences, Technology, Energy, and Corporate Development. SOC 2 Type II certified.",
+  description: "Industry-specific virtual data room solutions for Private Equity, Venture Capital, Investment Banking, Law Firms, Real Estate, Healthcare, Life Sciences, Technology, Energy, and Corporate Development. SOC 2 Type II certified.",
   url: "https://spacenexus.net/industries",
   serviceType: "Virtual Data Room",
   provider: {
@@ -279,7 +325,7 @@ const faqSchema = {
       name: "What industries does SpaceNexus serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, technology, real estate, and energy infrastructure teams with industry-specific VDR templates and compliance features.",
+        text: "SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, healthcare, technology, real estate, and energy infrastructure teams with industry-specific VDR templates and compliance features.",
       },
     },
     {
@@ -304,7 +350,7 @@ const faqSchema = {
 const faqs = [
   {
     question: "What industries does SpaceNexus serve?",
-    answer: "SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, technology, real estate, and energy infrastructure teams with industry-specific VDR templates and compliance features.",
+    answer: "SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, healthcare, technology, real estate, and energy infrastructure teams with industry-specific VDR templates and compliance features.",
   },
   {
     question: "Does SpaceNexus offer industry-specific data room templates?",
@@ -358,7 +404,7 @@ export default function IndustriesPage() {
       {/* Industries Grid */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {industries.map((industry) => {
               const colors = colorClasses[industry.color];
               return (

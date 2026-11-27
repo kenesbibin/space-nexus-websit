@@ -4,6 +4,7 @@ import TrustBar from "./components/TrustBar";
 import ProductEcosystem from "./components/ProductEcosystem";
 import VDRScreenshotGallery from "./components/VDRScreenshotGallery";
 import IDPSection from "./components/IDPSection";
+import SmartFeaturesSection from "./components/SmartFeaturesSection";
 import TransformationTable from "./components/TransformationTable";
 import BenefitsSection from "./components/BenefitsSection";
 import FAQSection from "./components/FAQSection";
@@ -117,6 +118,11 @@ export default function Home() {
       {/* Before/After Transformation Table */}
       <div className="content-auto">
         <TransformationTable />
+      </div>
+
+      {/* Smart Deal Rooms & AI Insights (XEBO-style bento section) */}
+      <div className="content-auto">
+        <SmartFeaturesSection />
       </div>
 
       {/* Benefits & ROI Section */}
