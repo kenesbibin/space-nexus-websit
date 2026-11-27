@@ -30,7 +30,7 @@ export default function robots(): MetadataRoute.Robots {
           "CCBot",
         ],
         allow: "/",
-        disallow: restrictedPaths,
+        disallow,
       },
       {
         userAgent: [
@@ -40,12 +40,12 @@ export default function robots(): MetadataRoute.Robots {
           "Bingbot",
         ],
         allow: "/",
-        disallow: restrictedPaths,
+        disallow,
       },
       {
         userAgent: ["ChatGPT-User", "Claude-User", "Perplexity-User"],
         allow: "/",
-        disallow: restrictedPaths,
+        disallow,
       },
       {
         userAgent: "*",
