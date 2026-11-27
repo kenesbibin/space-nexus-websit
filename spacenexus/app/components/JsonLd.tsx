@@ -1,4 +1,5 @@
 import { kindoraCanonicalUrl } from "../kindora/components/kindora-entity";
+import { authorProfiles } from "../blog/data/posts";
 
 export default function JsonLd() {
   const personSchemas = Object.values(authorProfiles).map((m) => ({
@@ -150,6 +151,18 @@ export default function JsonLd() {
     url: "https://spacenexus.net",
     publisher: { "@id": "https://spacenexus.net/#organization" },
     inLanguage: "en-US",
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "SpaceNexus Virtual Data Room",
+    serviceType: "Virtual Data Room",
+    description:
+      "A secure online workspace for sharing and reviewing documents during M&A due diligence and capital raising.",
+    url: "https://spacenexus.net",
+    provider: { "@id": "https://spacenexus.net/#organization" },
+    areaServed: { "@type": "Place", name: "Worldwide" },
   };
 
   return (
