@@ -50,7 +50,7 @@ const benefits = [
     description: "Designed specifically for small teams — no enterprise complexity, no expensive consultants, no steep learning curve.",
   },
   {
-    metric: "30min",
+    metric: "varies",
     title: "Setup in Minutes",
     description: "Import contacts from spreadsheets, set up donation forms, and start tracking donors with setup time depending on your data and workflow needs.",
   },
@@ -115,7 +115,7 @@ const comparisonData = [
   { feature: "Volunteer Management", kindora: true, bloomerang: false, salesforce: false, spreadsheet: false },
   { feature: "Online Donation Forms", kindora: true, bloomerang: true, salesforce: true, spreadsheet: false },
   { feature: "Email Communication", kindora: true, bloomerang: "partial", salesforce: "partial", spreadsheet: false },
-  { feature: "Setup in 30 Minutes", kindora: true, bloomerang: true, salesforce: false, spreadsheet: true },
+  { feature: "Setup time varies", kindora: true, bloomerang: true, salesforce: false, spreadsheet: true },
   { feature: "Unlimited Users", kindora: true, bloomerang: false, salesforce: false, spreadsheet: true },
   { feature: "No Per-Seat Fees", kindora: true, bloomerang: false, salesforce: false, spreadsheet: true },
   { feature: "Affordable Pricing", kindora: true, bloomerang: true, salesforce: false, spreadsheet: true },
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: "Can I use Kindora if I'm not technical?",
     answer:
-      "Absolutely. Kindora is designed for non-technical users. Import your data from spreadsheets, start tracking donors, and send emails — no coding, no consultants, no training required. Most teams are up and running in time varies by data and workflow needs.",
+      "Absolutely. Kindora is designed for non-technical users. Import your data from spreadsheets, start tracking donors, and send emails — no coding, no consultants, no training required. Setup time depends on your data and workflows.",
   },
   {
     question: "Does Kindora work for organisations with fewer than 10 staff?",
@@ -152,7 +152,7 @@ const faqs = [
 
 const platformStats = [
   { metric: "5-in-1", label: "For small nonprofits" },
-  { metric: "30min", label: "Setup time" },
+  { metric: "varies", label: "Setup time" },
   { metric: "Unlimited", label: "Users included" },
   { metric: "All-in-One", label: "Platform" },
 ];
@@ -375,7 +375,7 @@ export default function BestCrmForSmallNonprofitsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Find the Best CRM?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of small nonprofits choosing Kindora over spreadsheets and enterprise CRMs.
+            Compare Kindora with spreadsheets and enterprise CRMs to see which workflows fit your organization.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

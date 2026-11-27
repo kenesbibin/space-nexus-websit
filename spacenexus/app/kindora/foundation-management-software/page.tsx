@@ -418,7 +418,7 @@ export default function FoundationManagementSoftwarePage() {
                 { metric: "75%", label: "faster grant reporting" },
                 { metric: "100%", label: "compliance tracking" },
                 { metric: "60%", label: "reduction in admin time" },
-                { metric: "30 min", label: "setup time" },
+                { metric: "varies", label: "setup time" },
               ].map((b) => (
                 <div key={b.label} className="text-center">
                   <p className="text-3xl sm:text-4xl font-bold text-[#2563eb] mb-1">{b.metric}</p>
@@ -629,7 +629,7 @@ export default function FoundationManagementSoftwarePage() {
                 See Pricing
               </Link>
             </div>
-            <p className="text-sm text-gray-500 mt-6">SOC 2 Type II · AES-256 encryption · Fund accounting · No credit card required</p>
+            <p className="text-sm text-gray-500 mt-6">Role-based access controls · Audit logs</p>
           </div>
         </section>
 

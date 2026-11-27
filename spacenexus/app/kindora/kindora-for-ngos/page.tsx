@@ -96,7 +96,7 @@ const whyNgos = [
       "Affordable flat-rate pricing with unlimited users. No per-seat fees, no consultants required, no six-month implementation.",
   },
   {
-    title: "Ready in time varies by data and workflow needs",
+    title: "Ready with setup time that varies by data and workflows",
     description:
       "Import your data, set up your modules, and start working. Your team learns one system instead of several different tools.",
   },

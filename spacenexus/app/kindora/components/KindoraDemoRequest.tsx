@@ -130,8 +130,8 @@ export default function KindoraDemoRequest() {
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
         <p className="text-gray-600 mb-6">
-          Your demo request has been submitted. Our team will reach out to you
-          within 24 hours.
+          Your demo request has been submitted. The Kindora team will follow up
+          using the contact details you provided.
         </p>
         <button
           onClick={() => {

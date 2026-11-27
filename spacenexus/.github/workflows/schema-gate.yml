@@ -1,4 +1,4 @@
-name: schema-gate
+﻿name: schema-gate
 
 on:
   pull_request:
@@ -10,6 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Validate every Kindora blog article graph
+        run: npm run validate:kindora-blog-schema
+
+      - name: Validate BreadcrumbList for every Kindora route
+        run: node scripts/validate-kindora-breadcrumbs.cjs
+
+      - name: Validate Kindora service and pricing claims
+        run: npm run validate:kindora-commercial-schema
 
       - uses: actions/setup-python@v5
         with:

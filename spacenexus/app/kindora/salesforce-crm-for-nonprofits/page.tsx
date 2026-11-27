@@ -94,7 +94,7 @@ const jsonLd = {
           name: "Is there a better alternative to Salesforce CRM for nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora is a purpose-built nonprofit CRM that includes everything Salesforce offers — donor management, campaigns, grant tracking, case management, volunteer tools, and accounting — at a fraction of the cost and setup time. No consultants, no customization, ready in time varies by data and workflow needs.",
+            text: "Yes. Kindora is a purpose-built nonprofit CRM that includes everything Salesforce offers — donor management, campaigns, grant tracking, case management, volunteer tools, and accounting — at a fraction of the cost and setup time. No consultants, no customization, ready with setup time that varies by data and workflows.",
           },
         },
         {
@@ -184,7 +184,7 @@ const comparisonRows = [
   },
   {
     feature: "Setup Time",
-    kindora: { value: "time varies by data and workflow needs — no consultants", positive: true },
+    kindora: { value: "timing varies by data and workflows — no consultants", positive: true },
     salesforce: { value: "Weeks to months", positive: false },
   },
   {
@@ -226,7 +226,7 @@ const salesforceWeaknesses = [
 
 const kindoraAdvantages = [
   "Everything Salesforce CRM does for nonprofits — without the complexity",
-  "Ready in time varies by data and workflow needs with no consultants or training",
+  "Ready with setup time that varies by data and workflows with no consultants or training",
   "Built-in nonprofit accounting and cost allocation",
   "One affordable price replaces Salesforce licenses plus add-ons",
 ];
@@ -235,7 +235,7 @@ const whyChooseKindora = [
   {
     title: "No Consultants Needed",
     description:
-      "Salesforce requires certified implementation partners costing $10,000–$50,000+. Kindora is designed for nonprofits to set up themselves in time varies by data and workflow needs.",
+      "Salesforce requires certified implementation partners costing $10,000–$50,000+. Kindora is designed for nonprofits to set up themselves with setup time that varies by data and workflows.",
     icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
   },
   {
@@ -253,7 +253,7 @@ const whyChooseKindora = [
   {
     title: "Ready in Minutes",
     description:
-      "Salesforce implementation takes weeks or months. Kindora gets your nonprofit running in time varies by data and workflow needs with no training required.",
+      "Salesforce implementation takes weeks or months. Kindora gets your nonprofit running with setup time that varies by data and workflows with no training required.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
@@ -267,7 +267,7 @@ const faqs = [
   {
     question: "Is there a better alternative to Salesforce CRM for nonprofits?",
     answer:
-      "Yes. Kindora is a purpose-built nonprofit CRM that includes everything Salesforce offers — donor management, campaigns, grant tracking, case management, volunteer tools, and accounting — at a fraction of the cost and setup time. No consultants, no customization, ready in time varies by data and workflow needs.",
+      "Yes. Kindora is a purpose-built nonprofit CRM that includes everything Salesforce offers — donor management, campaigns, grant tracking, case management, volunteer tools, and accounting — at a fraction of the cost and setup time. No consultants, no customization, ready with setup time that varies by data and workflows.",
   },
   {
     question: "How much does Salesforce CRM for nonprofits cost?",

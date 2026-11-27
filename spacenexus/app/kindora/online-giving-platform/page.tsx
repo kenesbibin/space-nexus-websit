@@ -144,7 +144,7 @@ const faqs = [
   {
     question: "Is online giving secure with Kindora?",
     answer:
-      "Yes. Kindora uses encrypted payment processing, is SOC 2 compliant, and includes role-based access control. Donor payment information is handled securely with industry-standard security protocols.",
+      "Ask Kindora for current payment processing, hosting, and security documentation so you can evaluate it against your organization’s requirements.",
   },
 ];
 

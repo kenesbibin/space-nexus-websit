@@ -78,13 +78,13 @@ const features = [
   },
   {
     title: "Easy Setup",
-    description: "Get started in time varies by data and workflow needs with guided onboarding — no IT team, no consultants, no complexity.",
+    description: "Get started with setup time that varies by data and workflows with guided onboarding — no IT team, no consultants, no complexity.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
 
 const stats = [
-  { metric: "30 min", label: "Setup time" },
+  { metric: "varies", label: "Setup time" },
   { metric: "Free", label: "Trial available" },
   { metric: "All-in-one", label: "Platform" },
   { metric: "No IT", label: "Team required" },
@@ -104,7 +104,7 @@ const faqs = [
   {
     question: "Do I need technical skills or an IT team?",
     answer:
-      "No. Kindora is designed for nonprofit staff, not IT departments. If you can use email, you can use Kindora. Setup takes about time varies by data and workflow needs with guided onboarding — no developer or consultant required.",
+      "No. Kindora is designed for nonprofit staff, not IT departments. If you can use email, you can use Kindora. Setup takes setup time that varies by data and workflows with guided onboarding — no developer or consultant required.",
   },
   {
     question: "Can I start with just the basics and grow later?",

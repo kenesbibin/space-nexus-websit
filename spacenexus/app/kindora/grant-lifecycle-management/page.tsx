@@ -266,7 +266,7 @@ const benefits = [
     description: "Automated data pulling and one-click reports save hours every week.",
   },
   {
-    stat: "30 min",
+    stat: "varies",
     label: "Setup Time",
     description: "Setup time depends on your data and workflow needs; ask Kindora about onboarding options.",
   },

@@ -218,7 +218,7 @@ const benefits = [
     description: "Automated tracking prevents costly compliance failures.",
   },
   {
-    stat: "30 min",
+    stat: "varies",
     label: "Setup Time",
     description: "Setup time depends on your data and workflow needs; ask Kindora about onboarding options.",
   },

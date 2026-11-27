@@ -64,7 +64,7 @@ const smallCrmFeatures = [
   },
   {
     title: "Quick Setup",
-    description: "Get up and running in time varies by data and workflow needs. Import your data from spreadsheets and start managing relationships.",
+    description: "Get up and running with setup time that varies by data and workflows. Import your data from spreadsheets and start managing relationships.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
   {
@@ -100,7 +100,7 @@ const smallCrmFeatures = [
 ];
 
 const stats = [
-  { metric: "30 min", label: "Setup time" },
+  { metric: "varies", label: "Setup time" },
   { metric: "Affordable", label: "For small budgets" },
   { metric: "Simple", label: "Easy to use" },
   { metric: "Free", label: "Trial available" },
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "How quickly can I set up Kindora?",
     answer:
-      "Most small nonprofits can get up and running in about time varies by data and workflow needs. You can import your contacts from a spreadsheet and start managing relationships immediately.",
+      "Most small nonprofits can get up and running in setup time that varies by data and workflows. You can import your contacts from a spreadsheet and start managing relationships immediately.",
   },
   {
     question: "Does Kindora include email features?",
@@ -253,8 +253,8 @@ export default function SmallNonprofitCrmPage() {
 
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {[
-                    { label: "Donors Tracked", value: "500+" },
-                    { label: "Setup Time", value: "30 min" },
+                    { label: "Donors Tracked", value: "Sample" },
+                    { label: "Setup Time", value: "varies" },
                     { label: "Monthly Cost", value: "Affordable" },
                     { label: "Free Trial", value: "Yes" },
                   ].map((s) => (
@@ -405,7 +405,7 @@ export default function SmallNonprofitCrmPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm font-semibold text-teal-500 uppercase tracking-wider mb-3">Workflow</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get started in time varies by data and workflow needs</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get started with setup time that varies by data and workflows</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Simple steps to get your small nonprofit organized.</p>
           </div>
 
@@ -622,7 +622,7 @@ export default function SmallNonprofitCrmPage() {
             <a href="/kindora/small-nonprofit-crm" className="text-teal-600 hover:underline font-medium">
               small nonprofit CRM
             </a>{" "}
-            designed for organizations with limited budgets and small teams. Unlike enterprise solutions that require expensive consultants and months of setup, Kindora is ready to use in time varies by data and workflow needs with{" "}
+            designed for organizations with limited budgets and small teams. Unlike enterprise solutions that require expensive consultants and months of setup, Kindora is ready to use with setup time that varies by data and workflows with{" "}
             <a href="/kindora/features/donor-management" className="text-teal-600 hover:underline font-medium">
               donor management
             </a>,{" "}

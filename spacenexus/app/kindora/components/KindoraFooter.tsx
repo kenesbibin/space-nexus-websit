@@ -430,6 +430,9 @@ export default function KindoraFooter() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <p className="mb-4 text-xs leading-5 text-gray-500">
+            Product examples and dashboard figures are illustrative unless a source is linked. Outcomes vary by organization; request current security and implementation details from the Kindora team.
+          </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-500">© 2026 SpaceAI App. All rights reserved.</p>
             <span className="text-xs text-gray-600">Built with Next.js, React, and MongoDB</span>

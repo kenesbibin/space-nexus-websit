@@ -414,15 +414,15 @@ export default function CharityManagementSoftwarePage() {
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-100 grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-xl font-bold text-gray-900">4,500+</div>
+                    <div className="text-xl font-bold text-gray-900">Sample</div>
                     <div className="text-xs text-gray-500">Donors Managed</div>
                   </div>
                   <div>
-                    <div className="text-xl font-bold text-gray-900">$3.8M</div>
+                    <div className="text-xl font-bold text-gray-900">Sample</div>
                     <div className="text-xs text-gray-500">Funds Raised</div>
                   </div>
                   <div>
-                    <div className="text-xl font-bold text-gray-900">25,000+</div>
+                    <div className="text-xl font-bold text-gray-900">Sample</div>
                     <div className="text-xs text-gray-500">Hours Saved</div>
                   </div>
                 </div>

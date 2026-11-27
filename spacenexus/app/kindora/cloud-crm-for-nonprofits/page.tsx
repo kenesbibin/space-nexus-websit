@@ -109,7 +109,7 @@ const jsonLd = {
           name: "Is Kindora's cloud CRM secure?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora uses industry-standard encryption, automatic backups, and SOC 2-compliant security practices to protect your nonprofit's data. Your donor records, financial data, and program information are always safe and accessible.",
+            text: "Kindora's current hosting, backup, and security controls should be confirmed with the team. Request the latest documentation before uploading sensitive donor, financial, or program records.",
           },
         },
         {
@@ -125,7 +125,7 @@ const jsonLd = {
           name: "Does Kindora offer a free Starter plan?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora offers a free Starter plan with no credit card required. You can set up your cloud nonprofit CRM in about time varies by data and workflow needs and start managing donors, campaigns, and grants immediately.",
+            text: "Kindora offers a free Starter plan with no credit card required. Setup time depends on your data and workflows; the team can advise on migration requirements.",
           },
         },
       ],
@@ -161,7 +161,7 @@ const cloudFeatures = [
   {
     name: "Enterprise Security",
     description:
-      "Bank-level encryption, SOC 2 compliance, and role-based access controls protect your sensitive nonprofit data.",
+      "Review Kindora's current encryption, access-control, and security documentation against your requirements.",
     icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
   {
@@ -277,7 +277,7 @@ const faqs = [
   {
     question: "Is Kindora's cloud CRM secure?",
     answer:
-      "Yes. Kindora uses industry-standard encryption, automatic backups, and SOC 2-compliant security practices to protect your nonprofit's data. Your donor records, financial data, and program information are always safe and accessible.",
+      "Kindora's current hosting, backup, and security controls should be confirmed with the team. Request the latest documentation before uploading sensitive donor, financial, or program records.",
   },
   {
     question: "Can I access Kindora from my phone or tablet?",
@@ -287,7 +287,7 @@ const faqs = [
   {
     question: "Does Kindora offer a free Starter plan?",
     answer:
-      "Yes. Kindora offers a free Starter plan with no credit card required. You can set up your cloud nonprofit CRM in about time varies by data and workflow needs and start managing donors, campaigns, and grants immediately.",
+      "Kindora offers a free Starter plan with no credit card required. Setup time depends on your data and workflows; the team can advise on migration requirements.",
   },
 ];
 

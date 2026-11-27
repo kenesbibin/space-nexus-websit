@@ -39,7 +39,7 @@ const softwareSchema = {
   featureList: [
     "AI search with source attribution",
     "Knowledge graph reasoning",
-    "On-prem / 100% local processing",
+    "Open-source framework available for technical review",
   ],
   isBasedOn: {
     "@type": "SoftwareSourceCode",
@@ -75,7 +75,7 @@ const faqSchema = {
       name: "Is VeritasGraph open source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. VeritasGraph is open source and its code is available on GitHub. It can run on-prem or 100% local, so sensitive nonprofit records never leave your environment.",
+        text: "Yes. VeritasGraph is open source and its code is available on GitHub. The framework can be self-hosted by teams that deploy it themselves. This does not establish the hosting or data-processing options for Kindora's hosted product; contact Kindora for current product-specific details.",
       },
     },
   ],
@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: "Is VeritasGraph open source?",
-    a: "Yes. VeritasGraph is open source and its code is available on GitHub. It can run on-prem or 100% local, so sensitive nonprofit records never leave your environment.",
+    a: "Yes. VeritasGraph is open source and its code is available on GitHub. The framework can be self-hosted by teams that deploy it themselves. This does not establish the hosting or data-processing options for Kindora's hosted product; contact Kindora for current product-specific details.",
   },
 ];
 
@@ -106,8 +106,8 @@ const capabilities = [
     desc: "Traverses relationships across donors, grants, and programs like a human analyst.",
   },
   {
-    title: "Private by default",
-    desc: "Runs on-prem or 100% local. Zero data egress, fully sovereign.",
+    title: "Deployment details",
+    desc: "VeritasGraph is open source. Ask Kindora about the hosted product's current data-processing and hosting configuration.",
   },
 ];
 

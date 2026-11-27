@@ -404,7 +404,7 @@ export default function DonationManagementSoftwarePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Manage Donations Better?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing spreadsheets with professional donation management software.
+            Explore Kindora tools for professional donation management software.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

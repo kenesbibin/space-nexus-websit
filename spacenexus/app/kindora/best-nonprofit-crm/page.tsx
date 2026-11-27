@@ -101,8 +101,8 @@ const bestCrmFeatures = [
 
 const stats = [
   { metric: "All-in-One", label: "Donor + Grants + Programs + Accounting + Volunteers" },
-  { metric: "99.9%", label: "Uptime" },
-  { metric: "30 min", label: "Setup time" },
+  { metric: "Service terms", label: "Confirm current SLA" },
+  { metric: "varies", label: "Setup time" },
   { metric: "Free", label: "Plan available" },
 ];
 
@@ -255,7 +255,7 @@ export default function BestNonprofitCrmPage() {
                   {[
                     { label: "Modules", value: "7-in-1" },
                     { label: "Free Plan", value: "Yes" },
-                    { label: "Setup Time", value: "30 min" },
+                    { label: "Setup Time", value: "varies" },
                     { label: "Free Trial", value: "Yes" },
                   ].map((s) => (
                     <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100">
@@ -406,7 +406,7 @@ export default function BestNonprofitCrmPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm font-semibold text-purple-500 uppercase tracking-wider mb-3">Workflow</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">From signup to impact in time varies by data and workflow needs</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">From signup through setup, timing depends on your data and workflows</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Get started with the best nonprofit CRM fast.</p>
           </div>
 
@@ -580,7 +580,7 @@ export default function BestNonprofitCrmPage() {
             Ready to use the best nonprofit CRM?
           </h2>
           <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits using Kindora to manage donors, run campaigns, track grants, and report impact — all from one platform.
+            Explore donor, campaign, grant, and impact reporting workflows in Kindora.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

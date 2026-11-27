@@ -120,7 +120,7 @@ const demoFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How long is the demo?", "acceptedAnswer": { "@type": "Answer", "text": "Our standard demo is time varies by data and workflow needs. We'll show you the key features of Kindora NGO OS tailored to your organization's needs and answer any questions you have. For more in-depth walkthroughs, we can schedule extended sessions." } },
+    { "@type": "Question", "name": "How long is the demo?", "acceptedAnswer": { "@type": "Answer", "text": "The demo is tailored to your organization; ask the team how much time to set aside. We'll show you the key features of Kindora NGO OS tailored to your organization's needs and answer any questions you have. For more in-depth walkthroughs, we can schedule extended sessions." } },
     { "@type": "Question", "name": "Is there a free Starter plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! After your demo, you can start a free 14-day trial with full access to all features. No credit card required to get started." } },
     { "@type": "Question", "name": "What types of nonprofits is Kindora designed for?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora NGO OS is built for all types of nonprofits — from community service organizations and charitable foundations to grant-dependent NGOs and multi-program social enterprises. The platform scales from small teams to large international organizations." } },
     { "@type": "Question", "name": "Can I migrate data from my current tools?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Our team provides hands-on migration assistance to help you move from spreadsheets, legacy systems, or other nonprofit software. We support bulk imports and help ensure data integrity throughout the transition." } },
@@ -279,7 +279,7 @@ export default function KindoraDemoPage() {
               {
                 question: "How long is the demo?",
                 answer:
-                  "Our standard demo is time varies by data and workflow needs. We'll show you the key features of Kindora NGO OS tailored to your organization's needs and answer any questions you have. For more in-depth walkthroughs, we can schedule extended sessions.",
+                  "The demo is tailored to your organization; ask the team how much time to set aside. We'll show you the key features of Kindora NGO OS tailored to your organization's needs and answer any questions you have. For more in-depth walkthroughs, we can schedule extended sessions.",
               },
               {
                 question: "Is there a free Starter plan?",

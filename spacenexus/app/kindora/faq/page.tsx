@@ -75,7 +75,7 @@ const faqs = [
   {
     category: "VeritasGraph",
     q: "Where does Kindora data go when using VeritasGraph?",
-    a: "VeritasGraph runs on-prem or 100% local, so record indexing, graph construction, and reasoning happen without data egress. This keeps AI search sovereign for nonprofits managing sensitive donor, beneficiary, and compliance data — nothing is sent to third-party AI providers.",
+    a: "VeritasGraph is an open-source framework that can be self-hosted. That does not by itself describe how Kindora's hosted service stores or processes workspace data. Ask the Kindora team for current hosting, data-flow, and retention details before uploading sensitive donor or beneficiary records.",
   },
   {
     category: "How Kindora Verifies Answers",

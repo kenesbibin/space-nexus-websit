@@ -151,7 +151,7 @@ const faqs = [
   {
     question: "How long does it take to set up Kindora CRM for nonprofits?",
     answer:
-      "Most nonprofits are up and running with Kindora in time varies by data and workflow needs. Our team provides free data migration support to import your existing records from spreadsheets or other systems — so nothing is lost in the switch.",
+      "Most nonprofits are up and running with Kindora with setup time that varies by data and workflows. Our team provides free data migration support to import your existing records from spreadsheets or other systems — so nothing is lost in the switch.",
   },
 ];
 
@@ -404,7 +404,7 @@ export default function CrmForNonprofitsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your Nonprofit?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of nonprofits replacing scattered tools with a single, powerful CRM platform.
+            Explore workflows for bringing together a single, powerful CRM platform.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

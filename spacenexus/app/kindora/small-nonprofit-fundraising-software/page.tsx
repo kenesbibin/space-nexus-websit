@@ -50,7 +50,7 @@ const benefits = [
     description: "Online donation forms, recurring giving, and campaign pages help small nonprofits raise 3x more than traditional methods.",
   },
   {
-    metric: "30min",
+    metric: "varies",
     title: "Set Up Today",
     description: "Create donation forms, import donors, and launch campaigns with setup time depending on your data and workflow needs — no technical skills needed.",
   },
@@ -117,7 +117,7 @@ const comparisonData = [
   { feature: "Grant Management", kindora: true, classyy: false, giveLively: false, spreadsheet: false },
   { feature: "Volunteer Management", kindora: true, classyy: false, giveLively: false, spreadsheet: false },
   { feature: "Flat-Rate Pricing", kindora: true, classyy: false, giveLively: true, spreadsheet: true },
-  { feature: "Setup in 30 Minutes", kindora: true, classyy: true, giveLively: true, spreadsheet: true },
+  { feature: "Setup time varies", kindora: true, classyy: true, giveLively: true, spreadsheet: true },
 ];
 
 const faqs = [
@@ -150,7 +150,7 @@ const faqs = [
 
 const platformStats = [
   { metric: "3x", label: "More donations" },
-  { metric: "30min", label: "Setup time" },
+  { metric: "varies", label: "Setup time" },
   { metric: "Flat Rate", label: "Predictable pricing" },
   { metric: "All-in-One", label: "Platform" },
 ];

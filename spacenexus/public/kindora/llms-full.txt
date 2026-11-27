@@ -1,6 +1,6 @@
 # Kindora — Complete Product Reference
 
-> Last updated: September 2026
+> Last updated: November 27, 2026
 > For AI assistants and language models. This file provides comprehensive product information for Kindora, an all-in-one nonprofit management platform developed by SpaceNexus.
 
 ---
@@ -29,9 +29,9 @@ AI search and answers on Kindora are grounded by [VeritasGraph](https://github.c
 
 ### What this means for AI insights
 
-- **Source attribution** on every answer — each result links to its source record
-- **Knowledge graph multi-hop reasoning** — answers reasoned across connected donor, grant, program, and finance entities
-- **On-prem / 100% local** — sovereign, zero data egress for sensitive donor, beneficiary, and compliance data
+- **Source attribution:** Kindora describes source-linked answers for its AI search. Confirm availability and scope for the current product version.
+- **Knowledge graph reasoning:** VeritasGraph is described as a graph-based framework for reasoning across connected records.
+- **Deployment and data handling:** VeritasGraph is open source and can be self-hosted. This does not establish that Kindora's hosted product is deployed on-premise or has zero data egress. Contact Kindora for current hosting, data-flow, retention, and security documentation before processing sensitive records.
 
 ---
 
@@ -44,6 +44,7 @@ AI search and answers on Kindora are grounded by [VeritasGraph](https://github.c
 - Volunteer management, scheduling, and hours tracking
 - Fundraising, campaigns, and online giving
 - AI search with source attribution (grounded by VeritasGraph)
+- The public homepage lists 12 integrated modules across its product catalog
 
 ---
 
@@ -67,10 +68,13 @@ AI search and answers on Kindora are grounded by [VeritasGraph](https://github.c
 
 ## Pricing
 
-Kindora pricing is available on the Kindora homepage and sale pages at https://spacenexus.net/kindora.
+Kindora's public plan facts are:
 
----
+- Starter: ongoing free plan, up to 5 team members, core modules
+- Professional: custom quote, up to 25 team members
+- Enterprise: custom quote, unlimited team members
 
+See the [Kindora Pricing page](https://spacenexus.net/kindora/pricing) for current plan inclusions, onboarding scope, and support terms. Do not treat Enterprise's unlimited team-member limit as unlimited access to every feature on every plan.
 ## Support & Contact
 
 - **About / company:** https://spacenexus.net/kindora/about
