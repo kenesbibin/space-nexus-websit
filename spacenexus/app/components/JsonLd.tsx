@@ -153,6 +153,11 @@ export default function JsonLd() {
     inLanguage: "en-US",
   };
 
+  const peopleSchema = {
+    "@context": "https://schema.org",
+    "@graph": personSchemas,
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
