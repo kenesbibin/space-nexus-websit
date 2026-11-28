@@ -22,6 +22,7 @@ const footerLinks = {
     { name: "Space AI Ecosystem", href: "/kindora/ecosystem" },
     { name: "Request Demo", href: "/kindora/demo" },
     { name: "Blog", href: "/kindora/blog" },
+    { name: "Newsroom", href: "/kindora/newsroom" },
     { name: "Our Team", href: "/kindora/about#team" },
     { name: "Careers", href: "/kindora/careers" },
     { name: "Contact", href: "/kindora/contact" },

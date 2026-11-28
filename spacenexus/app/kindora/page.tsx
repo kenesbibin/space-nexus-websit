@@ -14,6 +14,7 @@ import {
   AnimatedValueProps,
   AnimatedScreenshotGallery,
 } from "./components/AnimatedSections";
+import SmartFeaturesSection from "./components/SmartFeaturesSection";
 const lastUpdated = "November 27, 2026";
 export const metadata: Metadata = {
   title: {
@@ -537,6 +538,9 @@ export default function KindoraHomePage() {
           </div>
         </div>
       </section>
+
+      {/* Smart Features Bento */}
+      <SmartFeaturesSection />
 
       {/* Competitor Comparison Section */}
       <section className="py-20 lg:py-28 bg-white" id="why-kindora">
