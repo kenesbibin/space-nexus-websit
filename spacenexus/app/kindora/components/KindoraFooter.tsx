@@ -29,6 +29,7 @@ const footerLinks = {
     { name: "How to Add Users", href: "/kindora/how-to-add-users" },
     { name: "Knowledge Graph", href: "/kindora/knowledge-graph" },
     { name: "FAQ", href: "/kindora/faq" },
+    { name: "Security", href: "/kindora/security" },
   ],
   crmDonor: [
     { name: "Nonprofit CRM", href: "/kindora/nonprofit-crm" },
