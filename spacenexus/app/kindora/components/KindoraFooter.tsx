@@ -170,6 +170,14 @@ const footerLinks = {
     { name: "Program Management Software", href: "/kindora/solutions/program-management-software" },
     { name: "Program Outcome Tracking", href: "/kindora/solutions/program-outcome-tracking" },
   ],
+  industries: [
+    { name: "NGOs", href: "/kindora/kindora-for-ngos" },
+    { name: "Churches", href: "/kindora/church-management-software" },
+    { name: "Foundations", href: "/kindora/foundation-management-software" },
+    { name: "Associations", href: "/kindora/association-management-software" },
+    { name: "Charities", href: "/kindora/charity-management-software" },
+    { name: "Social Services", href: "/kindora/social-services-case-management" },
+  ],
   contact: [
     { label: "Email", value: "contact@spacenexus.net", href: "mailto:contact@spacenexus.net" },
     { label: "Singapore", value: "+65 8611 1900", href: "tel:+6586111900" },
@@ -359,9 +367,9 @@ export default function KindoraFooter() {
         </div>
       </div>
 
-      {/* Row 3: Operations + Compare + Solutions + Contact */}
+      {/* Row 3: Operations + Guides + Solutions + Industries + Contact */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6">
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Nonprofit Operations</h4>
             <ul className="space-y-2">
@@ -385,6 +393,15 @@ export default function KindoraFooter() {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Solutions</h4>
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
+                <li key={link.name}><Link href={link.href} className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">{link.name}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Industries</h4>
+            <ul className="space-y-2">
+              {footerLinks.industries.map((link) => (
                 <li key={link.name}><Link href={link.href} className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">{link.name}</Link></li>
               ))}
             </ul>
